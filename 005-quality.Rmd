@@ -1,0 +1,122 @@
+# Quality {#quality .tabset .tabset-fade .tabset-pills}
+
+## Overview {-}
+
+A record is considered _completed_ when it has at least the sheets 
+**anagrafica**, **accettazione**, **pim**, **dimissione** marked as completed.
+
+---
+
+## Complete records {.tabset .tabset-dropdown}
+
+```{r, eval=!params$export}
+qualityReportUI("q_overall")
+```
+
+```{r, context = "server", eval=!params$export}
+qualityReport("q_overall", data = full_records)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+qualityReportStatic(full_records,
+  params$q_overall_completed,
+  params$q_overall_type
+)
+```
+
+
+
+
+
+
+
+
+## Hospitalized {.tabset .tabset-dropdown}
+
+```{r, context = "server"}
+data_hosp <- dplyr::filter(full_records, !is.na(reparto))
+```
+
+Records are considered related to an "hospitalized" patient if the field 
+**reparto** is not missing in the sheet **dimissione**.
+
+```{r, eval=!params$export}
+qualityReportUI("q_hosp")
+```
+
+```{r, context = "server", eval=!params$export}
+qualityReport("q_hosp", data = data_hosp)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+qualityReportStatic(data_hosp,
+  params$q_hosp_completed,
+  params$q_hosp_type
+)
+```
+
+
+
+
+
+
+
+
+## Data errors {.tabset .tabset-dropdown}
+
+Two types of errors are considered at the moment:
+
+1. Missing data.
+
+2. Outlier values out of reasonable range, i.e., which have a distance
+   from the median that is farther than 1.5 times the inter quartile
+   range.
+
+
+### Missing values
+
+
+```{r}
+n_missing <- map_int(full_records, ~sum(is.na(.)))
+are_w_missing <- n_missing > 0
+```
+
+Overall, there are `r sum(are_w_missing)` variables with some missing
+data (out of `r length(full_records)`) for a total number of
+`r sum(n_missing)` missing entries in the whole dataset
+(`r round(100 * mean(is.na(full_records)), 2)`% of missingness).
+
+```{r, eval=!params$export}
+missReportUI("q_miss", data = full_records)
+```
+
+```{r, context = "server", eval=!params$export}
+missReport("q_miss", data = full_records)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+missReportStatic(data = full_records, center = params$q_miss_center)
+```
+
+
+
+
+### Possible errors into the data
+
+
+For numerical variables, outliers are considered possible errors, i.e.
+values farther than 1.5 times the inter quartile range from the median.
+
+```{r, eval=!params$export}
+outlierReportUI("q_err", data = outliers)
+```
+
+```{r, context = "server", eval=!params$export}
+outlierReport("q_err", data = outliers)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+outlierReportStatic(data = outliers, center = params$q_err_center)
+```
+
+

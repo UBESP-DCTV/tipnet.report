@@ -1,0 +1,48 @@
+Package: tipnet.report
+Title: TIPNet reports
+Version: 0.0.1
+Authors@R: 
+    person("Corrado", "Lanera", , "corrado.lanera@gmail.com", role = c("aut", "cre", "cph"))
+Description: The goal of tipnet.report is to implement and collect all the
+    code needed for the development of the TIPNet reports by UBESP.
+License: GPL-3 + file LICENSE
+URL: https://github.com/UBESP-DCTV/tipnet.report
+BugReports: https://github.com/UBESP-DCTV/tipnet.report/issues
+Depends: 
+    R (>= 3.5.0)
+Imports: 
+    assertive (>= 0.3-5),
+    dplyr (>= 0.8.3),
+    DT,
+    forcats,
+    fs,
+    ggplot2,
+    glue,
+    here,
+    janitor,
+    lubridate,
+    magrittr (>= 1.5),
+    plotly,
+    purrr (>= 0.3.2),
+    readr,
+    REDCapR,
+    rlang (>= 0.4.0),
+    shiny,
+    stats,
+    stringr (>= 1.4.0),
+    tibble (>= 3.1.5),
+    tidyr,
+    tidyselect,
+    usethis (>= 1.5.1)
+Suggests: 
+    attempt,
+    covr (>= 3.2.1),
+    roxygen2 (>= 6.1.1),
+    spelling (>= 2.1),
+    testthat (>= 2.1.1),
+    withr
+Encoding: UTF-8
+Language: en-US
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
