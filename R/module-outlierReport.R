@@ -48,11 +48,11 @@ outlierReport <- function(id, data) {
     })
 
     db_to_use <- reactive({
-      outlier_dataToUse(data, center())
+      outlier_dataToUse(data(), center())
     })
 
     output$out_plot <- renderPlot(
-      outlier_dataPlot(data)
+      outlier_dataPlot(data())
     )
 
     output$out_table <- DT::renderDT(db_to_use(),

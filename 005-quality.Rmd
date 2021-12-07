@@ -14,11 +14,11 @@ qualityReportUI("q_overall")
 ```
 
 ```{r, context = "server", eval=!params$export}
-qualityReport("q_overall", data = full_records)
+qualityReport("q_overall", data = data_ranged[["full_filtered"]])
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
-qualityReportStatic(full_records,
+qualityReportStatic(data_ranged[["full_filtered"]](),
   params$q_overall_completed,
   params$q_overall_type
 )
@@ -34,7 +34,9 @@ qualityReportStatic(full_records,
 ## Hospitalized {.tabset .tabset-dropdown}
 
 ```{r, context = "server"}
-data_hosp <- dplyr::filter(full_records, !is.na(reparto))
+data_hosp <- reactive({
+  dplyr::filter(data_ranged[["full_filtered"]](), !is.na(reparto))
+})
 ```
 
 Records are considered related to an "hospitalized" patient if the field 
@@ -76,26 +78,19 @@ Two types of errors are considered at the moment:
 ### Missing values
 
 
-```{r}
-n_missing <- map_int(full_records, ~sum(is.na(.)))
-are_w_missing <- n_missing > 0
-```
 
-Overall, there are `r sum(are_w_missing)` variables with some missing
-data (out of `r length(full_records)`) for a total number of
-`r sum(n_missing)` missing entries in the whole dataset
-(`r round(100 * mean(is.na(full_records)), 2)`% of missingness).
 
 ```{r, eval=!params$export}
 missReportUI("q_miss", data = full_records)
 ```
 
 ```{r, context = "server", eval=!params$export}
-missReport("q_miss", data = full_records)
+missReport("q_miss", data = data_ranged[["full_filtered"]])
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
-missReportStatic(data = full_records, center = params$q_miss_center)
+missReportStatic(data = data_ranged[["full_filtered"]](),
+                 center = params$q_miss_center)
 ```
 
 
@@ -108,15 +103,15 @@ For numerical variables, outliers are considered possible errors, i.e.
 values farther than 1.5 times the inter quartile range from the median.
 
 ```{r, eval=!params$export}
-outlierReportUI("q_err", data = outliers)
+outlierReportUI("q_err", data = full_records)
 ```
 
 ```{r, context = "server", eval=!params$export}
-outlierReport("q_err", data = outliers)
+outlierReport("q_err", data = data_ranged[["outliers_filtered"]])
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
-outlierReportStatic(data = outliers, center = params$q_err_center)
+outlierReportStatic(data = data_ranged[["outliers_filtered"]](), center = params$q_err_center)
 ```
 
 

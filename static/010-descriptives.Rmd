@@ -32,21 +32,44 @@ foo
 
 foo
 
+
+
+
+
+
+
+
+
+
+
 ## Admissions {.tabset .tabset-dropdown}
 
 foo
 
-### Trends
 
-foo
 
-### Distributions
-
-foo
 
 ### Gender
 
-foo
+```{r, eval=!params$export}
+descriptivesReportUI("d_gender")
+```
+
+```{r, context = "server", eval=!params$export}
+descriptivesReport("d_gender", data = full_records)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+descriptivesReportStatic(full_records,
+      completed = params[["d_gender_completed"]])
+```
+
+
+
+
+
+
+
 
 ### Ethnicity
 
@@ -55,6 +78,22 @@ foo
 ### Age
 
 foo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

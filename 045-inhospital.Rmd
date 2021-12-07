@@ -1,0 +1,43 @@
+# Severity on admission and outcome {#inhospital .tabset .tabset-fade .tabset-pills}
+
+## Overview {-}
+
+The registry adopted, since the beginning, the Pediatric Index of Mortality (PIM) score. The PIM2 variables are
+recorded and the risk of death is automatically calculated by the system. In 2013, after a revision of the coefficient of the variables, the new PIM3 score was published. We updated the PIM page with the new formula and since 2014 we calculate both the 2 and 3 version. Moreover, retrospectically, we collected all the new variables and through the new coefficients we derived the PIM3 score for all the patient in the registry.
+
+The Standardized Mortality Ratio (SMR) was estimated as the ratio between observed deaths/expected deaths.
+Expected deaths were derived as the sum of all the PIM scores for each category considered.
+
+The new score seems to perform better than the old one, with a more adequate estimation of deaths and a more
+correct SMR.
+
+
+## PIM 2 and 3 {.tabset .tabset-dropdown}
+
+### Severity
+
+### Age
+
+### Year
+
+### Type
+
+### Unit
+
+
+## Mortality and Standardized Mortality Ratio (SMR) {.tabset .tabset-dropdown}
+
+### PIM 2 and 3
+
+### Age
+
+### Year
+
+### Type
+
+### Unit
+
+
+## Predictive moratality models
+
+### PIM 2 and 3

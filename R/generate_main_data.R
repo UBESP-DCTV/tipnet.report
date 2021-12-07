@@ -13,9 +13,8 @@ generate_main_data <- function() {
   tipnet <- fetch_tipnet()
   sheets <- extract_sheets(tipnet)
   full_records <- join_all_sheets(sheets)
-  outliers <- extract_outliers(full_records)
 
-  c(sheets, list(full_records = full_records, outliers = outliers))
+  c(sheets, list(full_records = full_records))
 
 }
 
