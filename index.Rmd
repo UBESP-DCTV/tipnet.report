@@ -2,8 +2,6 @@
 params:
   cache: FALSE
   export: FALSE
-  first_y: 1992
-  last_y:  2021
 
   q_overall_completed: "Completed"
   q_overall_type: "Proportion"
@@ -11,15 +9,13 @@ params:
   q_hosp_type: "Proportion"
   q_miss_center: ""
   q_err_center: ""
+  
+  d_gender_completed: "Completed only"
 
-title: "TIPNet report (`r paste0(params$first_y, ' - ', params$last_y)`)"
-author: "Italian Pediatric Intensive Care Units Network (**TIPNet**)
+title: "TIPNet inter-dynamical report"
+author: "The Italian Pediatric Intensive Care Units Network (**TIPNet**) is part of the Italian Society of Pediatric and Neonatal Anesthesia and Intensive Care (**SARNePI**).
   </br>
-  \\ \\ \\ \\ in collaboration with:
-  </br>
-  \\* Italian Society of Pediatric and Neonatal Anesthesia and Intensive Care (**SARNePI**)
-  </br>
-  \\* Unit of Biostatistics, Epidemiology and Public Health (**UBEP**) --- University of Padova."
+  \\ \\ \\ \\ This report has been developed in collaboration with the Unit of Biostatistics, Epidemiology and Public Health (**UBEP**) --- University of Padova."
 
 biblio-style: apalike
 link-citations: yes
@@ -67,13 +63,7 @@ attempt::attempt(suppressWarnings(invisible(lapply(
 ))), silent = TRUE)
 
 
-if (getOption("tipnet.dev", FALSE)) {
-    rstudioapi::documentSaveAll()
-    roxygen2::roxygenise()
-    devtools::load_all(quiet =  TRUE)
-} else {
-  library(tipnet.report)
-}
+
 
 library(tidyverse)
 library(lubridate)
@@ -83,6 +73,19 @@ library(glue)
 library(here)
 library(DT)
 library(fs)
+
+
+if (getOption("tipnet.dev", FALSE)) {
+    rstudioapi::documentSaveAll()
+    roxygen2::roxygenise()
+    devtools::load_all(quiet =  TRUE)
+    cat("!!!!!!! dev !!!!!!!")
+} else {
+    devtools::load_all(quiet =  TRUE)
+  # library(tipnet.report)
+    cat("!!!!!!! prod !!!!!!")
+}
+
 
 last_file <- file.path(data_path(), "tipnet.rds")
 is_to_update <- !fs::file_exists(last_file) ||
@@ -98,11 +101,14 @@ if (
   db_update_from_server()
 }
 
+last_data_date <- as.Date(file.info(last_file)$mtime)
+
+
 set.seed(1)
 ```
 
 
-```{r data, include=FALSE, cache=params$cache, cache.extra=file.info(last_file)$mtime}
+```{r data, include=FALSE, cache=params$cache, cache.extra=last_data_date}
 # This run only once bot in the render and server side
 
 # cache.extra option in the knitr tags here above needs to speed up
@@ -124,7 +130,9 @@ iwalk(generate_main_data(), ~assign(.y, .x, pos = 1))
 <!-- # setup and data chunks) -->
 <!-- ``` -->
 
-**Last report update**: `r as.Date(file.info('index.Rmd')$mtime)`  ---  **Last data update**: `r as.Date(file.info(last_file)$mtime)`
+**Last report update**: `r as.Date(file.info('index.Rmd')$mtime)`  ---  **Last data update**: `r last_data_date`
+
+
 
 # Colophon {-}
 
@@ -133,9 +141,9 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </style>
 <div class = "blue">
 
-**Network coordinator**: Andrea Wolfler, MD ([Department of Anesthesia and Intensive Care Unit](https://www.asst-fbf-sacco.it/reparti-e-servizi/info/anestesia-e-rianimazione-pediatrica) -- [Children’s Hospital Vittore Buzzi](https://www.asst-fbf-sacco.it/reparti-e-servizi/ricerca-reparto-presidio/buzzi)) --- Milan
+**Network coordinator**: Andrea Wolfler (Division of Anesthesia, Children’s Hospital G Gaslini – Genova) and Angela Amigoni (Pediatric Intensive Care Unit, University Hospital – Padova)
 
-**In collaboration with**: Unit of Biostatistics, Epidemiology and Public Helath ([UBEP](https://ubesp.jimdo.com/)), [Department of Cardiac, Toracic, Vascular sciences and Public Health](https://www.dctv.unipd.it/) -- [University of Padova](https://www.unipd.it/) --- Interuniversity Consortium
+**In collaboration with**: Unit of Biostatistics, Epidemiology and Public Helath ([UBEP](https://www.unipd-ubep.it/)), [Department of Cardiac, Toracic, Vascular sciences and Public Health](https://www.dctv.unipd.it/) -- [University of Padova](https://www.unipd.it/) --- Interuniversity Consortium
 
 - Dario Gregori (head of UBEP)
 - Corrado Lanera (Laboratory of Artificial Intelligence for Medical Sciences)
@@ -143,51 +151,41 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 - Rosanna Comoretto (Laboratory for Health Service Research)
 - Matteo Martinato, Laura Nasato (Service for Clinical Trials and Biometrics)
 
-**Business intelligence analyst**: Roberta Amato
+**Steering Committee TIPNET (SCT)**: Angela Amigoni, Andrea Wolfler, Maria Cristina Mondardini, Dario Gregori, Matteo Martinato, Francesca Izzo, Marco Piastra, Paolo Biban, Rosanna Comoretto)
 
 **IT Project Managers**: Dario Gregori, Corrado Lanera
 
-**With the contribution of**:
-
-- F. Racca, J Gualino - Alessandria
-- F. Ferrero, R Osello, R Gilodi - Novara
-- I Salvo, E. Zoia, A. Mandelli - Milano
-- E Calderini, C. Montani, E. Prandi - Milano
-- P. Biban, P Santuz - Verona
-- A. Pettenazzo, A Amigoni - Padova
-- S. Furlan, F Savron - Trieste
-- F Caramelli, C. Mondardini, E. Iannella - Bologna
-- C Cecchetti, D Perrotta - Roma
-- S Picardo, E Rossetti - Roma
-- M Corbari - Roma
-- G. Conti, M Piastra, O. Genovese - Roma
-- R Testa, A Dolcini, L. D’Amato - Napoli
-- G Coffaro, A. M. Guddo, A. M. Giglio - Palermo
-- E Gitto - Messina
-- G Stancanelli - Catania
 
 **TIPNet study group** - participating center:
 
-- Department of Anesthesia and Intensive Care, Children’s Hospital Sant’Antonio e Biagio e Cesare Arrigo, Alessandria:
-- Department of Pediatrics, Ospedale Maggiore della Carità, Novara:
-- Department of Anesthesia and Intensive Care, Children’s Hospital V Buzzi, Milan:
-- Department of Anesthesia and Intensive Care, Fondazione IRCCS Ca Granda, Ospedale Maggiore Policlinico, Milan:
-- Department of Pediatric Anesthesia and Intensive Care, Spedali Civili, Brescia
+- Pediatric and Neonatal Intensive Care Unit, Children’s Hospital G Gaslini, Genova
+- Division of Anesthesia and Intensive Care, Children’s Hospital Sant’Antonio e Biagio e Cesare Arrigo, Alessandria
+- Department of Pediatrics, Ospedale Maggiore della Carità, Novara
+- Division of Anesthesia and Intensive Care, Children’s Hospital V Buzzi, Milan
+- Division of Pediatric Anesthesia and Intensive Care, Fondazione IRCCS Ca Granda, Ospedale Maggiore Policlinico, Milan
 - Department of Neonatal and Paediatric Intensive Care, Azienda Ospedaliera Universitaria Integrata, Verona
 - Department of Woman’s and Child’s Health, Pediatric ICU, University Hospital, Padova
-- Department of Anesthesia and Intensive Care, Institute for Maternal and Child health, IRCCS Burlo Garofolo, Trieste
+- Division of Anesthesia and Intensive Care, Institute for Maternal and Child health, IRCCS Burlo Garofolo, Trieste
 - Department of Pediatric Anesthesia and Intensive Care, Ospedale Sant’Orsola Malpighi, Bologna
-- Department of Anesthesia and Intensive Care, Children’s Hospital Meyer, Firenze
-- Department of Anesthesia and Intensive Care, Children’s Hospital Bambino Gesù, Rome DEA, ARCO, Palidoro
-- Anesthesia and Intensive Care Department, Pediatric ICU, Policlinico Universitario A.Gemelli, Università Cattolica del Sacro Cuore, Rome
-- Department of Anesthesia and Intensive Care, Children’s Hospital Santobono-Pausillipon, Napoli
-- Department of Anesthesia and Intensive Care, Children’s Hospital G Di Cristina, Palermo
-- Department of Anesthesia and Intensive Care Ospedale Garibaldi – Nesima, Catania
+- Division of Anesthesia and Intensive Care, Children’s Hospital Meyer, Firenze
+- Department of Anesthesia and Intensive Care, Children’s Hospital Salesi, Ancona
+- Division of Anesthesia and Intensive Care, Children’s Hospital Santobono-Pausillipon, Napoli
+- Division of Anesthesia and Intensive Care, Children’s Hospital G Di Cristina, Palermo
+- Division of Anesthesia and Intensive Care Ospedale Garibaldi – Nesima, Catania
 - Department of Pediatrics Ospedale Policlinico –Universitario G Martino, Messina
+
 
 </div>
 
 
+
+```{r}
+yearRangeUI("year_range", last_data_date)
+```
+
+```{r, context="server"}
+data_ranged <- yearRange("year_range")
+```
 
 
 
@@ -207,6 +205,9 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 ```
 
 ```{r, child = "040-severity.Rmd"}
+```
+
+```{r, child = "045-inhospital.Rmd"}
 ```
 
 ```{r, child = "050-los.Rmd"}
@@ -276,7 +277,9 @@ observeEvent(input$generate, {
     q_hosp_completed = input[[NS("q_hosp", "completed")]],
     q_hosp_type = input[[NS("q_hosp", "type")]],
     q_miss_center = input[[NS("q_miss", "center")]],
-    q_err_center = input[[NS("q_err", "center")]]
+    q_err_center = input[[NS("q_err", "center")]],
+    
+    d_gender_completed = input[[NS("d_gender", "completed")]]
   )
 
   progress$inc(amount = 0.4,

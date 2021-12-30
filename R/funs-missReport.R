@@ -44,10 +44,15 @@ miss_dataPlot <- function(.db) {
 #' @describeIn funs-missReport table
 #' @export
 miss_dataTbl <- function(.db, .center) {
-  .db %>%
-    dplyr::filter(.data$center %in% .center) %>%
+  db <- if (length(.center) == 0 || !.center %in% .db[["center"]]) {
+    .db
+  } else {
+    dplyr::filter(.db, .data$center %in% .center)
+  }
+
+  db %>%
     dplyr::transmute(
-      .data$center,
+      center = .data$center,
       field = as.factor(.data$field),
       `missing (%)` = 100 * round(.data$prop, 4)
     ) %>%

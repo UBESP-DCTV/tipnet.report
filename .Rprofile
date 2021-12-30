@@ -10,6 +10,6 @@ source("renv/activate.R")
 # }
 #
 #
-# options(
-#   tipnet.dev = TRUE
-# )
+if (interactive()) {
+  options(tipnet.dev = TRUE)
+}

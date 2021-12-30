@@ -39,7 +39,9 @@ quality_areOutAge <- function(.db) {
 quality_statGlobal <- function(.db, completed) {
   are_out_age <- quality_areOutAge(.db)
 
-  glue::glue("Out of {sum(!are_out_age)}, there are ",
+  glue::glue(
+    "Out of {sum(!are_out_age)} patients' records (not with ",
+    "wrong/missing/>18 age), there are ",
     "{sum(.db[['complete']][!are_out_age], na.rm = TRUE)} records ",
     "with {completed} data (proportion of {completed} data = ",
     "{round(mean(.db[['complete']][!are_out_age], na.rm = TRUE), 2)})."
@@ -51,7 +53,7 @@ quality_statGlobal <- function(.db, completed) {
 #' @export
 quality_outOfAge <- function(are_out_age) {
   glue::glue("There are {sum(are_out_age)} people to exclude because ",
-  "of their age is missing or more than 18 (strictly)")
+  "of their age is wrong/missing or more than 18 (strictly)")
 }
 
 

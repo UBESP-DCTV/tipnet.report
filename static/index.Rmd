@@ -11,6 +11,8 @@ params:
   q_hosp_type: "Proportion"
   q_miss_center: ""
   q_err_center: ""
+  
+  d_gender_completed: "Completed only"
 
 title: "TIPNet report (`r paste0(params$first_y, ' - ', params$last_y)`)"
 author: "Italian Pediatric Intensive Care Units Network (**TIPNet**)
@@ -67,13 +69,7 @@ attempt::attempt(suppressWarnings(invisible(lapply(
 ))), silent = TRUE)
 
 
-if (getOption("tipnet.dev", FALSE)) {
-    rstudioapi::documentSaveAll()
-    roxygen2::roxygenise()
-    devtools::load_all(quiet =  TRUE)
-} else {
-  library(tipnet.report)
-}
+
 
 library(tidyverse)
 library(lubridate)
@@ -83,6 +79,18 @@ library(glue)
 library(here)
 library(DT)
 library(fs)
+
+
+if (getOption("tipnet.dev", FALSE)) {
+    rstudioapi::documentSaveAll()
+    roxygen2::roxygenise()
+    devtools::load_all(quiet =  TRUE)
+    cat("dev!!!!!!!!!!!!!!")
+} else {
+    devtools::load_all(quiet =  TRUE)
+  # library(tipnet.report)
+    cat("prod!!!!!!!!!!!!!!")
+}
 
 last_file <- file.path(data_path(), "tipnet.rds")
 is_to_update <- !fs::file_exists(last_file) ||
@@ -209,6 +217,9 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 ```{r, child = "040-severity.Rmd"}
 ```
 
+```{r, child = "045-inhospital.Rmd"}
+```
+
 ```{r, child = "050-los.Rmd"}
 ```
 
@@ -276,7 +287,9 @@ observeEvent(input$generate, {
     q_hosp_completed = input[[NS("q_hosp", "completed")]],
     q_hosp_type = input[[NS("q_hosp", "type")]],
     q_miss_center = input[[NS("q_miss", "center")]],
-    q_err_center = input[[NS("q_err", "center")]]
+    q_err_center = input[[NS("q_err", "center")]],
+    
+    d_gender_completed = input[[NS("d_gender", "completed")]]
   )
 
   progress$inc(amount = 0.4,
