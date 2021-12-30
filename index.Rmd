@@ -86,8 +86,8 @@ if (getOption("tipnet.dev", FALSE)) {
     cat("!!!!!!! prod !!!!!!")
 }
 
+
 last_file <- file.path(data_path(), "tipnet.rds")
-last_data_date <- as.Date(file.info(last_file)$mtime)
 is_to_update <- !fs::file_exists(last_file) ||
   (
     getOption("tipnet.auto_update", TRUE) &&
@@ -100,6 +100,9 @@ if (
 ) {
   db_update_from_server()
 }
+
+last_data_date <- as.Date(file.info(last_file)$mtime)
+
 
 set.seed(1)
 ```
