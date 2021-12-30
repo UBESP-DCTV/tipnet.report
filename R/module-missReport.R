@@ -71,7 +71,8 @@ missReport <- function(id, data) {
 
     output$miss_table <- DT::renderDT(
       miss_dataTbl(data_to_use(), center()),
-      filter = list(position = "top", clear = TRUE)
+      filter = list(position = "top", clear = TRUE),
+      server=FALSE
     )
 
     output$txt <- renderText(glue::glue(
