@@ -1,6 +1,6 @@
 centers_table <- tibble::tribble(
   ~id, ~center,                                             ~center_city,
-   1L, "Ospedale Gaslini",                                  "Genova",
+   1L, "Ospedale Gaslini (Genova)",                         "Genova",
    2L, "Ospedale SS Biagio e Arrigo",                       "Alessandria",
    3L, "Ospedale Infantile Regina Margherita",              "Torino",
    4L, "Ospedale Maggiore della Carità",                    "Novara",
