@@ -108,9 +108,12 @@ join_all_sheets <- function(sheets) {
       eta = as.integer(.data[["eta"]]),
       age_class = factor(
         dplyr::case_when(
-          .data[["eta"]] >  18 ~ "eta > 18",
-          .data[["eta"]] >  16 ~ "16 < eta <= 18",
-          .data[["eta"]] >=  0 ~ "0 <= eta <= 16",
+          .data[["eta"]] >  18 ~ "adulto",
+          .data[["eta"]] > 12 ~ "adolescente",
+          .data[["eta"]] > 6 & .data[["eta"]]<=12 ~ "eta scolare",
+          .data[["eta"]] >= 1 & .data[["eta"]]<=6 ~ "eta prescolare",
+          .data[["eta_giorni"]] > 30 & .data[["eta_giorni"]]<=365.25 ~ "lattante",
+          .data[["eta_giorni"]] >=  0 & .data[["eta_giorni"]]<=30 ~ "neonato",
           TRUE ~ "[wrong/missing age]"
         )
       ),
@@ -121,8 +124,6 @@ join_all_sheets <- function(sheets) {
         .data[["complete.dimissione"]]
     )
 }
-
-
 
 
 

@@ -279,7 +279,9 @@ observeEvent(input$generate, {
     q_miss_center = input[[NS("q_miss", "center")]],
     q_err_center = input[[NS("q_err", "center")]],
     
-    d_gender_completed = input[[NS("d_gender", "completed")]]
+    d_gender_completed = input[[NS("d_gender", "completed")]],
+    d_etnia_completed = input[[NS("d_gender", "completed")]],
+    d_ageclass_completed = input[[NS("d_ageclass","completed")]]
   )
 
   progress$inc(amount = 0.4,

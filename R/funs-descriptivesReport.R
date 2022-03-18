@@ -8,18 +8,7 @@ NULL
 #' @export
 #' @examples
 #'
-#' descriptives_genderPlot(full_records)
-descriptives_genderPlot <- function(.db) {
-
-  .db %>%
-    ggplot(aes(x = .data$center, fill = .data$gender)) +
-    geom_bar(position = "dodge") +
-    coord_flip()
-}
-
-
-
-#' @describeIn funs-descriptivesReport data
+#'#' @describeIn funs-descriptivesReport data
 #' @export
 #' @examples
 #'
@@ -39,3 +28,34 @@ descriptives_dataToUse <- function(
   }
   .db
 }
+
+#' descriptives_genderPlot(full_records)
+descriptives_genderPlot <- function(.db) {
+
+  .db %>%
+    ggplot(aes(x = .data$center, fill = .data$gender)) +
+    geom_bar(position = "dodge") +
+    coord_flip()
+}
+
+
+
+
+#' descriptives_etniaPlot(full_records)
+descriptives_etniaPlot <- function(.db) {
+
+  .db %>%
+    ggplot(aes(x = .data$center, fill = .data$etnia)) +
+    geom_bar(position = "dodge") +
+    coord_flip()
+}
+
+#' descriptives_etniaPlot(full_records)
+descriptives_ageclassPlot <- function(.db) {
+
+  .db %>%
+    ggplot(aes(x = .data$center, fill = .data$age_class)) +
+    geom_bar(position = "dodge") +
+    coord_flip()
+}
+
