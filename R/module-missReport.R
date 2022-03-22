@@ -72,6 +72,13 @@ missReport <- function(id, data) {
     output$miss_table <- DT::renderDT(
       miss_dataTbl(data_to_use(), center()),
       filter = list(position = "top", clear = TRUE),
+      class = "cell-border stripe",
+      extensions = c("KeyTable", "Buttons"),
+      editable = list(target = "cell"),
+      options = list(
+        dom = "Bfrtip",
+        buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+      ),
       server=FALSE
     )
 
@@ -96,6 +103,10 @@ missReportStatic <- function(data, center) {
   print(miss_dataPlot(data_to_use))
 
   DT::datatable(miss_dataTbl(data_to_use, center),
-    filter = list(position = "top", clear = TRUE)
+    filter = list(position = "top", clear = TRUE),
+    options = list(
+      dom = "Bfrtip",
+      buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+    )
   )
 }

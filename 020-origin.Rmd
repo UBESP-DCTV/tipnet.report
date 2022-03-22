@@ -44,11 +44,26 @@ The system allow to distinguish the first from subsequent admissions in the same
 
 ### Overview
 
+### Origin
+```{r, eval=!params$export}
+OriginReportUI_origin("d_origin")
+```
+
+```{r, context = "server", eval=!params$export}
+OriginReport_origin("d_origin", data = full_records)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+OriginReportStatic_origin(full_records,
+      completed = params[["d_origin_completed"]])
+```
+
 ### Other hospital
 
 ### Distribution by units
 
 ### Type
+
 
 ### Type of surgery
 
