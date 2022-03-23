@@ -46,7 +46,7 @@ htmltools::img(
 
 
 if (interactive()) {
-  params <- list(year = 2020)
+  params <- list(year = 2021)
 }
 #+ pkg, include = FALSE
 
@@ -112,7 +112,7 @@ data_dir <- "../tipnet-data"
 # db_update_from_server(data_dir)
 
 
-tip_data <- read_rds(here(data_dir, "2021-06-28-tipnet.rds"))
+tip_data <- read_rds(here(data_dir, "2022-03-18-tipnet.rds"))
 
 #'
 #' # Preambolo
@@ -191,7 +191,8 @@ label(accettazione, self = FALSE) <- c(
   "Comorbidità: renale", "Comorbidità: respiratoria",
   "Comorbidità: sindromica", "Comorbidità: altro",
   "Comorbidità: malformato/esiti di malformazione",
-  "Comorbidità: ex-prematuro", "Centro", "Classe di età",
+  "Comorbidità: ex-prematuro", "Comorbidità: gastroenterologica",
+  "Comorbidità: trapiantologica", "Centro", "Classe di età",
   "Numero di comorbidità")
 
 accettazione <- accettazione %>%
