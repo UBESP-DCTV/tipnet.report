@@ -13,7 +13,7 @@
 #'     fig_caption: true
 #'
 #' params:
-#'   year: 2020
+#'   year: 2021
 #' ---
 #'
 #'
