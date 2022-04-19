@@ -8,7 +8,7 @@
 \usage{
 outlier_dataPlot(.db, .center)
 
-outlier_dataToUse(.db, .center)
+outlier_dataToUse(.db)
 }
 \arguments{
 \item{.db}{(data frame) main data to use}

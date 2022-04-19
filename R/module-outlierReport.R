@@ -29,7 +29,7 @@ outlierReportUI <- function(id, data) {
       column(12, selectInput(ns("center"),
          label   = "Choose a center to display its data outliers",
          choices = unique(data[["center"]]),
-         multiple = TRUE
+         multiple = FALSE
       ))
     ),
     fluidRow(

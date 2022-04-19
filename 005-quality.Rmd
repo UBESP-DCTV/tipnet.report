@@ -31,38 +31,6 @@ qualityReportStatic(data_ranged[["full_filtered"]](),
 
 
 
-## Hospitalized {.tabset .tabset-dropdown}
-
-```{r, context = "server"}
-data_hosp <- reactive({
-  dplyr::filter(data_ranged[["full_filtered"]](), !is.na(reparto))
-})
-```
-
-Records are considered related to an "hospitalized" patient if the field 
-**reparto** is not missing in the sheet **dimissione**.
-
-```{r, eval=!params$export}
-qualityReportUI("q_hosp")
-```
-
-```{r, context = "server", eval=!params$export}
-qualityReport("q_hosp", data = data_hosp)
-```
-
-```{r, context = "server", eval=params$export, fig.height=11}
-qualityReportStatic(data_hosp,
-  params$q_hosp_completed,
-  params$q_hosp_type
-)
-```
-
-
-
-
-
-
-
 
 ## Data errors {.tabset .tabset-dropdown}
 

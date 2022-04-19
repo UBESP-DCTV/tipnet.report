@@ -7,7 +7,10 @@ yearRangeUI <- function(id, last_data_date) {
                       ns("years"),
                       "Report's years range (data collection started on 2010, new data collection with RedCap started on 2019):",
                       min = lubridate::ymd("2010-01-01"),
-                      max = last_data_date                    )
+                      max = last_data_date,
+                      start = lubridate::ymd("2010-01-01"),
+                      end = last_data_date
+                      )
     )),
     fluidRow(column(10, textOutput(ns("record_selected"))))
   )

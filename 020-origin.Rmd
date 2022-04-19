@@ -50,23 +50,56 @@ OriginReportUI_origin("d_origin")
 ```
 
 ```{r, context = "server", eval=!params$export}
-OriginReport_origin("d_origin", data = full_records)
+OriginReport_origin("d_origin", data = data_ranged[["full_filtered"]])
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
-OriginReportStatic_origin(full_records,
+OriginReportStatic_origin(data = data_ranged[["full_filtered"]],
       completed = params[["d_origin_completed"]])
 ```
 
 ### Other hospital
+```{r, eval=!params$export}
+OriginReportUI_altroosp("d_altroosp")
+```
 
+```{r, context = "server", eval=!params$export}
+OriginReport_altroosp("d_altroosp", data = data_ranged[["full_filtered"]])
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+OriginReportStatic_altroosp(data = data_ranged[["full_filtered"]],
+      completed = params[["d_altroosp_completed"]])
+```
 ### Distribution by units
 
 ### Type
+```{r, eval=!params$export}
+OriginReportUI_tipologia("d_tipologia")
+```
 
+```{r, context = "server", eval=!params$export}
+OriginReport_tipologia("d_tipologia", data = data_ranged[["full_filtered"]])
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+OriginReportStatic_tipologia(data = data_ranged[["full_filtered"]],
+      completed = params[["d_tipologia_completed"]])
+```
 
 ### Type of surgery
+```{r, eval=!params$export}
+OriginReportUI_tipochir("d_tipochir")
+```
 
+```{r, context = "server", eval=!params$export}
+OriginReport_tipochir("d_tipochir", data = data_ranged[["full_filtered"]])
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+OriginReportStatic_tipochir(data = data_ranged[["full_filtered"]],
+      completed = params[["d_tipochir_completed"]])
+```
 
 ## Reasons {.tabset .tabset-dropdown}
 

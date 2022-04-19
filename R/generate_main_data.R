@@ -13,6 +13,7 @@ generate_main_data <- function() {
   tipnet <- fetch_tipnet()
   sheets <- extract_sheets(tipnet)
   full_records <- join_all_sheets(sheets)
+  full_records <- join_center(full_records)
 
   c(sheets, list(full_records = full_records))
 
@@ -104,8 +105,20 @@ join_all_sheets <- function(sheets) {
       }
     ) %>%
     dplyr::mutate(
+
+
+
       codpat = as.factor(.data$codpat),
       eta = as.integer(.data[["eta"]]),
+      tipologia2=factor(
+        dplyr::case_when(
+          .data[["tipologia"]]=="medico"~ "Medico",
+          .data[["tipologia"]]=="chirurgico"~ "Chirurgico",
+          .data[["tipologia"]]=="trauma, ustione, intossicazione, annegamento, avvelenamento, folgorazione, inalazione di fumo, ipotermia, soffocamento"~ "Trauma",
+          TRUE ~ "[missing tipologia]"
+
+        )
+      ),
       age_class = factor(
         dplyr::case_when(
           .data[["eta"]] >  18 ~ "adulto",
@@ -115,7 +128,9 @@ join_all_sheets <- function(sheets) {
           .data[["eta_giorni"]] > 30 & .data[["eta_giorni"]]<=365.25 ~ "lattante",
           .data[["eta_giorni"]] >=  0 & .data[["eta_giorni"]]<=30 ~ "neonato",
           TRUE ~ "[wrong/missing age]"
-        )
+        )%>%
+          ordered(c("neonato", "lattante", "eta prescolare", "eta scolare",
+                    "adolescente", "adulto", "[wrong/missing age]")),
       ),
       complete =
         .data[["complete.anagrafica"]] &
@@ -123,9 +138,23 @@ join_all_sheets <- function(sheets) {
         .data[["complete.pim"]] &
         .data[["complete.dimissione"]]
     )
+
+
+
+
+
 }
 
+join_center<-function(full_records) {
+  center_table_def<-read.csv(file = 'center_table.csv')
+  full_records <- full_records %>%
+    merge(center_table_def, by = "center", all.x = T) %>%
+    mutate(center=paste0(center," ","(",center_city,")")) %>%
+    dplyr::mutate_if(is.character, as.factor)
 
+
+
+}
 
 
 
@@ -189,6 +218,7 @@ extract_outliers <- function(full_records) {
       data = list(dplyr::select(.data$data, -.data$n))
     ) %>%
     dplyr::ungroup()
+
 }
 
 

@@ -11,6 +11,7 @@ params:
   q_err_center: ""
   
   d_gender_completed: "Completed only"
+ 
 
 title: "TIPNet inter-dynamical report"
 author: "The Italian Pediatric Intensive Care Units Network (**TIPNet**) is part of the Italian Society of Pediatric and Neonatal Anesthesia and Intensive Care (**SARNePI**).
@@ -86,7 +87,6 @@ if (getOption("tipnet.dev", FALSE)) {
     cat("!!!!!!! prod !!!!!!")
 }
 
-
 last_file <- file.path(data_path(), "tipnet.rds")
 is_to_update <- !fs::file_exists(last_file) ||
   (
@@ -122,6 +122,8 @@ tipnet_meta <- path(data_path(), "tipnet_meta.rds") %>%
   read_rds()
 
 iwalk(generate_main_data(), ~assign(.y, .x, pos = 1))
+
+
 ```
 
 
@@ -207,8 +209,6 @@ data_ranged <- yearRange("year_range")
 ```{r, child = "040-severity.Rmd"}
 ```
 
-```{r, child = "045-inhospital.Rmd"}
-```
 
 ```{r, child = "050-los.Rmd"}
 ```

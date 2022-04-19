@@ -8,14 +8,20 @@ NULL
 #' @describeIn funs-missReport data to use
 #' @export
 miss_dataToUse <- function(.db) {
+  tipnet_meta <- path(data_path(), "tipnet_meta.rds") %>%
+  read_rds()
   .db %>%
     dplyr::group_by(.data$center) %>%
     dplyr::summarise_all(~mean(is.na(.))) %>%
-    tidyr::pivot_longer(
+   tidyr::pivot_longer(
       -.data$center,
-      names_to = "field",
+      names_to = "field_name",
       values_to = "prop"
-    )
+    ) %>%
+   merge(tipnet_meta,by="field_name",all.x=T)%>%
+    filter(.data$field_type!="checkbox") %>%
+    select(.data$center,.data$sheet,.data$field_name, .data$prop) %>%
+  filter(.data$field_name!="X")
 }
 
 
@@ -43,6 +49,8 @@ miss_dataPlot <- function(.db) {
 
 #' @describeIn funs-missReport table
 #' @export
+#'
+
 miss_dataTbl <- function(.db, .center) {
   db <- if (length(.center) == 0 || !.center %in% .db[["center"]]) {
     .db
@@ -53,8 +61,10 @@ miss_dataTbl <- function(.db, .center) {
   db %>%
     dplyr::transmute(
       center = .data$center,
-      field = as.factor(.data$field),
+      field = as.factor(.data$field_name),
+      form = as.factor(.data$sheet),
       `missing (%)` = 100 * round(.data$prop, 4)
     ) %>%
     dplyr::filter(.data[["missing (%)"]] != 0)
 }
+

@@ -43,7 +43,7 @@ descriptivesReport_gender <- function(id, data) {
     })
 
     data_to_use <- reactive({
-      descriptives_dataToUse(data, completed())
+      descriptives_dataToUse(data(), completed())
     })
 
 
@@ -63,8 +63,11 @@ descriptivesReport_gender <- function(id, data) {
 #' @export
 descriptivesReportStatic_gender <- function(data, completed) {
 
-  data_to_use <- quality_dataToUse(data, completed)
-  descriptives_genderPlot(data_to_use) +
+  data_to_use <- reactive({
+    quality_dataToUse(data(), completed)
+  })
+
+  descriptives_genderPlot(data_to_use()) +
     labs(subtitle = glue::glue("Data used: {completed}."))
 
 }
@@ -97,7 +100,7 @@ descriptivesReport_etnia <- function(id, data) {
     })
 
     data_to_use <- reactive({
-      descriptives_dataToUse(data, completed())
+      descriptives_dataToUse(data(), completed())
     })
 
 
@@ -105,6 +108,7 @@ descriptivesReport_etnia <- function(id, data) {
     output$dist <- renderPlot({
       descriptives_etniaPlot(data_to_use())
     })
+
 
   })
 }
@@ -117,8 +121,8 @@ descriptivesReport_etnia <- function(id, data) {
 #' @export
 descriptivesReportStatic_etnia <- function(data, completed) {
 
-  data_to_use <- quality_dataToUse(data, completed)
-  descriptives_etniaPlot(data_to_use) +
+  data_to_use <- quality_dataToUse(data(), completed)
+  descriptives_etniaPlot(data_to_use()) +
     labs(subtitle = glue::glue("Data used: {completed}."))
 
 }
@@ -151,7 +155,7 @@ descriptivesReport_ageclass <- function(id, data) {
     })
 
     data_to_use <- reactive({
-      descriptives_dataToUse(data, completed())
+      descriptives_dataToUse(data(), completed())
     })
 
 
@@ -159,6 +163,7 @@ descriptivesReport_ageclass <- function(id, data) {
     output$dist <- renderPlot({
       descriptives_ageclassPlot(data_to_use())
     })
+
 
   })
 }
@@ -171,8 +176,8 @@ descriptivesReport_ageclass <- function(id, data) {
 #' @export
 descriptivesReportStatic_ageclass <- function(data, completed) {
 
-  data_to_use <- quality_dataToUse(data, completed)
-  descriptives_ageclassPlot(data_to_use) +
+  data_to_use <- quality_dataToUse(data(), completed)
+  descriptives_ageclassPlot(data_to_use()) +
     labs(subtitle = glue::glue("Data used: {completed}."))
 
 }

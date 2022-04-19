@@ -43,7 +43,7 @@ outlier_dataPlot <- function(.db, .center) {
 
 #' @describeIn funs-outlierReport data to use
 #' @export
-outlier_dataToUse <- function(.db, .center) {
+outlier_dataToUse <- function(.db) {
   if (length(.center) == 0 || !.center %in% .db[["center"]]) {
     .db[["data"]][[1L]][FALSE, ]
   } else {

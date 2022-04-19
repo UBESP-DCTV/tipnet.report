@@ -38,10 +38,35 @@ descriptives_dataToUse <- function(
 #' descriptives_originPlot(full_records)
 descriptives_originPlot <- function(.db) {
 
-  .db %>%
+  .db %>% filter(is_prematuro=="no") %>%
     ggplot(aes(x = .data$center, fill = .data$provenienza)) +
     geom_bar(position = "dodge") +
     coord_flip()
 }
+#' descriptives_tipologiaPlot(full_records)
 
+descriptives_tipologiaPlot <- function(.db) {
 
+  .db %>% filter(eta>=0) %>%
+    ggplot(aes(x = .data$center, fill = .data$tipologia2)) +
+    geom_bar(position = "dodge") +
+    coord_flip()
+}
+#' descriptives_altroospPlot(full_records)
+
+descriptives_altroospPlot <- function(.db) {
+
+  .db %>% filter(provenienza=="altro ospedale") %>%
+    ggplot(aes(x = .data$center, fill = .data$altro_osp)) +
+    geom_bar(position = "dodge") +
+    coord_flip()
+}
+#' descriptives_tipochirPlot(full_records)
+
+descriptives_tipochirPlot <- function(.db) {
+
+  .db %>% filter(tipologia2=="Chirurgico") %>%
+    ggplot(aes(x = .data$center, fill = .data$tipo_chir)) +
+    geom_bar(position = "dodge") +
+    coord_flip()
+}
