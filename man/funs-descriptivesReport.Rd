@@ -2,30 +2,35 @@
 % Please edit documentation in R/funs-descriptivesReport.R
 \name{funs-descriptivesReport}
 \alias{funs-descriptivesReport}
-\alias{descriptives_genderPlot}
+\alias{descriptives_Plot}
 \alias{descriptives_dataToUse}
 \title{Descriptives module}
 \usage{
-descriptives_genderPlot(.db)
+descriptives_Plot(.db, what = c("gender", "etnia", "age_class"))
 
 descriptives_dataToUse(.db, .which = c("Completed only", "Overall"))
 }
 \arguments{
 \item{.db}{(data frame) data}
+
+\item{what}{(chr, default "gender") variable to describe. One of
+"gender", or "etnicity"}
 }
 \description{
 Descriptives module
 }
 \section{Functions}{
 \itemize{
-\item \code{descriptives_genderPlot}: plot
+\item \code{descriptives_Plot}: plot
 
 \item \code{descriptives_dataToUse}: data
 }}
 
 \examples{
 
-descriptives_genderPlot(full_records)
+descriptives_Plot(full_records) # default what = "gender"
+descriptives_Plot(full_records, "gender") # same as before
+descriptives_Plot(full_records, "etnia")
 
 descriptives_dataToUse(full_records, "Completed only")
 descriptives_dataToUse(full_records, "overall")

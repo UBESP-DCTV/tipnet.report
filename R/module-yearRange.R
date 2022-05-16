@@ -3,14 +3,14 @@ yearRangeUI <- function(id, last_data_date) {
 
   fluidPage(
     fluidRow(column(12,
-      sliderInput(
+      dateRangeInput(
         ns("years"),
         "Report's years range (data collection started on 2010, new data collection with RedCap started on 2019):",
-        min = lubridate::ymd("1992-01-01"),
+        min = lubridate::ymd("2010-01-01"),
         max = last_data_date,
-        value = c(lubridate::ymd("2010-01-01"), last_data_date),
-        step = lubridate::days(1L),
-        timeFormat = "%Y",
+        start = lubridate::ymd("2019-01-01"),
+        end = last_data_date,
+        weekstart = 1,
         width = "100%"
       )
     )),

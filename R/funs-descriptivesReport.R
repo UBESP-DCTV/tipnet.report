@@ -1,20 +1,40 @@
 #' Descriptives module
 #'
 #' @param .db (data frame) data
+#' @param what (chr, default "gender") variable to describe. One of
+#'   "gender", or "etnicity"
+#'
 #' @name funs-descriptivesReport
 NULL
-
+#'
 #' @describeIn funs-descriptivesReport plot
 #' @export
 #' @examples
 #'
-#' descriptives_genderPlot(full_records)
-descriptives_genderPlot <- function(.db) {
+#' descriptives_Plot(full_records) # default what = "gender"
+#' descriptives_Plot(full_records, "gender") # same as before
+#' descriptives_Plot(full_records, "etnia")
+descriptives_Plot <- function(
+    .db,
+    what = c("gender", "etnia", "age_class")
+) {
+  what <- match.arg(what)
+
+  reported_name <- switch(what,
+    "gender" = "gender",
+    "etnia" = "ethnicity",
+    "age_class" = "age class"
+  )
 
   .db %>%
-    ggplot(aes(x = .data$center, fill = .data$gender)) +
+    ggplot(aes(x = .data$center, fill = .data[[what]])) +
     geom_bar(position = "dodge") +
-    coord_flip()
+    coord_flip() +
+    labs(
+      x = "Center",
+      y = "Counts",
+      fill = stringr::str_to_sentence(reported_name)
+    )
 }
 
 

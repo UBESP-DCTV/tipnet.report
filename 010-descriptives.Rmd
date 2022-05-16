@@ -56,14 +56,20 @@ descriptivesReportUI("d_gender")
 ```
 
 ```{r, context = "server", eval=!params$export}
-descriptivesReport("d_gender", data = full_records)
+descriptivesReport(
+  "d_gender",
+  data = data_ranged[["full_filtered"]],
+  what = "gender"
+)
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
-descriptivesReportStatic(full_records,
-      completed = params[["d_gender_completed"]])
+descriptivesReportStatic(
+  data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "gender"
+)
 ```
-
 
 
 
@@ -73,11 +79,53 @@ descriptivesReportStatic(full_records,
 
 ### Ethnicity
 
-foo
+```{r, eval=!params$export}
+descriptivesReportUI("d_ethnicity")
+```
+
+```{r, context = "server", eval=!params$export}
+descriptivesReport(
+  "d_ethnicity",
+  data = data_ranged[["full_filtered"]],
+  what = "etnia"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+descriptivesReportStatic(
+  data_ranged[["full_filtered"]](),
+  completed = params[["d_ethnicity_completed"]],
+  what = "etnia"
+)
+```
+
+
+
+
+
 
 ### Age
 
-foo
+```{r, eval=!params$export}
+descriptivesReportUI("d_ageclass")
+```
+
+```{r, context = "server", eval=!params$export}
+descriptivesReport(
+  "d_ageclass",
+  data = data_ranged[["full_filtered"]],
+  what = "age_class"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+descriptivesReportStatic(
+  data_ranged[["full_filtered"]](),
+  completed = params[["d_ageclass_completed"]],
+  what = "age_class"
+)
+```
+
 
 
 

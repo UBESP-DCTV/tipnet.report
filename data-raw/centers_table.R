@@ -1,6 +1,6 @@
 centers_table <- tibble::tribble(
   ~id, ~center,                                             ~center_city,
-   1L, "Ospedale Gaslini (Genova)",                         "Genova",
+   1L, "Ospedale Gaslini",                                  "Genova",
    2L, "Ospedale SS Biagio e Arrigo",                       "Alessandria",
    3L, "Ospedale Infantile Regina Margherita",              "Torino",
    4L, "Ospedale Maggiore della Carità",                    "Novara",
@@ -35,8 +35,10 @@ centers_table <- tibble::tribble(
   dplyr::mutate_if(is.character, as.factor)
 
 old_ids <- readr::read_csv(
-  here::here("../data-raw/old_ids.csv"),
-  col_types = "i"
+  here::here("data-raw/old_ids.csv"),
+  col_names = c("sequential_id", "real_id", "center", "center_city"),
+  skip = 1,
+  col_types = "iicc"
 )
 
 usethis::use_data(centers_table, old_ids,

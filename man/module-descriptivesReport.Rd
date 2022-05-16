@@ -9,9 +9,9 @@
 \usage{
 descriptivesReportUI(id)
 
-descriptivesReport(id, data)
+descriptivesReport(id, data, what)
 
-descriptivesReportStatic(data, completed)
+descriptivesReportStatic(data, completed, what)
 }
 \arguments{
 \item{id}{name for the specific instance of the module.}
