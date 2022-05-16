@@ -11,8 +11,10 @@ NULL
 #' @export
 #' @examples
 #'
-#' descriptives_genderPlot(full_records)
-descriptives_genderPlot <- function(
+#' descriptives_Plot(full_records) # default what = "gender"
+#' descriptives_Plot(full_records, "gender") # same as before
+#' descriptives_Plot(full_records, "etnia")
+descriptives_Plot <- function(
     .db,
     what = c("gender", "etnia")
 ) {

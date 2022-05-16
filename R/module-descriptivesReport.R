@@ -49,7 +49,7 @@ descriptivesReport <- function(id, data, what) {
 
 
     output$dist <- renderPlot({
-      descriptives_genderPlot(data_to_use(), what = what)
+      descriptives_Plot(data_to_use(), what = what)
     })
 
   })
@@ -64,7 +64,7 @@ descriptivesReport <- function(id, data, what) {
 descriptivesReportStatic <- function(data, completed, what) {
 
   data_to_use <- quality_dataToUse(data, completed)
-  descriptives_genderPlot(data_to_use, what = what) +
+  descriptives_Plot(data_to_use, what = what) +
     labs(subtitle = glue::glue("Data used: {completed}."))
 
 }
