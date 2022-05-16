@@ -146,7 +146,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 **In collaboration with**: Unit of Biostatistics, Epidemiology and Public Helath ([UBEP](https://www.unipd-ubep.it/)), [Department of Cardiac, Toracic, Vascular sciences and Public Health](https://www.dctv.unipd.it/) -- [University of Padova](https://www.unipd.it/) --- Interuniversity Consortium
 
 - Dario Gregori (head of UBEP)
-- Corrado Lanera (Laboratory of Artificial Intelligence for Medical Sciences)
+- Corrado Lanera, Giorgia Stoppa (Laboratory of Artificial Intelligence for Medical Sciences)
 - Giulia Lorenzoni, Honoria Ocagli (Laboratory of Clinical Epidemiology)
 - Rosanna Comoretto (Laboratory for Health Service Research)
 - Matteo Martinato, Laura Nasato (Service for Clinical Trials and Biometrics)
