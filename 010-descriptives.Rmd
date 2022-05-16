@@ -106,7 +106,26 @@ descriptivesReportStatic(
 
 ### Age
 
-foo
+```{r, eval=!params$export}
+descriptivesReportUI("d_ageclass")
+```
+
+```{r, context = "server", eval=!params$export}
+descriptivesReport(
+  "d_ageclass",
+  data = data_ranged[["full_filtered"]],
+  what = "age_class"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+descriptivesReportStatic(
+  data_ranged[["full_filtered"]](),
+  completed = params[["d_ageclass_completed"]],
+  what = "age_class"
+)
+```
+
 
 
 

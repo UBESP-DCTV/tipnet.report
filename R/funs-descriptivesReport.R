@@ -16,13 +16,14 @@ NULL
 #' descriptives_Plot(full_records, "etnia")
 descriptives_Plot <- function(
     .db,
-    what = c("gender", "etnia")
+    what = c("gender", "etnia", "age_class")
 ) {
   what <- match.arg(what)
 
-  reported_name <- switch (what,
+  reported_name <- switch(what,
     "gender" = "gender",
-    "etnia" = "ethnicity"
+    "etnia" = "ethnicity",
+    "age_class" = "age class"
   )
 
   .db %>%
