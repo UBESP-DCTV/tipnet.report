@@ -43,7 +43,7 @@ descriptivesReport <- function(id, data) {
     })
 
     data_to_use <- reactive({
-      descriptives_dataToUse(data, completed())
+      descriptives_dataToUse(data(), completed())
     })
 
 

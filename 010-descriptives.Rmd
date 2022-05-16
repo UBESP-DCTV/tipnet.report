@@ -56,14 +56,13 @@ descriptivesReportUI("d_gender")
 ```
 
 ```{r, context = "server", eval=!params$export}
-descriptivesReport("d_gender", data = full_records)
+descriptivesReport("d_gender", data = data_ranged[["full_filtered"]])
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
-descriptivesReportStatic(full_records,
+descriptivesReportStatic(data_ranged[["full_filtered"]](),
       completed = params[["d_gender_completed"]])
 ```
-
 
 
 
