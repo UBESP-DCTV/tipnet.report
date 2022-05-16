@@ -23,3 +23,34 @@ test_that("age_to_class works", {
   expect_equal(age_classes, res)
 
 })
+
+
+test_that("factorize_centers works", {
+  # setup
+  centers_ids <- c(1, 3, 4)
+
+  # evaluation
+  centers_factorized_nocity <- factorize_centers(centers_ids, FALSE)
+  centers_factorized_city <- factorize_centers(centers_ids)
+
+
+  no_city_res <- factor(
+    c(1, 3, 4),
+    levels = centers_table[["id"]],
+    labels = centers_table[["center"]]
+  )
+  city_res <- factor(
+    c(1, 3, 4),
+    levels = centers_table[["id"]],
+    labels = stringr::str_c(
+      centers_table[["center"]],
+      " (", centers_table[["center_city"]], ")"
+    ) |>
+      stringr::str_trim()
+  )
+
+  # test
+  expect_equal(centers_factorized_nocity, no_city_res)
+  expect_equal(centers_factorized_city, city_res)
+
+})

@@ -1,5 +1,7 @@
 # tipnet.report (development version)
 
+
+* Now centers are displayed including their city in parentheses. (#7)
 * Age classes are now the following: neonato, lattante, eta prescolare,
     eta scolare, adolescente, adulto, [wrong/missing age].
     In order. (#7)
