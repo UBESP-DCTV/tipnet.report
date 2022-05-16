@@ -34,7 +34,7 @@ descriptivesReportUI <- function(id) {
 
 #' @describeIn module-descriptivesReport server function
 #' @export
-descriptivesReport <- function(id, data) {
+descriptivesReport <- function(id, data, what) {
 
   callModule(id = id, function(input, output, session) {
 
@@ -49,7 +49,7 @@ descriptivesReport <- function(id, data) {
 
 
     output$dist <- renderPlot({
-      descriptives_genderPlot(data_to_use())
+      descriptives_genderPlot(data_to_use(), what = what)
     })
 
   })
@@ -61,10 +61,10 @@ descriptivesReport <- function(id, data) {
 
 #' @describeIn module-descriptivesReport static report function
 #' @export
-descriptivesReportStatic <- function(data, completed) {
+descriptivesReportStatic <- function(data, completed, what) {
 
   data_to_use <- quality_dataToUse(data, completed)
-  descriptives_genderPlot(data_to_use) +
+  descriptives_genderPlot(data_to_use, what = what) +
     labs(subtitle = glue::glue("Data used: {completed}."))
 
 }

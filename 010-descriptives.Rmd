@@ -56,12 +56,19 @@ descriptivesReportUI("d_gender")
 ```
 
 ```{r, context = "server", eval=!params$export}
-descriptivesReport("d_gender", data = data_ranged[["full_filtered"]])
+descriptivesReport(
+  "d_gender",
+  data = data_ranged[["full_filtered"]],
+  what = "gender"
+)
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
-descriptivesReportStatic(data_ranged[["full_filtered"]](),
-      completed = params[["d_gender_completed"]])
+descriptivesReportStatic(
+  data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "gender"
+)
 ```
 
 
@@ -72,7 +79,30 @@ descriptivesReportStatic(data_ranged[["full_filtered"]](),
 
 ### Ethnicity
 
-foo
+```{r, eval=!params$export}
+descriptivesReportUI("d_etnicity")
+```
+
+```{r, context = "server", eval=!params$export}
+descriptivesReport(
+  "d_etnicity",
+  data = data_ranged[["full_filtered"]],
+  what = "etnia"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+descriptivesReportStatic(
+  data_ranged[["full_filtered"]](),
+  completed = params[["d_etnicity_completed"]],
+  what = "etnia"
+)
+```
+
+
+
+
+
 
 ### Age
 

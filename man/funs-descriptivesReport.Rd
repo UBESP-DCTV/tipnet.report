@@ -6,12 +6,15 @@
 \alias{descriptives_dataToUse}
 \title{Descriptives module}
 \usage{
-descriptives_genderPlot(.db)
+descriptives_genderPlot(.db, what = c("gender", "etnia"))
 
 descriptives_dataToUse(.db, .which = c("Completed only", "Overall"))
 }
 \arguments{
 \item{.db}{(data frame) data}
+
+\item{what}{(chr, default "gender") variable to describe. One of
+"gender", or "etnicity"}
 }
 \description{
 Descriptives module
