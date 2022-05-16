@@ -80,12 +80,12 @@ descriptivesReportStatic(
 ### Ethnicity
 
 ```{r, eval=!params$export}
-descriptivesReportUI("d_etnicity")
+descriptivesReportUI("d_ethnicity")
 ```
 
 ```{r, context = "server", eval=!params$export}
 descriptivesReport(
-  "d_etnicity",
+  "d_ethnicity",
   data = data_ranged[["full_filtered"]],
   what = "etnia"
 )
@@ -94,7 +94,7 @@ descriptivesReport(
 ```{r, context = "server", eval=params$export, fig.height=11}
 descriptivesReportStatic(
   data_ranged[["full_filtered"]](),
-  completed = params[["d_etnicity_completed"]],
+  completed = params[["d_ethnicity_completed"]],
   what = "etnia"
 )
 ```

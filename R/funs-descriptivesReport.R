@@ -20,10 +20,20 @@ descriptives_Plot <- function(
 ) {
   what <- match.arg(what)
 
+  reported_name <- switch (what,
+    "gender" = "gender",
+    "etnia" = "ethnicity"
+  )
+
   .db %>%
     ggplot(aes(x = .data$center, fill = .data[[what]])) +
     geom_bar(position = "dodge") +
-    coord_flip()
+    coord_flip() +
+    labs(
+      x = "Center",
+      y = "Counts",
+      fill = stringr::str_to_sentence(reported_name)
+    )
 }
 
 
