@@ -106,14 +106,7 @@ join_all_sheets <- function(sheets) {
     dplyr::mutate(
       codpat = as.factor(.data$codpat),
       eta = as.integer(.data[["eta"]]),
-      age_class = factor(
-        dplyr::case_when(
-          .data[["eta"]] >  18 ~ "eta > 18",
-          .data[["eta"]] >  16 ~ "16 < eta <= 18",
-          .data[["eta"]] >=  0 ~ "0 <= eta <= 16",
-          TRUE ~ "[wrong/missing age]"
-        )
-      ),
+      age_class = age_to_class(.data[["eta"]], .data[["eta_giorni"]]),
       complete =
         .data[["complete.anagrafica"]] &
         .data[["complete.accettazione"]] &

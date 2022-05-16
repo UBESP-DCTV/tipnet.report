@@ -35,3 +35,24 @@ data_path <- function(path = here::here()) {
 
   fs::dir_create(path_to_data)
 }
+
+
+
+age_to_class <- function(ages, days) {
+  ordered(
+    dplyr::case_when(
+      ages >   18 ~ "adulto",
+      ages >   12 ~ "adolescente",
+      ages >    6 ~ "eta scolare",
+      ages >    0 ~ "eta prescolare",
+      days >= 366 ~ "[wrong/missing age]",
+      days >   30 ~ "lattante",
+      days >    0 ~ "neonato",
+      TRUE ~ "[wrong/missing age]"
+    ),
+    levels = c(
+      "neonato", "lattante", "eta prescolare", "eta scolare",
+      "adolescente", "adulto", "[wrong/missing age]"
+    )
+  )
+}

@@ -1,7 +1,11 @@
 # tipnet.report (development version)
 
+* Age classes are now the following: neonato, lattante, eta prescolare,
+    eta scolare, adolescente, adulto, [wrong/missing age].
+    In order. (#7)
+* Now plots for gender, ethnicity, and age classes are present. (#7)
 * Now date range for report can be selected by calendar instead of
-  slider. (issue #7)
+  slider. (#7)
 
 # tipnet.report 0.0.1
 
