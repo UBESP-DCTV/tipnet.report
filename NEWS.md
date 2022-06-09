@@ -1,6 +1,7 @@
 # tipnet.report (development version)
 
-
+* Now centers are displayed in the table reporting outliers (in
+    particular when more than one center is selected) (#7)
 * Now centers are displayed including their city in parentheses. (#7)
 * Age classes are now the following: neonato, lattante, eta prescolare,
     eta scolare, adolescente, adulto, [wrong/missing age].

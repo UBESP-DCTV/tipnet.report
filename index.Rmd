@@ -95,8 +95,8 @@ is_to_update <- !fs::file_exists(last_file) ||
   )
 
 if (
-  getOption("tipnet.force_update") ||
-  is_to_update
+  FALSE && (getOption("tipnet.force_update") ||
+  is_to_update)
 ) {
   db_update_from_server()
 }

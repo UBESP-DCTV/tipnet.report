@@ -57,7 +57,7 @@ outlierReport <- function(id, data) {
 
     output$out_table <- DT::renderDT(db_to_use(),
       filter = list(position = "top", clear = TRUE),
-      server=FALSE
+      server = FALSE
     )
   })
 }
