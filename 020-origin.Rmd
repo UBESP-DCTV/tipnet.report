@@ -29,15 +29,34 @@ The system allow to distinguish the first from subsequent admissions in the same
 
 
 
-## Planned and Unplunned {.tabset .tabset-dropdown}
+## Planned and Unplanned {.tabset .tabset-dropdown}
 
 ### Overview
+```{r, eval=!params$export}
+originReportUI("o_readmission")
+```
+
+```{r, context = "server", eval=!params$export}
+originReport(
+  "o_readmission",
+  data = data_ranged[["full_filtered"]],
+  what = "ricovero_progr"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "ricovero_progr"
+)
+```
 
 ### Re-admissions
 
-### Distribution by units
+### Distribution by gender
 
-### Distribution by origin
+### Distribution by age group
 
 
 ## Origin and type {.tabset .tabset-dropdown}
@@ -45,8 +64,6 @@ The system allow to distinguish the first from subsequent admissions in the same
 ### Overview
 
 ### Other hospital
-
-### Distribution by units
 
 ### Type
 

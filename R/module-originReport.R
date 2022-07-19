@@ -1,9 +1,11 @@
-#' Descriptives module
+#' Origin module
 #'
 #' General description
 #'
 #' @param id name for the specific instance of the module.
 #' @param data database to use
+#' @param completed (chr) "Completed" or "Not-completed"
+#' @param type (chr) "Total" or "Proportion"
 #'
 #' @importFrom shiny NS callModule reactive req
 #' @importFrom shiny fluidPage fluidRow selectInput textOutput plotOutput
@@ -12,12 +14,13 @@
 #' @importFrom ggplot2 ggplot aes stat_summary facet_wrap coord_flip
 #' @importFrom ggplot2 theme ggtitle xlab ylab element_text
 #'
-#' @name module-descriptivesReport
+#' @name module-originReport
 NULL
 
-#' @describeIn module-descriptivesReport user interface
+
+#' @describeIn module-originReport user interface
 #' @export
-descriptivesReportUI <- function(id) {
+originReportUI <- function(id) {
   ns <- NS(id)
 
   fluidPage(
@@ -28,13 +31,17 @@ descriptivesReportUI <- function(id) {
                             selected = "Completed only"
       ))
     ),
-    fluidRow(plotOutput(ns("dist"), height = "800px"))
+    fluidRow(plotOutput(ns("dist"), height = "800px")),
+    fluidRow(
+      column(12, DT::DTOutput(ns("tbl")))
+    )
   )
 }
 
-#' @describeIn module-descriptivesReport server function
+
+#' @describeIn module-originReport server function
 #' @export
-descriptivesReport <- function(id, data, what) {
+originReport <- function(id, data, what) {
 
   callModule(id = id, function(input, output, session) {
 
@@ -43,26 +50,27 @@ descriptivesReport <- function(id, data, what) {
     })
 
     data_to_use <- reactive({
-      descriptives_dataToUse(data(), completed())
+      origin_dataToUse(data(), completed())
     })
 
     output$dist <- renderPlot({
-      descriptives_Plot(data_to_use(), what = what)
+      origin_Plot(data_to_use(), what = what)
     })
+
+    output$tbl <- DT::renderDT(
+      origin_dataTbl(data_to_use(), what = what),
+      filter = list(position = "top", clear = TRUE),
+      server = FALSE
+    )
 
   })
 }
 
 
-
-
-
-#' @describeIn module-descriptivesReport static report function
+#' @describeIn module-originReport static report function
 #' @export
-descriptivesReportStatic <- function(data, completed, what) {
-
+originReportStatic <- function(data, completed, what) {
   data_to_use <- quality_dataToUse(data, completed)
-  descriptives_Plot(data_to_use, what = what) +
+  origin_Plot(data_to_use, what = what) +
     labs(subtitle = glue::glue("Data used: {completed}."))
-
 }

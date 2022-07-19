@@ -6,6 +6,8 @@
 #'
 #' @name funs-descriptivesReport
 NULL
+
+
 #'
 #' @describeIn funs-descriptivesReport plot
 #' @export
@@ -26,15 +28,7 @@ descriptives_Plot <- function(
     "age_class" = "age class"
   )
 
-  .db %>%
-    ggplot(aes(x = .data$center, fill = .data[[what]])) +
-    geom_bar(position = "dodge") +
-    coord_flip() +
-    labs(
-      x = "Center",
-      y = "Counts",
-      fill = stringr::str_to_sentence(reported_name)
-    )
+  centervar_countstats(what, reported_name)[["gg"]]
 }
 
 
