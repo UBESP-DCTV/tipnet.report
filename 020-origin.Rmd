@@ -2,12 +2,14 @@
 
 ## Overview {-}
 
-The system allow to distinguish the first from subsequent admissions in the same unit. Admission was coded as mode, type, origin
+The system allow to distinguish the first from subsequent admissions in the same unit. Admission was coded as mode, type, origin, and reasons. All the metrics can be visualized stratified by gender and age class.
 
 **Mode**:
 
 - planned (defined as admission that might be postponed for 24 hours)
 - unplanned
+- re-admission
+
 
 **Type**:
 
@@ -29,16 +31,16 @@ The system allow to distinguish the first from subsequent admissions in the same
 
 
 
-## Planned and Unplanned {.tabset .tabset-dropdown}
+## Mode  {.tabset .tabset-dropdown}
 
-### Overview
+### Planned and Unplanned
 ```{r, eval=!params$export}
-originReportUI("o_readmission")
+originReportUI("m_planned")
 ```
 
 ```{r, context = "server", eval=!params$export}
 originReport(
-  "o_readmission",
+  "m_planned",
   data = data_ranged[["full_filtered"]],
   what = "ricovero_progr"
 )
@@ -54,10 +56,25 @@ originReportStatic(
 
 ### Re-admissions
 
-### Distribution by gender
+```{r, eval=!params$export}
+originReportUI("m_admission")
+```
 
-### Distribution by age group
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_admission",
+  data = data_ranged[["full_filtered"]],
+  what = "redcap_repeat_instance"
+)
+```
 
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "redcap_repeat_instance"
+)
+```
 
 ## Origin and type {.tabset .tabset-dropdown}
 

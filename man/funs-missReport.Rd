@@ -23,10 +23,10 @@ functions for missing-data section
 }
 \section{Functions}{
 \itemize{
-\item \code{miss_dataToUse}: data to use
+\item \code{miss_dataToUse()}: data to use
 
-\item \code{miss_dataPlot}: plot
+\item \code{miss_dataPlot()}: plot
 
-\item \code{miss_dataTbl}: table
+\item \code{miss_dataTbl()}: table
+
 }}
-

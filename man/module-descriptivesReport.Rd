@@ -23,10 +23,10 @@ General description
 }
 \section{Functions}{
 \itemize{
-\item \code{descriptivesReportUI}: user interface
+\item \code{descriptivesReportUI()}: user interface
 
-\item \code{descriptivesReport}: server function
+\item \code{descriptivesReport()}: server function
 
-\item \code{descriptivesReportStatic}: static report function
+\item \code{descriptivesReportStatic()}: static report function
+
 }}
-

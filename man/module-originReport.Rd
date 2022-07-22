@@ -27,10 +27,10 @@ General description
 }
 \section{Functions}{
 \itemize{
-\item \code{originReportUI}: user interface
+\item \code{originReportUI()}: user interface
 
-\item \code{originReport}: server function
+\item \code{originReport()}: server function
 
-\item \code{originReportStatic}: static report function
+\item \code{originReportStatic()}: static report function
+
 }}
-

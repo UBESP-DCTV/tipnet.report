@@ -6,7 +6,12 @@
 \alias{origin_dataToUse}
 \title{Origin module}
 \usage{
-origin_Plot(.db, what = c("ricovero_progr"))
+origin_Plot(
+  .db,
+  what = c("ricovero_progr", "redcap_repeat_instance"),
+  by_ageclass = FALSE,
+  by_gender = FALSE
+)
 
 origin_dataToUse(.db, .which = c("Completed only", "Overall"))
 }
@@ -21,11 +26,11 @@ Origin module
 }
 \section{Functions}{
 \itemize{
-\item \code{origin_Plot}: plot
+\item \code{origin_Plot()}: plot
 
-\item \code{origin_dataToUse}: data
+\item \code{origin_dataToUse()}: data
+
 }}
-
 \examples{
 
 origin_Plot(full_records) # default what = "gender"

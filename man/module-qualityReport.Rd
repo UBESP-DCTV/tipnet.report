@@ -27,10 +27,10 @@ General description
 }
 \section{Functions}{
 \itemize{
-\item \code{qualityReportUI}: user interface
+\item \code{qualityReportUI()}: user interface
 
-\item \code{qualityReport}: server function
+\item \code{qualityReport()}: server function
 
-\item \code{qualityReportStatic}: static report function
+\item \code{qualityReportStatic()}: static report function
+
 }}
-

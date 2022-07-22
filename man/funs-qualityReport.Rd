@@ -38,16 +38,16 @@ Quality module
 }
 \section{Functions}{
 \itemize{
-\item \code{quality_dataToUse}: data to use
+\item \code{quality_dataToUse()}: data to use
 
-\item \code{quality_summaryFun}: summary function
+\item \code{quality_summaryFun()}: summary function
 
-\item \code{quality_areOutAge}: check for out of range
+\item \code{quality_areOutAge()}: check for out of range
 
-\item \code{quality_statGlobal}: message for global statistics
+\item \code{quality_statGlobal()}: message for global statistics
 
-\item \code{quality_outOfAge}: message for out of age
+\item \code{quality_outOfAge()}: message for out of age
 
-\item \code{quality_completeDataPlot}: plot
+\item \code{quality_completeDataPlot()}: plot
+
 }}
-

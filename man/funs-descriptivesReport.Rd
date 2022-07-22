@@ -21,11 +21,11 @@ Descriptives module
 }
 \section{Functions}{
 \itemize{
-\item \code{descriptives_Plot}: plot
+\item \code{descriptives_Plot()}: plot
 
-\item \code{descriptives_dataToUse}: data
+\item \code{descriptives_dataToUse()}: data
+
 }}
-
 \examples{
 
 descriptives_Plot(full_records) # default what = "gender"
