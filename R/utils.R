@@ -21,10 +21,12 @@ skip_if_no_auth <- function() {
 #' @export
 data_path <- function(path = here::here()) {
   current_folder <- basename(normalizePath(path))
-  path_to_data <- switch(current_folder,
+  path_to_data <- switch(
+    current_folder,
     "TIPNet_test"   = fs::path(path, "..", "..", "tipnet-data"),
+    "tipnet-report" = fs::path(path, "..", "..", "tipnet-data"),
     "TIPNet"        = fs::path(path, "..", "..", "tipnet-data"),
-    "tipnet.report"  = fs::path(path, "..", "tipnet-data"),
+    "tipnet.report" = fs::path(path, "..", "tipnet-data"),
     "tipnet.report" = fs::path(path, "..", "tipnet-data"),
     "report"        = data_path(fs::path(path, "..", "..", "tipnet-data")),
     "static"        = data_path(fs::path(path, "..", "..", "tipnet-data")),
