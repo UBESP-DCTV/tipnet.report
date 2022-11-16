@@ -52,7 +52,7 @@ foo
 ### Gender
 
 ```{r, eval=!params$export}
-descriptivesReportUI("d_gender")
+descriptivesReportUI("d_gender", what = "gender")
 ```
 
 ```{r, context = "server", eval=!params$export}
@@ -80,7 +80,7 @@ descriptivesReportStatic(
 ### Ethnicity
 
 ```{r, eval=!params$export}
-descriptivesReportUI("d_ethnicity")
+descriptivesReportUI("d_ethnicity", what = "etnia")
 ```
 
 ```{r, context = "server", eval=!params$export}
@@ -107,7 +107,7 @@ descriptivesReportStatic(
 ### Age
 
 ```{r, eval=!params$export}
-descriptivesReportUI("d_ageclass")
+descriptivesReportUI("d_ageclass", what = "age_class")
 ```
 
 ```{r, context = "server", eval=!params$export}

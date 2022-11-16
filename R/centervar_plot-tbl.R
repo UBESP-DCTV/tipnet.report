@@ -39,7 +39,9 @@ centervar_plot <- function(.db, what, reported_name) {
 #' @export
 centervar_tbl <- function(.db, what) {
 
-  if (what == "redcap_repeat_instance") {
+  if (any(what == "redcap_repeat_instance")) {
+    checkmate::assert_string(what)
+
     .db |>
       dplyr::group_by(.data$center, .add = TRUE) |>
       dplyr::summarise(
@@ -50,7 +52,10 @@ centervar_tbl <- function(.db, what) {
   } else {
     .db |>
       transform_centervar(what = what) |>
-      dplyr::group_by(.data$center, .data[[what]], .add = TRUE) |>
+      dplyr::group_by(
+        across(c(.data$center, dplyr::all_of(what))),
+        .add = TRUE
+      ) |>
       dplyr::summarise(Somma = dplyr::n())
   }
 
@@ -58,13 +63,14 @@ centervar_tbl <- function(.db, what) {
 
 
 transform_centervar <- function(x, what) {
-  if (what == "redcap_repeat_instance") {
+  if (any(what == "redcap_repeat_instance")) {
+    checkmate::assert_string(what)
     x |>
       dplyr::filter(.data[[what]] != 1)
   } else {
     x |>
       dplyr::mutate(
-        dplyr::across(.data[[what]], forcats::fct_explicit_na)
+        dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
       )
   }
 }

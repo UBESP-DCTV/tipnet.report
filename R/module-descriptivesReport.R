@@ -17,7 +17,7 @@ NULL
 
 #' @describeIn module-descriptivesReport user interface
 #' @export
-descriptivesReportUI <- function(id) {
+descriptivesReportUI <- function(id, what = NULL) {
   ns <- NS(id)
 
   fluidPage(
@@ -29,9 +29,15 @@ descriptivesReportUI <- function(id) {
       ))
     ),
     fluidRow(plotOutput(ns("dist"), height = "800px")),
-    fluidRow(
-      column(12, DT::DTOutput(ns("tbl")))
-    )
+
+    fluidRow(column(12,
+      checkboxGroupInput(ns("strat"),
+                  label = "Additional strata for the table.",
+                  choices = c("gender", "etnia", "age"),
+                  selected = stringr::str_remove(what, "_class$")
+      )
+    )),
+    fluidRow(column(12, DT::DTOutput(ns("tbl"))))
   )
 }
 
@@ -45,6 +51,10 @@ descriptivesReport <- function(id, data, what) {
       req(input$completed)
     })
 
+    strat <- reactive({
+      req(input$strat)
+    })
+
     data_to_use <- reactive({
       descriptives_dataToUse(data(), completed())
     })
@@ -55,7 +65,7 @@ descriptivesReport <- function(id, data, what) {
 
     output$tbl <- DT::renderDT(
       data_to_use() |>
-        descriptives_dataTbl(what = what),
+        descriptives_dataTbl(strat = strat()),
 
       filter = list(position = "top", clear = TRUE),
       server = FALSE

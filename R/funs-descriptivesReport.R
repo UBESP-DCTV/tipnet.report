@@ -55,12 +55,14 @@ descriptives_dataToUse <- function(
 }
 
 
-descriptives_dataTbl <- function(
-    .db,
-    what = c("gender", "etnia", "age_class")
-) {
-  what <- match.arg(what)
+descriptives_dataTbl <- function(.db, strat) {
+  checkmate::assert_subset(
+    strat,
+    c("gender", "etnia", "age"),
+    empty.ok = FALSE
+  )
 
-  .db |>
-    centervar_tbl(what)
+  strat <- stringr::str_replace(strat, "age", "age_class")
+
+  centervar_tbl(.db, strat)
 }
