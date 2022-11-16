@@ -9,8 +9,8 @@
 origin_Plot(
   .db,
   what = c("ricovero_progr", "redcap_repeat_instance"),
-  by_ageclass = FALSE,
-  by_gender = FALSE
+  by_gender = FALSE,
+  by_ageclass = FALSE
 )
 
 origin_dataToUse(.db, .which = c("Completed only", "Overall"))

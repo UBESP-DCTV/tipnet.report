@@ -28,7 +28,7 @@ descriptives_Plot <- function(
     "age_class" = "age class"
   )
 
-  centervar_countstats(what, reported_name)[["gg"]]
+  centervar_plot(.db, what, reported_name)
 }
 
 
@@ -52,4 +52,15 @@ descriptives_dataToUse <- function(
     )
   }
   .db
+}
+
+
+descriptives_dataTbl <- function(
+    .db,
+    what = c("gender", "etnia", "age_class")
+) {
+  what <- match.arg(what)
+
+  .db |>
+    centervar_tbl(what)
 }

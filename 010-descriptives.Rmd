@@ -42,7 +42,7 @@ foo
 
 
 
-## Admissions {.tabset .tabset-dropdown}
+## Demographics {.tabset .tabset-dropdown}
 
 foo
 
@@ -125,27 +125,3 @@ descriptivesReportStatic(
   what = "age_class"
 )
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Demographics {.tabset .tabset-dropdown}
-
-foo

@@ -28,7 +28,10 @@ descriptivesReportUI <- function(id) {
                             selected = "Completed only"
       ))
     ),
-    fluidRow(plotOutput(ns("dist"), height = "800px"))
+    fluidRow(plotOutput(ns("dist"), height = "800px")),
+    fluidRow(
+      column(12, DT::DTOutput(ns("tbl")))
+    )
   )
 }
 
@@ -49,6 +52,14 @@ descriptivesReport <- function(id, data, what) {
     output$dist <- renderPlot({
       descriptives_Plot(data_to_use(), what = what)
     })
+
+    output$tbl <- DT::renderDT(
+      data_to_use() |>
+        descriptives_dataTbl(what = what),
+
+      filter = list(position = "top", clear = TRUE),
+      server = FALSE
+    )
 
   })
 }
