@@ -7,7 +7,7 @@
 \alias{descriptivesReportStatic}
 \title{Descriptives module}
 \usage{
-descriptivesReportUI(id)
+descriptivesReportUI(id, what = NULL)
 
 descriptivesReport(id, data, what)
 

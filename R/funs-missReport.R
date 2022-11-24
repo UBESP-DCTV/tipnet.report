@@ -7,8 +7,21 @@ NULL
 
 #' @describeIn funs-missReport data to use
 #' @export
-miss_dataToUse <- function(.db) {
+miss_dataToUse <- function(
+    .db,
+    sheets = c(
+      "anagrafica", "accettazione", "degenza", "dimissione",
+      "infezione", "ingresso", "punteggio_di_aristotle",
+      "pelod_scheda_facoltativa", "pim", "procedure_di_ventilazione"
+    )
+) {
+
+  col_to_retain <- purrr::map(sheets, ~names(get(.x))) |>
+    purrr::reduce(union) |>
+    c("complete")
+
   .db %>%
+    dplyr::select(all_of(col_to_retain)) %>%
     dplyr::group_by(.data$center) %>%
     dplyr::summarise_all(~mean(is.na(.))) %>%
     tidyr::pivot_longer(
@@ -36,7 +49,7 @@ miss_dataPlot <- function(.db) {
     ) +
     ylab("Proportions") +
     xlab("") +
-    coord_flip(ylim = c(0.5, 1)) +
+    coord_flip(ylim = c(min(.db$prop) / 1.5, min(1, max(.db$prop) * 1.5))) +
     ggtitle("Distributions of missigness by center")
 }
 
@@ -44,7 +57,7 @@ miss_dataPlot <- function(.db) {
 #' @describeIn funs-missReport table
 #' @export
 miss_dataTbl <- function(.db, .center) {
-  db <- if (length(.center) == 0 || !.center %in% .db[["center"]]) {
+  db <- if (length(.center) == 0 || !any(.center %in% .db[["center"]])) {
     .db
   } else {
     dplyr::filter(.db, .data$center %in% .center)

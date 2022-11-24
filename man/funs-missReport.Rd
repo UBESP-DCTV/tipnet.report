@@ -7,7 +7,7 @@
 \alias{miss_dataTbl}
 \title{functions for missing-data section}
 \usage{
-miss_dataToUse(.db)
+miss_dataToUse(.db, sheets = NULL)
 
 miss_dataPlot(.db)
 

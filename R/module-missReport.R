@@ -23,9 +23,25 @@ NULL
 missReportUI <- function(id, data) {
   ns <- NS(id)
 
+  all_sheets <- c(
+    "anagrafica", "accettazione", "degenza", "dimissione",
+    "infezione", "ingresso", "punteggio_di_aristotle",
+    "pelod_scheda_facoltativa", "pim", "procedure_di_ventilazione"
+  ) %>%
+    purrr::set_names(str_to_sentence(str_replace_all(., "_", " ")))
+
   fluidPage(
     fluidRow(
       column(12, textOutput(ns("txt")))
+    ),
+    fluidRow(
+      column(12, checkboxGroupInput(
+        ns("active_sheets"),
+        label = "Select REDCap sheets to consider",
+        choices = all_sheets,
+        selected = all_sheets,
+        inline = TRUE
+      ))
     ),
     fluidRow(
       column(12, plotOutput(ns("miss_plot")))
@@ -56,9 +72,8 @@ missReport <- function(id, data) {
       n_missing() > 0
     })
 
-
     data_to_use <- reactive({
-      miss_dataToUse(data())
+      miss_dataToUse(data(), input$active_sheets)
     })
 
     output$miss_plot <- renderPlot(
