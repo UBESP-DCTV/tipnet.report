@@ -42,7 +42,7 @@ tidy_extract <- function(data, type = c("data", "meta")) {
         fields = .data$redcap_event_name
       ) %>%
       dplyr::mutate(center = factorize_centers(.data$center)) %>%
-      dplyr::filter(center %in% c("<MISSING>", "", "Prova")) %>%
+      # dplyr::filter(center %in% c("<MISSING>", "", "Prova")) %>%
       dplyr::mutate(center = forcats::fct_drop(.data$center))
   }
 
