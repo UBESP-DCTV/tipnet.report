@@ -35,7 +35,9 @@ centers_table <- tibble::tribble(
   "33", "Ospedale Pediatrico Giovanni XXIII",                "Bari",
   "Prova", "Prova",                                         "Prova"
 ) %>%
-  dplyr::mutate_if(is.character, as.factor)
+  dplyr::mutate(
+    dplyr::across(dplyr::all_of(c("center", "center_city")), as.factor)
+  )
 
 old_ids <- readr::read_csv(
   here::here("data-raw/old_ids.csv"),
