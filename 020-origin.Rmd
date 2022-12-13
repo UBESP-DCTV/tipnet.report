@@ -158,7 +158,26 @@ originReportStatic(
   what = "tipo_chir"
 )
 ```
+## Priority level of admission  {.tabset .tabset-dropdown}
+```{r, eval=!params$export}
+originReportUI("m_priorita")
+```
 
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_priorita",
+  data = data_ranged[["full_filtered"]],
+  what = "priorita"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "priorita"
+)
+```
 ## Reasons {.tabset .tabset-dropdown}
 
 ### Post-operative PICUs admissions
