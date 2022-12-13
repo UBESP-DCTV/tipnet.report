@@ -18,12 +18,14 @@ NULL
 #' admission_Plot(full_records, "etnia")
 admission_Plot <- function(
     .db,
-    what = c("mal_cronica")
+    what = c("mal_cronica","popc","insuff_organo7")
 ) {
   what <- match.arg(what)
 
   reported_name <- switch(what,
-                          "mal_cronica" = "malattia cronica"
+                          "mal_cronica" = "malattia cronica",
+                          "popc" = "POPC",
+                          "insuff_organo7" = "Insufficienze d'organo"
   )
 
   centervar_plot(.db, what, reported_name)
@@ -55,7 +57,7 @@ admission_dataToUse <- function(
 
 admission_dataTbl <- function(
     .db,
-    what = c("mal_cronica"),
+    what = c("mal_cronica","popc","insuff_organo7"),
     by_gender = FALSE,
     by_ageclass = FALSE
 ) {

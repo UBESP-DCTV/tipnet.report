@@ -1,4 +1,4 @@
-# Chronic Complex Conditions (CCC) on Admissions {#ccc .tabset .tabset-fade .tabset-pills}
+# PICU Admissions {#ccc .tabset .tabset-fade .tabset-pills}
 
 ## Overview {-}
 
@@ -14,7 +14,28 @@ Moreover, the system allows to record the specific chronic disease
 
 ## Comorbidity on admission {.tabset .tabset-dropdown}
 
-## Macro-diagnosis {.tabset .tabset-dropdown}
+### Comorbidity on admission Yes/No
+```{r, eval=!params$export}
+admissionReportUI("m_mal_cronica")
+```
+
+```{r, context = "server", eval=!params$export}
+admissionReport(
+  "m_mal_cronica",
+  data = data_ranged[["full_filtered"]],
+  what = "mal_cronica"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+admissionReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_mal_cronica_completed"]],
+  what = "mal_cronica"
+)
+```
+
+### Macro-diagnosis
 
 ## CCC {.tabset .tabset-dropdown}
 
@@ -23,3 +44,57 @@ Moreover, the system allows to record the specific chronic disease
 ### Type
 
 ### Age
+
+## POPC {.tabset .tabset-dropdown}
+```{r, eval=!params$export}
+admissionReportUI("m_popc")
+```
+
+```{r, context = "server", eval=!params$export}
+admissionReport(
+  "m_popc",
+  data = data_ranged[["full_filtered"]],
+  what = "popc"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+admissionReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_popc_completed"]],
+  what = "popc"
+)
+```
+## Insufficienze d'organo  {.tabset .tabset-dropdown}
+
+### Insufficienze d'organo Yes/No
+```{r, eval=!params$export}
+admissionReportUI("m_insuff_organo7")
+```
+
+```{r, context = "server", eval=!params$export}
+admissionReport(
+  "m_insuff_organo7",
+  data = data_ranged[["full_filtered"]],
+  what = "insuff_organo7"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+admissionReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_insuff_organo7_completed"]],
+  what = "insuff_organo7"
+)
+```
+### Macro-diagnosis
+
+## PIM2 and PIM3 {.tabset .tabset-dropdown}
+
+### Severity
+
+### Age
+
+### Year
+
+### Type
