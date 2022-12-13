@@ -18,7 +18,9 @@ NULL
 #' origin_Plot(full_records, "etnia")
 origin_Plot <- function(
     .db,
-    what = c("ricovero_progr", "redcap_repeat_instance","provenienza","altro_osp","tipologia2","tipo_chir","priorita")
+    what = c("ricovero_progr", "redcap_repeat_instance","provenienza",
+             "altro_osp","tipologia2","tipo_chir","priorita",
+             "motivo_post_oper","motivo_ricovero2","motivo_ric_trauma2")
 
 ) {
   what <- match.arg(what)
@@ -31,7 +33,11 @@ origin_Plot <- function(
       "altro_osp" = "Altro ospedale",
       "tipologia2" = "tipo",
       "tipo_chr" = "Tipo chirurgia",
-      "priorita" = "Priorità"
+      "priorita" = "Priorità",
+      "motivo_post_oper" = "post chirurgia",
+      "motivo_ricovero2"  = "ric. medico",
+      "motivo_ric_trauma" = "ric. post-trauma"
+
     )
 
   p <- .db |>
@@ -46,7 +52,9 @@ origin_Plot <- function(
 
 origin_dataTbl <- function(
     .db,
-    what = c("ricovero_progr", "redcap_repeat_instance","provenienza","altro_osp","tipologia2","tipo_chir","priorita"),
+    what = c("ricovero_progr", "redcap_repeat_instance","provenienza",
+             "altro_osp","tipologia2","tipo_chir","priorita",
+             "motivo_post_oper","motivo_ricovero2","motivo_ric_trauma2"),
     by_gender = FALSE,
     by_ageclass = FALSE
 ) {

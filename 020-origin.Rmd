@@ -181,11 +181,66 @@ originReportStatic(
 ## Reasons {.tabset .tabset-dropdown}
 
 ### Post-operative PICUs admissions
+```{r, eval=!params$export}
+originReportUI("m_motivo_post_oper")
+```
 
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_motivo_post_oper",
+  data = data_ranged[["full_filtered"]],
+  what = "motivo_post_oper"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "motivo_post_oper"
+)
+```
 ### Medical PICUs admissions
+```{r, eval=!params$export}
+originReportUI("m_motivo_ricovero")
+```
 
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_motivo_ricovero",
+  data = data_ranged[["full_filtered"]],
+  what = "motivo_ricovero2"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "motivo_ricovero2"
+)
+```
 ### Trauma
 
 ### brain trauma
 
 ### PICUs admission after injuries
+```{r, eval=!params$export}
+originReportUI("m_motivo_ric_trauma")
+```
+
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_motivo_ric_trauma",
+  data = data_ranged[["full_filtered"]],
+  what = "motivo_ric_trauma2"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "motivo_ric_trauma2"
+)
+```

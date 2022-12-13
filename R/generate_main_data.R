@@ -115,6 +115,9 @@ join_all_sheets <- function(sheets) {
 
         )
       ),
+   motivo_ricovero2  =  forcats::fct_recode(motivo_ricovero,"alterato sensorio"="alterato sensorio / crisi convulsive","disordini metabolici"="disordini metabolici / disidratazione","insufficienza cardiocircolatoria" = "insufficienza cardiocircolatoria (no shock settico)",
+                 "diagnosi sepsi correlata" = "diagnosi sepsi correlata (di natura diversa da respiro cuore snc)","shock distributivo"="shock distributivo (settico)","arresto"="arresto cardiocircolatorio","programmato"="programmato per procedure invasive"),
+   motivo_ric_trauma2  =  forcats::fct_recode(motivo_ric_trauma,"insufficienza cardiovascolare"="insufficienza cardiovascolare (shock emorragico)"),
       age_class = age_to_class(.data[["eta"]], .data[["eta_giorni"]]),
       complete =
         .data[["complete.anagrafica"]] &
@@ -122,6 +125,8 @@ join_all_sheets <- function(sheets) {
         .data[["complete.pim"]] &
         .data[["complete.dimissione"]]
     )
+
+
 }
 
 
