@@ -1,0 +1,76 @@
+#' picu admissions module
+#'
+#' @param .db (data frame) data
+#' @param what (chr, default "gender") variable to describe. One of
+#'   "gender", or "etnicity"
+#'
+#' @name funs-admissionReport
+NULL
+
+
+#'
+#' @describeIn funs-admissionReport plot
+#' @export
+#' @examples
+#'
+#' admission_Plot(full_records) # default what = "mal_cronica"
+#' admission_Plot(full_records, "mal_cronica") # same as before
+#' admission_Plot(full_records, "etnia")
+admission_Plot <- function(
+    .db,
+    what = c("mal_cronica")
+) {
+  what <- match.arg(what)
+
+  reported_name <- switch(what,
+                          "mal_cronica" = "malattia cronica"
+  )
+
+  centervar_plot(.db, what, reported_name)
+}
+
+
+
+#' @describeIn funs-admissionReport data
+#' @export
+#' @examples
+#'
+#' admission_dataToUse(full_records, "Completed only")
+#' admission_dataToUse(full_records, "overall")
+admission_dataToUse <- function(
+    .db,
+    .which = c("Completed only", "Overall")
+) {
+
+  .which <- match.arg(.which)
+
+  if (.which == "Completed only") {
+    return(
+      filter(.db, .data$complete)
+    )
+  }
+  .db
+}
+
+
+admission_dataTbl <- function(
+    .db,
+    what = c("mal_cronica"),
+    by_gender = FALSE,
+    by_ageclass = FALSE
+) {
+  what <- match.arg(what)
+
+  if (by_gender) {
+    .db <- .db |>
+      group_by(.data[["gender"]])
+  }
+
+  if (by_ageclass) {
+    .db <- .db |>
+      group_by(.data[["age_class"]], .add = TRUE)
+  }
+
+  .db |>
+    centervar_tbl(what)
+}
