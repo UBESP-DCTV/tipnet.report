@@ -18,9 +18,8 @@ NULL
 #' origin_Plot(full_records, "etnia")
 origin_Plot <- function(
     .db,
-    what = c("ricovero_progr", "redcap_repeat_instance"),
-    by_gender = FALSE,
-    by_ageclass = FALSE
+    what = c("ricovero_progr", "redcap_repeat_instance","provenienza","altro_osp","tipologia2","tipo_chir")
+
 ) {
   what <- match.arg(what)
 
@@ -33,15 +32,8 @@ origin_Plot <- function(
   p <- .db |>
     centervar_plot(what, reported_name)
 
-  if (by_gender) {
-    p <- p +
-      aes(colour = gender)
-  }
 
-  if (by_ageclass) {
-    p <- p +
-     facet_wrap(~ age_class, nrow = 3)
-  }
+
 
   p
 }
@@ -49,7 +41,7 @@ origin_Plot <- function(
 
 origin_dataTbl <- function(
     .db,
-    what = c("ricovero_progr", "redcap_repeat_instance"),
+    what = c("ricovero_progr", "redcap_repeat_instance","provenienza","altro_osp","tipologia2","tipo_chir"),
     by_gender = FALSE,
     by_ageclass = FALSE
 ) {

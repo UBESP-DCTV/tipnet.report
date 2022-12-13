@@ -79,13 +79,85 @@ originReportStatic(
 ## Origin and type {.tabset .tabset-dropdown}
 
 ### Overview
+```{r, eval=!params$export}
+originReportUI("m_provenienza")
+```
 
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_provenienza",
+  data = data_ranged[["full_filtered"]],
+  what = "provenienza"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "provenienza"
+)
+```
 ### Other hospital
+```{r, eval=!params$export}
+originReportUI("m_altro_osp")
+```
 
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_altro_osp",
+  data = data_ranged[["full_filtered"]],
+  what = "altro_osp"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "altro_osp"
+)
+```
 ### Type
+```{r, eval=!params$export}
+originReportUI("m_tipologia")
+```
 
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_tipologia",
+  data = data_ranged[["full_filtered"]],
+  what = "tipologia2"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "tipologia2"
+)
+```
 ### Type of surgery
+```{r, eval=!params$export}
+originReportUI("m_tipo_chir")
+```
 
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_tipo_chir",
+  data = data_ranged[["full_filtered"]],
+  what = "tipo_chir"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "tipo_chir"
+)
+```
 
 ## Reasons {.tabset .tabset-dropdown}
 

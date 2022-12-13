@@ -106,6 +106,15 @@ join_all_sheets <- function(sheets) {
     dplyr::mutate(
       codpat = as.factor(.data$codpat),
       eta = as.integer(.data[["eta"]]),
+      tipologia2=factor(
+        dplyr::case_when(
+          .data[["tipologia"]]=="medico"~ "Medico",
+          .data[["tipologia"]]=="chirurgico"~ "Chirurgico",
+          .data[["tipologia"]]=="trauma, ustione, intossicazione, annegamento, avvelenamento, folgorazione, inalazione di fumo, ipotermia, soffocamento"~ "Trauma",
+          TRUE ~ "[missing tipologia]"
+
+        )
+      ),
       age_class = age_to_class(.data[["eta"]], .data[["eta_giorni"]]),
       complete =
         .data[["complete.anagrafica"]] &

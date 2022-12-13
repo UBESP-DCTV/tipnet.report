@@ -31,6 +31,7 @@ originReportUI <- function(id) {
                             selected = "Completed only"
       ))
     ),
+    fluidRow(plotOutput(ns("dist"), height = "800px")),
     fluidRow(
       column(5, checkboxInput(ns("byAgeclass"),
                               label   = "Per età"
@@ -39,7 +40,6 @@ originReportUI <- function(id) {
                               label   = "Per genere"
       ))
     ),
-    fluidRow(plotOutput(ns("dist"), height = "800px")),
     fluidRow(
       column(12, DT::DTOutput(ns("tbl")))
     )
@@ -64,9 +64,8 @@ originReport <- function(id, data, what) {
     output$dist <- renderPlot({
       data_to_use() |>
         origin_Plot(
-          what = what,
-          by_ageclass = input[["byAgeclass"]],
-          by_gender = input[["byGender"]]
+          what = what
+
           )
     })
 
