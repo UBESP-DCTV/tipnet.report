@@ -203,14 +203,13 @@ data_ranged <- yearRange("year_range")
 ```{r, child = "030-ccc.Rmd"}
 ```
 
-```{r, child = "040-severity.Rmd"}
-```
-
-```{r, child = "045-inhospital.Rmd"}
+```{r, child = "035-focus.Rmd"}
 ```
 
 ```{r, child = "050-los.Rmd"}
 ```
+
+
 
 
 

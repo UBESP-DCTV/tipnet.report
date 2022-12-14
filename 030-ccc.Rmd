@@ -91,6 +91,10 @@ admissionReportStatic(
 
 ## PIM2 and PIM3 {.tabset .tabset-dropdown}
 
+The registry adopted, since the beginning, the Pediatric Index of Mortality (PIM) score. The PIM2 variables are
+recorded and the risk of death is automatically calculated by the system. In 2013, after a revision of the coefficient of the variables, the new PIM3 score was published. We updated the PIM page with the new formula and since 2014 we calculate both the 2 and 3 version. Moreover, retrospectically, we collected all the new variables and through the new coefficients we derived the PIM3 score for all the patient in the registry.
+
+
 ### Severity
 
 ### Age
