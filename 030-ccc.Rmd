@@ -36,6 +36,23 @@ admissionReportStatic(
 ```
 
 ### Macro-diagnosis
+```{r, eval=!params$export}
+admissionReportUI1("m_mal_cronica1")
+```
+
+```{r, context = "server", eval=!params$export}
+admissionReport1(
+  "m_mal_cronica1",
+  data = data_ranged[["full_filtered"]]
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+admissionReportStatic1(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_mal_cronica_completed"]]
+)
+```
 
 ## CCC {.tabset .tabset-dropdown}
 
