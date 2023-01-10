@@ -14,54 +14,35 @@ NULL
 #'
 #' admission_Plot1(full_records, "mal_cronica") # same as before
 #' admission_Plot1(full_records, "etnia")
-admission_Plot1 <- function(.db) {
 
-  .db  |>
-    select(.data$center,c(.data$mal_cronica0_1:.data$mal_cronica0_13)) |>
-    rename('Cardiologica'='mal_cronica0_1', 'Metabolica'='mal_cronica0_2',
-           'Neurologica'=	'mal_cronica0_3',
-           'Neuromuscolare' =	'mal_cronica0_4',
-           'Onco-ematologica' = 'mal_cronica0_5',
-           'Renale' =	'mal_cronica0_6',
-           'Respiratoria'	= 'mal_cronica0_7',
-           'Sindromica' =	'mal_cronica0_8',
-           'Altro' =	'mal_cronica0_9',
-           'Malformato' =	'mal_cronica0_10',
-           'Ex-prematuro'=	'mal_cronica0_11',
-           'Gastroenterologica' =	'mal_cronica0_12',
-           'Trapiantologica'=	'mal_cronica0_13'
-    ) |>
-   # dplyr::group_by(.data$center) %>%
-    #dplyr::mutate(
-     # n = dplyr::n()) %>%
-    #dplyr::ungroup() |>
-    tidyr::pivot_longer(
-      -c(.data$center),
-      names_to = "variable"
-    ) %>%
-    mutate(value1 = (ifelse(.data$value == " ",0,1))) |>
-    mutate(value1 = (ifelse(is.na(.data$value1),0,1))) |>
-    select(-.data$value) %>%
-    group_by(.data$center,.data$variable) %>%
-    summarise(prop = sum(.data$value1)) %>%
-    ggplot(aes(x = .data$prop, y = .data$center, group = .data$variable, fill = .data$variable))+
-    geom_bar(stat = "identity")
-    #group_by(.data$center,.data$variable,.data$n) %>%
-    #summarise(Categorie = (.data$prop)/.data$n*100) %>%
-    #select(-.data$n) %>%
-   # ggplot(aes(x = " ", y = .data$prop, fill = .data$variable)) +
-    #geom_bar(stat="identity", width=1, color="white") +
-    #coord_polar("y", start=0) +
-    #facet_wrap(~.data$center,nrow = 4)+
-    #theme_void()
-    #theme(axis.text.x=element_blank())
-  #labs(
-  #  fill = stringr::str_to_sentence(reported_name)
-  #)
+# comorb <- c(
+#   'mal_cronica0_1' = 'Cardiologica',
+#   'mal_cronica0_2' = 'Metabolica',
+#   'mal_cronica0_3' = 'Neurologica',
+#   'mal_cronica0_4' = 'Neuromuscolare',
+#   'mal_cronica0_5' = 'Onco-ematologica',
+#   'mal_cronica0_6' = 'Renale',
+#   'mal_cronica0_7' = 'Respiratoria',
+#   'mal_cronica0_8' = 'Sindromica',
+#   'mal_cronica0_9' = 'Altro',
+#   'mal_cronica0_10' = 'Malformato',
+#   'mal_cronica0_11' = 'Ex-prematuro',
+#   'mal_cronica0_12' = 'Gastroenterologica',
+#   'mal_cronica0_13' = 'Trapiantologica'
+# )
+admission_Plot1 <- function(.db, dict) {
 
+  .db |>
+    select(.data$center, dplyr::all_of(names(dict))) |>
+    rename_with(~dict[.x], .cols = dplyr::all_of(names(dict))) |>
+    pivot_longer(-"center", values_drop_na = TRUE) |>
+    ggplot(aes(y = center, fill = name)) +
+    geom_bar(position = "fill")
 
+  stop("update dictionaries as interenal data defined and stored in data-raw/centers_table.R")
 }
 
+# admission_Plot1(full_records, comorb)
 
 
 #' @describeIn funs-admissionReport data

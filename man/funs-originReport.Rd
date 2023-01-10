@@ -8,9 +8,9 @@
 \usage{
 origin_Plot(
   .db,
-  what = c("ricovero_progr", "redcap_repeat_instance"),
-  by_gender = FALSE,
-  by_ageclass = FALSE
+  what = c("ricovero_progr", "redcap_repeat_instance", "provenienza", "altro_osp",
+    "tipologia2", "tipo_chir", "priorita", "motivo_post_oper", "motivo_ricovero2",
+    "motivo_ric_trauma2")
 )
 
 origin_dataToUse(.db, .which = c("Completed only", "Overall"))
