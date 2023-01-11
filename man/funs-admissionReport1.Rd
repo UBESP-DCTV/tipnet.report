@@ -5,7 +5,7 @@
 \alias{admission_Plot1}
 \title{picu admissions module}
 \usage{
-admission_Plot1(.db)
+admission_Plot1(.db, dict)
 }
 \arguments{
 \item{.db}{(data frame) data

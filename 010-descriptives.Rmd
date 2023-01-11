@@ -22,15 +22,15 @@ data entry
 
 ---
 
-## PICUs {.tabset .tabset-dropdown}
+<!-- ## PICUs {.tabset .tabset-dropdown} -->
 
-### Partecipating Units
+<!-- ### Partecipating Units -->
 
-foo
+<!-- foo -->
 
-### Number of beds
+<!-- ### Number of beds -->
 
-foo
+<!-- foo -->
 
 
 

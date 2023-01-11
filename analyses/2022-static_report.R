@@ -112,7 +112,7 @@ data_dir <- "../tipnet-data"
 # db_update_from_server(data_dir)
 
 
-tip_data <- read_rds(here(data_dir, "2022-12-05-tipnet.rds"))
+tip_data <- read_rds(here(data_dir, "2023-01-04-tipnet.rds"))
 
 #'
 #' # Preambolo
