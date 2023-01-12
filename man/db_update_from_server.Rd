@@ -4,7 +4,7 @@
 \alias{db_update_from_server}
 \title{Pull REDCap data from the server}
 \usage{
-db_update_from_server(path_data = NULL)
+db_update_from_server(path_data = NULL, use_city = TRUE)
 }
 \arguments{
 \item{path_data}{(chr) path for data folder (default is \verb{data/}

@@ -54,8 +54,23 @@ if (need_privacy) {
     )
 }
 
+comorb <- c(
+  'mal_cronica0_1' = 'Cardiologica',
+  'mal_cronica0_2' = 'Metabolica',
+  'mal_cronica0_3' = 'Neurologica',
+  'mal_cronica0_4' = 'Neuromuscolare',
+  'mal_cronica0_5' = 'Onco-ematologica',
+  'mal_cronica0_6' = 'Renale',
+  'mal_cronica0_7' = 'Respiratoria',
+  'mal_cronica0_8' = 'Sindromica',
+  'mal_cronica0_9' = 'Altro',
+  'mal_cronica0_10' = 'Malformato',
+  'mal_cronica0_11' = 'Ex-prematuro',
+  'mal_cronica0_12' = 'Gastroenterologica',
+  'mal_cronica0_13' = 'Trapiantologica'
+)
 
-usethis::use_data(centers_table, old_ids,
+usethis::use_data(centers_table, old_ids, comorb,
   internal = TRUE,
   overwrite = TRUE
 )

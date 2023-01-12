@@ -18,17 +18,26 @@ NULL
 #' admission_Plot(full_records, "etnia")
 admission_Plot <- function(
     .db,
-    what = c("mal_cronica","popc","insuff_organo7")
+    type = c("centervar", "checkbox"),
+    what = c("mal_cronica","popc","insuff_organo7"),
+    dict = NULL
 ) {
+  type <- match.arg(type)
   what <- match.arg(what)
 
-  reported_name <- switch(what,
-                          "mal_cronica" = "malattia cronica",
-                          "popc" = "POPC",
-                          "insuff_organo7" = "Insufficienze d'organo"
-  )
+  if (type == "centervar") {
+    reported_name <- switch(what,
+                            "mal_cronica" = "malattia cronica",
+                            "popc" = "POPC",
+                            "insuff_organo7" = "Insufficienze d'organo"
+    )
 
-  centervar_plot(.db, what, reported_name)
+
+    centervar_plot(.db, what, reported_name)
+
+  } else if (type == "checkbox") {
+    checkbox_plot(.db, dict)
+  }
 }
 
 
@@ -57,10 +66,13 @@ admission_dataToUse <- function(
 
 admission_dataTbl <- function(
     .db,
+    type = c("centervar", "checkbox"),
     what = c("mal_cronica","popc","insuff_organo7"),
+    dict = NULL,
     by_gender = FALSE,
     by_ageclass = FALSE
 ) {
+  type <- match.arg(type)
   what <- match.arg(what)
 
   if (by_gender) {
@@ -73,6 +85,11 @@ admission_dataTbl <- function(
       group_by(.data[["age_class"]], .add = TRUE)
   }
 
-  .db |>
-    centervar_tbl(what)
+
+  if (type == "centervar") {
+    centervar_tbl(.db, what)
+  } else if (type == "checkbox") {
+    checkbox_tbl(.db, dict)
+  }
+
 }

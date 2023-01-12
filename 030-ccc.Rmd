@@ -23,36 +23,25 @@ admissionReportUI("m_mal_cronica")
 admissionReport(
   "m_mal_cronica",
   data = data_ranged[["full_filtered"]],
-  what = "mal_cronica"
-)
-```
-
-```{r, context = "server", eval=params$export, fig.height=11}
-admissionReportStatic(
-  data = data_ranged[["full_filtered"]](),
-  completed = params[["d_mal_cronica_completed"]],
+  type = "centervar",
   what = "mal_cronica"
 )
 ```
 
 ### Macro-diagnosis
 ```{r, eval=!params$export}
-admissionReportUI1("m_mal_cronica1")
+admissionReportUI("m_macro")
 ```
 
 ```{r, context = "server", eval=!params$export}
-admissionReport1(
-  "m_mal_cronica1",
-  data = data_ranged[["full_filtered"]]
+admissionReport(
+  "m_macro",
+  data = data_ranged[["full_filtered"]],
+  type = "checkbox",
+  dict = comorb  # internal db in data-raw/internal-data.R
 )
 ```
 
-```{r, context = "server", eval=params$export, fig.height=11}
-admissionReportStatic1(
-  data = data_ranged[["full_filtered"]](),
-  completed = params[["d_mal_cronica_completed"]]
-)
-```
 
 ## CCC {.tabset .tabset-dropdown}
 
@@ -71,14 +60,7 @@ admissionReportUI("m_popc")
 admissionReport(
   "m_popc",
   data = data_ranged[["full_filtered"]],
-  what = "popc"
-)
-```
-
-```{r, context = "server", eval=params$export, fig.height=11}
-admissionReportStatic(
-  data = data_ranged[["full_filtered"]](),
-  completed = params[["d_popc_completed"]],
+  type = "centervar",
   what = "popc"
 )
 ```
@@ -93,17 +75,11 @@ admissionReportUI("m_insuff_organo7")
 admissionReport(
   "m_insuff_organo7",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "insuff_organo7"
 )
 ```
 
-```{r, context = "server", eval=params$export, fig.height=11}
-admissionReportStatic(
-  data = data_ranged[["full_filtered"]](),
-  completed = params[["d_insuff_organo7_completed"]],
-  what = "insuff_organo7"
-)
-```
 ### Macro-diagnosis
 
 ## PIM2 and PIM3 {.tabset .tabset-dropdown}

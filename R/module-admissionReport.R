@@ -31,7 +31,7 @@ admissionReportUI <- function(id) {
                             selected = "Completed only"
       ))
     ),
-    fluidRow(plotOutput(ns("dist"), height = "800px")),
+    fluidRow(plotlyOutput(ns("dist"), height = "800px")),
     fluidRow(
       column(5, checkboxInput(ns("byAgeclass"),
                               label   = "Per età"
@@ -49,7 +49,7 @@ admissionReportUI <- function(id) {
 
 #' @describeIn module-admissionReport server function
 #' @export
-admissionReport <- function(id, data, what) {
+admissionReport <- function(id, data, type, what = NULL, dict = NULL) {
 
   callModule(id = id, function(input, output, session) {
 
@@ -61,18 +61,18 @@ admissionReport <- function(id, data, what) {
       admission_dataToUse(data(), completed())
     })
 
-    output$dist <- renderPlot({
+    output$dist <- renderPlotly({
       data_to_use() |>
-        admission_Plot(
-          what = what
-
-        )
+        admission_Plot(type = type, what = what, dict = dict) |>
+        plotly::ggplotly(dynamicTicks = TRUE)
     })
 
     output$tbl <- DT::renderDT(
       data_to_use() |>
         admission_dataTbl(
+          type = type,
           what = what,
+          dict = dict,
           by_ageclass = input[["byAgeclass"]],
           by_gender = input[["byGender"]]
         ),

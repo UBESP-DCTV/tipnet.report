@@ -4,7 +4,7 @@
 \alias{tidy_extract}
 \title{Extract data from REDCap import in tidy way}
 \usage{
-tidy_extract(data, type = c("data", "meta"))
+tidy_extract(data, type = c("data", "meta"), use_city = TRUE)
 }
 \arguments{
 \item{data}{the output of \link{read_redcap}}
