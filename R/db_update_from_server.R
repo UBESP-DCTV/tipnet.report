@@ -11,7 +11,7 @@
 #' \dontrun{
 #'   db_update_from_server()
 #' }
-db_update_from_server <- function(path_data = NULL) {
+db_update_from_server <- function(path_data = NULL, use_city = TRUE) {
 
   path_data <- path_data %||% data_path()
 
@@ -33,10 +33,10 @@ db_update_from_server <- function(path_data = NULL) {
     return(invisible(FALSE))
   }
 
-  tipnet_meta <- tidy_extract(tipnet_raw, "meta")
+  tipnet_meta <- tidy_extract(tipnet_raw, "meta", use_city = use_city)
 
   tipnet <- tipnet_raw %>%
-    tidy_extract("data") %>%
+    tidy_extract("data", use_city = use_city) %>%
     nest_tables() %>%
     dplyr::mutate(
       tables = purrr::map2(

@@ -2,6 +2,8 @@
 params:
   cache: FALSE
   export: FALSE
+  need_privacy: TRUE
+  force_update: FALSE
 
   q_overall_completed: "Completed"
   q_overall_type: "Proportion"
@@ -97,7 +99,10 @@ is_to_update <- !fs::file_exists(last_file) ||
 if (
   getOption("tipnet.force_update") || is_to_update
 ) {
-  db_update_from_server()
+  usethis::ui_todo("Updating TIPNet from REDCap...")
+  np <- params[["need_privacy"]]
+  db_update_from_server(use_city = np)
+  usethis::ui_done("TIPNet db updated.")
 }
 
 last_data_date <- as.Date(file.info(last_file)$mtime)
