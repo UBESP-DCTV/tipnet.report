@@ -49,7 +49,7 @@ originReportUI <- function(id) {
 
 #' @describeIn module-originReport server function
 #' @export
-originReport <- function(id, data, what) {
+originReport <- function(id, data, type, what = NULL, dict = NULL) {
 
   callModule(id = id, function(input, output, session) {
 
@@ -64,7 +64,7 @@ originReport <- function(id, data, what) {
     output$dist <- renderPlotly({
       data_to_use() |>
         origin_Plot(
-          what = what
+          type = type, what = what, dict = dict
 
           ) |>
       plotly::ggplotly(dynamicTicks = TRUE)
@@ -73,7 +73,9 @@ originReport <- function(id, data, what) {
     output$tbl <- DT::renderDT(
       data_to_use() |>
         origin_dataTbl(
+          type = type,
           what = what,
+          dict = dict,
           by_ageclass = input[["byAgeclass"]],
           by_gender = input[["byGender"]]
         ),

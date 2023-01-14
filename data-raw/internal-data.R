@@ -70,7 +70,33 @@ comorb <- c(
   'mal_cronica0_13' = 'Trapiantologica'
 )
 
-usethis::use_data(centers_table, old_ids, comorb,
-  internal = TRUE,
-  overwrite = TRUE
+
+
+trauma <- c(
+            'tipo_trauma_1' = 'anafilassi',
+            'tipo_trauma_2' = 'annegamento',
+            'tipo_trauma_3' = 'avvelenamento',
+            'tipo_trauma_4' = 'folgorazione',
+            'tipo_trauma_5' = 'ingestione',
+            'tipo_trauma_6' = 'intossicazione-CO',
+            'tipo_trauma_7' = 'ipotermia',
+            'tipo_trauma_8' = 'soffocamento',
+            'tipo_trauma_9' = 'addominale',
+            'tipo_trauma_10' = 'contusione-fegato',
+            'tipo_trauma_11' = 'contusione-milza',
+            'tipo_trauma_12' = 'altra-contusione',
+            'tipo_trauma_13' = 'cranico',
+            'tipo_trauma_14' = 'facciale',
+            'tipo_trauma_15' = 'scheletrico',
+            'tipo_trauma_16' = 'spinale',
+            'tipo_trauma_17' = 'toracico',
+            'tipo_trauma_18' = 'ustioni',
+            'tipo_trauma_19' = 'altro'
+
+
+)
+
+usethis::use_data(centers_table, old_ids, comorb,trauma,
+                  internal = TRUE,
+                  overwrite = TRUE
 )

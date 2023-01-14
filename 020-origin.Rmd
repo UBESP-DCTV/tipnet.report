@@ -42,6 +42,7 @@ originReportUI("m_planned")
 originReport(
   "m_planned",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "ricovero_progr"
 )
 ```
@@ -64,6 +65,7 @@ originReportUI("m_admission")
 originReport(
   "m_admission",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "redcap_repeat_instance"
 )
 ```
@@ -87,6 +89,7 @@ originReportUI("m_provenienza")
 originReport(
   "m_provenienza",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "provenienza"
 )
 ```
@@ -107,6 +110,7 @@ originReportUI("m_altro_osp")
 originReport(
   "m_altro_osp",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "altro_osp"
 )
 ```
@@ -127,6 +131,7 @@ originReportUI("m_tipologia")
 originReport(
   "m_tipologia",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "tipologia2"
 )
 ```
@@ -147,6 +152,7 @@ originReportUI("m_tipo_chir")
 originReport(
   "m_tipo_chir",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "tipo_chir"
 )
 ```
@@ -167,6 +173,7 @@ originReportUI("m_priorita")
 originReport(
   "m_priorita",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "priorita"
 )
 ```
@@ -189,6 +196,7 @@ originReportUI("m_motivo_post_oper")
 originReport(
   "m_motivo_post_oper",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "motivo_post_oper"
 )
 ```
@@ -209,6 +217,7 @@ originReportUI("m_motivo_ricovero")
 originReport(
   "m_motivo_ricovero",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "motivo_ricovero2"
 )
 ```
@@ -221,8 +230,21 @@ originReportStatic(
 )
 ```
 ### Trauma
+```{r, eval=!params$export}
+originReportUI("m_trauma")
+```
 
-### brain trauma
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_trauma",
+  data = data_ranged[["full_filtered"]],
+  type = "checkbox",
+  dict = trauma  # internal db in data-raw/internal-data.R
+)
+```
+
+
+
 
 ### PICUs admission after injuries
 ```{r, eval=!params$export}
@@ -233,6 +255,7 @@ originReportUI("m_motivo_ric_trauma")
 originReport(
   "m_motivo_ric_trauma",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "motivo_ric_trauma2"
 )
 ```

@@ -18,12 +18,18 @@ NULL
 #' origin_Plot(full_records, "etnia")
 origin_Plot <- function(
     .db,
+    type = c("centervar", "checkbox"),
     what = c("ricovero_progr", "redcap_repeat_instance","provenienza",
              "altro_osp","tipologia2","tipo_chir","priorita",
-             "motivo_post_oper","motivo_ricovero2","motivo_ric_trauma2")
+             "motivo_post_oper","motivo_ricovero2","motivo_ric_trauma2"),
+    dict = NULL
+
 
 ) {
+  type <- match.arg(type)
   what <- match.arg(what)
+
+if (type == "centervar") {
 
   reported_name <- what |>
     switch(
@@ -36,28 +42,32 @@ origin_Plot <- function(
       "priorita" = "Priorità",
       "motivo_post_oper" = "post chirurgia",
       "motivo_ricovero2"  = "ric. medico",
-      "motivo_ric_trauma" = "ric. post-trauma"
+      "motivo_ric_trauma2" = "post-trauma"
 
     )
 
-  p <- .db |>
-    centervar_plot(what, reported_name)
+    centervar_plot(.db,what, reported_name)
 
 
 
 
-  p
+
+} else if (type == "checkbox") {
+    checkbox_plot(.db, dict)
 }
-
+}
 
 origin_dataTbl <- function(
     .db,
+    type = c("centervar", "checkbox"),
     what = c("ricovero_progr", "redcap_repeat_instance","provenienza",
              "altro_osp","tipologia2","tipo_chir","priorita",
              "motivo_post_oper","motivo_ricovero2","motivo_ric_trauma2"),
+    dict = NULL,
     by_gender = FALSE,
     by_ageclass = FALSE
 ) {
+  type <- match.arg(type)
   what <- match.arg(what)
 
   if (by_gender) {
@@ -70,8 +80,12 @@ origin_dataTbl <- function(
       group_by(.data[["age_class"]], .add = TRUE)
   }
 
-  .db |>
-    centervar_tbl(what)
+  if (type == "centervar") {
+    centervar_tbl(.db, what)
+  } else if (type == "checkbox") {
+    checkbox_tbl(.db, dict)
+  }
+
 }
 
 
