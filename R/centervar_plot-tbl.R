@@ -7,7 +7,8 @@ centervar_plot <- function(.db, what, reported_name) {
   geom_centervar <- if (what == "redcap_repeat_instance") {
     function(p) {
       p +
-      geom_boxplot(aes(y = .data[[what]]))
+      geom_boxplot(aes(y = .data[[what]]))+
+        coord_flip()
     }
   } else {
     function(p) {

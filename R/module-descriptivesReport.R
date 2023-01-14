@@ -28,7 +28,7 @@ descriptivesReportUI <- function(id, what = NULL) {
                             selected = "Completed only"
       ))
     ),
-    fluidRow(plotOutput(ns("dist"), height = "800px")),
+    fluidRow(plotlyOutput(ns("dist"), height = "800px")),
 
     fluidRow(column(12,
       checkboxGroupInput(ns("strat"),
@@ -59,8 +59,10 @@ descriptivesReport <- function(id, data, what) {
       descriptives_dataToUse(data(), completed())
     })
 
-    output$dist <- renderPlot({
-      descriptives_Plot(data_to_use(), what = what)
+    output$dist <- renderPlotly({
+      descriptives_Plot(data_to_use(), what = what) |>
+        plotly::ggplotly(dynamicTicks = TRUE)
+
     })
 
     output$tbl <- DT::renderDT(
