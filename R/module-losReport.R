@@ -31,7 +31,7 @@ losReportUI <- function(id) {
                             selected = "Completed only"
       ))
     ),
-    fluidRow(plotOutput(ns("dist"), height = "800px")),
+    fluidRow(plotlyOutput(ns("dist"), height = "800px")),
     fluidRow(
       column(5, checkboxInput(ns("byAgeclass"),
                               label   = "Per età"
@@ -61,12 +61,13 @@ losReport <- function(id, data, what) {
       los_dataToUse(data(), completed())
     })
 
-    output$dist <- renderPlot({
+    output$dist <- renderPlotly({
       data_to_use() |>
         los_Plot(
           what = what
 
-        )
+        )|>
+        plotly::ggplotly(dynamicTicks = TRUE)
     })
 
     output$tbl <- DT::renderDT(
