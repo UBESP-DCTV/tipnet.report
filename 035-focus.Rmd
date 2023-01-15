@@ -15,6 +15,7 @@ focusReportUI("m_insufficienza")
 focusReport(
   "m_insufficienza",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "insufficienza"
 )
 ```
@@ -28,6 +29,20 @@ focusReportStatic(
 ```
 
 ### Macro-diagnosis
+```{r, eval=!params$export}
+focusReportUI("m_insuff_organo_ricovero")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "m_insuff_organo_ricovero",
+  data = data_ranged[["full_filtered"]],
+  type = "checkbox",
+  dict = insuff_organo_ricovero  # internal db in data-raw/internal-data.R
+)
+```
+
+
 
 ## Procedure durante il ricovero {.tabset .tabset-dropdown}
 
@@ -40,8 +55,9 @@ focusReportUI("m_procedure_rico")
 focusReport(
   "m_procedure_rico",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "procedure_rico"
-)
+  )
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
@@ -54,11 +70,55 @@ focusReportStatic(
 
 ### Quali procedure
 
+```{r, eval=!params$export}
+focusReportUI("m_procedure_ricovero")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "m_procedure_ricovero",
+  data = data_ranged[["full_filtered"]],
+  type = "checkbox",
+  dict = procedure_ricovero  # internal db in data-raw/internal-data.R
+)
+```
+
+
+
 ## Nutrizione {.tabset .tabset-dropdown}
+```{r, eval=!params$export}
+focusReportUI("m_nutrizione")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "m_nutrizione",
+  data = data_ranged[["full_filtered"]],
+  type = "checkbox",
+  dict = nutrizione # internal db in data-raw/internal-data.R
+  )
+```
+
+
 
 ## Procedure ventilazione {.tabset .tabset-dropdown}
 
+
+
 ### Motivo vam
+```{r, eval=!params$export}
+focusReportUI("m_ventilazione")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "m_ventilazione",
+  data = data_ranged[["full_filtered"]],
+  type = "checkbox",
+  dict = ventilazione  # internal db in data-raw/internal-data.R
+  )
+```
+
 
 ### Quando è iniziata la ventilazione in degenza?
 ```{r, eval=!params$export}
@@ -69,8 +129,9 @@ focusReportUI("m_vent_iniz")
 focusReport(
   "m_vent_iniz",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "vent_iniz2"
-)
+ )
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
@@ -90,8 +151,9 @@ focusReportUI("m_niv_it")
 focusReport(
   "m_niv_it",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "niv_it"
-)
+  )
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
@@ -114,8 +176,9 @@ focusReportUI("m_inf_ingresso_tip")
 focusReport(
   "m_inf_ingresso_tip",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "inf_ingresso_tip"
-)
+  )
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
@@ -134,8 +197,9 @@ focusReportUI("m_sede_inf")
 focusReport(
   "m_sede_inf",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "sede_inf2"
-)
+  )
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
@@ -155,8 +219,9 @@ focusReportUI("m_diagnosi_inf")
 focusReport(
   "m_diagnosi_inf",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "diagnosi_inf"
-)
+  )
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
@@ -176,8 +241,9 @@ focusReportUI("m_tipo_inf")
 focusReport(
   "m_tipo_inf",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "tipo_inf"
-)
+  )
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
@@ -196,8 +262,9 @@ focusReportUI("m_sepsi_2")
 focusReport(
   "m_sepsi_2",
   data = data_ranged[["full_filtered"]],
+  type = "centervar",
   what = "sepsi_2"
-)
+  )
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}

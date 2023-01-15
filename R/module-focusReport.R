@@ -31,7 +31,7 @@ focusReportUI <- function(id) {
                             selected = "Completed only"
       ))
     ),
-    fluidRow(plotOutput(ns("dist"), height = "800px")),
+    fluidRow(plotlyOutput(ns("dist"), height = "800px")),
     fluidRow(
       column(5, checkboxInput(ns("byAgeclass"),
                               label   = "Per età"
@@ -49,7 +49,7 @@ focusReportUI <- function(id) {
 
 #' @describeIn module-focusReport server function
 #' @export
-focusReport <- function(id, data, what) {
+focusReport <- function(id, data, type, what = NULL, dict = NULL) {
 
   callModule(id = id, function(input, output, session) {
 
@@ -58,21 +58,24 @@ focusReport <- function(id, data, what) {
     })
 
     data_to_use <- reactive({
-      focus_dataToUse(data(), completed())
+      origin_dataToUse(data(), completed())
     })
 
-    output$dist <- renderPlot({
+    output$dist <- renderPlotly({
       data_to_use() |>
         focus_Plot(
-          what = what
+          type = type, what = what, dict = dict
 
-        )
+        ) |>
+        plotly::ggplotly(dynamicTicks = TRUE)
     })
 
     output$tbl <- DT::renderDT(
       data_to_use() |>
         focus_dataTbl(
+          type = type,
           what = what,
+          dict = dict,
           by_ageclass = input[["byAgeclass"]],
           by_gender = input[["byGender"]]
         ),

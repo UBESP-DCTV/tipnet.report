@@ -8,9 +8,11 @@
 \usage{
 origin_Plot(
   .db,
+  type = c("centervar", "checkbox"),
   what = c("ricovero_progr", "redcap_repeat_instance", "provenienza", "altro_osp",
     "tipologia2", "tipo_chir", "priorita", "motivo_post_oper", "motivo_ricovero2",
-    "motivo_ric_trauma2")
+    "motivo_ric_trauma2"),
+  dict = NULL
 )
 
 origin_dataToUse(.db, .which = c("Completed only", "Overall"))

@@ -80,7 +80,21 @@ admissionReport(
 )
 ```
 
-### Macro-diagnosis
+### Insufficienze d'organo macro
+```{r, eval=!params$export}
+admissionReportUI("m_insuff_organo")
+```
+
+```{r, context = "server", eval=!params$export}
+admissionReport(
+  "m_insuff_organo",
+  data = data_ranged[["full_filtered"]],
+  type = "checkbox",
+  dict = insuff_organo  # internal db in data-raw/internal-data.R
+)
+```
+
+
 
 ## PIM2 and PIM3 {.tabset .tabset-dropdown}
 

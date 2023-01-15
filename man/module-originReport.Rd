@@ -9,7 +9,7 @@
 \usage{
 originReportUI(id)
 
-originReport(id, data, what)
+originReport(id, data, type, what = NULL, dict = NULL)
 
 originReportStatic(data, completed, what)
 }
@@ -18,9 +18,9 @@ originReportStatic(data, completed, what)
 
 \item{data}{database to use}
 
-\item{completed}{(chr) "Completed" or "Not-completed"}
-
 \item{type}{(chr) "Total" or "Proportion"}
+
+\item{completed}{(chr) "Completed" or "Not-completed"}
 }
 \description{
 General description

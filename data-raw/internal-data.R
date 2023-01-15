@@ -96,7 +96,68 @@ trauma <- c(
 
 )
 
-usethis::use_data(centers_table, old_ids, comorb,trauma,
+insuff_organo <- c(
+             'insuff_organo_1' = 'respiratoria',
+             'insuff_organo_2' = 'cardiovascolare',
+             'insuff_organo_3' = 'neurologica',
+             'insuff_organo_4' = 'renale',
+             'insuff_organo_5' = 'emocoagulativa',
+             'insuff_organo_6' = 'epatica'
+)
+
+insuff_organo_ricovero <- c(
+              'insuff_organo_2_1' = 'respiratoria',
+              'insuff_organo_2_2' = 'cardiovascolare',
+              'insuff_organo_2_3' = 'neurologica-acuta',
+              'insuff_organo_2_4' = 'renale',
+              'insuff_organo_2_5' = 'emocoagulativa',
+              'insuff_organo_2_6' = 'epatica'
+)
+
+procedure_ricovero <- c(
+              'procedure_ric_1' = '02-alto_flusso',
+              'procedure_ric_4' = '02-basso_flusso',
+              'procedure_ric_2' = 'ventilazione',
+              'procedure_ric_3' = 'accesso-vascolare',
+              'procedure_ric_5' = 'drenaggio-pericardico',
+              'procedure_ric_7' = 'drenaggio-toracico',
+              'procedure_ric_8' = 'drenaggio-addominale',
+              'procedure_ric_6' = 'peg',
+              'procedure_ric_10' = 'broncoscopia',
+              'procedure_ric_11' = 'tracheotomia',
+              'procedure_ric_12' = 'cateterismo-cardiaco',
+              'procedure_ric_13' = 'intervento-chirurgico',
+              'procedure_ric_14' = 'tratt-dialitico',
+              'procedure_ric_17' = 'altro',
+              'procedure_ric_18' = 'VAD',
+              'procedure_ric_19' = 'Rashkind',
+              'procedure_ric_20' = 'RCP',
+              'procedure_ric_15' = 'ECMO',
+              'procedure_ric_16' = 'PIC'
+
+)
+nutrizione <- c(
+             'nutrizione_1' = 'enterale',
+             'nutrizione_2' = 'NPT',
+             'nutrizione_3' = 'os',
+             'nutrizione_4' = 'idratazione'
+
+)
+
+ventilazione <- c(
+  'vam0_1' = 'restrittivo-primario',
+  'vam0_2' = 'restrittico-secondario',
+  'vam0_3' = 'ostruttivo',
+  'vam0_4' = 'coma',
+  'vam0_5' = 'sepsi',
+  'vam0_6' = 'post-operatoria'
+
+)
+
+usethis::use_data(centers_table, old_ids, comorb,trauma,insuff_organo,
+                  insuff_organo_ricovero,
+                  procedure_ricovero,
+                  nutrizione,ventilazione,
                   internal = TRUE,
                   overwrite = TRUE
 )
