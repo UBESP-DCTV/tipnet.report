@@ -104,10 +104,7 @@ transform_centervar <- function(x, what) {
         names_to = "pim_type",
         values_to = "pim_val"
       ) |>
-      ggplot2::remove_missing(na.rm = TRUE, vars = "tip_val") |>
-      dplyr::mutate(
-        year = lubridate::year(.data[["ingresso_dt"]])
-      )
+      ggplot2::remove_missing(na.rm = TRUE, vars = "tip_val")
 
   } else if (
     any(what == c("redcap_repeat_instance","durata_degenza"))

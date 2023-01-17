@@ -38,6 +38,12 @@ admissionReportUI <- function(id) {
       )),
       column(5, checkboxInput(ns("byGender"),
                               label   = "Per genere"
+      )),
+      column(5, checkboxInput(ns("byYear"),
+                              label   = "Per anno"
+      )),
+      column(5, checkboxInput(ns("byType"),
+                              label   = "Per tipologia di ricovero"
       ))
     ),
     fluidRow(
@@ -64,7 +70,8 @@ admissionReport <- function(id, data, type, what = NULL, dict = NULL) {
     output$dist <- renderPlotly({
       data_to_use() |>
         admission_Plot(type = type, what = what, dict = dict) |>
-        plotly::ggplotly()
+        plotly::ggplotly() |>
+        layout(boxmode = "group")
     })
 
     output$tbl <- DT::renderDT(
@@ -74,7 +81,9 @@ admissionReport <- function(id, data, type, what = NULL, dict = NULL) {
           what = what,
           dict = dict,
           by_ageclass = input[["byAgeclass"]],
-          by_gender = input[["byGender"]]
+          by_gender = input[["byGender"]],
+          by_type = input[["byType"]],
+          by_year = input[["byYear"]]
         ),
 
       filter = list(position = "top", clear = TRUE),
