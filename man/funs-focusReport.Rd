@@ -8,8 +8,10 @@
 \usage{
 focus_Plot(
   .db,
+  type = c("centervar", "checkbox"),
   what = c("insufficienza", "procedure_rico", "vent_iniz2", "niv_it", "inf_ingresso_tip",
-    "sede_inf2", "diagnosi_inf", "tipo_inf", "sepsi_2")
+    "sede_inf2", "diagnosi_inf", "tipo_inf", "sepsi_2"),
+  dict = NULL
 )
 
 focus_dataToUse(.db, .which = c("Completed only", "Overall"))

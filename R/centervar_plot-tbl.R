@@ -7,7 +7,13 @@ centervar_plot <- function(.db, what, reported_name) {
   geom_centervar <- if (what == "redcap_repeat_instance") {
     function(p) {
       p +
-      geom_boxplot(aes(y = .data[[what]]))+
+      geom_boxplot(aes(y = .data[[what]])) +
+        coord_flip()
+    }
+  } else if (what == "pim") {
+    function(p) {
+      p +
+        geom_boxplot(aes(y = .data[["pim_val"]], colour = "pim_type")) +
         coord_flip()
     }
   } else {
@@ -20,7 +26,7 @@ centervar_plot <- function(.db, what, reported_name) {
     }
   }
 
-  .db  |>
+  .db |>
     transform_centervar(what = what) |>
     ggplot(aes(x = .data$center)) |>
     geom_centervar() +
@@ -32,6 +38,9 @@ centervar_plot <- function(.db, what, reported_name) {
     ) +
     theme(legend.position = "top")
 }
+
+
+
 
 #' Table stratified by center
 #'
@@ -50,6 +59,16 @@ centervar_tbl <- function(.db, what) {
         Mediana = median(.data[[what]]),
         IQR = IQR(.data[[what]])
       )
+  } else if (any(what == "pim")) {
+    checkmate::assert_string(what)
+
+    .db |>
+      dplyr::group_by(.data$center, .data$pim_type, .add = TRUE) |>
+      dplyr::summarise(
+        N = n(),
+        Mediana = median(.data[["pim_val"]]),
+        IQR = IQR(.data[["pim_val"]])
+      )
   } else {
     .db |>
       transform_centervar(what = what) |>
@@ -63,8 +82,33 @@ centervar_tbl <- function(.db, what) {
 }
 
 
+
+
+
+
+
+
+
+
 transform_centervar <- function(x, what) {
-  if (any(what == "redcap_repeat_instance")) {
+  if (any(what == "pim")) {
+    checkmate::assert_string(what)
+
+    x |>
+      dplyr::select(
+        "center", "age_class", "gender", "tipologia", "ingresso_dt",
+        dplyr::matches("pim")
+      ) |>
+      pivot_longer(
+        dplyr::all_of(c("pim2", "pim3")),
+        names_to = "pim_type",
+        values_to = "pim_val"
+      ) |>
+      dplyr::mutate(
+        year = lubridate::year(.data[["ingresso_dt"]])
+      )
+
+  } else if (any(what == "redcap_repeat_instance")) {
     checkmate::assert_string(what)
     x |>
       dplyr::filter(.data[[what]] != 1)

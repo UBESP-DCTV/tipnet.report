@@ -19,7 +19,7 @@ NULL
 admission_Plot <- function(
     .db,
     type = c("centervar", "checkbox"),
-    what = c("mal_cronica","popc","insuff_organo7"),
+    what = c("mal_cronica","popc","insuff_organo7", "pim"),
     dict = NULL
 ) {
   type <- match.arg(type)
@@ -29,7 +29,8 @@ admission_Plot <- function(
     reported_name <- switch(what,
                             "mal_cronica" = "malattia cronica",
                             "popc" = "POPC",
-                            "insuff_organo7" = "Insufficienze d'organo"
+                            "insuff_organo7" = "Insufficienze d'organo",
+                            "pim" = "PIM"
     )
 
 
