@@ -68,10 +68,12 @@ admission_dataToUse <- function(
 admission_dataTbl <- function(
     .db,
     type = c("centervar", "checkbox"),
-    what = c("mal_cronica","popc","insuff_organo7"),
+    what = c("mal_cronica","popc","insuff_organo7", "pim"),
     dict = NULL,
     by_gender = FALSE,
-    by_ageclass = FALSE
+    by_ageclass = FALSE,
+    by_type = FALSE,
+    by_year = FALSE
 ) {
   type <- match.arg(type)
   what <- match.arg(what)
@@ -84,6 +86,19 @@ admission_dataTbl <- function(
   if (by_ageclass) {
     .db <- .db |>
       group_by(.data[["age_class"]], .add = TRUE)
+  }
+
+  if (what == "pim" && by_type) {
+    .db <- .db |>
+      group_by(.data[["tipologia"]], .add = TRUE)
+  }
+
+  if (what == "pim" && by_year) {
+    .db <- .db |>
+      dplyr::mutate(
+        year = as.integer(lubridate::year(.data[["ingresso_dt"]]))
+      ) |>
+      group_by(.data[["year"]], .add = TRUE)
   }
 
 
