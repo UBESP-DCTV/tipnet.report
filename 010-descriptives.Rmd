@@ -22,17 +22,15 @@ data entry
 
 ---
 
-## PICUs {.tabset .tabset-dropdown}
+<!-- ## PICUs {.tabset .tabset-dropdown} -->
 
-### Partecipating Units
+<!-- ### Partecipating Units -->
 
-foo
+<!-- foo -->
 
-### Number of beds
+<!-- ### Number of beds -->
 
-foo
-
-
+<!-- foo -->
 
 
 
@@ -42,7 +40,9 @@ foo
 
 
 
-## Admissions {.tabset .tabset-dropdown}
+
+
+## Demographics {.tabset .tabset-dropdown}
 
 foo
 
@@ -52,7 +52,7 @@ foo
 ### Gender
 
 ```{r, eval=!params$export}
-descriptivesReportUI("d_gender")
+descriptivesReportUI("d_gender", what = "gender")
 ```
 
 ```{r, context = "server", eval=!params$export}
@@ -80,7 +80,7 @@ descriptivesReportStatic(
 ### Ethnicity
 
 ```{r, eval=!params$export}
-descriptivesReportUI("d_ethnicity")
+descriptivesReportUI("d_ethnicity", what = "etnia")
 ```
 
 ```{r, context = "server", eval=!params$export}
@@ -107,7 +107,7 @@ descriptivesReportStatic(
 ### Age
 
 ```{r, eval=!params$export}
-descriptivesReportUI("d_ageclass")
+descriptivesReportUI("d_ageclass", what = "age_class")
 ```
 
 ```{r, context = "server", eval=!params$export}
@@ -125,27 +125,3 @@ descriptivesReportStatic(
   what = "age_class"
 )
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Demographics {.tabset .tabset-dropdown}
-
-foo

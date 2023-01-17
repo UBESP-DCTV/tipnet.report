@@ -44,13 +44,16 @@ outlier_dataPlot <- function(.db, .center) {
 #' @describeIn funs-outlierReport data to use
 #' @export
 outlier_dataToUse <- function(.db, .center) {
-  if (length(.center) == 0 || !.center %in% .db[["center"]]) {
+  if (length(.center) == 0 || !any(.center %in% .db[["center"]])) {
     .db[["data"]][[1L]][FALSE, ]
   } else {
-    dplyr::filter(.db, .data$center %in% .center)[["data"]][[1]] %>%
+    dplyr::filter(.db, .data$center %in% .center) %>%
+      dplyr::select(.data$center, .data$data) |>
+      tidyr::unnest(cols = c(.data$data)) |>
       dplyr::rename(
-        `patient's code` = .data$codpat,
-        `instance id` = .data$redcap_repeat_instance
+        Center = .data$center,
+        `Patient's code` = .data$codpat,
+        `Instance id` = .data$redcap_repeat_instance
       )
   }
 }

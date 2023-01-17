@@ -106,6 +106,22 @@ join_all_sheets <- function(sheets) {
     dplyr::mutate(
       codpat = as.factor(.data$codpat),
       eta = as.integer(.data[["eta"]]),
+      tipologia2=factor(
+        dplyr::case_when(
+          .data[["tipologia"]]=="medico"~ "Medico",
+          .data[["tipologia"]]=="chirurgico"~ "Chirurgico",
+          .data[["tipologia"]]=="trauma, ustione, intossicazione, annegamento, avvelenamento, folgorazione, inalazione di fumo, ipotermia, soffocamento"~ "Trauma",
+          TRUE ~ "[missing tipologia]"
+
+        )
+      ),
+   motivo_ricovero2  =  forcats::fct_recode(motivo_ricovero,"alterato sensorio"="alterato sensorio / crisi convulsive","disordini metabolici"="disordini metabolici / disidratazione","insufficienza cardiocircolatoria" = "insufficienza cardiocircolatoria (no shock settico)",
+                 "diagnosi sepsi correlata" = "diagnosi sepsi correlata (di natura diversa da respiro cuore snc)","shock distributivo"="shock distributivo (settico)","arresto"="arresto cardiocircolatorio","programmato"="programmato per procedure invasive"),
+   sede_inf2  =  forcats::fct_recode(sede_inf,"polmone"="polmone (infezione di comunità)","polmone - vap"="polmone - vap (inf. nosocomiale associata al ventilatore)","snc (ventr.)" = "snc (da derivazione ventricolare)",
+                                            "snc (non ventr.)" = "snc (non da derivazione ventricolare)","vie aree inf."="vie aree inferiori (non polmonite)","vie aeree sup."="vie aeree superiori"),
+   vent_iniz2  =  forcats::fct_recode(vent_iniz,"prima dell'ingresso"="prima dell'ingresso in rianimazione","all'ingresso"="all'ingresso (entro la prima ora) in rianimazione","durante la degenza"="durante la degenza in rianimazione"),
+
+   motivo_ric_trauma2  =  forcats::fct_recode(motivo_ric_trauma,"insufficienza cardiovascolare"="insufficienza cardiovascolare (shock emorragico)"),
       age_class = age_to_class(.data[["eta"]], .data[["eta_giorni"]]),
       complete =
         .data[["complete.anagrafica"]] &
@@ -113,6 +129,8 @@ join_all_sheets <- function(sheets) {
         .data[["complete.pim"]] &
         .data[["complete.dimissione"]]
     )
+
+
 }
 
 

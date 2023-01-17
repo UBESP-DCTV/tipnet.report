@@ -7,7 +7,12 @@
 \alias{miss_dataTbl}
 \title{functions for missing-data section}
 \usage{
-miss_dataToUse(.db)
+miss_dataToUse(
+  .db,
+  sheets = c("anagrafica", "accettazione", "degenza", "dimissione", "infezione",
+    "ingresso", "punteggio_di_aristotle", "pelod_scheda_facoltativa", "pim",
+    "procedure_di_ventilazione")
+)
 
 miss_dataPlot(.db)
 
@@ -23,10 +28,10 @@ functions for missing-data section
 }
 \section{Functions}{
 \itemize{
-\item \code{miss_dataToUse}: data to use
+\item \code{miss_dataToUse()}: data to use
 
-\item \code{miss_dataPlot}: plot
+\item \code{miss_dataPlot()}: plot
 
-\item \code{miss_dataTbl}: table
+\item \code{miss_dataTbl()}: table
+
 }}
-

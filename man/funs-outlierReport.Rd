@@ -20,8 +20,8 @@ Functions for outlier section
 }
 \section{Functions}{
 \itemize{
-\item \code{outlier_dataPlot}: plot
+\item \code{outlier_dataPlot()}: plot
 
-\item \code{outlier_dataToUse}: data to use
+\item \code{outlier_dataToUse()}: data to use
+
 }}
-

@@ -2,12 +2,14 @@
 
 ## Overview {-}
 
-The system allow to distinguish the first from subsequent admissions in the same unit. Admission was coded as mode, type, origin
+The system allow to distinguish the first from subsequent admissions in the same unit. Admission was coded as mode, type, origin, and reasons. All the metrics can be visualized stratified by gender and age class.
 
 **Mode**:
 
 - planned (defined as admission that might be postponed for 24 hours)
 - unplanned
+- re-admission
+
 
 **Type**:
 
@@ -29,38 +31,239 @@ The system allow to distinguish the first from subsequent admissions in the same
 
 
 
-## Planned and Unplunned {.tabset .tabset-dropdown}
+## Mode  {.tabset .tabset-dropdown}
 
-### Overview
+### Planned and Unplanned
+```{r, eval=!params$export}
+originReportUI("m_planned")
+```
+
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_planned",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "ricovero_progr"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "ricovero_progr"
+)
+```
 
 ### Re-admissions
 
-### Distribution by units
+```{r, eval=!params$export}
+originReportUI("m_admission")
+```
 
-### Distribution by origin
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_admission",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "redcap_repeat_instance"
+)
+```
 
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "redcap_repeat_instance"
+)
+```
 
 ## Origin and type {.tabset .tabset-dropdown}
 
 ### Overview
+```{r, eval=!params$export}
+originReportUI("m_provenienza")
+```
 
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_provenienza",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "provenienza"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "provenienza"
+)
+```
 ### Other hospital
+```{r, eval=!params$export}
+originReportUI("m_altro_osp")
+```
 
-### Distribution by units
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_altro_osp",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "altro_osp"
+)
+```
 
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "altro_osp"
+)
+```
 ### Type
+```{r, eval=!params$export}
+originReportUI("m_tipologia")
+```
 
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_tipologia",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "tipologia2"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "tipologia2"
+)
+```
 ### Type of surgery
+```{r, eval=!params$export}
+originReportUI("m_tipo_chir")
+```
 
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_tipo_chir",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "tipo_chir"
+)
+```
 
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "tipo_chir"
+)
+```
+## Priority level of admission  {.tabset .tabset-dropdown}
+```{r, eval=!params$export}
+originReportUI("m_priorita")
+```
+
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_priorita",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "priorita"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "priorita"
+)
+```
 ## Reasons {.tabset .tabset-dropdown}
 
 ### Post-operative PICUs admissions
+```{r, eval=!params$export}
+originReportUI("m_motivo_post_oper")
+```
 
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_motivo_post_oper",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "motivo_post_oper"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "motivo_post_oper"
+)
+```
 ### Medical PICUs admissions
+```{r, eval=!params$export}
+originReportUI("m_motivo_ricovero")
+```
 
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_motivo_ricovero",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "motivo_ricovero2"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "motivo_ricovero2"
+)
+```
 ### Trauma
+```{r, eval=!params$export}
+originReportUI("m_trauma")
+```
 
-### brain trauma
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_trauma",
+  data = data_ranged[["full_filtered"]],
+  type = "checkbox",
+  dict = trauma  # internal db in data-raw/internal-data.R
+)
+```
+
+
+
 
 ### PICUs admission after injuries
+```{r, eval=!params$export}
+originReportUI("m_motivo_ric_trauma")
+```
+
+```{r, context = "server", eval=!params$export}
+originReport(
+  "m_motivo_ric_trauma",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "motivo_ric_trauma2"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "motivo_ric_trauma2"
+)
+```

@@ -1,4 +1,4 @@
-# Chronic Complex Conditions (CCC) on Admissions {#ccc .tabset .tabset-fade .tabset-pills}
+# PICU Admissions {#ccc .tabset .tabset-fade .tabset-pills}
 
 ## Overview {-}
 
@@ -14,7 +14,34 @@ Moreover, the system allows to record the specific chronic disease
 
 ## Comorbidity on admission {.tabset .tabset-dropdown}
 
-## Macro-diagnosis {.tabset .tabset-dropdown}
+### Comorbidity on admission Yes/No
+```{r, eval=!params$export}
+admissionReportUI("m_mal_cronica")
+```
+
+```{r, context = "server", eval=!params$export}
+admissionReport(
+  "m_mal_cronica",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "mal_cronica"
+)
+```
+
+### Macro-diagnosis
+```{r, eval=!params$export}
+admissionReportUI("m_macro")
+```
+
+```{r, context = "server", eval=!params$export}
+admissionReport(
+  "m_macro",
+  data = data_ranged[["full_filtered"]],
+  type = "checkbox",
+  dict = comorb  # internal db in data-raw/internal-data.R
+)
+```
+
 
 ## CCC {.tabset .tabset-dropdown}
 
@@ -23,3 +50,62 @@ Moreover, the system allows to record the specific chronic disease
 ### Type
 
 ### Age
+
+## POPC {.tabset .tabset-dropdown}
+```{r, eval=!params$export}
+admissionReportUI("m_popc")
+```
+
+```{r, context = "server", eval=!params$export}
+admissionReport(
+  "m_popc",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "popc"
+)
+```
+## Insufficienze d'organo  {.tabset .tabset-dropdown}
+
+### Insufficienze d'organo Yes/No
+```{r, eval=!params$export}
+admissionReportUI("m_insuff_organo7")
+```
+
+```{r, context = "server", eval=!params$export}
+admissionReport(
+  "m_insuff_organo7",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "insuff_organo7"
+)
+```
+
+### Insufficienze d'organo macro
+```{r, eval=!params$export}
+admissionReportUI("m_insuff_organo")
+```
+
+```{r, context = "server", eval=!params$export}
+admissionReport(
+  "m_insuff_organo",
+  data = data_ranged[["full_filtered"]],
+  type = "checkbox",
+  dict = insuff_organo  # internal db in data-raw/internal-data.R
+)
+```
+
+
+
+## PIM2 and PIM3 {.tabset .tabset-dropdown}
+
+The registry adopted, since the beginning, the Pediatric Index of Mortality (PIM) score. The PIM2 variables are
+recorded and the risk of death is automatically calculated by the system. In 2013, after a revision of the coefficient of the variables, the new PIM3 score was published. We updated the PIM page with the new formula and since 2014 we calculate both the 2 and 3 version. Moreover, retrospectically, we collected all the new variables and through the new coefficients we derived the PIM3 score for all the patient in the registry.
+
+
+### Severity
+
+### Age
+
+### Year
+
+### Type

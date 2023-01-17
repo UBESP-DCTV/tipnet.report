@@ -43,7 +43,7 @@ yearRange <- function(id) {
         dplyr::filter(selected_years)
     })
 
-    outliers_filtered <-reactive({
+    outliers_filtered <- reactive({
       extract_outliers(full_filtered())
     })
 

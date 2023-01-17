@@ -9,5 +9,5 @@
 #'   \item{center}{(factor) Name of the center}
 #'   \item{center_city}{(factor) City in which the center is}
 #' }
-#'
-"centers_table"
+#' @name centers_table
+NULL

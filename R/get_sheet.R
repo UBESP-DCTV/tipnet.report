@@ -16,6 +16,7 @@
 #'   tipnet <- read_rds(db_update_from_server())
 #'   tipnet %>% get_sheet("anagrafica")
 #'   tipnet %>% get_sheet("anagrafica", field = "anagrafica")
+#'   tipnet %>% get_sheet("degenza")
 #'
 #' }
 get_sheet <- function(x, sheet, field = NULL) {
