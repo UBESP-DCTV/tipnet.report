@@ -1371,23 +1371,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -1492,7 +1486,7 @@ border-radius: 0px;
 <h1 class="title toc-ignore">TIP-Net</h1>
 <h3 class="subtitle">Report dati 2022</h3>
 <h4 class="author">Unità di Biostatistica, Epidemiologia, e Sanità Pubblica<br>Dipartimento di Scienze Cardio-Toraco-Vascolari e Sanità Pubblica<br>University of Padova</h4>
-<h4 class="date">Data di creazione del report: 2023-01-11 (ver. 1.0.0)</h4>
+<h4 class="date">Data di creazione del report: 2023-01-18 (ver. 1.0.0)</h4>
 
 </div>
 
@@ -1566,7 +1560,7 @@ left: 0.1em;
 bottom: -1ex;
 }
 </style>
- <font color="MidnightBlue"><div align="center"><span style="font-weight:bold">Accettazione <br><br> 2  Variables   2632  Observations</span></div></font> <hr class="thinhr"> <span style="font-weight:bold">Sesso</span>: <div style="float: right; text-align: right;"><img src="data:image/png;base64,
+ <title>Accettazione Descriptives</title> <font color="MidnightBlue"><div align="center"><span style="font-weight:bold">Accettazione <br><br> 2  Variables   2651  Observations</span></div></font> <hr class="thinhr"> <span style="font-weight:bold">Sesso</span>: <div style="float: right; text-align: right;"><img src="data:image/png;base64,
 iVBORw0KGgoAAAANSUhEUgAAAAoAAAANCAMAAACn6Q83AAAACVBMVEUAAADMzMz////1iUV5AAAAIElEQVQImWNgYIQBBgYmGEBjQrm4mCCtcBMIqMVvAgMAMdUAq70nDhEAAAAASUVORK5CYII=" alt="image" /></div> <style>
 .hmisctable666202 {
 border: none;
@@ -1585,11 +1579,11 @@ font-weight: normal;
 </style>
  <table class="hmisctable666202">
  <tr><th>n</th><th>missing</th><th>distinct</th></tr>
- <tr><td>2630</td><td>2</td><td>3</td></tr>
+ <tr><td>2649</td><td>2</td><td>3</td></tr>
  </table>
  <pre style="font-size:85%;">
  Value      maschio femmina ambiguo
- Frequency     1486    1137       7
+ Frequency     1498    1144       7
  Proportion   0.565   0.432   0.003
  </pre>
  <hr class="thinhr"> <span style="font-weight:bold">Etnia</span>: <div style="float: right; text-align: right;"><img src="data:image/png;base64,
@@ -1611,7 +1605,7 @@ font-weight: normal;
 </style>
  <table class="hmisctable155607">
  <tr><th>n</th><th>missing</th><th>distinct</th></tr>
- <tr><td>2629</td><td>3</td><td>8</td></tr>
+ <tr><td>2648</td><td>3</td><td>8</td></tr>
  </table>
  <style>
 .hmisctable285376 {
@@ -1650,28 +1644,28 @@ font-weight: bold;
 <tr class="header">
 <th align="left"> </th>
 <th align="center">N</th>
-<th align="center">maschio (N=1486)</th>
-<th align="center">femmina (N=1137)</th>
+<th align="center">maschio (N=1498)</th>
+<th align="center">femmina (N=1144)</th>
 <th align="center">ambiguo (N=7)</th>
-<th align="center">Combined (N=2630)</th>
+<th align="center">Combined (N=2649)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">Età (giorni)</td>
-<td align="center">2631</td>
-<td align="center">137.250/ 909.000/3290.000
-1883.286+/-2177.276</td>
-<td align="center">179.000/1113.000/3668.000
-2033.965+/-2175.493</td>
+<td align="center">2650</td>
+<td align="center">139.250/ 910.500/3298.000
+1889.674+/-2179.285</td>
+<td align="center">181.250/1117.000/3675.500
+2038.490+/-2177.674</td>
 <td align="center">743.000/1507.000/1821.500
 1707.571+/-1761.969</td>
-<td align="center">154.000/1011.000/3430.000
-1947.231+/-2176.040</td>
+<td align="center">156.000/1013.000/3438.000
+1952.735+/-2178.102</td>
 </tr>
 <tr class="even">
 <td align="left">Classe di età</td>
-<td align="center">2632</td>
+<td align="center">2651</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -1680,42 +1674,42 @@ font-weight: bold;
 <tr class="odd">
 <td align="left">    neonati</td>
 <td align="center"></td>
-<td align="center">12% (173)</td>
-<td align="center">11% (126)</td>
+<td align="center">12% (174)</td>
+<td align="center">11% (127)</td>
 <td align="center">14% ( 1)</td>
-<td align="center">11% (300)</td>
+<td align="center">11% (302)</td>
 </tr>
 <tr class="even">
 <td align="left">    lattanti</td>
 <td align="center"></td>
-<td align="center">27% (395)</td>
+<td align="center">27% (397)</td>
 <td align="center">22% (251)</td>
 <td align="center">14% ( 1)</td>
-<td align="center">25% (647)</td>
+<td align="center">24% (649)</td>
 </tr>
 <tr class="odd">
 <td align="left">    prescolare</td>
 <td align="center"></td>
-<td align="center">24% (351)</td>
-<td align="center">25% (283)</td>
+<td align="center">24% (354)</td>
+<td align="center">25% (286)</td>
 <td align="center">43% ( 3)</td>
-<td align="center">24% (637)</td>
+<td align="center">24% (643)</td>
 </tr>
 <tr class="even">
 <td align="left">    scolare</td>
 <td align="center"></td>
-<td align="center">21% (315)</td>
+<td align="center">21% (317)</td>
 <td align="center">22% (249)</td>
 <td align="center">14% ( 1)</td>
-<td align="center">21% (565)</td>
+<td align="center">21% (567)</td>
 </tr>
 <tr class="odd">
 <td align="left">    adolescente</td>
 <td align="center"></td>
-<td align="center">15% (227)</td>
-<td align="center">19% (215)</td>
+<td align="center">15% (231)</td>
+<td align="center">19% (218)</td>
 <td align="center">14% ( 1)</td>
-<td align="center">17% (443)</td>
+<td align="center">17% (450)</td>
 </tr>
 <tr class="even">
 <td align="left">    adulto</td>
@@ -1743,7 +1737,7 @@ font-weight: bold;
 </tr>
 <tr class="odd">
 <td align="left">Priorità</td>
-<td align="center">2619</td>
+<td align="center">2638</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -1752,26 +1746,26 @@ font-weight: bold;
 <tr class="even">
 <td align="left">    1</td>
 <td align="center"></td>
-<td align="center">55% ( 811)</td>
-<td align="center">57% ( 642)</td>
+<td align="center">55% ( 817)</td>
+<td align="center">57% ( 645)</td>
 <td align="center">71% ( 5)</td>
-<td align="center">56% (1458)</td>
+<td align="center">56% (1467)</td>
 </tr>
 <tr class="odd">
 <td align="left">    2</td>
 <td align="center"></td>
-<td align="center">40% ( 592)</td>
-<td align="center">39% ( 439)</td>
+<td align="center">40% ( 597)</td>
+<td align="center">39% ( 441)</td>
 <td align="center">29% ( 2)</td>
-<td align="center">39% (1033)</td>
+<td align="center">39% (1040)</td>
 </tr>
 <tr class="even">
 <td align="left">    3</td>
 <td align="center"></td>
-<td align="center">3% ( 42)</td>
-<td align="center">2% ( 25)</td>
+<td align="center">3% ( 43)</td>
+<td align="center">2% ( 27)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">3% ( 67)</td>
+<td align="center">3% ( 70)</td>
 </tr>
 <tr class="odd">
 <td align="left">    4a</td>
@@ -1791,7 +1785,7 @@ font-weight: bold;
 </tr>
 <tr class="odd">
 <td align="left">Ricovero programmato</td>
-<td align="center">2429</td>
+<td align="center">2448</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -1800,22 +1794,22 @@ font-weight: bold;
 <tr class="even">
 <td align="left">    si</td>
 <td align="center"></td>
-<td align="center">38% ( 523)</td>
-<td align="center">40% ( 424)</td>
+<td align="center">38% ( 525)</td>
+<td align="center">40% ( 427)</td>
 <td align="center">29% ( 2)</td>
-<td align="center">39% ( 949)</td>
+<td align="center">39% ( 954)</td>
 </tr>
 <tr class="odd">
 <td align="left">    no</td>
 <td align="center"></td>
-<td align="center">62% ( 848)</td>
-<td align="center">60% ( 626)</td>
+<td align="center">62% ( 858)</td>
+<td align="center">60% ( 630)</td>
 <td align="center">71% ( 5)</td>
-<td align="center">61% (1479)</td>
+<td align="center">61% (1493)</td>
 </tr>
 <tr class="even">
 <td align="left">Tipologia di ricovero</td>
-<td align="center">2617</td>
+<td align="center">2636</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -1824,30 +1818,30 @@ font-weight: bold;
 <tr class="odd">
 <td align="left">    chirurgico</td>
 <td align="center"></td>
-<td align="center">47% ( 697)</td>
-<td align="center">47% ( 529)</td>
+<td align="center">47% ( 701)</td>
+<td align="center">47% ( 531)</td>
 <td align="center">43% ( 3)</td>
-<td align="center">47% (1229)</td>
+<td align="center">47% (1235)</td>
 </tr>
 <tr class="even">
 <td align="left">    medico</td>
 <td align="center"></td>
-<td align="center">46% ( 677)</td>
-<td align="center">49% ( 549)</td>
+<td align="center">46% ( 683)</td>
+<td align="center">49% ( 553)</td>
 <td align="center">57% ( 4)</td>
-<td align="center">47% (1230)</td>
+<td align="center">47% (1240)</td>
 </tr>
 <tr class="odd">
 <td align="left">    trauma, ustione, intossicazione, annegamento, avvelenamento, folgorazione, inalazione di fumo, ipotermia, soffocamento</td>
 <td align="center"></td>
-<td align="center">7% ( 105)</td>
-<td align="center">5% ( 51)</td>
+<td align="center">7% ( 107)</td>
+<td align="center">5% ( 52)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">6% ( 156)</td>
+<td align="center">6% ( 159)</td>
 </tr>
 <tr class="even">
 <td align="left">Motivo del ricovero</td>
-<td align="center">1231</td>
+<td align="center">1241</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -1856,26 +1850,26 @@ font-weight: bold;
 <tr class="odd">
 <td align="left">    insufficienza respiratoria</td>
 <td align="center"></td>
-<td align="center">41% (280)</td>
-<td align="center">42% (229)</td>
+<td align="center">42% (285)</td>
+<td align="center">42% (232)</td>
 <td align="center">50% ( 2)</td>
-<td align="center">42% (511)</td>
+<td align="center">42% (519)</td>
 </tr>
 <tr class="even">
 <td align="left">    alterato sensorio / crisi convulsive</td>
 <td align="center"></td>
-<td align="center">17% (117)</td>
+<td align="center">17% (118)</td>
 <td align="center">19% (103)</td>
 <td align="center">25% ( 1)</td>
-<td align="center">18% (221)</td>
+<td align="center">18% (222)</td>
 </tr>
 <tr class="odd">
 <td align="left">    disordini metabolici / disidratazione</td>
 <td align="center"></td>
 <td align="center">7% ( 46)</td>
-<td align="center">6% ( 32)</td>
+<td align="center">6% ( 33)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">6% ( 78)</td>
+<td align="center">6% ( 79)</td>
 </tr>
 <tr class="even">
 <td align="left">    insufficienza cardiocircolatoria (no shock settico)</td>
@@ -1967,7 +1961,7 @@ font-weight: bold;
 </tr>
 <tr class="odd">
 <td align="left">Presenza di comorbidità</td>
-<td align="center">2622</td>
+<td align="center">2641</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -1976,22 +1970,22 @@ font-weight: bold;
 <tr class="even">
 <td align="left">    si</td>
 <td align="center"></td>
-<td align="center">60% ( 893)</td>
-<td align="center">58% ( 657)</td>
+<td align="center">60% ( 899)</td>
+<td align="center">58% ( 662)</td>
 <td align="center">86% ( 6)</td>
-<td align="center">59% (1556)</td>
+<td align="center">59% (1567)</td>
 </tr>
 <tr class="odd">
 <td align="left">    no</td>
 <td align="center"></td>
-<td align="center">40% ( 590)</td>
-<td align="center">42% ( 473)</td>
+<td align="center">40% ( 596)</td>
+<td align="center">42% ( 475)</td>
 <td align="center">14% ( 1)</td>
-<td align="center">41% (1064)</td>
+<td align="center">41% (1072)</td>
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: cardiologica</td>
-<td align="center">2632</td>
+<td align="center">2651</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2000,22 +1994,22 @@ font-weight: bold;
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">84% (1247)</td>
-<td align="center">87% ( 984)</td>
+<td align="center">84% (1259)</td>
+<td align="center">87% ( 990)</td>
 <td align="center">86% ( 6)</td>
-<td align="center">85% (2237)</td>
+<td align="center">85% (2255)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
 <td align="center"></td>
 <td align="center">16% ( 239)</td>
-<td align="center">13% ( 153)</td>
+<td align="center">13% ( 154)</td>
 <td align="center">14% ( 1)</td>
-<td align="center">15% ( 393)</td>
+<td align="center">15% ( 394)</td>
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: metabolica</td>
-<td align="center">2632</td>
+<td align="center">2651</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2024,22 +2018,22 @@ font-weight: bold;
 <tr class="even">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">97% (1439)</td>
-<td align="center">97% (1106)</td>
+<td align="center">97% (1451)</td>
+<td align="center">97% (1112)</td>
 <td align="center">100% ( 7)</td>
-<td align="center">97% (2552)</td>
+<td align="center">97% (2570)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
 <td align="center"></td>
 <td align="center">3% ( 47)</td>
-<td align="center">3% ( 31)</td>
+<td align="center">3% ( 32)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">3% ( 78)</td>
+<td align="center">3% ( 79)</td>
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: neurologica</td>
-<td align="center">2632</td>
+<td align="center">2651</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2048,22 +2042,22 @@ font-weight: bold;
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">83% (1229)</td>
-<td align="center">85% ( 966)</td>
+<td align="center">83% (1238)</td>
+<td align="center">85% ( 971)</td>
 <td align="center">57% ( 4)</td>
-<td align="center">84% (2199)</td>
+<td align="center">84% (2213)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
 <td align="center"></td>
-<td align="center">17% ( 257)</td>
-<td align="center">15% ( 171)</td>
+<td align="center">17% ( 260)</td>
+<td align="center">15% ( 173)</td>
 <td align="center">43% ( 3)</td>
-<td align="center">16% ( 431)</td>
+<td align="center">16% ( 436)</td>
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: neuromuscolare</td>
-<td align="center">2632</td>
+<td align="center">2651</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2072,10 +2066,10 @@ font-weight: bold;
 <tr class="even">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">97% (1439)</td>
-<td align="center">95% (1076)</td>
+<td align="center">97% (1451)</td>
+<td align="center">95% (1083)</td>
 <td align="center">100% ( 7)</td>
-<td align="center">96% (2522)</td>
+<td align="center">96% (2541)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -2087,7 +2081,7 @@ font-weight: bold;
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: onco-ematologica</td>
-<td align="center">2632</td>
+<td align="center">2651</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2096,22 +2090,22 @@ font-weight: bold;
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">92% (1365)</td>
-<td align="center">92% (1046)</td>
+<td align="center">92% (1377)</td>
+<td align="center">92% (1052)</td>
 <td align="center">100% ( 7)</td>
-<td align="center">92% (2418)</td>
+<td align="center">92% (2436)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
 <td align="center"></td>
 <td align="center">8% ( 121)</td>
-<td align="center">8% ( 91)</td>
+<td align="center">8% ( 92)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">8% ( 212)</td>
+<td align="center">8% ( 213)</td>
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: renale</td>
-<td align="center">2632</td>
+<td align="center">2651</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2120,10 +2114,10 @@ font-weight: bold;
 <tr class="even">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">98% (1455)</td>
-<td align="center">97% (1098)</td>
+<td align="center">98% (1467)</td>
+<td align="center">97% (1105)</td>
 <td align="center">71% ( 5)</td>
-<td align="center">97% (2558)</td>
+<td align="center">97% (2577)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -2135,7 +2129,7 @@ font-weight: bold;
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: respiratoria</td>
-<td align="center">2632</td>
+<td align="center">2651</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2144,10 +2138,10 @@ font-weight: bold;
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">92% (1366)</td>
-<td align="center">92% (1048)</td>
+<td align="center">92% (1378)</td>
+<td align="center">92% (1055)</td>
 <td align="center">71% ( 5)</td>
-<td align="center">92% (2419)</td>
+<td align="center">92% (2438)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -2159,7 +2153,7 @@ font-weight: bold;
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: sindromica</td>
-<td align="center">2632</td>
+<td align="center">2651</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2168,22 +2162,22 @@ font-weight: bold;
 <tr class="even">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">92% (1374)</td>
-<td align="center">90% (1028)</td>
+<td align="center">92% (1385)</td>
+<td align="center">90% (1035)</td>
 <td align="center">86% ( 6)</td>
-<td align="center">92% (2408)</td>
+<td align="center">92% (2426)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
 <td align="center"></td>
-<td align="center">8% ( 112)</td>
+<td align="center">8% ( 113)</td>
 <td align="center">10% ( 109)</td>
 <td align="center">14% ( 1)</td>
-<td align="center">8% ( 222)</td>
+<td align="center">8% ( 223)</td>
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: malformato/esiti di malformazione</td>
-<td align="center">2632</td>
+<td align="center">2651</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2192,22 +2186,22 @@ font-weight: bold;
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">89% (1328)</td>
-<td align="center">91% (1038)</td>
+<td align="center">89% (1340)</td>
+<td align="center">91% (1044)</td>
 <td align="center">86% ( 6)</td>
-<td align="center">90% (2372)</td>
+<td align="center">90% (2390)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
 <td align="center"></td>
 <td align="center">11% ( 158)</td>
-<td align="center">9% ( 99)</td>
+<td align="center">9% ( 100)</td>
 <td align="center">14% ( 1)</td>
-<td align="center">10% ( 258)</td>
+<td align="center">10% ( 259)</td>
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: ex-prematuro</td>
-<td align="center">2632</td>
+<td align="center">2651</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2216,10 +2210,10 @@ font-weight: bold;
 <tr class="even">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">96% (1432)</td>
-<td align="center">97% (1108)</td>
+<td align="center">96% (1444)</td>
+<td align="center">97% (1115)</td>
 <td align="center">86% ( 6)</td>
-<td align="center">97% (2546)</td>
+<td align="center">97% (2565)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -2231,7 +2225,7 @@ font-weight: bold;
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: altro</td>
-<td align="center">2632</td>
+<td align="center">2651</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2240,10 +2234,10 @@ font-weight: bold;
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">96% (1433)</td>
-<td align="center">95% (1085)</td>
+<td align="center">96% (1445)</td>
+<td align="center">95% (1092)</td>
 <td align="center">86% ( 6)</td>
-<td align="center">96% (2524)</td>
+<td align="center">96% (2543)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -2255,7 +2249,7 @@ font-weight: bold;
 </tr>
 <tr class="odd">
 <td align="left">Numero di comorbidità</td>
-<td align="center">2632</td>
+<td align="center">2651</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2264,26 +2258,26 @@ font-weight: bold;
 <tr class="even">
 <td align="left">    0</td>
 <td align="center"></td>
-<td align="center">43% ( 636)</td>
-<td align="center">44% ( 503)</td>
+<td align="center">43% ( 644)</td>
+<td align="center">44% ( 505)</td>
 <td align="center">14% ( 1)</td>
-<td align="center">43% (1140)</td>
+<td align="center">43% (1150)</td>
 </tr>
 <tr class="odd">
 <td align="left">    1</td>
 <td align="center"></td>
-<td align="center">40% ( 592)</td>
-<td align="center">39% ( 439)</td>
+<td align="center">40% ( 596)</td>
+<td align="center">39% ( 443)</td>
 <td align="center">43% ( 3)</td>
-<td align="center">39% (1034)</td>
+<td align="center">39% (1042)</td>
 </tr>
 <tr class="even">
 <td align="left">    2</td>
 <td align="center"></td>
 <td align="center">11% ( 165)</td>
-<td align="center">11% ( 127)</td>
+<td align="center">11% ( 128)</td>
 <td align="center">14% ( 1)</td>
-<td align="center">11% ( 293)</td>
+<td align="center">11% ( 294)</td>
 </tr>
 <tr class="odd">
 <td align="left">    3</td>
@@ -2319,7 +2313,7 @@ font-weight: bold;
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: gastroenterologica</td>
-<td align="center">160</td>
+<td align="center">162</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2328,10 +2322,10 @@ font-weight: bold;
 <tr class="even">
 <td align="left">    gastroenterologica</td>
 <td align="center"></td>
-<td align="center">100% ( 86)</td>
+<td align="center">100% ( 88)</td>
 <td align="center">100% ( 73)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">100% (160)</td>
+<td align="center">100% (162)</td>
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: trapiantologica</td>
@@ -2351,31 +2345,31 @@ font-weight: bold;
 </tr>
 <tr class="odd">
 <td align="left">PIM 2</td>
-<td align="center">2341</td>
+<td align="center">2360</td>
 <td align="center">0.600000/ 1.260000/ 3.760000
-4.572795+/-11.126023</td>
-<td align="center">0.537500/ 1.240000/ 3.660000
-4.111961+/- 9.444184</td>
+4.558430+/-11.083769</td>
+<td align="center">0.535000/ 1.240000/ 3.660000
+4.117799+/- 9.436752</td>
 <td align="center">1.295000/ 2.200000/ 2.885000
 2.572857+/- 2.165885</td>
 <td align="center">0.560000/ 1.260000/ 3.660000
-4.364246+/-10.408041</td>
+4.359034+/-10.380622</td>
 </tr>
 <tr class="even">
 <td align="left">PIM 3</td>
-<td align="center">2341</td>
-<td align="center">0.440000/ 0.940000/ 2.910000
-3.673625+/-10.637592</td>
-<td align="center">0.410000/ 0.885000/ 2.557500
-3.047225+/- 7.834550</td>
+<td align="center">2360</td>
+<td align="center">0.440000/ 0.940000/ 2.940000
+3.664589+/-10.594980</td>
+<td align="center">0.410000/ 0.890000/ 2.590000
+3.056164+/- 7.827870</td>
 <td align="center">0.820000/ 1.300000/ 1.590000
 1.644286+/- 1.576979</td>
-<td align="center">0.430000/ 0.910000/ 2.670000
-3.393238+/- 9.502152</td>
+<td align="center">0.437500/ 0.920000/ 2.695000
+3.392453+/- 9.474356</td>
 </tr>
 <tr class="odd">
 <td align="left">Tecnica di ventilazione</td>
-<td align="center">1256</td>
+<td align="center">1274</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2384,30 +2378,30 @@ font-weight: bold;
 <tr class="even">
 <td align="left">    niv</td>
 <td align="center"></td>
-<td align="center">26% (191)</td>
-<td align="center">30% (158)</td>
+<td align="center">26% (193)</td>
+<td align="center">30% (160)</td>
 <td align="center">17% ( 1)</td>
-<td align="center">28% (350)</td>
+<td align="center">28% (354)</td>
 </tr>
 <tr class="odd">
 <td align="left">    it</td>
 <td align="center"></td>
-<td align="center">59% (431)</td>
-<td align="center">57% (298)</td>
+<td align="center">59% (438)</td>
+<td align="center">57% (301)</td>
 <td align="center">67% ( 4)</td>
-<td align="center">58% (733)</td>
+<td align="center">58% (743)</td>
 </tr>
 <tr class="even">
 <td align="left">    niv e it</td>
 <td align="center"></td>
-<td align="center">14% (105)</td>
-<td align="center">13% ( 66)</td>
+<td align="center">14% (106)</td>
+<td align="center">13% ( 69)</td>
 <td align="center">17% ( 1)</td>
-<td align="center">14% (172)</td>
+<td align="center">14% (176)</td>
 </tr>
 <tr class="odd">
 <td align="left">Tipologia di infezione</td>
-<td align="center">632</td>
+<td align="center">640</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2416,34 +2410,34 @@ font-weight: bold;
 <tr class="even">
 <td align="left">    comunità</td>
 <td align="center"></td>
-<td align="center">73% (265)</td>
-<td align="center">74% (200)</td>
+<td align="center">74% (269)</td>
+<td align="center">74% (203)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">74% (465)</td>
+<td align="center">74% (472)</td>
 </tr>
 <tr class="odd">
 <td align="left">    nosocomiale (dopo 48h da inizio ospedalizzazione)</td>
 <td align="center"></td>
-<td align="center">27% ( 96)</td>
-<td align="center">26% ( 70)</td>
+<td align="center">26% ( 96)</td>
+<td align="center">26% ( 71)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">26% (167)</td>
+<td align="center">26% (168)</td>
 </tr>
 <tr class="even">
 <td align="left">Durata della degenza</td>
-<td align="center">2204</td>
+<td align="center">2228</td>
 <td align="center">1.000000/ 2.000000/ 5.000000
-5.726624+/-13.900824</td>
+5.701961+/-13.836246</td>
 <td align="center">1.000000/ 2.000000/ 5.000000
-5.437901+/-11.172040</td>
+5.462434+/-11.123199</td>
 <td align="center">1.000000/ 1.000000/ 5.500000
 3.285714+/- 3.302236</td>
 <td align="center">1.000000/ 2.000000/ 5.000000
-5.599365+/-12.788784</td>
+5.595601+/-12.729591</td>
 </tr>
 <tr class="odd">
 <td align="left">Modalità di decesso</td>
-<td align="center">54</td>
+<td align="center">55</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2452,10 +2446,10 @@ font-weight: bold;
 <tr class="even">
 <td align="left">    morte nonostante rianimazione cardiopolmonare</td>
 <td align="center"></td>
-<td align="center">33% (12)</td>
+<td align="center">32% (12)</td>
 <td align="center">44% ( 8)</td>
 <td align="center"></td>
-<td align="center">37% (20)</td>
+<td align="center">36% (20)</td>
 </tr>
 <tr class="odd">
 <td align="left">    sospensione dei trattamenti di supporto vitale</td>
@@ -2476,10 +2470,10 @@ font-weight: bold;
 <tr class="odd">
 <td align="left">    decisione di non rianimare</td>
 <td align="center"></td>
-<td align="center">11% ( 4)</td>
+<td align="center">14% ( 5)</td>
 <td align="center">6% ( 1)</td>
 <td align="center"></td>
-<td align="center">9% ( 5)</td>
+<td align="center">11% ( 6)</td>
 </tr>
 <tr class="even">
 <td align="left">    morte cerebrale</td>
@@ -2491,7 +2485,7 @@ font-weight: bold;
 </tr>
 <tr class="odd">
 <td align="left">Esito TIP</td>
-<td align="center">2208</td>
+<td align="center">2232</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2500,22 +2494,22 @@ font-weight: bold;
 <tr class="even">
 <td align="left">    vivo</td>
 <td align="center"></td>
-<td align="center">97% (1224)</td>
-<td align="center">98% ( 922)</td>
+<td align="center">97% (1236)</td>
+<td align="center">98% ( 933)</td>
 <td align="center">100% ( 7)</td>
-<td align="center">98% (2153)</td>
+<td align="center">98% (2176)</td>
 </tr>
 <tr class="odd">
 <td align="left">    morto</td>
 <td align="center"></td>
-<td align="center">3% ( 36)</td>
+<td align="center">3% ( 37)</td>
 <td align="center">2% ( 18)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">2% ( 54)</td>
+<td align="center">2% ( 55)</td>
 </tr>
 <tr class="even">
 <td align="left">Diagnosi alla dimissione</td>
-<td align="center">2205</td>
+<td align="center">2229</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2533,41 +2527,41 @@ font-weight: bold;
 <td align="left">    cardiovascolare, congenito</td>
 <td align="center"></td>
 <td align="center">10% (122)</td>
-<td align="center">8% ( 74)</td>
+<td align="center">8% ( 75)</td>
 <td align="center">14% ( 1)</td>
-<td align="center">9% (197)</td>
+<td align="center">9% (198)</td>
 </tr>
 <tr class="odd">
 <td align="left">    gastrointestinale</td>
 <td align="center"></td>
-<td align="center">9% (112)</td>
+<td align="center">9% (114)</td>
 <td align="center">7% ( 70)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">8% (182)</td>
+<td align="center">8% (184)</td>
 </tr>
 <tr class="even">
 <td align="left">    incidenti</td>
 <td align="center"></td>
-<td align="center">7% ( 86)</td>
-<td align="center">5% ( 48)</td>
+<td align="center">7% ( 88)</td>
+<td align="center">5% ( 49)</td>
 <td align="center">14% ( 1)</td>
-<td align="center">6% (135)</td>
+<td align="center">6% (138)</td>
 </tr>
 <tr class="odd">
 <td align="left">    miscellanea</td>
 <td align="center"></td>
-<td align="center">30% (373)</td>
-<td align="center">33% (305)</td>
+<td align="center">29% (375)</td>
+<td align="center">32% (307)</td>
 <td align="center">14% ( 1)</td>
-<td align="center">31% (679)</td>
+<td align="center">31% (683)</td>
 </tr>
 <tr class="even">
 <td align="left">    neurologico</td>
 <td align="center"></td>
-<td align="center">19% (236)</td>
+<td align="center">19% (238)</td>
 <td align="center">19% (179)</td>
 <td align="center">14% ( 1)</td>
-<td align="center">19% (416)</td>
+<td align="center">19% (418)</td>
 </tr>
 <tr class="odd">
 <td align="left">    renale</td>
@@ -2588,18 +2582,18 @@ font-weight: bold;
 <tr class="odd">
 <td align="left">    respiratorio, via aerea inferiore</td>
 <td align="center"></td>
-<td align="center">11% (133)</td>
-<td align="center">11% (104)</td>
+<td align="center">11% (137)</td>
+<td align="center">12% (110)</td>
 <td align="center">29% ( 2)</td>
-<td align="center">11% (239)</td>
+<td align="center">11% (249)</td>
 </tr>
 <tr class="even">
 <td align="left">    respiratorio, via aerea superiore</td>
 <td align="center"></td>
-<td align="center">4% ( 49)</td>
-<td align="center">2% ( 23)</td>
+<td align="center">4% ( 50)</td>
+<td align="center">3% ( 24)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">3% ( 72)</td>
+<td align="center">3% ( 74)</td>
 </tr>
 <tr class="odd">
 <td align="left">    sviluppo di delirium</td>
@@ -2623,14 +2617,14 @@ font-weight: bold;
 <div id="smr" class="section level3" number="2.1.3">
 <h3><span class="header-section-number">2.1.3</span> SMR</h3>
 <p>SMR PIM2 (overall): 0.53</p>
-<p>SMR PIM3 (overall): 0.68</p>
+<p>SMR PIM3 (overall): 0.69</p>
 </div>
 </div>
 </div>
 <div id="centers" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Report centri</h1>
-<div id="dag-na" class="section level2 tabset tabset-fade tabset-pills" number="3.1">
-<h2><span class="header-section-number">3.1</span> DAG: NA</h2>
+<div id="dag-1" class="section level2 tabset tabset-fade tabset-pills" number="3.1">
+<h2><span class="header-section-number">3.1</span> DAG: 1</h2>
 <div id="accettazione-1" class="section level3" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> Accettazione</h3>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -2672,9 +2666,12 @@ left: 0.1em;
 bottom: -1ex;
 }
 </style>
+<title>
+Accettazione Descriptives
+</title>
 <font color="MidnightBlue">
 <div align="center">
-<span style="font-weight:bold">Accettazione <br><br> 2 Variables   546 Observations</span>
+<span style="font-weight:bold">Accettazione <br><br> 2 Variables   547 Observations</span>
 </div>
 </font>
 <hr class="thinhr">
@@ -2713,7 +2710,7 @@ distinct
 </tr>
 <tr>
 <td>
-546
+547
 </td>
 <td>
 0
@@ -2725,8 +2722,8 @@ distinct
 </table>
 <pre style="font-size:85%;">
  Value      maschio femmina ambiguo
- Frequency      304     240       2
- Proportion   0.557   0.440   0.004
+ Frequency      304     241       2
+ Proportion   0.556   0.441   0.004
  </pre>
 <hr class="thinhr">
 <span style="font-weight:bold">Etnia</span>:
@@ -2764,7 +2761,7 @@ distinct
 </tr>
 <tr>
 <td>
-546
+547
 </td>
 <td>
 0
@@ -2832,7 +2829,7 @@ non conosciuta/non riportata
 </td>
 </tr>
 </table>
-caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21, 0.038), araba (31, 0.057), etnia mista (5, 0.009), non conosciuta/non riportata (8, 0.015)
+caucasica (451, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21, 0.038), araba (31, 0.057), etnia mista (5, 0.009), non conosciuta/non riportata (8, 0.015)
 <hr class="thinhr">
 </div>
 <div id="descrittive-1" class="section level3" number="3.1.2">
@@ -2851,27 +2848,27 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <th align="left"> </th>
 <th align="center">N</th>
 <th align="center">maschio (N=304)</th>
-<th align="center">femmina (N=240)</th>
+<th align="center">femmina (N=241)</th>
 <th align="center">ambiguo (N=2)</th>
-<th align="center">Combined (N=546)</th>
+<th align="center">Combined (N=547)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">Età (giorni)</td>
-<td align="center">546</td>
+<td align="center">547</td>
 <td align="center">100.250/ 891.500/2758.000
 1829.470+/-2372.628</td>
-<td align="center">121.250/1080.000/4252.000
-2107.883+/-2269.201</td>
+<td align="center">110.000/1073.000/4250.000
+2099.199+/-2268.478</td>
 <td align="center">595.500/1092.000/1588.500
 1092.000+/-1404.314</td>
-<td align="center">107.500/1012.000/3212.250
-1949.148+/-2326.637</td>
+<td align="center">106.000/1011.000/3206.500
+1945.612+/-2325.976</td>
 </tr>
 <tr class="even">
 <td align="left">Classe di età</td>
-<td align="center">546</td>
+<td align="center">547</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2881,15 +2878,15 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    neonati</td>
 <td align="center"></td>
 <td align="center">17% ( 52)</td>
-<td align="center">17% ( 40)</td>
+<td align="center">17% ( 41)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">17% ( 92)</td>
+<td align="center">17% ( 93)</td>
 </tr>
 <tr class="even">
 <td align="left">    lattanti</td>
 <td align="center"></td>
 <td align="center">25% ( 76)</td>
-<td align="center">18% ( 42)</td>
+<td align="center">17% ( 42)</td>
 <td align="center">50% ( 1)</td>
 <td align="center">22% (119)</td>
 </tr>
@@ -2897,7 +2894,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    prescolare</td>
 <td align="center"></td>
 <td align="center">19% ( 59)</td>
-<td align="center">25% ( 59)</td>
+<td align="center">24% ( 59)</td>
 <td align="center">0% ( 0)</td>
 <td align="center">22% (118)</td>
 </tr>
@@ -2943,7 +2940,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="odd">
 <td align="left">Priorità</td>
-<td align="center">542</td>
+<td align="center">543</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2961,9 +2958,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    2</td>
 <td align="center"></td>
 <td align="center">55% (166)</td>
-<td align="center">51% (121)</td>
+<td align="center">51% (122)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">53% (287)</td>
+<td align="center">53% (288)</td>
 </tr>
 <tr class="even">
 <td align="left">    3</td>
@@ -2991,7 +2988,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="odd">
 <td align="left">Ricovero programmato</td>
-<td align="center">471</td>
+<td align="center">472</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3001,9 +2998,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    si</td>
 <td align="center"></td>
 <td align="center">51% (135)</td>
-<td align="center">55% (113)</td>
+<td align="center">55% (114)</td>
 <td align="center">50% ( 1)</td>
-<td align="center">53% (249)</td>
+<td align="center">53% (250)</td>
 </tr>
 <tr class="odd">
 <td align="left">    no</td>
@@ -3015,7 +3012,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="even">
 <td align="left">Tipologia di ricovero</td>
-<td align="center">540</td>
+<td align="center">541</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3025,9 +3022,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    chirurgico</td>
 <td align="center"></td>
 <td align="center">61% (184)</td>
-<td align="center">63% (149)</td>
+<td align="center">63% (150)</td>
 <td align="center">50% ( 1)</td>
-<td align="center">62% (334)</td>
+<td align="center">62% (335)</td>
 </tr>
 <tr class="even">
 <td align="left">    medico</td>
@@ -3167,7 +3164,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="odd">
 <td align="left">Presenza di comorbidità</td>
-<td align="center">542</td>
+<td align="center">543</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3185,13 +3182,13 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    no</td>
 <td align="center"></td>
 <td align="center">21% ( 65)</td>
-<td align="center">19% ( 44)</td>
+<td align="center">19% ( 45)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">20% (109)</td>
+<td align="center">20% (110)</td>
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: cardiologica</td>
-<td align="center">546</td>
+<td align="center">547</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3201,9 +3198,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">73% (223)</td>
-<td align="center">69% (165)</td>
+<td align="center">69% (166)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">71% (390)</td>
+<td align="center">71% (391)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -3215,7 +3212,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: metabolica</td>
-<td align="center">546</td>
+<td align="center">547</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3225,9 +3222,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">98% (297)</td>
-<td align="center">97% (232)</td>
+<td align="center">97% (233)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">97% (531)</td>
+<td align="center">97% (532)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -3239,7 +3236,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: neurologica</td>
-<td align="center">546</td>
+<td align="center">547</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3249,9 +3246,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">79% (239)</td>
-<td align="center">78% (187)</td>
+<td align="center">78% (188)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">78% (426)</td>
+<td align="center">78% (427)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -3263,7 +3260,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: neuromuscolare</td>
-<td align="center">546</td>
+<td align="center">547</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3273,9 +3270,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">97% (294)</td>
-<td align="center">98% (234)</td>
+<td align="center">98% (235)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">97% (530)</td>
+<td align="center">97% (531)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -3287,7 +3284,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: onco-ematologica</td>
-<td align="center">546</td>
+<td align="center">547</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3297,9 +3294,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">90% (275)</td>
-<td align="center">92% (221)</td>
+<td align="center">92% (222)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">91% (498)</td>
+<td align="center">91% (499)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -3311,7 +3308,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: renale</td>
-<td align="center">546</td>
+<td align="center">547</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3321,9 +3318,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">99% (300)</td>
-<td align="center">95% (228)</td>
+<td align="center">95% (229)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">97% (530)</td>
+<td align="center">97% (531)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -3335,7 +3332,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: respiratoria</td>
-<td align="center">546</td>
+<td align="center">547</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3345,9 +3342,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">91% (276)</td>
-<td align="center">88% (210)</td>
+<td align="center">88% (211)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">89% (486)</td>
+<td align="center">89% (487)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -3359,7 +3356,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: sindromica</td>
-<td align="center">546</td>
+<td align="center">547</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3369,9 +3366,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">94% (286)</td>
-<td align="center">88% (211)</td>
+<td align="center">88% (212)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">91% (499)</td>
+<td align="center">91% (500)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -3383,7 +3380,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: malformato/esiti di malformazione</td>
-<td align="center">546</td>
+<td align="center">547</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3393,9 +3390,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">88% (267)</td>
-<td align="center">88% (210)</td>
+<td align="center">88% (211)</td>
 <td align="center">50% ( 1)</td>
-<td align="center">88% (478)</td>
+<td align="center">88% (479)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -3407,7 +3404,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: ex-prematuro</td>
-<td align="center">546</td>
+<td align="center">547</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3417,9 +3414,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">96% (291)</td>
-<td align="center">98% (236)</td>
+<td align="center">98% (237)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">97% (529)</td>
+<td align="center">97% (530)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -3431,7 +3428,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: altro</td>
-<td align="center">546</td>
+<td align="center">547</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3441,9 +3438,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">91% (278)</td>
-<td align="center">93% (224)</td>
+<td align="center">93% (225)</td>
 <td align="center">50% ( 1)</td>
-<td align="center">92% (503)</td>
+<td align="center">92% (504)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -3455,7 +3452,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="odd">
 <td align="left">Numero di comorbidità</td>
-<td align="center">546</td>
+<td align="center">547</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3465,9 +3462,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    0</td>
 <td align="center"></td>
 <td align="center">26% ( 78)</td>
-<td align="center">20% ( 49)</td>
+<td align="center">21% ( 50)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">23% (127)</td>
+<td align="center">23% (128)</td>
 </tr>
 <tr class="odd">
 <td align="left">    1</td>
@@ -3475,7 +3472,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="center">54% (163)</td>
 <td align="center">56% (135)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">55% (298)</td>
+<td align="center">54% (298)</td>
 </tr>
 <tr class="even">
 <td align="left">    2</td>
@@ -3543,31 +3540,31 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="even">
 <td align="left">PIM 2</td>
-<td align="center">485</td>
+<td align="center">486</td>
 <td align="center">0.5400000/1.3000000/4.0600000
 3.9289259+/-8.7105804</td>
-<td align="center">0.5600000/1.4000000/3.6900000
-4.0848357+/-8.6082657</td>
+<td align="center">0.5525000/1.3950000/3.6700000
+4.0677570+/-8.5916681</td>
 <td align="center">2.7475000/2.8850000/3.0225000
 2.8850000+/-0.3889087</td>
-<td align="center">0.5500000/1.4000000/3.8500000
-3.9930928+/-8.6393953</td>
+<td align="center">0.5425000/1.3950000/3.8325000
+3.9857613+/-8.6319973</td>
 </tr>
 <tr class="odd">
 <td align="left">PIM 3</td>
-<td align="center">485</td>
+<td align="center">486</td>
 <td align="center">0.40000000/0.90500000/2.35500000
 2.85251852+/-8.22650185</td>
-<td align="center">0.46000000/0.88000000/2.39000000
-2.74553991+/-5.83056458</td>
+<td align="center">0.46000000/0.87500000/2.38000000
+2.73663551+/-5.81832001</td>
 <td align="center">1.33000000/1.36000000/1.39000000
 1.36000000+/-0.08485281</td>
-<td align="center">0.43000000/0.90000000/2.37000000
-2.79938144+/-7.24672021</td>
+<td align="center">0.43000000/0.89500000/2.36500000
+2.79534979+/-7.23979109</td>
 </tr>
 <tr class="even">
 <td align="left">Tecnica di ventilazione</td>
-<td align="center">167</td>
+<td align="center">169</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3577,7 +3574,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    niv</td>
 <td align="center"></td>
 <td align="center">7% ( 7)</td>
-<td align="center">9% ( 6)</td>
+<td align="center">8% ( 6)</td>
 <td align="center">0% ( 0)</td>
 <td align="center">8% ( 13)</td>
 </tr>
@@ -3585,9 +3582,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    it</td>
 <td align="center"></td>
 <td align="center">91% ( 87)</td>
-<td align="center">88% ( 61)</td>
+<td align="center">89% ( 63)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">90% (150)</td>
+<td align="center">90% (152)</td>
 </tr>
 <tr class="odd">
 <td align="left">    niv e it</td>
@@ -3623,15 +3620,15 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="odd">
 <td align="left">Durata della degenza</td>
-<td align="center">399</td>
+<td align="center">402</td>
 <td align="center">1.000000/ 2.000000/ 5.000000
 8.687225+/-26.664483</td>
-<td align="center">1.000000/ 2.000000/ 5.000000
-5.970588+/-14.302491</td>
+<td align="center">1.000000/ 2.000000/ 6.000000
+6.086705+/-14.216699</td>
 <td align="center">1.000000/ 1.000000/ 1.000000
 1.000000+/- 0.000000</td>
 <td align="center">1.000000/ 2.000000/ 5.000000
-7.491228+/-22.194759</td>
+7.529851+/-22.119498</td>
 </tr>
 <tr class="even">
 <td align="left">Modalità di decesso</td>
@@ -3683,7 +3680,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="even">
 <td align="left">Esito TIP</td>
-<td align="center">399</td>
+<td align="center">402</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3693,9 +3690,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    vivo</td>
 <td align="center"></td>
 <td align="center">98% (221)</td>
-<td align="center">98% (167)</td>
+<td align="center">98% (170)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">98% (390)</td>
+<td align="center">98% (393)</td>
 </tr>
 <tr class="even">
 <td align="left">    morto</td>
@@ -3707,7 +3704,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 </tr>
 <tr class="odd">
 <td align="left">Diagnosi alla dimissione</td>
-<td align="center">392</td>
+<td align="center">395</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -3725,9 +3722,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    cardiovascolare, congenito</td>
 <td align="center"></td>
 <td align="center">23% ( 52)</td>
-<td align="center">23% ( 38)</td>
+<td align="center">23% ( 39)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">23% ( 90)</td>
+<td align="center">23% ( 91)</td>
 </tr>
 <tr class="even">
 <td align="left">    gastrointestinale</td>
@@ -3749,7 +3746,7 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    miscellanea</td>
 <td align="center"></td>
 <td align="center">31% ( 70)</td>
-<td align="center">33% ( 55)</td>
+<td align="center">32% ( 55)</td>
 <td align="center">0% ( 0)</td>
 <td align="center">32% (125)</td>
 </tr>
@@ -3781,9 +3778,9 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <td align="left">    respiratorio, via aerea inferiore</td>
 <td align="center"></td>
 <td align="center">3% ( 7)</td>
-<td align="center">5% ( 8)</td>
+<td align="center">6% ( 10)</td>
 <td align="center">50% ( 1)</td>
-<td align="center">4% ( 16)</td>
+<td align="center">5% ( 18)</td>
 </tr>
 <tr class="odd">
 <td align="left">    respiratorio, via aerea superiore</td>
@@ -3818,8 +3815,8 @@ caucasica (450, 0.824), ispanica (24, 0.044), asiatica (7, 0.013), africana (21,
 <p>SMR PIM3: 0.66</p>
 </div>
 </div>
-<div id="dag-na-1" class="section level2 tabset tabset-fade tabset-pills" number="3.2">
-<h2><span class="header-section-number">3.2</span> DAG: NA</h2>
+<div id="dag-2" class="section level2 tabset tabset-fade tabset-pills" number="3.2">
+<h2><span class="header-section-number">3.2</span> DAG: 2</h2>
 <div id="accettazione-2" class="section level3" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Accettazione</h3>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -3861,6 +3858,9 @@ left: 0.1em;
 bottom: -1ex;
 }
 </style>
+<title>
+Accettazione Descriptives
+</title>
 <font color="MidnightBlue">
 <div align="center">
 <span style="font-weight:bold">Accettazione <br><br> 2 Variables   131 Observations</span>
@@ -4856,8 +4856,8 @@ etnia mista
 <p>SMR PIM3: 0.65</p>
 </div>
 </div>
-<div id="dag-na-2" class="section level2 tabset tabset-fade tabset-pills" number="3.3">
-<h2><span class="header-section-number">3.3</span> DAG: NA</h2>
+<div id="dag-3" class="section level2 tabset tabset-fade tabset-pills" number="3.3">
+<h2><span class="header-section-number">3.3</span> DAG: 3</h2>
 <div id="accettazione-3" class="section level3" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> Accettazione</h3>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -4899,9 +4899,12 @@ left: 0.1em;
 bottom: -1ex;
 }
 </style>
+<title>
+Accettazione Descriptives
+</title>
 <font color="MidnightBlue">
 <div align="center">
-<span style="font-weight:bold">Accettazione <br><br> 2 Variables   307 Observations</span>
+<span style="font-weight:bold">Accettazione <br><br> 2 Variables   308 Observations</span>
 </div>
 </font>
 <hr class="thinhr">
@@ -4940,7 +4943,7 @@ distinct
 </tr>
 <tr>
 <td>
-305
+306
 </td>
 <td>
 2
@@ -4952,8 +4955,8 @@ distinct
 </table>
 <pre style="font-size:85%;">
  Value      maschio femmina ambiguo
- Frequency      168     136       1
- Proportion   0.551   0.446   0.003
+ Frequency      169     136       1
+ Proportion   0.552   0.444   0.003
  </pre>
 <hr class="thinhr">
 <span style="font-weight:bold">Etnia</span>:
@@ -4991,7 +4994,7 @@ distinct
 </tr>
 <tr>
 <td>
-306
+307
 </td>
 <td>
 1
@@ -5059,7 +5062,7 @@ non conosciuta/non riportata
 </td>
 </tr>
 </table>
-caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 0.092), araba (12, 0.039), etnia mista (6, 0.020), non conosciuta/non riportata (2, 0.007)
+caucasica (245, 0.798), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 0.091), araba (12, 0.039), etnia mista (6, 0.020), non conosciuta/non riportata (2, 0.007)
 <hr class="thinhr">
 </div>
 <div id="descrittive-3" class="section level3" number="3.3.2">
@@ -5077,28 +5080,28 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="header">
 <th align="left"> </th>
 <th align="center">N</th>
-<th align="center">maschio (N=168)</th>
+<th align="center">maschio (N=169)</th>
 <th align="center">femmina (N=136)</th>
 <th align="center">ambiguo (N=1)</th>
-<th align="center">Combined (N=305)</th>
+<th align="center">Combined (N=306)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">Età (giorni)</td>
-<td align="center">306</td>
-<td align="center">100.500/ 737.000/2963.500
-1798.911+/-2115.799</td>
+<td align="center">307</td>
+<td align="center">93.000/ 718.000/2913.000
+1788.373+/-2113.936</td>
 <td align="center">102.000/ 853.000/3296.500
 1864.971+/-2082.826</td>
 <td align="center">1387.000/1387.000/1387.000
 1387.000+/-</td>
-<td align="center">95.500/ 801.000/3179.500
-1821.147+/-2093.693</td>
+<td align="center">90.500/ 780.000/3172.000
+1815.274+/-2092.801</td>
 </tr>
 <tr class="even">
 <td align="left">Classe di età</td>
-<td align="center">307</td>
+<td align="center">308</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5107,10 +5110,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="odd">
 <td align="left">    neonati</td>
 <td align="center"></td>
-<td align="center">15% (25)</td>
+<td align="center">15% (26)</td>
 <td align="center">14% (19)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">14% (44)</td>
+<td align="center">15% (45)</td>
 </tr>
 <tr class="even">
 <td align="left">    lattanti</td>
@@ -5170,7 +5173,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="odd">
 <td align="left">Priorità</td>
-<td align="center">303</td>
+<td align="center">304</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5179,10 +5182,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="even">
 <td align="left">    1</td>
 <td align="center"></td>
-<td align="center">79% (132)</td>
+<td align="center">79% (133)</td>
 <td align="center">80% (106)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">79% (239)</td>
+<td align="center">79% (240)</td>
 </tr>
 <tr class="odd">
 <td align="left">    2</td>
@@ -5218,7 +5221,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="odd">
 <td align="left">Ricovero programmato</td>
-<td align="center">271</td>
+<td align="center">272</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5235,14 +5238,14 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="odd">
 <td align="left">    no</td>
 <td align="center"></td>
-<td align="center">59% ( 87)</td>
+<td align="center">59% ( 88)</td>
 <td align="center">60% ( 73)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">60% (161)</td>
+<td align="center">60% (162)</td>
 </tr>
 <tr class="even">
 <td align="left">Tipologia di ricovero</td>
-<td align="center">303</td>
+<td align="center">304</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5259,10 +5262,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="even">
 <td align="left">    medico</td>
 <td align="center"></td>
-<td align="center">37% ( 61)</td>
+<td align="center">37% ( 62)</td>
 <td align="center">38% ( 51)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">38% (113)</td>
+<td align="center">38% (114)</td>
 </tr>
 <tr class="odd">
 <td align="left">    trauma, ustione, intossicazione, annegamento, avvelenamento, folgorazione, inalazione di fumo, ipotermia, soffocamento</td>
@@ -5274,7 +5277,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="even">
 <td align="left">Motivo del ricovero</td>
-<td align="center">114</td>
+<td align="center">115</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5283,15 +5286,15 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="odd">
 <td align="left">    insufficienza respiratoria</td>
 <td align="center"></td>
-<td align="center">57% (35)</td>
+<td align="center">58% (36)</td>
 <td align="center">63% (33)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">61% (69)</td>
+<td align="center">61% (70)</td>
 </tr>
 <tr class="even">
 <td align="left">    alterato sensorio / crisi convulsive</td>
 <td align="center"></td>
-<td align="center">25% (15)</td>
+<td align="center">24% (15)</td>
 <td align="center">19% (10)</td>
 <td align="center">0% ( 0)</td>
 <td align="center">22% (25)</td>
@@ -5394,7 +5397,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="odd">
 <td align="left">Presenza di comorbidità</td>
-<td align="center">304</td>
+<td align="center">305</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5411,14 +5414,14 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="odd">
 <td align="left">    no</td>
 <td align="center"></td>
-<td align="center">41% ( 69)</td>
+<td align="center">41% ( 70)</td>
 <td align="center">47% ( 63)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">44% (132)</td>
+<td align="center">44% (133)</td>
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: cardiologica</td>
-<td align="center">307</td>
+<td align="center">308</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5427,10 +5430,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">89% (150)</td>
+<td align="center">89% (151)</td>
 <td align="center">96% (130)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">92% (281)</td>
+<td align="center">92% (282)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -5442,7 +5445,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: metabolica</td>
-<td align="center">307</td>
+<td align="center">308</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5451,10 +5454,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="even">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">98% (165)</td>
+<td align="center">98% (166)</td>
 <td align="center">99% (134)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">98% (300)</td>
+<td align="center">98% (301)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -5466,7 +5469,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: neurologica</td>
-<td align="center">307</td>
+<td align="center">308</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5475,10 +5478,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">80% (134)</td>
+<td align="center">80% (135)</td>
 <td align="center">86% (117)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">83% (252)</td>
+<td align="center">83% (253)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -5490,7 +5493,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: neuromuscolare</td>
-<td align="center">307</td>
+<td align="center">308</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5499,10 +5502,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="even">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">98% (165)</td>
+<td align="center">98% (166)</td>
 <td align="center">95% (129)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">97% (295)</td>
+<td align="center">97% (296)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -5514,7 +5517,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: onco-ematologica</td>
-<td align="center">307</td>
+<td align="center">308</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5523,10 +5526,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">92% (154)</td>
+<td align="center">92% (155)</td>
 <td align="center">94% (128)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">93% (283)</td>
+<td align="center">93% (284)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -5538,7 +5541,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: renale</td>
-<td align="center">307</td>
+<td align="center">308</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5547,10 +5550,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="even">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">98% (164)</td>
+<td align="center">98% (165)</td>
 <td align="center">95% (129)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">96% (293)</td>
+<td align="center">96% (294)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -5562,7 +5565,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: respiratoria</td>
-<td align="center">307</td>
+<td align="center">308</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5571,10 +5574,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">95% (160)</td>
+<td align="center">95% (161)</td>
 <td align="center">94% (128)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">95% (289)</td>
+<td align="center">95% (290)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -5586,7 +5589,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: sindromica</td>
-<td align="center">307</td>
+<td align="center">308</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5595,10 +5598,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="even">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">92% (154)</td>
+<td align="center">92% (155)</td>
 <td align="center">94% (128)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">93% (283)</td>
+<td align="center">93% (284)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -5610,7 +5613,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: malformato/esiti di malformazione</td>
-<td align="center">307</td>
+<td align="center">308</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5619,10 +5622,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">88% (147)</td>
+<td align="center">88% (148)</td>
 <td align="center">86% (117)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">87% (265)</td>
+<td align="center">87% (266)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -5634,7 +5637,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: ex-prematuro</td>
-<td align="center">307</td>
+<td align="center">308</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5643,10 +5646,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="even">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">97% (163)</td>
+<td align="center">97% (164)</td>
 <td align="center">99% (134)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">98% (298)</td>
+<td align="center">98% (299)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -5658,7 +5661,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: altro</td>
-<td align="center">307</td>
+<td align="center">308</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5667,10 +5670,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">96% (162)</td>
+<td align="center">96% (163)</td>
 <td align="center">92% (125)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">94% (288)</td>
+<td align="center">94% (289)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -5682,7 +5685,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="odd">
 <td align="left">Numero di comorbidità</td>
-<td align="center">307</td>
+<td align="center">308</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5691,10 +5694,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="even">
 <td align="left">    0</td>
 <td align="center"></td>
-<td align="center">43% ( 73)</td>
+<td align="center">44% ( 74)</td>
 <td align="center">50% ( 68)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">46% (141)</td>
+<td align="center">46% (142)</td>
 </tr>
 <tr class="odd">
 <td align="left">    1</td>
@@ -5754,31 +5757,31 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="even">
 <td align="left">PIM 2</td>
-<td align="center">257</td>
-<td align="center">0.700000/ 1.160000/ 3.650000
-4.675540+/-11.902317</td>
+<td align="center">258</td>
+<td align="center">0.700000/ 1.200000/ 3.742500
+4.758643+/-11.900119</td>
 <td align="center">0.590000/ 1.200000/ 3.492500
 3.030776+/- 4.919793</td>
 <td align="center">0.430000/ 0.430000/ 0.430000
 0.430000+/-</td>
-<td align="center">0.640000/ 1.160000/ 3.650000
-3.900039+/- 9.380990</td>
+<td align="center">0.640000/ 1.165000/ 3.650000
+3.948140+/- 9.394545</td>
 </tr>
 <tr class="odd">
 <td align="left">PIM 3</td>
-<td align="center">257</td>
-<td align="center">0.465000/ 0.880000/ 2.375000
-4.109640+/-12.129788</td>
+<td align="center">258</td>
+<td align="center">0.467500/ 0.895000/ 2.442500
+4.177286+/-12.112550</td>
 <td align="center">0.452500/ 0.765000/ 1.887500
 2.186034+/- 3.581834</td>
 <td align="center">0.340000/ 0.340000/ 0.340000
 0.340000+/-</td>
-<td align="center">0.460000/ 0.780000/ 2.100000
-3.212374+/- 9.276508</td>
+<td align="center">0.460000/ 0.780000/ 2.190000
+3.252558+/- 9.280915</td>
 </tr>
 <tr class="even">
 <td align="left">Tecnica di ventilazione</td>
-<td align="center">236</td>
+<td align="center">237</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5790,7 +5793,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <td align="center">22% ( 30)</td>
 <td align="center">23% ( 23)</td>
 <td align="center"></td>
-<td align="center">23% ( 53)</td>
+<td align="center">22% ( 53)</td>
 </tr>
 <tr class="even">
 <td align="left">    it</td>
@@ -5803,14 +5806,14 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="odd">
 <td align="left">    niv e it</td>
 <td align="center"></td>
-<td align="center">10% ( 14)</td>
+<td align="center">11% ( 15)</td>
 <td align="center">12% ( 12)</td>
 <td align="center"></td>
-<td align="center">11% ( 26)</td>
+<td align="center">11% ( 27)</td>
 </tr>
 <tr class="even">
 <td align="left">Tipologia di infezione</td>
-<td align="center">83</td>
+<td align="center">84</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5819,30 +5822,30 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="odd">
 <td align="left">    comunità</td>
 <td align="center"></td>
-<td align="center">70% (28)</td>
+<td align="center">71% (29)</td>
 <td align="center">81% (35)</td>
 <td align="center"></td>
-<td align="center">76% (63)</td>
+<td align="center">76% (64)</td>
 </tr>
 <tr class="even">
 <td align="left">    nosocomiale (dopo 48h da inizio ospedalizzazione)</td>
 <td align="center"></td>
-<td align="center">30% (12)</td>
+<td align="center">29% (12)</td>
 <td align="center">19% ( 8)</td>
 <td align="center"></td>
 <td align="center">24% (20)</td>
 </tr>
 <tr class="odd">
 <td align="left">Durata della degenza</td>
-<td align="center">273</td>
+<td align="center">274</td>
 <td align="center">1.000000/2.000000/3.000000
-3.861842+/-7.467412</td>
+3.908497+/-7.465147</td>
 <td align="center">1.000000/2.000000/3.500000
 3.798319+/-5.891073</td>
 <td align="center">1.000000/1.000000/1.000000
 1.000000+/-</td>
 <td align="center">1.000000/2.000000/3.000000
-3.853480+/-6.803475</td>
+3.879562+/-6.804713</td>
 </tr>
 <tr class="even">
 <td align="left">Modalità di decesso</td>
@@ -5894,7 +5897,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="even">
 <td align="left">Esito TIP</td>
-<td align="center">273</td>
+<td align="center">274</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5903,10 +5906,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="odd">
 <td align="left">    vivo</td>
 <td align="center"></td>
-<td align="center">97% (146)</td>
+<td align="center">97% (147)</td>
 <td align="center">98% (118)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">97% (265)</td>
+<td align="center">97% (266)</td>
 </tr>
 <tr class="even">
 <td align="left">    morto</td>
@@ -5918,7 +5921,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </tr>
 <tr class="odd">
 <td align="left">Diagnosi alla dimissione</td>
-<td align="center">279</td>
+<td align="center">280</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -5967,7 +5970,7 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="odd">
 <td align="left">    neurologico</td>
 <td align="center"></td>
-<td align="center">27% (41)</td>
+<td align="center">26% (41)</td>
 <td align="center">16% (20)</td>
 <td align="center">0% ( 0)</td>
 <td align="center">22% (61)</td>
@@ -5991,10 +5994,10 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 <tr class="even">
 <td align="left">    respiratorio, via aerea inferiore</td>
 <td align="center"></td>
-<td align="center">10% (15)</td>
+<td align="center">10% (16)</td>
 <td align="center">16% (20)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">13% (35)</td>
+<td align="center">13% (36)</td>
 </tr>
 <tr class="odd">
 <td align="left">    respiratorio, via aerea superiore</td>
@@ -6025,18 +6028,18 @@ caucasica (244, 0.797), ispanica (8, 0.026), asiatica (6, 0.020), africana (28, 
 </div>
 <div id="smr-3" class="section level3" number="3.3.3">
 <h3><span class="header-section-number">3.3.3</span> SMR</h3>
-<p>SMR PIM2: 0.7</p>
-<p>SMR PIM3: 0.85</p>
+<p>SMR PIM2: 0.69</p>
+<p>SMR PIM3: 0.83</p>
 </div>
 </div>
-<div id="dag-na-3" class="section level2 tabset tabset-fade tabset-pills" number="3.4">
-<h2><span class="header-section-number">3.4</span> DAG: NA</h2>
+<div id="dag-4" class="section level2 tabset tabset-fade tabset-pills" number="3.4">
+<h2><span class="header-section-number">3.4</span> DAG: 4</h2>
 <blockquote>
 <p>no data for this center</p>
 </blockquote>
 </div>
-<div id="dag-na-4" class="section level2 tabset tabset-fade tabset-pills" number="3.5">
-<h2><span class="header-section-number">3.5</span> DAG: NA</h2>
+<div id="dag-5" class="section level2 tabset tabset-fade tabset-pills" number="3.5">
+<h2><span class="header-section-number">3.5</span> DAG: 5</h2>
 <div id="accettazione-4" class="section level3" number="3.5.1">
 <h3><span class="header-section-number">3.5.1</span> Accettazione</h3>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -6078,6 +6081,9 @@ left: 0.1em;
 bottom: -1ex;
 }
 </style>
+<title>
+Accettazione Descriptives
+</title>
 <font color="MidnightBlue">
 <div align="center">
 <span style="font-weight:bold">Accettazione <br><br> 2 Variables   249 Observations</span>
@@ -7075,14 +7081,14 @@ non conosciuta/non riportata
 <p>SMR PIM3: 0.15</p>
 </div>
 </div>
-<div id="dag-na-5" class="section level2 tabset tabset-fade tabset-pills" number="3.6">
-<h2><span class="header-section-number">3.6</span> DAG: NA</h2>
+<div id="dag-6" class="section level2 tabset tabset-fade tabset-pills" number="3.6">
+<h2><span class="header-section-number">3.6</span> DAG: 6</h2>
 <blockquote>
 <p>no data for this center</p>
 </blockquote>
 </div>
-<div id="dag-na-6" class="section level2 tabset tabset-fade tabset-pills" number="3.7">
-<h2><span class="header-section-number">3.7</span> DAG: NA</h2>
+<div id="dag-7" class="section level2 tabset tabset-fade tabset-pills" number="3.7">
+<h2><span class="header-section-number">3.7</span> DAG: 7</h2>
 <div id="accettazione-5" class="section level3" number="3.7.1">
 <h3><span class="header-section-number">3.7.1</span> Accettazione</h3>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -7124,6 +7130,9 @@ left: 0.1em;
 bottom: -1ex;
 }
 </style>
+<title>
+Accettazione Descriptives
+</title>
 <font color="MidnightBlue">
 <div align="center">
 <span style="font-weight:bold">Accettazione <br><br> 2 Variables   329 Observations</span>
@@ -8011,7 +8020,7 @@ caucasica (248, 0.754), ispanica (2, 0.006), asiatica (19, 0.058), africana (16,
 </tr>
 <tr class="odd">
 <td align="left">Tecnica di ventilazione</td>
-<td align="center">130</td>
+<td align="center">131</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8021,9 +8030,9 @@ caucasica (248, 0.754), ispanica (2, 0.006), asiatica (19, 0.058), africana (16,
 <td align="left">    niv</td>
 <td align="center"></td>
 <td align="center">43% (36)</td>
-<td align="center">51% (23)</td>
+<td align="center">52% (24)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">45% (59)</td>
+<td align="center">46% (60)</td>
 </tr>
 <tr class="odd">
 <td align="left">    it</td>
@@ -8031,13 +8040,13 @@ caucasica (248, 0.754), ispanica (2, 0.006), asiatica (19, 0.058), africana (16,
 <td align="center">36% (30)</td>
 <td align="center">33% (15)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">35% (45)</td>
+<td align="center">34% (45)</td>
 </tr>
 <tr class="even">
 <td align="left">    niv e it</td>
 <td align="center"></td>
 <td align="center">21% (18)</td>
-<td align="center">16% ( 7)</td>
+<td align="center">15% ( 7)</td>
 <td align="center">100% ( 1)</td>
 <td align="center">20% (26)</td>
 </tr>
@@ -8067,15 +8076,15 @@ caucasica (248, 0.754), ispanica (2, 0.006), asiatica (19, 0.058), africana (16,
 </tr>
 <tr class="even">
 <td align="left">Durata della degenza</td>
-<td align="center">254</td>
+<td align="center">255</td>
 <td align="center">2.000000/ 4.000000/ 9.000000
 7.233333+/- 9.511150</td>
-<td align="center">2.000000/ 3.000000/ 7.000000
-8.495146+/-19.542249</td>
+<td align="center">2.000000/ 3.000000/ 7.250000
+8.509615+/-19.447712</td>
 <td align="center">8.000000/ 8.000000/ 8.000000
 8.000000+/-</td>
 <td align="center">2.000000/ 4.000000/ 9.000000
-7.748031+/-14.409301</td>
+7.756863+/-14.381600</td>
 </tr>
 <tr class="odd">
 <td align="left">Modalità di decesso</td>
@@ -8127,7 +8136,7 @@ caucasica (248, 0.754), ispanica (2, 0.006), asiatica (19, 0.058), africana (16,
 </tr>
 <tr class="odd">
 <td align="left">Esito TIP</td>
-<td align="center">254</td>
+<td align="center">255</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8137,9 +8146,9 @@ caucasica (248, 0.754), ispanica (2, 0.006), asiatica (19, 0.058), africana (16,
 <td align="left">    vivo</td>
 <td align="center"></td>
 <td align="center">99% (149)</td>
-<td align="center">98% (101)</td>
+<td align="center">98% (102)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">99% (251)</td>
+<td align="center">99% (252)</td>
 </tr>
 <tr class="odd">
 <td align="left">    morto</td>
@@ -8151,7 +8160,7 @@ caucasica (248, 0.754), ispanica (2, 0.006), asiatica (19, 0.058), africana (16,
 </tr>
 <tr class="even">
 <td align="left">Diagnosi alla dimissione</td>
-<td align="center">254</td>
+<td align="center">255</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8193,7 +8202,7 @@ caucasica (248, 0.754), ispanica (2, 0.006), asiatica (19, 0.058), africana (16,
 <td align="left">    miscellanea</td>
 <td align="center"></td>
 <td align="center">11% (17)</td>
-<td align="center">16% (16)</td>
+<td align="center">15% (16)</td>
 <td align="center">0% ( 0)</td>
 <td align="center">13% (33)</td>
 </tr>
@@ -8225,9 +8234,9 @@ caucasica (248, 0.754), ispanica (2, 0.006), asiatica (19, 0.058), africana (16,
 <td align="left">    respiratorio, via aerea inferiore</td>
 <td align="center"></td>
 <td align="center">17% (26)</td>
-<td align="center">16% (16)</td>
+<td align="center">16% (17)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">17% (42)</td>
+<td align="center">17% (43)</td>
 </tr>
 <tr class="even">
 <td align="left">    respiratorio, via aerea superiore</td>
@@ -8262,8 +8271,8 @@ caucasica (248, 0.754), ispanica (2, 0.006), asiatica (19, 0.058), africana (16,
 <p>SMR PIM3: 0.39</p>
 </div>
 </div>
-<div id="dag-na-7" class="section level2 tabset tabset-fade tabset-pills" number="3.8">
-<h2><span class="header-section-number">3.8</span> DAG: NA</h2>
+<div id="dag-8" class="section level2 tabset tabset-fade tabset-pills" number="3.8">
+<h2><span class="header-section-number">3.8</span> DAG: 8</h2>
 <div id="accettazione-6" class="section level3" number="3.8.1">
 <h3><span class="header-section-number">3.8.1</span> Accettazione</h3>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -8305,9 +8314,12 @@ left: 0.1em;
 bottom: -1ex;
 }
 </style>
+<title>
+Accettazione Descriptives
+</title>
 <font color="MidnightBlue">
 <div align="center">
-<span style="font-weight:bold">Accettazione <br><br> 2 Variables   323 Observations</span>
+<span style="font-weight:bold">Accettazione <br><br> 2 Variables   325 Observations</span>
 </div>
 </font>
 <hr class="thinhr">
@@ -8346,7 +8358,7 @@ distinct
 </tr>
 <tr>
 <td>
-323
+325
 </td>
 <td>
 0
@@ -8358,8 +8370,8 @@ distinct
 </table>
 <pre style="font-size:85%;">
  Value      maschio femmina ambiguo
- Frequency      204     117       2
- Proportion   0.632   0.362   0.006
+ Frequency      204     119       2
+ Proportion   0.628   0.366   0.006
  </pre>
 <hr class="thinhr">
 <span style="font-weight:bold">Etnia</span>:
@@ -8397,7 +8409,7 @@ distinct
 </tr>
 <tr>
 <td>
-323
+325
 </td>
 <td>
 0
@@ -8467,8 +8479,8 @@ etnia mista
 </table>
 <pre style="font-size:85%;">
  Value        caucasica    ispanica    asiatica    africana       araba etnia mista
- Frequency          242           1          26          26          24           4
- Proportion       0.749       0.003       0.080       0.080       0.074       0.012
+ Frequency          244           1          26          26          24           4
+ Proportion       0.751       0.003       0.080       0.080       0.074       0.012
  </pre>
 <hr class="thinhr">
 </div>
@@ -8488,27 +8500,27 @@ etnia mista
 <th align="left"> </th>
 <th align="center">N</th>
 <th align="center">maschio (N=204)</th>
-<th align="center">femmina (N=117)</th>
+<th align="center">femmina (N=119)</th>
 <th align="center">ambiguo (N=2)</th>
-<th align="center">Combined (N=323)</th>
+<th align="center">Combined (N=325)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">Età (giorni)</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center">237.750/1010.500/3967.000
 2047.667+/-2345.159</td>
-<td align="center">220.000/1025.000/3650.000
-1902.256+/-1917.042</td>
+<td align="center">221.000/1025.000/3607.000
+1883.252+/-1906.894</td>
 <td align="center">2492.750/3427.500/4362.250
 3427.500+/-2643.872</td>
-<td align="center">230.000/1025.000/3790.500
-2003.539+/-2197.827</td>
+<td align="center">230.000/1025.000/3785.000
+1995.957+/-2193.338</td>
 </tr>
 <tr class="even">
 <td align="left">Classe di età</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8534,9 +8546,9 @@ etnia mista
 <td align="left">    prescolare</td>
 <td align="center"></td>
 <td align="center">29% (60)</td>
-<td align="center">27% (32)</td>
+<td align="center">29% (34)</td>
 <td align="center">50% ( 1)</td>
-<td align="center">29% (93)</td>
+<td align="center">29% (95)</td>
 </tr>
 <tr class="even">
 <td align="left">    scolare</td>
@@ -8580,7 +8592,7 @@ etnia mista
 </tr>
 <tr class="odd">
 <td align="left">Priorità</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8590,9 +8602,9 @@ etnia mista
 <td align="left">    1</td>
 <td align="center"></td>
 <td align="center">66% (134)</td>
-<td align="center">70% ( 82)</td>
+<td align="center">71% ( 84)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">67% (216)</td>
+<td align="center">67% (218)</td>
 </tr>
 <tr class="odd">
 <td align="left">    2</td>
@@ -8600,7 +8612,7 @@ etnia mista
 <td align="center">31% ( 63)</td>
 <td align="center">29% ( 34)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">31% ( 99)</td>
+<td align="center">30% ( 99)</td>
 </tr>
 <tr class="even">
 <td align="left">    3</td>
@@ -8628,7 +8640,7 @@ etnia mista
 </tr>
 <tr class="odd">
 <td align="left">Ricovero programmato</td>
-<td align="center">312</td>
+<td align="center">314</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8638,21 +8650,21 @@ etnia mista
 <td align="left">    si</td>
 <td align="center"></td>
 <td align="center">22% ( 44)</td>
-<td align="center">30% ( 34)</td>
+<td align="center">30% ( 35)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">25% ( 78)</td>
+<td align="center">25% ( 79)</td>
 </tr>
 <tr class="odd">
 <td align="left">    no</td>
 <td align="center"></td>
 <td align="center">78% (152)</td>
-<td align="center">70% ( 80)</td>
+<td align="center">70% ( 81)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">75% (234)</td>
+<td align="center">75% (235)</td>
 </tr>
 <tr class="even">
 <td align="left">Tipologia di ricovero</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8664,15 +8676,15 @@ etnia mista
 <td align="center">34% ( 70)</td>
 <td align="center">29% ( 34)</td>
 <td align="center">50% ( 1)</td>
-<td align="center">33% (105)</td>
+<td align="center">32% (105)</td>
 </tr>
 <tr class="even">
 <td align="left">    medico</td>
 <td align="center"></td>
 <td align="center">61% (125)</td>
-<td align="center">64% ( 75)</td>
+<td align="center">65% ( 77)</td>
 <td align="center">50% ( 1)</td>
-<td align="center">62% (201)</td>
+<td align="center">62% (203)</td>
 </tr>
 <tr class="odd">
 <td align="left">    trauma, ustione, intossicazione, annegamento, avvelenamento, folgorazione, inalazione di fumo, ipotermia, soffocamento</td>
@@ -8684,7 +8696,7 @@ etnia mista
 </tr>
 <tr class="even">
 <td align="left">Motivo del ricovero</td>
-<td align="center">201</td>
+<td align="center">203</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8694,15 +8706,15 @@ etnia mista
 <td align="left">    insufficienza respiratoria</td>
 <td align="center"></td>
 <td align="center">33% (41)</td>
-<td align="center">27% (20)</td>
+<td align="center">29% (22)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">30% (61)</td>
+<td align="center">31% (63)</td>
 </tr>
 <tr class="even">
 <td align="left">    alterato sensorio / crisi convulsive</td>
 <td align="center"></td>
 <td align="center">15% (19)</td>
-<td align="center">28% (21)</td>
+<td align="center">27% (21)</td>
 <td align="center">100% ( 1)</td>
 <td align="center">20% (41)</td>
 </tr>
@@ -8774,7 +8786,7 @@ etnia mista
 <td align="left">    cardiopatia congenita</td>
 <td align="center"></td>
 <td align="center">2% ( 2)</td>
-<td align="center">7% ( 5)</td>
+<td align="center">6% ( 5)</td>
 <td align="center">0% ( 0)</td>
 <td align="center">3% ( 7)</td>
 </tr>
@@ -8804,7 +8816,7 @@ etnia mista
 </tr>
 <tr class="odd">
 <td align="left">Presenza di comorbidità</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8814,21 +8826,21 @@ etnia mista
 <td align="left">    si</td>
 <td align="center"></td>
 <td align="center">69% (141)</td>
-<td align="center">64% ( 75)</td>
+<td align="center">64% ( 76)</td>
 <td align="center">50% ( 1)</td>
-<td align="center">67% (217)</td>
+<td align="center">67% (218)</td>
 </tr>
 <tr class="odd">
 <td align="left">    no</td>
 <td align="center"></td>
 <td align="center">31% ( 63)</td>
-<td align="center">36% ( 42)</td>
+<td align="center">36% ( 43)</td>
 <td align="center">50% ( 1)</td>
-<td align="center">33% (106)</td>
+<td align="center">33% (107)</td>
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: cardiologica</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8838,9 +8850,9 @@ etnia mista
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">74% (150)</td>
-<td align="center">83% ( 97)</td>
+<td align="center">83% ( 99)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">77% (249)</td>
+<td align="center">77% (251)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -8852,7 +8864,7 @@ etnia mista
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: metabolica</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8862,9 +8874,9 @@ etnia mista
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">97% (197)</td>
-<td align="center">97% (113)</td>
+<td align="center">97% (115)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">97% (312)</td>
+<td align="center">97% (314)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -8876,7 +8888,7 @@ etnia mista
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: neurologica</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8886,9 +8898,9 @@ etnia mista
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">86% (176)</td>
-<td align="center">89% (104)</td>
+<td align="center">89% (106)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">87% (282)</td>
+<td align="center">87% (284)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -8900,7 +8912,7 @@ etnia mista
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: neuromuscolare</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8910,9 +8922,9 @@ etnia mista
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">98% (200)</td>
-<td align="center">99% (116)</td>
+<td align="center">99% (118)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">98% (318)</td>
+<td align="center">98% (320)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -8924,7 +8936,7 @@ etnia mista
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: onco-ematologica</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8934,21 +8946,21 @@ etnia mista
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">87% (178)</td>
-<td align="center">83% ( 97)</td>
+<td align="center">82% ( 98)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">86% (277)</td>
+<td align="center">86% (278)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
 <td align="center"></td>
 <td align="center">13% ( 26)</td>
-<td align="center">17% ( 20)</td>
+<td align="center">18% ( 21)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">14% ( 46)</td>
+<td align="center">14% ( 47)</td>
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: renale</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8958,9 +8970,9 @@ etnia mista
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">95% (193)</td>
-<td align="center">96% (112)</td>
+<td align="center">96% (114)</td>
 <td align="center">50% ( 1)</td>
-<td align="center">95% (306)</td>
+<td align="center">95% (308)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -8972,7 +8984,7 @@ etnia mista
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: respiratoria</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -8982,9 +8994,9 @@ etnia mista
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">97% (198)</td>
-<td align="center">95% (111)</td>
+<td align="center">95% (113)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">96% (311)</td>
+<td align="center">96% (313)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -8996,7 +9008,7 @@ etnia mista
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: sindromica</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -9006,21 +9018,21 @@ etnia mista
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">92% (187)</td>
-<td align="center">91% (107)</td>
+<td align="center">92% (109)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">92% (296)</td>
+<td align="center">92% (298)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
 <td align="center"></td>
 <td align="center">8% ( 17)</td>
-<td align="center">9% ( 10)</td>
+<td align="center">8% ( 10)</td>
 <td align="center">0% ( 0)</td>
 <td align="center">8% ( 27)</td>
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: malformato/esiti di malformazione</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -9030,9 +9042,9 @@ etnia mista
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">95% (194)</td>
-<td align="center">100% (117)</td>
+<td align="center">100% (119)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">97% (313)</td>
+<td align="center">97% (315)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -9044,7 +9056,7 @@ etnia mista
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: ex-prematuro</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -9054,9 +9066,9 @@ etnia mista
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">99% (201)</td>
-<td align="center">97% (113)</td>
+<td align="center">97% (115)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">98% (316)</td>
+<td align="center">98% (318)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -9068,7 +9080,7 @@ etnia mista
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: altro</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -9078,9 +9090,9 @@ etnia mista
 <td align="left">    FALSE</td>
 <td align="center"></td>
 <td align="center">99% (202)</td>
-<td align="center">99% (116)</td>
+<td align="center">99% (118)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">99% (320)</td>
+<td align="center">99% (322)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -9092,7 +9104,7 @@ etnia mista
 </tr>
 <tr class="odd">
 <td align="left">Numero di comorbidità</td>
-<td align="center">323</td>
+<td align="center">325</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -9102,17 +9114,17 @@ etnia mista
 <td align="left">    0</td>
 <td align="center"></td>
 <td align="center">34% ( 69)</td>
-<td align="center">43% ( 50)</td>
+<td align="center">43% ( 51)</td>
 <td align="center">50% ( 1)</td>
-<td align="center">37% (120)</td>
+<td align="center">37% (121)</td>
 </tr>
 <tr class="odd">
 <td align="left">    1</td>
 <td align="center"></td>
 <td align="center">55% (113)</td>
-<td align="center">45% ( 53)</td>
+<td align="center">45% ( 54)</td>
 <td align="center">50% ( 1)</td>
-<td align="center">52% (167)</td>
+<td align="center">52% (168)</td>
 </tr>
 <tr class="even">
 <td align="left">    2</td>
@@ -9172,31 +9184,31 @@ etnia mista
 </tr>
 <tr class="odd">
 <td align="left">PIM 2</td>
-<td align="center">302</td>
+<td align="center">304</td>
 <td align="center">1.042500/ 2.200000/ 5.782500
 7.381737+/-15.670119</td>
-<td align="center">0.887500/ 1.785000/ 5.237500
-7.013636+/-12.463565</td>
+<td align="center">0.902500/ 1.785000/ 5.260000
+7.123393+/-12.477548</td>
 <td align="center">3.405000/ 4.610000/ 5.815000
 4.610000+/- 3.408255</td>
-<td align="center">0.980000/ 1.965000/ 5.697500
-7.229305+/-14.510441</td>
+<td align="center">1.000000/ 1.965000/ 5.712500
+7.268322+/-14.501792</td>
 </tr>
 <tr class="even">
 <td align="left">PIM 3</td>
-<td align="center">302</td>
+<td align="center">304</td>
 <td align="center">0.742500/ 1.570000/ 4.945000
 6.110737+/-14.693821</td>
-<td align="center">0.580000/ 1.285000/ 4.147500
-4.575182+/- 8.615810</td>
+<td align="center">0.580000/ 1.285000/ 4.245000
+4.680982+/- 8.675484</td>
 <td align="center">2.027500/ 3.035000/ 4.042500
 3.035000+/- 2.849640</td>
-<td align="center">0.740000/ 1.430000/ 4.695000
-5.531060+/-12.769738</td>
+<td align="center">0.737500/ 1.430000/ 4.717500
+5.563750+/-12.759004</td>
 </tr>
 <tr class="odd">
 <td align="left">Tecnica di ventilazione</td>
-<td align="center">222</td>
+<td align="center">224</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -9214,21 +9226,21 @@ etnia mista
 <td align="left">    it</td>
 <td align="center"></td>
 <td align="center">60% ( 85)</td>
-<td align="center">68% ( 54)</td>
+<td align="center">67% ( 54)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">64% (141)</td>
+<td align="center">63% (141)</td>
 </tr>
 <tr class="even">
 <td align="left">    niv e it</td>
 <td align="center"></td>
 <td align="center">20% ( 28)</td>
-<td align="center">16% ( 13)</td>
+<td align="center">19% ( 15)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">18% ( 41)</td>
+<td align="center">19% ( 43)</td>
 </tr>
 <tr class="odd">
 <td align="left">Tipologia di infezione</td>
-<td align="center">117</td>
+<td align="center">118</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -9238,29 +9250,29 @@ etnia mista
 <td align="left">    comunità</td>
 <td align="center"></td>
 <td align="center">62% (50)</td>
-<td align="center">53% (19)</td>
+<td align="center">54% (20)</td>
 <td align="center"></td>
-<td align="center">59% (69)</td>
+<td align="center">59% (70)</td>
 </tr>
 <tr class="odd">
 <td align="left">    nosocomiale (dopo 48h da inizio ospedalizzazione)</td>
 <td align="center"></td>
 <td align="center">38% (31)</td>
-<td align="center">47% (17)</td>
+<td align="center">46% (17)</td>
 <td align="center"></td>
 <td align="center">41% (48)</td>
 </tr>
 <tr class="even">
 <td align="left">Durata della degenza</td>
-<td align="center">314</td>
+<td align="center">316</td>
 <td align="center">1.000000/ 3.000000/ 8.000000
 7.595960+/-12.079617</td>
 <td align="center">1.000000/ 3.000000/ 8.000000
-7.043860+/-11.963359</td>
+7.068966+/-11.864983</td>
 <td align="center">1.500000/ 2.000000/ 2.500000
 2.000000+/- 1.414214</td>
 <td align="center">1.000000/ 3.000000/ 8.000000
-7.359873+/-11.990456</td>
+7.367089+/-11.954333</td>
 </tr>
 <tr class="odd">
 <td align="left">Modalità di decesso</td>
@@ -9312,7 +9324,7 @@ etnia mista
 </tr>
 <tr class="odd">
 <td align="left">Esito TIP</td>
-<td align="center">315</td>
+<td align="center">317</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -9322,9 +9334,9 @@ etnia mista
 <td align="left">    vivo</td>
 <td align="center"></td>
 <td align="center">94% (186)</td>
-<td align="center">98% (113)</td>
+<td align="center">98% (115)</td>
 <td align="center">100% ( 2)</td>
-<td align="center">96% (301)</td>
+<td align="center">96% (303)</td>
 </tr>
 <tr class="odd">
 <td align="left">    morto</td>
@@ -9336,7 +9348,7 @@ etnia mista
 </tr>
 <tr class="even">
 <td align="left">Diagnosi alla dimissione</td>
-<td align="center">315</td>
+<td align="center">317</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -9346,9 +9358,9 @@ etnia mista
 <td align="left">    cardiovascolare, acquisito</td>
 <td align="center"></td>
 <td align="center">10% (19)</td>
-<td align="center">10% (11)</td>
+<td align="center">9% (11)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">10% (30)</td>
+<td align="center">9% (30)</td>
 </tr>
 <tr class="even">
 <td align="left">    cardiovascolare, congenito</td>
@@ -9378,7 +9390,7 @@ etnia mista
 <td align="left">    miscellanea</td>
 <td align="center"></td>
 <td align="center">23% (45)</td>
-<td align="center">22% (25)</td>
+<td align="center">21% (25)</td>
 <td align="center">0% ( 0)</td>
 <td align="center">22% (70)</td>
 </tr>
@@ -9410,9 +9422,9 @@ etnia mista
 <td align="left">    respiratorio, via aerea inferiore</td>
 <td align="center"></td>
 <td align="center">8% (16)</td>
-<td align="center">5% ( 6)</td>
+<td align="center">7% ( 8)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">7% (22)</td>
+<td align="center">8% (24)</td>
 </tr>
 <tr class="even">
 <td align="left">    respiratorio, via aerea superiore</td>
@@ -9443,12 +9455,12 @@ etnia mista
 </div>
 <div id="smr-6" class="section level3" number="3.8.3">
 <h3><span class="header-section-number">3.8.3</span> SMR</h3>
-<p>SMR PIM2: 0.64</p>
-<p>SMR PIM3: 0.84</p>
+<p>SMR PIM2: 0.63</p>
+<p>SMR PIM3: 0.83</p>
 </div>
 </div>
-<div id="dag-na-8" class="section level2 tabset tabset-fade tabset-pills" number="3.9">
-<h2><span class="header-section-number">3.9</span> DAG: NA</h2>
+<div id="dag-9" class="section level2 tabset tabset-fade tabset-pills" number="3.9">
+<h2><span class="header-section-number">3.9</span> DAG: 9</h2>
 <div id="accettazione-7" class="section level3" number="3.9.1">
 <h3><span class="header-section-number">3.9.1</span> Accettazione</h3>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9490,6 +9502,9 @@ left: 0.1em;
 bottom: -1ex;
 }
 </style>
+<title>
+Accettazione Descriptives
+</title>
 <font color="MidnightBlue">
 <div align="center">
 <span style="font-weight:bold">Accettazione <br><br> 2 Variables   101 Observations</span>
@@ -10307,7 +10322,7 @@ etnia mista
 </tr>
 <tr class="even">
 <td align="left">Tipologia di infezione</td>
-<td align="center">15</td>
+<td align="center">16</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -10316,15 +10331,15 @@ etnia mista
 <td align="left">    comunità</td>
 <td align="center"></td>
 <td align="center">75% ( 3)</td>
-<td align="center">73% ( 8)</td>
-<td align="center">73% (11)</td>
+<td align="center">67% ( 8)</td>
+<td align="center">69% (11)</td>
 </tr>
 <tr class="even">
 <td align="left">    nosocomiale (dopo 48h da inizio ospedalizzazione)</td>
 <td align="center"></td>
 <td align="center">25% ( 1)</td>
-<td align="center">27% ( 3)</td>
-<td align="center">27% ( 4)</td>
+<td align="center">33% ( 4)</td>
+<td align="center">31% ( 5)</td>
 </tr>
 <tr class="odd">
 <td align="left">Durata della degenza</td>
@@ -10545,8 +10560,8 @@ etnia mista
 <p>SMR PIM3: 0.5</p>
 </div>
 </div>
-<div id="dag-na-9" class="section level2 tabset tabset-fade tabset-pills" number="3.10">
-<h2><span class="header-section-number">3.10</span> DAG: NA</h2>
+<div id="dag-10" class="section level2 tabset tabset-fade tabset-pills" number="3.10">
+<h2><span class="header-section-number">3.10</span> DAG: 10</h2>
 <div id="accettazione-8" class="section level3" number="3.10.1">
 <h3><span class="header-section-number">3.10.1</span> Accettazione</h3>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -10588,6 +10603,9 @@ left: 0.1em;
 bottom: -1ex;
 }
 </style>
+<title>
+Accettazione Descriptives
+</title>
 <font color="MidnightBlue">
 <div align="center">
 <span style="font-weight:bold">Accettazione <br><br> 2 Variables   288 Observations</span>
@@ -11614,8 +11632,8 @@ caucasica (229, 0.795), ispanica (4, 0.014), asiatica (16, 0.056), africana (5, 
 <p>SMR PIM3: 1.04</p>
 </div>
 </div>
-<div id="dag-na-10" class="section level2 tabset tabset-fade tabset-pills" number="3.11">
-<h2><span class="header-section-number">3.11</span> DAG: NA</h2>
+<div id="dag-11" class="section level2 tabset tabset-fade tabset-pills" number="3.11">
+<h2><span class="header-section-number">3.11</span> DAG: 11</h2>
 <div id="accettazione-9" class="section level3" number="3.11.1">
 <h3><span class="header-section-number">3.11.1</span> Accettazione</h3>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11657,6 +11675,9 @@ left: 0.1em;
 bottom: -1ex;
 }
 </style>
+<title>
+Accettazione Descriptives
+</title>
 <font color="MidnightBlue">
 <div align="center">
 <span style="font-weight:bold">Accettazione <br><br> 2 Variables   18 Observations</span>
@@ -12541,14 +12562,14 @@ distinct
 <p>SMR PIM3: 0</p>
 </div>
 </div>
-<div id="dag-na-11" class="section level2 tabset tabset-fade tabset-pills" number="3.12">
-<h2><span class="header-section-number">3.12</span> DAG: NA</h2>
+<div id="dag-12" class="section level2 tabset tabset-fade tabset-pills" number="3.12">
+<h2><span class="header-section-number">3.12</span> DAG: 12</h2>
 <blockquote>
 <p>no data for this center</p>
 </blockquote>
 </div>
-<div id="dag-na-12" class="section level2 tabset tabset-fade tabset-pills" number="3.13">
-<h2><span class="header-section-number">3.13</span> DAG: NA</h2>
+<div id="dag-13" class="section level2 tabset tabset-fade tabset-pills" number="3.13">
+<h2><span class="header-section-number">3.13</span> DAG: 13</h2>
 <div id="accettazione-10" class="section level3" number="3.13.1">
 <h3><span class="header-section-number">3.13.1</span> Accettazione</h3>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -12590,9 +12611,12 @@ left: 0.1em;
 bottom: -1ex;
 }
 </style>
+<title>
+Accettazione Descriptives
+</title>
 <font color="MidnightBlue">
 <div align="center">
-<span style="font-weight:bold">Accettazione <br><br> 2 Variables   278 Observations</span>
+<span style="font-weight:bold">Accettazione <br><br> 2 Variables   280 Observations</span>
 </div>
 </font>
 <hr class="thinhr">
@@ -12631,7 +12655,7 @@ distinct
 </tr>
 <tr>
 <td>
-278
+280
 </td>
 <td>
 0
@@ -12643,8 +12667,8 @@ distinct
 </table>
 <pre style="font-size:85%;">
  Value      maschio femmina ambiguo
- Frequency      177     100       1
- Proportion   0.637   0.360   0.004
+ Frequency      179     100       1
+ Proportion   0.639   0.357   0.004
  </pre>
 <hr class="thinhr">
 <span style="font-weight:bold">Etnia</span>:
@@ -12682,7 +12706,7 @@ distinct
 </tr>
 <tr>
 <td>
-278
+280
 </td>
 <td>
 0
@@ -12752,8 +12776,8 @@ afro-americana
 </table>
 <pre style="font-size:85%;">
  Value           caucasica       asiatica       africana          araba
- Frequency             217             15             28             14
- Proportion          0.781          0.054          0.101          0.050
+ Frequency             219             15             28             14
+ Proportion          0.782          0.054          0.100          0.050
                                          
  Value         etnia mista afro-americana
  Frequency               3              1
@@ -12776,28 +12800,28 @@ afro-americana
 <tr class="header">
 <th align="left"> </th>
 <th align="center">N</th>
-<th align="center">maschio (N=177)</th>
+<th align="center">maschio (N=179)</th>
 <th align="center">femmina (N=100)</th>
 <th align="center">ambiguo (N=1)</th>
-<th align="center">Combined (N=278)</th>
+<th align="center">Combined (N=280)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">Età (giorni)</td>
-<td align="center">278</td>
-<td align="center">168.000/ 890.000/2880.000
-1805.667+/-2066.706</td>
+<td align="center">280</td>
+<td align="center">170.500/ 874.000/2862.500
+1787.441+/-2062.242</td>
 <td align="center">212.000/ 998.000/2587.750
 1797.180+/-1969.892</td>
 <td align="center">20.000/ 20.000/ 20.000
 20.000+/-</td>
-<td align="center">184.750/ 903.500/2840.500
-1796.191+/-2027.858</td>
+<td align="center">176.000/ 900.500/2837.500
+1784.607+/-2025.203</td>
 </tr>
 <tr class="even">
 <td align="left">Classe di età</td>
-<td align="center">278</td>
+<td align="center">280</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -12814,15 +12838,15 @@ afro-americana
 <tr class="even">
 <td align="left">    lattanti</td>
 <td align="center"></td>
-<td align="center">32% (57)</td>
+<td align="center">33% (59)</td>
 <td align="center">27% (27)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">30% (84)</td>
+<td align="center">31% (86)</td>
 </tr>
 <tr class="odd">
 <td align="left">    prescolare</td>
 <td align="center"></td>
-<td align="center">27% (47)</td>
+<td align="center">26% (47)</td>
 <td align="center">28% (28)</td>
 <td align="center">0% ( 0)</td>
 <td align="center">27% (75)</td>
@@ -12869,7 +12893,7 @@ afro-americana
 </tr>
 <tr class="odd">
 <td align="left">Priorità</td>
-<td align="center">277</td>
+<td align="center">279</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -12878,10 +12902,10 @@ afro-americana
 <tr class="even">
 <td align="left">    1</td>
 <td align="center"></td>
-<td align="center">73% (129)</td>
+<td align="center">74% (131)</td>
 <td align="center">77% ( 77)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">75% (207)</td>
+<td align="center">75% (209)</td>
 </tr>
 <tr class="odd">
 <td align="left">    2</td>
@@ -12917,7 +12941,7 @@ afro-americana
 </tr>
 <tr class="odd">
 <td align="left">Ricovero programmato</td>
-<td align="center">267</td>
+<td align="center">269</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -12926,22 +12950,22 @@ afro-americana
 <tr class="even">
 <td align="left">    si</td>
 <td align="center"></td>
-<td align="center">27% ( 47)</td>
+<td align="center">28% ( 48)</td>
 <td align="center">17% ( 16)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">24% ( 63)</td>
+<td align="center">24% ( 64)</td>
 </tr>
 <tr class="odd">
 <td align="left">    no</td>
 <td align="center"></td>
-<td align="center">73% (124)</td>
+<td align="center">72% (125)</td>
 <td align="center">83% ( 79)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">76% (204)</td>
+<td align="center">76% (205)</td>
 </tr>
 <tr class="even">
 <td align="left">Tipologia di ricovero</td>
-<td align="center">277</td>
+<td align="center">279</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -12950,18 +12974,18 @@ afro-americana
 <tr class="odd">
 <td align="left">    chirurgico</td>
 <td align="center"></td>
-<td align="center">35% ( 61)</td>
+<td align="center">35% ( 62)</td>
 <td align="center">24% ( 24)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">31% ( 85)</td>
+<td align="center">31% ( 86)</td>
 </tr>
 <tr class="even">
 <td align="left">    medico</td>
 <td align="center"></td>
-<td align="center">50% ( 88)</td>
+<td align="center">50% ( 89)</td>
 <td align="center">58% ( 58)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">53% (147)</td>
+<td align="center">53% (148)</td>
 </tr>
 <tr class="odd">
 <td align="left">    trauma, ustione, intossicazione, annegamento, avvelenamento, folgorazione, inalazione di fumo, ipotermia, soffocamento</td>
@@ -12973,7 +12997,7 @@ afro-americana
 </tr>
 <tr class="even">
 <td align="left">Motivo del ricovero</td>
-<td align="center">147</td>
+<td align="center">148</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -12982,10 +13006,10 @@ afro-americana
 <tr class="odd">
 <td align="left">    insufficienza respiratoria</td>
 <td align="center"></td>
-<td align="center">51% (45)</td>
+<td align="center">52% (46)</td>
 <td align="center">52% (30)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">52% (76)</td>
+<td align="center">52% (77)</td>
 </tr>
 <tr class="even">
 <td align="left">    alterato sensorio / crisi convulsive</td>
@@ -13006,7 +13030,7 @@ afro-americana
 <tr class="even">
 <td align="left">    insufficienza cardiocircolatoria (no shock settico)</td>
 <td align="center"></td>
-<td align="center">5% ( 4)</td>
+<td align="center">4% ( 4)</td>
 <td align="center">9% ( 5)</td>
 <td align="center">0% ( 0)</td>
 <td align="center">6% ( 9)</td>
@@ -13093,7 +13117,7 @@ afro-americana
 </tr>
 <tr class="odd">
 <td align="left">Presenza di comorbidità</td>
-<td align="center">278</td>
+<td align="center">280</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13102,7 +13126,7 @@ afro-americana
 <tr class="even">
 <td align="left">    si</td>
 <td align="center"></td>
-<td align="center">40% ( 70)</td>
+<td align="center">39% ( 70)</td>
 <td align="center">33% ( 33)</td>
 <td align="center">100% ( 1)</td>
 <td align="center">37% (104)</td>
@@ -13110,14 +13134,14 @@ afro-americana
 <tr class="odd">
 <td align="left">    no</td>
 <td align="center"></td>
-<td align="center">60% (107)</td>
+<td align="center">61% (109)</td>
 <td align="center">67% ( 67)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">63% (174)</td>
+<td align="center">63% (176)</td>
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: cardiologica</td>
-<td align="center">278</td>
+<td align="center">280</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13126,10 +13150,10 @@ afro-americana
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">98% (174)</td>
+<td align="center">98% (176)</td>
 <td align="center">97% ( 97)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">98% (272)</td>
+<td align="center">98% (274)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -13141,7 +13165,7 @@ afro-americana
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: metabolica</td>
-<td align="center">278</td>
+<td align="center">280</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13150,10 +13174,10 @@ afro-americana
 <tr class="even">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">99% (176)</td>
+<td align="center">99% (178)</td>
 <td align="center">100% (100)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">100% (277)</td>
+<td align="center">100% (279)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -13165,7 +13189,7 @@ afro-americana
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: neurologica</td>
-<td align="center">278</td>
+<td align="center">280</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13174,22 +13198,22 @@ afro-americana
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">86% (153)</td>
+<td align="center">87% (155)</td>
 <td align="center">86% ( 86)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">86% (240)</td>
+<td align="center">86% (242)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
 <td align="center"></td>
-<td align="center">14% ( 24)</td>
+<td align="center">13% ( 24)</td>
 <td align="center">14% ( 14)</td>
 <td align="center">0% ( 0)</td>
 <td align="center">14% ( 38)</td>
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: neuromuscolare</td>
-<td align="center">278</td>
+<td align="center">280</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13198,10 +13222,10 @@ afro-americana
 <tr class="even">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">98% (173)</td>
+<td align="center">98% (175)</td>
 <td align="center">97% ( 97)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">97% (271)</td>
+<td align="center">98% (273)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -13209,11 +13233,11 @@ afro-americana
 <td align="center">2% ( 4)</td>
 <td align="center">3% ( 3)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">3% ( 7)</td>
+<td align="center">2% ( 7)</td>
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: onco-ematologica</td>
-<td align="center">278</td>
+<td align="center">280</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13222,10 +13246,10 @@ afro-americana
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">97% (172)</td>
+<td align="center">97% (174)</td>
 <td align="center">97% ( 97)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">97% (270)</td>
+<td align="center">97% (272)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -13237,7 +13261,7 @@ afro-americana
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: renale</td>
-<td align="center">278</td>
+<td align="center">280</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13246,10 +13270,10 @@ afro-americana
 <tr class="even">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">98% (173)</td>
+<td align="center">98% (175)</td>
 <td align="center">96% ( 96)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">97% (270)</td>
+<td align="center">97% (272)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -13261,7 +13285,7 @@ afro-americana
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: respiratoria</td>
-<td align="center">278</td>
+<td align="center">280</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13270,10 +13294,10 @@ afro-americana
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">94% (167)</td>
+<td align="center">94% (169)</td>
 <td align="center">99% ( 99)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">96% (267)</td>
+<td align="center">96% (269)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -13285,7 +13309,7 @@ afro-americana
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: sindromica</td>
-<td align="center">278</td>
+<td align="center">280</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13294,10 +13318,10 @@ afro-americana
 <tr class="even">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">90% (159)</td>
+<td align="center">90% (161)</td>
 <td align="center">88% ( 88)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">89% (248)</td>
+<td align="center">89% (250)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
@@ -13309,7 +13333,7 @@ afro-americana
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: malformato/esiti di malformazione</td>
-<td align="center">278</td>
+<td align="center">280</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13318,10 +13342,10 @@ afro-americana
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">89% (158)</td>
+<td align="center">89% (160)</td>
 <td align="center">96% ( 96)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">92% (255)</td>
+<td align="center">92% (257)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -13333,7 +13357,7 @@ afro-americana
 </tr>
 <tr class="odd">
 <td align="left">Comorbidità: ex-prematuro</td>
-<td align="center">278</td>
+<td align="center">280</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13342,22 +13366,22 @@ afro-americana
 <tr class="even">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">95% (169)</td>
+<td align="center">96% (171)</td>
 <td align="center">96% ( 96)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">95% (265)</td>
+<td align="center">95% (267)</td>
 </tr>
 <tr class="odd">
 <td align="left">    TRUE</td>
 <td align="center"></td>
-<td align="center">5% ( 8)</td>
+<td align="center">4% ( 8)</td>
 <td align="center">4% ( 4)</td>
 <td align="center">100% ( 1)</td>
 <td align="center">5% ( 13)</td>
 </tr>
 <tr class="even">
 <td align="left">Comorbidità: altro</td>
-<td align="center">278</td>
+<td align="center">280</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13366,10 +13390,10 @@ afro-americana
 <tr class="odd">
 <td align="left">    FALSE</td>
 <td align="center"></td>
-<td align="center">99% (176)</td>
+<td align="center">99% (178)</td>
 <td align="center">99% ( 99)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">99% (276)</td>
+<td align="center">99% (278)</td>
 </tr>
 <tr class="even">
 <td align="left">    TRUE</td>
@@ -13381,7 +13405,7 @@ afro-americana
 </tr>
 <tr class="odd">
 <td align="left">Numero di comorbidità</td>
-<td align="center">278</td>
+<td align="center">280</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13390,10 +13414,10 @@ afro-americana
 <tr class="even">
 <td align="left">    0</td>
 <td align="center"></td>
-<td align="center">63% (111)</td>
+<td align="center">63% (113)</td>
 <td align="center">67% ( 67)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">64% (178)</td>
+<td align="center">64% (180)</td>
 </tr>
 <tr class="odd">
 <td align="left">    1</td>
@@ -13477,31 +13501,31 @@ afro-americana
 </tr>
 <tr class="odd">
 <td align="left">PIM 2</td>
-<td align="center">253</td>
-<td align="center">0.887500/1.285000/2.502500
-3.078187+/-5.564470</td>
+<td align="center">255</td>
+<td align="center">0.882500/1.285000/2.410000
+3.056049+/-5.533560</td>
 <td align="center">1.047500/1.645000/4.562500
 3.335543+/-4.636252</td>
 <td align="center">1.180000/1.180000/1.180000
 1.180000+/-</td>
-<td align="center">0.920000/1.380000/3.600000
-3.164269+/-5.227757</td>
+<td align="center">0.920000/1.380000/3.540000
+3.149529+/-5.209914</td>
 </tr>
 <tr class="even">
 <td align="left">PIM 3</td>
-<td align="center">253</td>
-<td align="center">0.600000/1.025000/1.960000
-2.700750+/-6.316666</td>
+<td align="center">255</td>
+<td align="center">0.600000/1.010000/1.862500
+2.676111+/-6.281265</td>
 <td align="center">0.760000/1.480000/3.980000
 2.647065+/-3.841977</td>
 <td align="center">0.620000/0.620000/0.620000
 0.620000+/-</td>
-<td align="center">0.620000/1.210000/3.320000
-2.673004+/-5.524755</td>
+<td align="center">0.620000/1.200000/3.310000
+2.657569+/-5.505756</td>
 </tr>
 <tr class="odd">
 <td align="left">Tecnica di ventilazione</td>
-<td align="center">167</td>
+<td align="center">171</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13510,30 +13534,30 @@ afro-americana
 <tr class="even">
 <td align="left">    niv</td>
 <td align="center"></td>
-<td align="center">23% (25)</td>
-<td align="center">41% (24)</td>
+<td align="center">24% (26)</td>
+<td align="center">40% (24)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">30% (50)</td>
+<td align="center">30% (51)</td>
 </tr>
 <tr class="odd">
 <td align="left">    it</td>
 <td align="center"></td>
-<td align="center">53% (57)</td>
-<td align="center">46% (27)</td>
+<td align="center">54% (59)</td>
+<td align="center">45% (27)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">50% (84)</td>
+<td align="center">50% (86)</td>
 </tr>
 <tr class="even">
 <td align="left">    niv e it</td>
 <td align="center"></td>
 <td align="center">23% (25)</td>
-<td align="center">14% ( 8)</td>
+<td align="center">15% ( 9)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">20% (33)</td>
+<td align="center">20% (34)</td>
 </tr>
 <tr class="odd">
 <td align="left">Tipologia di infezione</td>
-<td align="center">109</td>
+<td align="center">112</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13542,10 +13566,10 @@ afro-americana
 <tr class="even">
 <td align="left">    comunità</td>
 <td align="center"></td>
-<td align="center">94% ( 63)</td>
-<td align="center">88% ( 37)</td>
+<td align="center">94% ( 65)</td>
+<td align="center">88% ( 38)</td>
 <td align="center"></td>
-<td align="center">92% (100)</td>
+<td align="center">92% (103)</td>
 </tr>
 <tr class="odd">
 <td align="left">    nosocomiale (dopo 48h da inizio ospedalizzazione)</td>
@@ -13557,15 +13581,15 @@ afro-americana
 </tr>
 <tr class="even">
 <td align="left">Durata della degenza</td>
-<td align="center">247</td>
+<td align="center">251</td>
 <td align="center">1.000000/2.000000/3.000000
-2.894410+/-3.999379</td>
+2.859756+/-3.972122</td>
 <td align="center">1.000000/2.000000/4.000000
-3.435294+/-5.141908</td>
+3.511628+/-5.160356</td>
 <td align="center">8.000000/8.000000/8.000000
 8.000000+/-</td>
 <td align="center">1.000000/2.000000/4.000000
-3.101215+/-4.426670</td>
+3.103586+/-4.419641</td>
 </tr>
 <tr class="odd">
 <td align="left">Modalità di decesso</td>
@@ -13617,7 +13641,7 @@ afro-americana
 </tr>
 <tr class="odd">
 <td align="left">Esito TIP</td>
-<td align="center">247</td>
+<td align="center">251</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13626,10 +13650,10 @@ afro-americana
 <tr class="even">
 <td align="left">    vivo</td>
 <td align="center"></td>
-<td align="center">98% (158)</td>
-<td align="center">100% ( 85)</td>
+<td align="center">98% (161)</td>
+<td align="center">100% ( 86)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">99% (244)</td>
+<td align="center">99% (248)</td>
 </tr>
 <tr class="odd">
 <td align="left">    morto</td>
@@ -13641,7 +13665,7 @@ afro-americana
 </tr>
 <tr class="even">
 <td align="left">Diagnosi alla dimissione</td>
-<td align="center">247</td>
+<td align="center">251</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -13669,31 +13693,31 @@ afro-americana
 <td align="center">13% (21)</td>
 <td align="center">6% ( 5)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">11% (26)</td>
+<td align="center">10% (26)</td>
 </tr>
 <tr class="even">
 <td align="left">    incidenti</td>
 <td align="center"></td>
-<td align="center">14% (22)</td>
-<td align="center">18% (15)</td>
+<td align="center">13% (22)</td>
+<td align="center">17% (15)</td>
 <td align="center">0% ( 0)</td>
 <td align="center">15% (37)</td>
 </tr>
 <tr class="odd">
 <td align="left">    miscellanea</td>
 <td align="center"></td>
-<td align="center">25% (40)</td>
+<td align="center">25% (41)</td>
 <td align="center">20% (17)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">23% (57)</td>
+<td align="center">23% (58)</td>
 </tr>
 <tr class="even">
 <td align="left">    neurologico</td>
 <td align="center"></td>
-<td align="center">22% (35)</td>
-<td align="center">24% (20)</td>
+<td align="center">22% (36)</td>
+<td align="center">23% (20)</td>
 <td align="center">0% ( 0)</td>
-<td align="center">22% (55)</td>
+<td align="center">22% (56)</td>
 </tr>
 <tr class="odd">
 <td align="left">    renale</td>
@@ -13714,16 +13738,16 @@ afro-americana
 <tr class="odd">
 <td align="left">    respiratorio, via aerea inferiore</td>
 <td align="center"></td>
-<td align="center">16% (25)</td>
-<td align="center">14% (12)</td>
+<td align="center">16% (26)</td>
+<td align="center">15% (13)</td>
 <td align="center">100% ( 1)</td>
-<td align="center">15% (38)</td>
+<td align="center">16% (40)</td>
 </tr>
 <tr class="even">
 <td align="left">    respiratorio, via aerea superiore</td>
 <td align="center"></td>
 <td align="center">4% ( 7)</td>
-<td align="center">4% ( 3)</td>
+<td align="center">3% ( 3)</td>
 <td align="center">0% ( 0)</td>
 <td align="center">4% (10)</td>
 </tr>
@@ -13752,8 +13776,8 @@ afro-americana
 <p>SMR PIM3: 0.44</p>
 </div>
 </div>
-<div id="dag-na-13" class="section level2 tabset tabset-fade tabset-pills" number="3.14">
-<h2><span class="header-section-number">3.14</span> DAG: NA</h2>
+<div id="dag-14" class="section level2 tabset tabset-fade tabset-pills" number="3.14">
+<h2><span class="header-section-number">3.14</span> DAG: 14</h2>
 <div id="accettazione-11" class="section level3" number="3.14.1">
 <h3><span class="header-section-number">3.14.1</span> Accettazione</h3>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -13795,6 +13819,9 @@ left: 0.1em;
 bottom: -1ex;
 }
 </style>
+<title>
+Accettazione Descriptives
+</title>
 <font color="MidnightBlue">
 <div align="center">
 <span style="font-weight:bold">Accettazione <br><br> 2 Variables   2 Observations</span>
@@ -14680,26 +14707,26 @@ caucasica
 <p>SMR PIM3: 1.27</p>
 </div>
 </div>
-<div id="dag-na-14" class="section level2 tabset tabset-fade tabset-pills" number="3.15">
-<h2><span class="header-section-number">3.15</span> DAG: NA</h2>
+<div id="dag-15" class="section level2 tabset tabset-fade tabset-pills" number="3.15">
+<h2><span class="header-section-number">3.15</span> DAG: 15</h2>
 <blockquote>
 <p>no data for this center</p>
 </blockquote>
 </div>
-<div id="dag-na-15" class="section level2 tabset tabset-fade tabset-pills" number="3.16">
-<h2><span class="header-section-number">3.16</span> DAG: NA</h2>
+<div id="dag-20" class="section level2 tabset tabset-fade tabset-pills" number="3.16">
+<h2><span class="header-section-number">3.16</span> DAG: 20</h2>
 <blockquote>
 <p>no data for this center</p>
 </blockquote>
 </div>
-<div id="dag-na-16" class="section level2 tabset tabset-fade tabset-pills" number="3.17">
-<h2><span class="header-section-number">3.17</span> DAG: NA</h2>
+<div id="dag-21" class="section level2 tabset tabset-fade tabset-pills" number="3.17">
+<h2><span class="header-section-number">3.17</span> DAG: 21</h2>
 <blockquote>
 <p>no data for this center</p>
 </blockquote>
 </div>
-<div id="dag-na-17" class="section level2 tabset tabset-fade tabset-pills" number="3.18">
-<h2><span class="header-section-number">3.18</span> DAG: NA</h2>
+<div id="dag-22" class="section level2 tabset tabset-fade tabset-pills" number="3.18">
+<h2><span class="header-section-number">3.18</span> DAG: 22</h2>
 <div id="accettazione-12" class="section level3" number="3.18.1">
 <h3><span class="header-section-number">3.18.1</span> Accettazione</h3>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -14741,6 +14768,9 @@ left: 0.1em;
 bottom: -1ex;
 }
 </style>
+<title>
+Accettazione Descriptives
+</title>
 <font color="MidnightBlue">
 <div align="center">
 <span style="font-weight:bold">Accettazione <br><br> 2 Variables   24 Observations</span>
@@ -15629,20 +15659,20 @@ distinct
 <p>SMR PIM3: 1.74</p>
 </div>
 </div>
-<div id="dag-na-18" class="section level2 tabset tabset-fade tabset-pills" number="3.19">
-<h2><span class="header-section-number">3.19</span> DAG: NA</h2>
+<div id="dag-24" class="section level2 tabset tabset-fade tabset-pills" number="3.19">
+<h2><span class="header-section-number">3.19</span> DAG: 24</h2>
 <blockquote>
 <p>no data for this center</p>
 </blockquote>
 </div>
-<div id="dag-na-19" class="section level2 tabset tabset-fade tabset-pills" number="3.20">
-<h2><span class="header-section-number">3.20</span> DAG: NA</h2>
+<div id="dag-25" class="section level2 tabset tabset-fade tabset-pills" number="3.20">
+<h2><span class="header-section-number">3.20</span> DAG: 25</h2>
 <blockquote>
 <p>no data for this center</p>
 </blockquote>
 </div>
-<div id="dag-na-20" class="section level2 tabset tabset-fade tabset-pills" number="3.21">
-<h2><span class="header-section-number">3.21</span> DAG: NA</h2>
+<div id="dag-28" class="section level2 tabset tabset-fade tabset-pills" number="3.21">
+<h2><span class="header-section-number">3.21</span> DAG: 28</h2>
 <div id="accettazione-13" class="section level3" number="3.21.1">
 <h3><span class="header-section-number">3.21.1</span> Accettazione</h3>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -15684,6 +15714,9 @@ left: 0.1em;
 bottom: -1ex;
 }
 </style>
+<title>
+Accettazione Descriptives
+</title>
 <font color="MidnightBlue">
 <div align="center">
 <span style="font-weight:bold">Accettazione <br><br> 2 Variables   17 Observations</span>
@@ -16586,8 +16619,8 @@ distinct
 <p>SMR PIM3: 0.81</p>
 </div>
 </div>
-<div id="dag-na-21" class="section level2 tabset tabset-fade tabset-pills" number="3.22">
-<h2><span class="header-section-number">3.22</span> DAG: NA</h2>
+<div id="dag-29" class="section level2 tabset tabset-fade tabset-pills" number="3.22">
+<h2><span class="header-section-number">3.22</span> DAG: 29</h2>
 <div id="accettazione-14" class="section level3" number="3.22.1">
 <h3><span class="header-section-number">3.22.1</span> Accettazione</h3>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16629,6 +16662,9 @@ left: 0.1em;
 bottom: -1ex;
 }
 </style>
+<title>
+Accettazione Descriptives
+</title>
 <font color="MidnightBlue">
 <div align="center">
 <span style="font-weight:bold">Accettazione <br><br> 2 Variables   7 Observations</span>
@@ -17592,14 +17628,14 @@ distinct
 <p>SMR PIM3: 0</p>
 </div>
 </div>
-<div id="dag-na-22" class="section level2 tabset tabset-fade tabset-pills" number="3.23">
-<h2><span class="header-section-number">3.23</span> DAG: NA</h2>
+<div id="dag-30" class="section level2 tabset tabset-fade tabset-pills" number="3.23">
+<h2><span class="header-section-number">3.23</span> DAG: 30</h2>
 <blockquote>
 <p>no data for this center</p>
 </blockquote>
 </div>
-<div id="dag-na-23" class="section level2 tabset tabset-fade tabset-pills" number="3.24">
-<h2><span class="header-section-number">3.24</span> DAG: NA</h2>
+<div id="dag-32" class="section level2 tabset tabset-fade tabset-pills" number="3.24">
+<h2><span class="header-section-number">3.24</span> DAG: 32</h2>
 <blockquote>
 <p>no data for this center</p>
 </blockquote>

@@ -46,7 +46,7 @@ htmltools::img(
 
 
 if (interactive()) {
-  params <- list(year = 2021)
+  params <- list(year = 2022)
 }
 #+ pkg, include = FALSE
 
@@ -112,7 +112,7 @@ data_dir <- "../tipnet-data"
 # db_update_from_server(data_dir)
 
 
-tip_data <- read_rds(here(data_dir, "2023-01-04-tipnet.rds"))
+tip_data <- read_rds(here(data_dir, "2023-01-12-tipnet.rds"))
 
 #'
 #' # Preambolo
@@ -252,16 +252,18 @@ data_to_describe <- left_join(accettazione, pim) %>%
   left_join(infezione) %>%
   left_join(dimissione) %>%
   left_join(anagrafica) %>%
-  select(-etnia) %>%
-  mutate(
-    center = forcats::fct_relabel(center, ~str_c(
-      dplyr::filter(centers_table, center == .x) %>%
-        dplyr::pull(center_city),
-      .x,
-      sep = " - "
-    ))
-  )
+  select(-etnia)
 
+if (centers_table[["center_city"]][[1]] != "") {
+  data_to_describe <- data_to_describe %>%
+    mutate(
+      center = forcats::fct_relabel(center, ~str_c(
+        dplyr::filter(centers_table, center == .x)[["center_city"]],
+        .x,
+        sep = " - "
+      ))
+    )
+}
 
 eval_summaries <- function(tip_data, current_center = NULL) {
 
