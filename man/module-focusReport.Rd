@@ -9,7 +9,7 @@
 \usage{
 focusReportUI(id)
 
-focusReport(id, data, what)
+focusReport(id, data, type, what = NULL, dict = NULL)
 
 focusReportStatic(data, completed, what)
 }
@@ -18,9 +18,9 @@ focusReportStatic(data, completed, what)
 
 \item{data}{database to use}
 
-\item{completed}{(chr) "Completed" or "Not-completed"}
-
 \item{type}{(chr) "Total" or "Proportion"}
+
+\item{completed}{(chr) "Completed" or "Not-completed"}
 }
 \description{
 General description

@@ -9,7 +9,7 @@
 admission_Plot(
   .db,
   type = c("centervar", "checkbox"),
-  what = c("mal_cronica", "popc", "insuff_organo7"),
+  what = c("mal_cronica", "popc", "insuff_organo7", "pim"),
   dict = NULL
 )
 

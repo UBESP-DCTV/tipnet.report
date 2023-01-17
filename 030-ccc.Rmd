@@ -103,7 +103,18 @@ recorded and the risk of death is automatically calculated by the system. In 201
 
 
 ### Severity
+```{r, eval=!params$export}
+admissionReportUI("adm_pim")
+```
 
+```{r, context = "server", eval=!params$export}
+admissionReport(
+  "adm_pim",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "pim"
+)
+```
 ### Age
 
 ### Year

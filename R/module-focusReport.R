@@ -67,7 +67,8 @@ focusReport <- function(id, data, type, what = NULL, dict = NULL) {
           type = type, what = what, dict = dict
 
         ) |>
-        plotly::ggplotly(dynamicTicks = TRUE)
+        plotly::ggplotly() |>
+        layout(boxmode = "group")
     })
 
     output$tbl <- DT::renderDT(

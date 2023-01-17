@@ -67,7 +67,8 @@ losReport <- function(id, data, what) {
           what = what
 
         )|>
-        plotly::ggplotly(dynamicTicks = TRUE)
+        plotly::ggplotly() |>
+        layout(boxmode = "group")
     })
 
     output$tbl <- DT::renderDT(
