@@ -19,7 +19,7 @@ NULL
 los_Plot <- function(
     .db,
     what = c("diagnosi","diagnosi_2","popc_dimissione","esito_tip","mod_decesso","deceduto",
-             "prelievo_organi","destinazione")
+             "prelievo_organi","destinazione","durata_degenza")
 ) {
   what <- match.arg(what)
 
@@ -31,7 +31,8 @@ los_Plot <- function(
                           "mod_decesso" = "Decesso",
                           "deceduto" = "Acc. decesso",
                           "prelievo_organi" = "Organi",
-                          "destinazione" = "destinazione"
+                          "destinazione" = "destinazione",
+                          "durata_degenza" = "Durata"
 
 
   )
@@ -66,7 +67,7 @@ los_dataToUse <- function(
 los_dataTbl <- function(
     .db,
     what = c("diagnosi","diagnosi_2","popc_dimissione","esito_tip","mod_decesso","deceduto",
-             "prelievo_organi","destinazione"),
+             "prelievo_organi","destinazione","durata_degenza"),
     by_gender = FALSE,
     by_ageclass = FALSE
 ) {

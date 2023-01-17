@@ -4,7 +4,7 @@
 #' @export
 centervar_plot <- function(.db, what, reported_name) {
 
-  geom_centervar <- if (what == "redcap_repeat_instance") {
+  geom_centervar <- if (any(what == c("redcap_repeat_instance","durata_degenza"))) {
     function(p) {
       p +
       geom_boxplot(aes(y = .data[[what]])) +
@@ -49,7 +49,7 @@ centervar_plot <- function(.db, what, reported_name) {
 #' @export
 centervar_tbl <- function(.db, what) {
 
-  if (any(what == "redcap_repeat_instance")) {
+  if (any(what == c( "redcap_repeat_instance","durata_degenza"))) {
     checkmate::assert_string(what)
 
     .db |>
@@ -108,7 +108,7 @@ transform_centervar <- function(x, what) {
         year = lubridate::year(.data[["ingresso_dt"]])
       )
 
-  } else if (any(what == "redcap_repeat_instance")) {
+  } else if (any(what == c("redcap_repeat_instance","durata_degenza"))) {
     checkmate::assert_string(what)
     x |>
       dplyr::filter(.data[[what]] != 1)

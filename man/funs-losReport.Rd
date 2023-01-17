@@ -9,7 +9,7 @@
 los_Plot(
   .db,
   what = c("diagnosi", "diagnosi_2", "popc_dimissione", "esito_tip", "mod_decesso",
-    "deceduto", "prelievo_organi", "destinazione")
+    "deceduto", "prelievo_organi", "destinazione", "durata_degenza")
 )
 
 los_dataToUse(.db, .which = c("Completed only", "Overall"))

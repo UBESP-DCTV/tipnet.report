@@ -5,6 +5,17 @@
 
 
 ## LOS {.tabset .tabset-dropdown}
+```{r, eval=!params$export}
+losReportUI("m_durata")
+```
+
+```{r, context = "server", eval=!params$export}
+losReport(
+  "m_durata",
+  data = data_ranged[["full_filtered"]],
+  what = "durata_degenza"
+)
+```
 
 ### Age
 
