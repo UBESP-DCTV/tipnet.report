@@ -9,7 +9,8 @@ checkbox_plot <- function(.db, dict) {
   checkbox_db(.db, dict) |>
     ggplot(aes(x = center, fill = name)) +
     geom_bar(position = "fill") +
-    coord_flip()
+    coord_flip() +
+    labs(x = "Centro", y = "Prop", fill = "Categoria")
 }
 
 
