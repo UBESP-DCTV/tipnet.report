@@ -67,7 +67,7 @@ losReport <- function(id, data, what) {
           what = what
 
         )|>
-        plotly::ggplotly(dynamicTicks = TRUE)
+        plotly::ggplotly()
     })
 
     output$tbl <- DT::renderDT(

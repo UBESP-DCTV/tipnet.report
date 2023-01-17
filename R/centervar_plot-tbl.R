@@ -7,13 +7,17 @@ centervar_plot <- function(.db, what, reported_name) {
   geom_centervar <- if (any(what == c("redcap_repeat_instance","durata_degenza"))) {
     function(p) {
       p +
-      geom_boxplot(aes(y = .data[[what]])) +
-        coord_flip()
+      geom_boxplot(aes(y = .data[[what]]))
     }
-  } else if (what == "pim") {
+  } else if (any(what == "pim")) {
     function(p) {
       p +
-        geom_boxplot(aes(y = .data[["pim_val"]], colour = "pim_type")) +
+        geom_boxplot(
+          aes(
+            y = .data[["pim_val"]],
+            colour = .data[["pim_type"]]
+          )
+        ) +
         coord_flip()
     }
   } else {
@@ -34,7 +38,8 @@ centervar_plot <- function(.db, what, reported_name) {
     labs(
       x = "Center",
       y = "Counts",
-      fill = stringr::str_to_sentence(reported_name)
+      fill = stringr::str_to_sentence(reported_name),
+      colour = stringr::str_to_sentence(reported_name)
     ) +
     theme(legend.position = "top")
 }
@@ -56,18 +61,18 @@ centervar_tbl <- function(.db, what) {
       dplyr::group_by(.data$center, .add = TRUE) |>
       dplyr::summarise(
         N = n(),
-        Mediana = median(.data[[what]]),
-        IQR = IQR(.data[[what]])
+        Mediana = median(.data[[what]], na.rm = TRUE),
+        IQR = IQR(.data[[what]], na.rm = TRUE)
       )
   } else if (any(what == "pim")) {
     checkmate::assert_string(what)
 
     .db |>
+      transform_centervar(what = what) |>
       dplyr::group_by(.data$center, .data$pim_type, .add = TRUE) |>
       dplyr::summarise(
-        N = n(),
-        Mediana = median(.data[["pim_val"]]),
-        IQR = IQR(.data[["pim_val"]])
+        Mediana = median(.data[["pim_val"]], na.rm = TRUE),
+        IQR = IQR(.data[["pim_val"]], na.rm = TRUE)
       )
   } else {
     .db |>
@@ -80,11 +85,6 @@ centervar_tbl <- function(.db, what) {
   }
 
 }
-
-
-
-
-
 
 
 
@@ -104,11 +104,14 @@ transform_centervar <- function(x, what) {
         names_to = "pim_type",
         values_to = "pim_val"
       ) |>
+      ggplot2::remove_missing(na.rm = TRUE, vars = "tip_val") |>
       dplyr::mutate(
         year = lubridate::year(.data[["ingresso_dt"]])
       )
 
-  } else if (any(what == c("redcap_repeat_instance","durata_degenza"))) {
+  } else if (
+    any(what == c("redcap_repeat_instance","durata_degenza"))
+  ) {
     checkmate::assert_string(what)
     x |>
       dplyr::filter(.data[[what]] != 1)

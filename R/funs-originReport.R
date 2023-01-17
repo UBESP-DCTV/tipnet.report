@@ -29,32 +29,32 @@ origin_Plot <- function(
   type <- match.arg(type)
   what <- match.arg(what)
 
-if (type == "centervar") {
+  if (type == "centervar") {
 
-  reported_name <- what |>
-    switch(
-      "ricovero_progr" = "Ricovero programmato",
-      "redcap_repeat_instance" = "Riammissione",
-      "provenienza" = "Provenienza",
-      "altro_osp" = "Altro ospedale",
-      "tipologia2" = "tipo",
-      "tipo_chr" = "Tipo chirurgia",
-      "priorita" = "Priorità",
-      "motivo_post_oper" = "post chirurgia",
-      "motivo_ricovero2"  = "ric. medico",
-      "motivo_ric_trauma2" = "post-trauma"
+    reported_name <- what |>
+      switch(
+        "ricovero_progr" = "Ricovero programmato",
+        "redcap_repeat_instance" = "Riammissione",
+        "provenienza" = "Provenienza",
+        "altro_osp" = "Altro ospedale",
+        "tipologia2" = "tipo",
+        "tipo_chr" = "Tipo chirurgia",
+        "priorita" = "Priorità",
+        "motivo_post_oper" = "post chirurgia",
+        "motivo_ricovero2"  = "ric. medico",
+        "motivo_ric_trauma2" = "post-trauma"
 
-    )
+      )
 
-    centervar_plot(.db,what, reported_name)
-
-
+    centervar_plot(.db, what, reported_name)
 
 
 
-} else if (type == "checkbox") {
+
+
+  } else if (type == "checkbox") {
     checkbox_plot(.db, dict)
-}
+  }
 }
 
 origin_dataTbl <- function(

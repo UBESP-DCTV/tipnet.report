@@ -68,7 +68,7 @@ admission_dataToUse <- function(
 admission_dataTbl <- function(
     .db,
     type = c("centervar", "checkbox"),
-    what = c("mal_cronica","popc","insuff_organo7"),
+    what = c("mal_cronica","popc","insuff_organo7", "pim"),
     dict = NULL,
     by_gender = FALSE,
     by_ageclass = FALSE

@@ -31,7 +31,7 @@ admissionReportUI <- function(id) {
                             selected = "Completed only"
       ))
     ),
-    fluidRow(plotlyOutput(ns("dist"), height = "800px")),
+    fluidRow(plotlyOutput(ns("dist"), height = "1000px")),
     fluidRow(
       column(5, checkboxInput(ns("byAgeclass"),
                               label   = "Per età"
@@ -64,7 +64,7 @@ admissionReport <- function(id, data, type, what = NULL, dict = NULL) {
     output$dist <- renderPlotly({
       data_to_use() |>
         admission_Plot(type = type, what = what, dict = dict) |>
-        plotly::ggplotly(dynamicTicks = TRUE)
+        plotly::ggplotly()
     })
 
     output$tbl <- DT::renderDT(

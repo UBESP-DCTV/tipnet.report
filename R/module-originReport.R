@@ -65,9 +65,8 @@ originReport <- function(id, data, type, what = NULL, dict = NULL) {
       data_to_use() |>
         origin_Plot(
           type = type, what = what, dict = dict
-
           ) |>
-      plotly::ggplotly(dynamicTicks = TRUE)
+      plotly::ggplotly()
     })
 
     output$tbl <- DT::renderDT(
