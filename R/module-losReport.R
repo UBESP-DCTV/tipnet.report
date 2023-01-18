@@ -39,6 +39,12 @@ losReportUI <- function(id) {
       )),
       column(5, checkboxInput(ns("byGender"),
                               label   = "Per genere"
+      )),
+      column(5, checkboxInput(ns("byYear"),
+                              label   = "Per anno"
+      )),
+      column(5, checkboxInput(ns("byType"),
+                              label   = "Per tipologia di ricovero"
       ))
     ),
     fluidRow(
@@ -80,9 +86,10 @@ losReport <- function(id, data, what) {
         los_dataTbl(
           what = what,
           by_ageclass = input[["byAgeclass"]],
-          by_gender = input[["byGender"]]
+          by_gender = input[["byGender"]],
+          by_type = input[["byType"]],
+          by_year = input[["byYear"]]
         ),
-
       filter = list(position = "top", clear = TRUE),
       server = FALSE
     )

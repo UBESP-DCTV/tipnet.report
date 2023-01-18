@@ -20,6 +20,18 @@ centervar_plot <- function(.db, what, reported_name) {
         ) +
         coord_flip()
     }
+  }
+    else if (any(what == "smr")) {
+      function(p) {
+        p +
+          geom_text(
+            aes(x = .data[["smr_val"]], y = .data[["smr_type"]],label = .data$center,colour=.data[["smr_type"]]),
+            position = "jitter"
+
+          )
+
+
+        }
   } else {
     function(p) {
       p +
@@ -76,7 +88,13 @@ centervar_tbl <- function(.db, what) {
       ) |>
       dplyr::relocate(dplyr::all_of(c("center", "pim_type"))) |>
       dplyr::arrange(.data[["center"]], .data[["pim_type"]])
-  } else {
+  } else if (any(what == "smr")) {
+    .db |>
+      transform_centervar(what = what)
+  #    dplyr::relocate(dplyr::all_of(c("center", "smr_type"))) |>
+   #   dplyr::arrange(.data[["center"]], .data[["smr_type"]])
+  }
+  else {
     .db |>
       transform_centervar(what = what) |>
       dplyr::group_by(
@@ -108,7 +126,29 @@ transform_centervar <- function(x, what) {
       ) |>
       ggplot2::remove_missing(na.rm = TRUE, vars = "pim_val")
 
-  } else if (
+  }
+else if (any(what == "smr")) {
+    checkmate::assert_string(what)
+
+  x |>
+      dplyr::select(any_of(c(
+        "center", "age_class", "gender", "tipologia", "ingresso_dt","esito_tip","pim2",
+        "pim3"
+      ))) |>  dplyr::mutate(
+        year = as.integer(lubridate::year(.data[["ingresso_dt"]]))) |>
+      group_by(.data$center)|>
+    dplyr::summarise(
+        smr_pim2 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
+          (sum(.data$pim2, na.rm = TRUE)/100),
+        smr_pim3 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
+          (sum(.data$pim3, na.rm = TRUE)/100)) |>
+      pivot_longer(
+        dplyr::all_of(c("smr_pim2", "smr_pim3")),
+        names_to = "smr_type",
+        values_to = "smr_val"
+      )
+
+  }else if (
     any(what == c("redcap_repeat_instance","durata_degenza"))
   ) {
     checkmate::assert_string(what)

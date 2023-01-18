@@ -19,7 +19,7 @@ NULL
 los_Plot <- function(
     .db,
     what = c("diagnosi","diagnosi_2","popc_dimissione","esito_tip","mod_decesso","deceduto",
-             "prelievo_organi","destinazione","durata_degenza")
+             "prelievo_organi","destinazione","durata_degenza","smr")
 ) {
   what <- match.arg(what)
 
@@ -32,7 +32,8 @@ los_Plot <- function(
                           "deceduto" = "Acc. decesso",
                           "prelievo_organi" = "Organi",
                           "destinazione" = "destinazione",
-                          "durata_degenza" = "Durata"
+                          "durata_degenza" = "Durata",
+                          "smr" ="SMR"
 
 
   )
@@ -45,7 +46,7 @@ los_Plot <- function(
 #' @describeIn funs-losReport plot
 #' @export
 pimlos_plot <- function(.db) {
-  full_records |>
+  .db |>
     dplyr::select("center", "durata_degenza", dplyr::matches("pim")) |>
     tidyr::pivot_longer(
       dplyr::all_of(c("pim2", "pim3")),
@@ -97,9 +98,12 @@ los_dataToUse <- function(
 los_dataTbl <- function(
     .db,
     what = c("diagnosi","diagnosi_2","popc_dimissione","esito_tip","mod_decesso","deceduto",
-             "prelievo_organi","destinazione","durata_degenza"),
+             "prelievo_organi","destinazione","durata_degenza","smr"),
     by_gender = FALSE,
-    by_ageclass = FALSE
+    by_ageclass = FALSE,
+    by_type = FALSE,
+    by_year = FALSE
+
 ) {
   what <- match.arg(what)
 
@@ -112,7 +116,18 @@ los_dataTbl <- function(
     .db <- .db |>
       group_by(.data[["age_class"]], .add = TRUE)
   }
+  if (what == "smr" && by_type) {
+    .db <- .db |>
+      group_by(.data[["tipologia"]], .add = TRUE)
+  }
 
+  if (what == "smr" && by_year) {
+    .db <- .db |>
+      dplyr::mutate(
+        year = as.integer(lubridate::year(.data[["ingresso_dt"]]))
+      ) |>
+      group_by(.data[["year"]], .add = TRUE)
+  }
   .db |>
     centervar_tbl(what)
 }

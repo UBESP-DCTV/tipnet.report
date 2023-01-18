@@ -17,13 +17,13 @@ losReport(
 )
 ```
 
-### Age
+<!--### Age-->
 
-### Year
+<!--### Year-->
 
-### Center
+<!--### Center-->
 
-### Condition (CCC)
+<!--### Condition (CCC)-->
 
 ### Rate of los
 
@@ -210,15 +210,26 @@ The new score seems to perform better than the old one, with a more adequate est
 correct SMR.
 
 ### Units
+```{r, eval=!params$export}
+losReportUI("m_smr")
+```
+
+```{r, context = "server", eval=!params$export}
+losReport(
+  "m_smr",
+  data = data_ranged[["full_filtered"]],
+  what = "smr"
+)
+```
+
+<!--#### Units -->
+<!--### PIM2 and PIM3 -->
+
+<!--### Age-->
+
+<!--### Year-->
+
+<!--### Type-->
 
 
-### PIM2 and PIM3
-
-### Age
-
-### Year
-
-### Type
-
-
-## Predictive mortality models {.tabset .tabset-dropdown}
+<!--#### Predictive mortality models {.tabset .tabset-dropdown}-->
