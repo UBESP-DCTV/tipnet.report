@@ -32,7 +32,6 @@ losReportUI <- function(id) {
       ))
     ),
     fluidRow(plotlyOutput(ns("dist"), height = "800px")),
-    fluidRow(plotlyOutput(ns("pimlos"), height = "800px")),
     fluidRow(
       column(5, checkboxInput(ns("byAgeclass"),
                               label   = "Per età"
@@ -75,11 +74,7 @@ losReport <- function(id, data, what) {
         layout(boxmode = "group")
     })
 
-    output$pimlos <- renderPlotly({
-      data_to_use() |>
-        pimlos_plot() |>
-        plotly::ggplotly()
-    })
+
 
     output$tbl <- DT::renderDT(
       data_to_use() |>

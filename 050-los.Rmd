@@ -17,6 +17,17 @@ losReport(
 )
 ```
 
+```{r, eval=!params$export}
+lospimReportUI("m_durata")
+```
+
+```{r, context = "server", eval=!params$export}
+lospimReport(
+  "m_durata",
+  data = data_ranged[["full_filtered"]],
+  what = "durata_degenza"
+)
+```
 <!--### Age-->
 
 <!--### Year-->
@@ -25,7 +36,7 @@ losReport(
 
 <!--### Condition (CCC)-->
 
-### Rate of los
+<!--###### Rate of los-->
 
 
 ## Discharge {.tabset .tabset-dropdown}
