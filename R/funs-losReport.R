@@ -42,6 +42,36 @@ los_Plot <- function(
 
 
 
+#' @describeIn funs-losReport plot
+#' @export
+pimlos_plot <- function(.db) {
+  full_records |>
+    dplyr::select("center", "durata_degenza", dplyr::matches("pim")) |>
+    tidyr::pivot_longer(
+      dplyr::all_of(c("pim2", "pim3")),
+      names_to = "pim_type",
+      values_to = "pim_val"
+    ) |>
+    ggplot2::remove_missing(
+      na.rm = TRUE,
+      vars = c("pim_val", "durata_degenza")
+    ) |>
+    group_by(.data$center, .data$pim_type) |>
+    summarise(
+      pimmed = mean(.data$pim_val),
+      durata_media = mean(.data$durata_degenza)
+    ) |>
+    dplyr::ungroup() |>
+    ggplot(
+      aes(.data$durata_media, .data$pimmed, colour = .data$pim_type)
+    ) +
+    geom_text(aes(label = .data$center))
+}
+
+
+
+
+
 #' @describeIn funs-losReport data
 #' @export
 #' @examples

@@ -73,7 +73,7 @@ centervar_tbl <- function(.db, what) {
       dplyr::summarise(
         Mediana = median(.data[["pim_val"]], na.rm = TRUE),
         IQR = IQR(.data[["pim_val"]], na.rm = TRUE)
-      )|>
+      ) |>
       dplyr::relocate(dplyr::all_of(c("center", "pim_type"))) |>
       dplyr::arrange(.data[["center"]], .data[["pim_type"]])
   } else {
@@ -106,7 +106,7 @@ transform_centervar <- function(x, what) {
         names_to = "pim_type",
         values_to = "pim_val"
       ) |>
-      ggplot2::remove_missing(na.rm = TRUE, vars = "tip_val")
+      ggplot2::remove_missing(na.rm = TRUE, vars = "pim_val")
 
   } else if (
     any(what == c("redcap_repeat_instance","durata_degenza"))
