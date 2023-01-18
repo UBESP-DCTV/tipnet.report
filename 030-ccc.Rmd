@@ -115,8 +115,4 @@ admissionReport(
   what = "pim"
 )
 ```
-### Age
 
-### Year
-
-### Type

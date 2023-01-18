@@ -73,7 +73,9 @@ centervar_tbl <- function(.db, what) {
       dplyr::summarise(
         Mediana = median(.data[["pim_val"]], na.rm = TRUE),
         IQR = IQR(.data[["pim_val"]], na.rm = TRUE)
-      )
+      )|>
+      dplyr::relocate(dplyr::all_of(c("center", "pim_type"))) |>
+      dplyr::arrange(.data[["center"]], .data[["pim_type"]])
   } else {
     .db |>
       transform_centervar(what = what) |>
