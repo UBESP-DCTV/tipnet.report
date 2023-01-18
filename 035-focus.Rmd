@@ -163,7 +163,7 @@ focusReportStatic(
   what = "niv_it"
 )
 ```
-### Durata
+<!--### Durata  -->
 
 ## Scheda infezioni {.tabset .tabset-dropdown}
 
