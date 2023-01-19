@@ -223,97 +223,97 @@ data_ranged <- yearRange("year_range")
 
 
 
-```{r, results='asis', eval=!params$export}
-cat("# Download current report {-}")
-```
+<!-- ```{r, results='asis', eval=!params$export} -->
+<!-- cat("# Download current report {-}") -->
+<!-- ``` -->
 
-```{r, eval=!params$export}
-actionButton("generate", "Generate Report", icon = icon("file"))
-```
+<!-- ```{r, eval=!params$export} -->
+<!-- actionButton("generate", "Generate Report", icon = icon("file")) -->
+<!-- ``` -->
 
-</br>
+<!-- </br> -->
 
-```{r, eval=!params$export}
-shiny::downloadLink("report", "Download report", icon = icon("file"))
-```
+<!-- ```{r, eval=!params$export} -->
+<!-- shiny::downloadLink("report", "Download report", icon = icon("file")) -->
+<!-- ``` -->
 
-```{r, context="server", eval=!params$export}
-report_path <- reactiveValues(filepath = NULL)
+<!-- ```{r, context="server", eval=!params$export} -->
+<!-- report_path <- reactiveValues(filepath = NULL) -->
 
-observeEvent(input$generate, {
-      
-  progress <- shiny::Progress$new()
-  # Make sure it closes when we exit this reactive, even if there's an error
-  on.exit(progress$close())
+<!-- observeEvent(input$generate, { -->
 
-  progress$set(
-    message = "Gathering data to build the report.",
-    value = 0
-  )
+<!--   progress <- shiny::Progress$new() -->
+<!--   # Make sure it closes when we exit this reactive, even if there's an error -->
+<!--   on.exit(progress$close()) -->
 
-  static_dir <- "static"
-  if (fs::dir_exists(static_dir)) fs::dir_delete(static_dir)
-  dir <- normalizePath(fs::dir_create(static_dir))
+<!--   progress$set( -->
+<!--     message = "Gathering data to build the report.", -->
+<!--     value = 0 -->
+<!--   ) -->
 
-  list.files(
-    pattern = "\\.Rmd$|inst", 
-    all.files = TRUE,
-    include.dirs = TRUE
-  ) %>% 
-    stringr::str_subset("^index\\.Rmd$", negate = TRUE) %>% 
-    file.copy(dir, recursive = TRUE, copy.date = TRUE)
-  
-  report_raw <- file.path(dir, "index.Rmd")
-  report_out <- file.path(dir, "report.html")
+<!--   static_dir <- "static" -->
+<!--   if (fs::dir_exists(static_dir)) fs::dir_delete(static_dir) -->
+<!--   dir <- normalizePath(fs::dir_create(static_dir)) -->
 
-  read_lines("index.Rmd") %>% 
-    str_remove("^runtime: shiny_prerendered$") %>% 
-    str_remove("\\.tabset \\.tabset-fade \\.tabset-pills") %>%
-    write_lines(report_raw)
+<!--   list.files( -->
+<!--     pattern = "\\.Rmd$|inst",  -->
+<!--     all.files = TRUE, -->
+<!--     include.dirs = TRUE -->
+<!--   ) %>%  -->
+<!--     stringr::str_subset("^index\\.Rmd$", negate = TRUE) %>%  -->
+<!--     file.copy(dir, recursive = TRUE, copy.date = TRUE) -->
 
-  # Set up parameters to pass to Rmd document
-  params <- list(
-    export = TRUE,
+<!--   report_raw <- file.path(dir, "index.Rmd") -->
+<!--   report_out <- file.path(dir, "report.html") -->
 
-    q_overall_completed = input[[NS("q_overall", "completed")]],
-    q_overall_type = input[[NS("q_overall", "type")]],
-    q_hosp_completed = input[[NS("q_hosp", "completed")]],
-    q_hosp_type = input[[NS("q_hosp", "type")]],
-    q_miss_center = input[[NS("q_miss", "center")]],
-    q_err_center = input[[NS("q_err", "center")]],
-    
-    d_gender_completed = input[[NS("d_gender", "completed")]]
-  )
+<!--   read_lines("index.Rmd") %>%  -->
+<!--     str_remove("^runtime: shiny_prerendered$") %>%  -->
+<!--     str_remove("\\.tabset \\.tabset-fade \\.tabset-pills") %>% -->
+<!--     write_lines(report_raw) -->
 
-  progress$inc(amount = 0.4,
-    message = "Building the report",
-    detail = "This may take a while..."
-  )
-  
-  withr::local_options(list(tipnet.dev = FALSE))
-  rmarkdown::render(report_raw,
-    output_file = report_out,
-    params = params,
-    envir = new.env(parent = globalenv())
-  )  
-  
-  progress$set(value = 1,
-    message = "Report build",
-    detail = "Click the download link to download it.
-      This window will disappear in 10 seconds."
-  )
-  Sys.sleep(10)
+<!--   # Set up parameters to pass to Rmd document -->
+<!--   params <- list( -->
+<!--     export = TRUE, -->
 
-  report_path$filepath <- report_out
-  
+<!--     q_overall_completed = input[[NS("q_overall", "completed")]], -->
+<!--     q_overall_type = input[[NS("q_overall", "type")]], -->
+<!--     q_hosp_completed = input[[NS("q_hosp", "completed")]], -->
+<!--     q_hosp_type = input[[NS("q_hosp", "type")]], -->
+<!--     q_miss_center = input[[NS("q_miss", "center")]], -->
+<!--     q_err_center = input[[NS("q_err", "center")]], -->
 
-})
+<!--     d_gender_completed = input[[NS("d_gender", "completed")]] -->
+<!--   ) -->
 
-output$report <- downloadHandler(
-  filename = paste0(today(), "_tipnet-report.html"),
-  content  = function(file) file.copy(report_path$filepath, file)
-)
-```
+<!--   progress$inc(amount = 0.4, -->
+<!--     message = "Building the report", -->
+<!--     detail = "This may take a while..." -->
+<!--   ) -->
+
+<!--   withr::local_options(list(tipnet.dev = FALSE)) -->
+<!--   rmarkdown::render(report_raw, -->
+<!--     output_file = report_out, -->
+<!--     params = params, -->
+<!--     envir = new.env(parent = globalenv()) -->
+<!--   )   -->
+
+<!--   progress$set(value = 1, -->
+<!--     message = "Report build", -->
+<!--     detail = "Click the download link to download it. -->
+<!--       This window will disappear in 10 seconds." -->
+<!--   ) -->
+<!--   Sys.sleep(10) -->
+
+<!--   report_path$filepath <- report_out -->
+
+
+<!-- }) -->
+
+<!-- output$report <- downloadHandler( -->
+<!--   filename = paste0(today(), "_tipnet-report.html"), -->
+<!--   content  = function(file) file.copy(report_path$filepath, file) -->
+<!-- ) -->
+<!-- ``` -->
 
 
 
