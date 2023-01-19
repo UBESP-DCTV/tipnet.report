@@ -4,8 +4,9 @@
 
 
 
-<!-- ## LOS {.tabset .tabset-dropdown} -->
-## LOS {-}
+## LOS {.tabset .tabset-dropdown}
+
+### Durata
 ```{r, eval=!params$export}
 losReportUI("l_durata")
 ```
@@ -18,6 +19,8 @@ losReport(
 )
 ```
 
+### Durata Vs. PIM
+
 ```{r, eval=!params$export}
 lospimReportUI("l_durata_pim")
 ```
@@ -25,20 +28,9 @@ lospimReportUI("l_durata_pim")
 ```{r, context = "server", eval=!params$export}
 lospimReport(
   "l_durata_pim",
-  data = data_ranged[["full_filtered"]],
-  what = "durata_degenza"
+  data = data_ranged[["full_filtered"]]
 )
 ```
-
-<!--### Age-->
-
-<!--### Year-->
-
-<!--### Center-->
-
-<!--### Condition (CCC)-->
-
-<!--###### Rate of los-->
 
 
 ## Discharge {.tabset .tabset-dropdown}
@@ -214,7 +206,8 @@ losReportStatic(
 )
 ```
 
-## Standardized Mortality Ratio (SMR) {.tabset .tabset-dropdown}
+<!-- ## Standardized Mortality Ratio (SMR) {.tabset .tabset-dropdown} -->
+## Standardized Mortality Ratio (SMR)
 
 The Standardized Mortality Ratio (SMR) was estimated as the ratio between observed deaths/expected deaths.
 Expected deaths were derived as the sum of all the PIM scores for each category considered.
@@ -222,7 +215,7 @@ Expected deaths were derived as the sum of all the PIM scores for each category 
 The new score seems to perform better than the old one, with a more adequate estimation of deaths and a more
 correct SMR.
 
-### Units
+<!-- ### Units -->
 ```{r, eval=!params$export}
 losReportUI("l_smr")
 ```
