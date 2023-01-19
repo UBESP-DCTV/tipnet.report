@@ -88,12 +88,12 @@ admission_dataTbl <- function(
       group_by(.data[["age_class"]], .add = TRUE)
   }
 
-  if (what == "pim" && by_type) {
+  if (by_type) {
     .db <- .db |>
       group_by(.data[["tipologia"]], .add = TRUE)
   }
 
-  if (what == "pim" && by_year) {
+  if (by_year) {
     .db <- .db |>
       dplyr::mutate(
         year = as.integer(lubridate::year(.data[["ingresso_dt"]]))

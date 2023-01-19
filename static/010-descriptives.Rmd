@@ -22,71 +22,15 @@ data entry
 
 ---
 
-## PICUs {.tabset .tabset-dropdown}
+<!-- ## PICUs {.tabset .tabset-dropdown} -->
 
-### Partecipating Units
+<!-- ### Partecipating Units -->
 
-foo
+<!-- foo -->
 
-### Number of beds
+<!-- ### Number of beds -->
 
-foo
-
-
-
-
-
-
-
-
-
-
-
-## Admissions {.tabset .tabset-dropdown}
-
-foo
-
-
-
-
-### Gender
-
-```{r, eval=!params$export}
-descriptivesReportUI("d_gender")
-```
-
-```{r, context = "server", eval=!params$export}
-descriptivesReport("d_gender", data = full_records)
-```
-
-```{r, context = "server", eval=params$export, fig.height=11}
-descriptivesReportStatic(full_records,
-      completed = params[["d_gender_completed"]])
-```
-
-
-
-
-
-
-
-
-### Ethnicity
-
-foo
-
-### Age
-
-foo
-
-
-
-
-
-
-
-
-
+<!-- foo -->
 
 
 
@@ -101,3 +45,83 @@ foo
 ## Demographics {.tabset .tabset-dropdown}
 
 foo
+
+
+
+
+### Gender
+
+```{r, eval=!params$export}
+descriptivesReportUI("d_gender", what = "gender")
+```
+
+```{r, context = "server", eval=!params$export}
+descriptivesReport(
+  "d_gender",
+  data = data_ranged[["full_filtered"]],
+  what = "gender"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+descriptivesReportStatic(
+  data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "gender"
+)
+```
+
+
+
+
+
+
+
+### Ethnicity
+
+```{r, eval=!params$export}
+descriptivesReportUI("d_ethnicity", what = "etnia")
+```
+
+```{r, context = "server", eval=!params$export}
+descriptivesReport(
+  "d_ethnicity",
+  data = data_ranged[["full_filtered"]],
+  what = "etnia"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+descriptivesReportStatic(
+  data_ranged[["full_filtered"]](),
+  completed = params[["d_ethnicity_completed"]],
+  what = "etnia"
+)
+```
+
+
+
+
+
+
+### Age
+
+```{r, eval=!params$export}
+descriptivesReportUI("d_ageclass", what = "age_class")
+```
+
+```{r, context = "server", eval=!params$export}
+descriptivesReport(
+  "d_ageclass",
+  data = data_ranged[["full_filtered"]],
+  what = "age_class"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+descriptivesReportStatic(
+  data_ranged[["full_filtered"]](),
+  completed = params[["d_ageclass_completed"]],
+  what = "age_class"
+)
+```

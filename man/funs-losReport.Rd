@@ -10,7 +10,7 @@
 los_Plot(
   .db,
   what = c("diagnosi", "diagnosi_2", "popc_dimissione", "esito_tip", "mod_decesso",
-    "deceduto", "prelievo_organi", "destinazione", "durata_degenza")
+    "deceduto", "prelievo_organi", "destinazione", "durata_degenza", "smr")
 )
 
 pimlos_plot(.db)

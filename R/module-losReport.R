@@ -33,18 +33,19 @@ losReportUI <- function(id) {
     ),
     fluidRow(plotlyOutput(ns("dist"), height = "800px")),
     fluidRow(
-      column(5, checkboxInput(ns("byAgeclass"),
-                              label   = "Per età"
+      column(3, checkboxInput(ns("byAgeclass"),
+                              label   = "Età"
       )),
-      column(5, checkboxInput(ns("byGender"),
-                              label   = "Per genere"
+      column(3, checkboxInput(ns("byGender"),
+                              label   = "Genere"
       )),
-      column(5, checkboxInput(ns("byYear"),
-                              label   = "Per anno"
+      column(3, checkboxInput(ns("byYear"),
+                              label   = "Anno"
       )),
-      column(5, checkboxInput(ns("byType"),
-                              label   = "Per tipologia di ricovero"
-      ))
+      column(3, checkboxInput(ns("byType"),
+                              label   = "Tipo ricovero"
+      )),
+      title = "Stratificazione tabella per: "
     ),
     fluidRow(
       column(12, DT::DTOutput(ns("tbl")))
@@ -71,7 +72,7 @@ losReport <- function(id, data, what) {
       data_to_use() |>
         los_Plot(what = what) |>
         plotly::ggplotly() |>
-        layout(boxmode = "group")
+        plotly::layout(boxmode = "group")
     })
 
 

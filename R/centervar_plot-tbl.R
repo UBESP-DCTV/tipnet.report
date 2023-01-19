@@ -20,17 +20,17 @@ centervar_plot <- function(.db, what, reported_name) {
         ) +
         coord_flip()
     }
-  }
-    else if (any(what == "smr")) {
+  } else if (any(what == "smr")) {
       function(p) {
         p +
           geom_text(
-            aes(x = .data[["smr_val"]], y = .data[["smr_type"]],label = .data$center,colour=.data[["smr_type"]]),
+            aes(
+              x = .data[["smr_val"]],
+              y = .data[["smr_type"]],
+              label = .data$center,colour=.data[["smr_type"]]
+            ),
             position = "jitter"
-
           )
-
-
         }
   } else {
     function(p) {
@@ -111,53 +111,96 @@ centervar_tbl <- function(.db, what) {
 
 
 transform_centervar <- function(x, what) {
-  if (any(what == "pim")) {
-    checkmate::assert_string(what)
 
-    x |>
-      dplyr::select(
-        "center", "age_class", "gender", "tipologia", "ingresso_dt",
-        dplyr::matches("pim")
-      ) |>
-      pivot_longer(
-        dplyr::all_of(c("pim2", "pim3")),
-        names_to = "pim_type",
-        values_to = "pim_val"
-      ) |>
-      ggplot2::remove_missing(na.rm = TRUE, vars = "pim_val")
+  func_name <- glue::glue("transform_centervar_{what[[1]]}")
 
-  }
-else if (any(what == "smr")) {
-    checkmate::assert_string(what)
+  tryCatch(
+    do.call(func_name, list(x = x, what = what)),
+    error = function(e) transform_centervar_default(x, what)
+  ) |>
+    dplyr::mutate(
+      center = forcats::fct_inseq(.data[["center"]]) |>
+        forcats::fct_rev()
+    )
+}
+
+
+
+transform_centervar_pim <- function(x, what) {
+  checkmate::assert_string(what)
 
   x |>
-      dplyr::select(any_of(c(
-        "center", "age_class", "gender", "tipologia", "ingresso_dt","esito_tip","pim2",
-        "pim3"
-      ))) |>  dplyr::mutate(
-        year = as.integer(lubridate::year(.data[["ingresso_dt"]]))) |>
-      group_by(.data$center)|>
-    dplyr::summarise(
-        smr_pim2 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
-          (sum(.data$pim2, na.rm = TRUE)/100),
-        smr_pim3 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
-          (sum(.data$pim3, na.rm = TRUE)/100)) |>
-      pivot_longer(
-        dplyr::all_of(c("smr_pim2", "smr_pim3")),
-        names_to = "smr_type",
-        values_to = "smr_val"
-      )
-
-  }else if (
-    any(what == c("redcap_repeat_instance","durata_degenza"))
-  ) {
-    checkmate::assert_string(what)
-    x |>
-      dplyr::filter(.data[[what]] != 1)
-  } else {
-    x |>
-      dplyr::mutate(
-        dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
-      )
-  }
+    dplyr::select(
+      "center", "age_class", "gender", "tipologia", "ingresso_dt",
+      dplyr::matches("pim")
+    ) |>
+    pivot_longer(
+      dplyr::all_of(c("pim2", "pim3")),
+      names_to = "pim_type",
+      values_to = "pim_val"
+    ) |>
+    ggplot2::remove_missing(na.rm = TRUE, vars = "pim_val")
 }
+
+transform_centervar_smr <- function(x, what) {
+  checkmate::assert_string(what)
+
+  x |>
+    dplyr::select(any_of(c(
+      "center", "age_class", "gender", "tipologia", "ingresso_dt",
+      "esito_tip","pim2", "pim3"
+    ))) |>  dplyr::mutate(
+      year = as.integer(lubridate::year(.data[["ingresso_dt"]]))) |>
+    group_by(.data$center)|>
+    dplyr::summarise(
+      smr_pim2 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
+        (sum(.data$pim2, na.rm = TRUE)/100),
+      smr_pim3 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
+        (sum(.data$pim3, na.rm = TRUE)/100)) |>
+    pivot_longer(
+      dplyr::all_of(c("smr_pim2", "smr_pim3")),
+      names_to = "smr_type",
+      values_to = "smr_val"
+    )
+}
+
+transform_centervar_redcap_repeat_instance <- function(x, what) {
+  checkmate::assert_string(what)
+
+  dplyr::filter(x, .data[[what]] != 1)
+}
+
+transform_centervar_durata_degenza <- function(x, what) {
+  checkmate::assert_string(what)
+
+  dplyr::filter(x, .data[[what]] != 1)
+}
+
+transform_centervar_default <- function(x, what) {
+  x |>
+    dplyr::mutate(
+      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+    )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

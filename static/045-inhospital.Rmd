@@ -1,4 +1,4 @@
-# Severity on admission and outcome {#severity .tabset .tabset-fade .tabset-pills}
+# Severity on admission and outcome {#inhospital .tabset .tabset-fade .tabset-pills}
 
 ## Overview {-}
 

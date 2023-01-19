@@ -66,7 +66,13 @@ pimlos_plot <- function(.db) {
     ggplot(
       aes(.data$durata_media, .data$pimmed, colour = .data$pim_type)
     ) +
-    geom_text(aes(label = .data$center))
+    geom_text(aes(label = .data$center)) +
+    labs(
+      x = "Durata media",
+      y = "PIM medio (per centro)",
+      colour = "PIM",
+      label = "PIM"
+    )
 }
 
 
@@ -116,12 +122,12 @@ los_dataTbl <- function(
     .db <- .db |>
       group_by(.data[["age_class"]], .add = TRUE)
   }
-  if (what == "smr" && by_type) {
+  if (by_type) {
     .db <- .db |>
       group_by(.data[["tipologia"]], .add = TRUE)
   }
 
-  if (what == "smr" && by_year) {
+  if (by_year) {
     .db <- .db |>
       dplyr::mutate(
         year = as.integer(lubridate::year(.data[["ingresso_dt"]]))

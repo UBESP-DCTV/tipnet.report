@@ -33,18 +33,11 @@ admissionReportUI <- function(id) {
     ),
     fluidRow(plotlyOutput(ns("dist"), height = "1000px")),
     fluidRow(
-      column(5, checkboxInput(ns("byAgeclass"),
-                              label   = "Per età"
-      )),
-      column(5, checkboxInput(ns("byGender"),
-                              label   = "Per genere"
-      )),
-      column(5, checkboxInput(ns("byYear"),
-                              label   = "Per anno"
-      )),
-      column(5, checkboxInput(ns("byType"),
-                              label   = "Per tipologia di ricovero"
-      ))
+      column(3, checkboxInput(ns("byAgeclass"), label = "Età")),
+      column(3, checkboxInput(ns("byGender"), label = "Genere")),
+      column(3, checkboxInput(ns("byYear"), label = "Anno")),
+      column(3, checkboxInput(ns("byType"), label = "Tipo ricovero")),
+      title = "Stratificazione tabella per: "
     ),
     fluidRow(
       column(12, DT::DTOutput(ns("tbl")))
@@ -71,7 +64,7 @@ admissionReport <- function(id, data, type, what = NULL, dict = NULL) {
       data_to_use() |>
         admission_Plot(type = type, what = what, dict = dict) |>
         plotly::ggplotly() |>
-        layout(boxmode = "group")
+        plotly::layout(boxmode = "group")
     })
 
     output$tbl <- DT::renderDT(
