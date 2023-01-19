@@ -7,28 +7,29 @@
 <!-- ## LOS {.tabset .tabset-dropdown} -->
 ## LOS {-}
 ```{r, eval=!params$export}
-losReportUI("m_durata")
+losReportUI("l_durata")
 ```
 
 ```{r, context = "server", eval=!params$export}
 losReport(
-  "m_durata",
+  "l_durata",
   data = data_ranged[["full_filtered"]],
   what = "durata_degenza"
 )
 ```
 
 ```{r, eval=!params$export}
-lospimReportUI("m_durata")
+lospimReportUI("l_durata_pim")
 ```
 
 ```{r, context = "server", eval=!params$export}
 lospimReport(
-  "m_durata",
+  "l_durata_pim",
   data = data_ranged[["full_filtered"]],
   what = "durata_degenza"
 )
 ```
+
 <!--### Age-->
 
 <!--### Year-->
@@ -44,12 +45,12 @@ lospimReport(
 
 ### Diagnosi di dimissione principale
 ```{r, eval=!params$export}
-losReportUI("m_diagnosi")
+losReportUI("l_diagnosi")
 ```
 
 ```{r, context = "server", eval=!params$export}
 losReport(
-  "m_diagnosi",
+  "l_diagnosi",
   data = data_ranged[["full_filtered"]],
   what = "diagnosi"
 )
@@ -65,12 +66,12 @@ losReportStatic(
 
 ### Diagnosi di dimissione secondaria
 ```{r, eval=!params$export}
-losReportUI("m_diagnosi_2")
+losReportUI("l_diagnosi_2")
 ```
 
 ```{r, context = "server", eval=!params$export}
 losReport(
-  "m_diagnosi_2",
+  "l_diagnosi_2",
   data = data_ranged[["full_filtered"]],
   what = "diagnosi_2"
 )
@@ -86,12 +87,12 @@ losReportStatic(
 
 ## POPC  {.tabset .tabset-dropdown}
 ```{r, eval=!params$export}
-losReportUI("m_popc_dimissione")
+losReportUI("l_popc_dimissione")
 ```
 
 ```{r, context = "server", eval=!params$export}
 losReport(
-  "m_popc_dimissione",
+  "l_popc_dimissione",
   data = data_ranged[["full_filtered"]],
   what = "popc_dimissione"
 )
@@ -109,12 +110,12 @@ losReportStatic(
 
 ### Esito
 ```{r, eval=!params$export}
-losReportUI("m_esito_tip")
+losReportUI("l_esito_tip")
 ```
 
 ```{r, context = "server", eval=!params$export}
 losReport(
-  "m_esito_tip",
+  "l_esito_tip",
   data = data_ranged[["full_filtered"]],
   what = "esito_tip"
 )
@@ -130,12 +131,12 @@ losReportStatic(
 
 ### Decesso
 ```{r, eval=!params$export}
-losReportUI("m_mod_decesso")
+losReportUI("l_mod_decesso")
 ```
 
 ```{r, context = "server", eval=!params$export}
 losReport(
-  "m_mod_decesso",
+  "l_mod_decesso",
   data = data_ranged[["full_filtered"]],
   what = "mod_decesso"
 )
@@ -152,12 +153,12 @@ losReportStatic(
 
 ### Accertamento di morte
 ```{r, eval=!params$export}
-losReportUI("m_deceduto")
+losReportUI("l_deceduto")
 ```
 
 ```{r, context = "server", eval=!params$export}
 losReport(
-  "m_deceduto",
+  "l_deceduto",
   data = data_ranged[["full_filtered"]],
   what = "deceduto"
 )
@@ -173,12 +174,12 @@ losReportStatic(
 
 ### Prelievo di organi
 ```{r, eval=!params$export}
-losReportUI("m_prelievo_organi")
+losReportUI("l_prelievo_organi")
 ```
 
 ```{r, context = "server", eval=!params$export}
 losReport(
-  "m_prelievo_organi",
+  "l_prelievo_organi",
   data = data_ranged[["full_filtered"]],
   what = "prelievo_organi"
 )
@@ -194,12 +195,12 @@ losReportStatic(
 
 ### Destinazione
 ```{r, eval=!params$export}
-losReportUI("m_destinazione")
+losReportUI("l_destinazione")
 ```
 
 ```{r, context = "server", eval=!params$export}
 losReport(
-  "m_destinazione",
+  "l_destinazione",
   data = data_ranged[["full_filtered"]],
   what = "destinazione"
 )
@@ -223,12 +224,12 @@ correct SMR.
 
 ### Units
 ```{r, eval=!params$export}
-losReportUI("m_smr")
+losReportUI("l_smr")
 ```
 
 ```{r, context = "server", eval=!params$export}
 losReport(
-  "m_smr",
+  "l_smr",
   data = data_ranged[["full_filtered"]],
   what = "smr"
 )

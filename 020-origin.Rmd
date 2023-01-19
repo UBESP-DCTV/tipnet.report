@@ -35,12 +35,12 @@ The system allow to distinguish the first from subsequent admissions in the same
 
 ### Planned and Unplanned
 ```{r, eval=!params$export}
-originReportUI("m_planned")
+originReportUI("o_planned")
 ```
 
 ```{r, context = "server", eval=!params$export}
 originReport(
-  "m_planned",
+  "o_planned",
   data = data_ranged[["full_filtered"]],
   type = "centervar",
   what = "ricovero_progr"
@@ -58,12 +58,12 @@ originReportStatic(
 ### Re-admissions
 
 ```{r, eval=!params$export}
-originReportUI("m_admission")
+originReportUI("o_admission")
 ```
 
 ```{r, context = "server", eval=!params$export}
 originReport(
-  "m_admission",
+  "o_admission",
   data = data_ranged[["full_filtered"]],
   type = "centervar",
   what = "redcap_repeat_instance"
@@ -82,12 +82,12 @@ originReportStatic(
 
 ### Overview
 ```{r, eval=!params$export}
-originReportUI("m_provenienza")
+originReportUI("o_provenienza")
 ```
 
 ```{r, context = "server", eval=!params$export}
 originReport(
-  "m_provenienza",
+  "o_provenienza",
   data = data_ranged[["full_filtered"]],
   type = "centervar",
   what = "provenienza"
@@ -103,12 +103,12 @@ originReportStatic(
 ```
 ### Other hospital
 ```{r, eval=!params$export}
-originReportUI("m_altro_osp")
+originReportUI("o_altro_osp")
 ```
 
 ```{r, context = "server", eval=!params$export}
 originReport(
-  "m_altro_osp",
+  "o_altro_osp",
   data = data_ranged[["full_filtered"]],
   type = "centervar",
   what = "altro_osp"
@@ -124,12 +124,12 @@ originReportStatic(
 ```
 ### Type
 ```{r, eval=!params$export}
-originReportUI("m_tipologia")
+originReportUI("o_tipologia")
 ```
 
 ```{r, context = "server", eval=!params$export}
 originReport(
-  "m_tipologia",
+  "o_tipologia",
   data = data_ranged[["full_filtered"]],
   type = "centervar",
   what = "tipologia2"
@@ -145,12 +145,12 @@ originReportStatic(
 ```
 ### Type of surgery
 ```{r, eval=!params$export}
-originReportUI("m_tipo_chir")
+originReportUI("o_tipo_chir")
 ```
 
 ```{r, context = "server", eval=!params$export}
 originReport(
-  "m_tipo_chir",
+  "o_tipo_chir",
   data = data_ranged[["full_filtered"]],
   type = "centervar",
   what = "tipo_chir"
@@ -166,12 +166,12 @@ originReportStatic(
 ```
 ## Priority level of admission  {.tabset .tabset-dropdown}
 ```{r, eval=!params$export}
-originReportUI("m_priorita")
+originReportUI("o_priorita")
 ```
 
 ```{r, context = "server", eval=!params$export}
 originReport(
-  "m_priorita",
+  "o_priorita",
   data = data_ranged[["full_filtered"]],
   type = "centervar",
   what = "priorita"
@@ -189,12 +189,12 @@ originReportStatic(
 
 ### Post-operative PICUs admissions
 ```{r, eval=!params$export}
-originReportUI("m_motivo_post_oper")
+originReportUI("o_motivo_post_oper")
 ```
 
 ```{r, context = "server", eval=!params$export}
 originReport(
-  "m_motivo_post_oper",
+  "o_motivo_post_oper",
   data = data_ranged[["full_filtered"]],
   type = "centervar",
   what = "motivo_post_oper"
@@ -210,12 +210,12 @@ originReportStatic(
 ```
 ### Medical PICUs admissions
 ```{r, eval=!params$export}
-originReportUI("m_motivo_ricovero")
+originReportUI("o_motivo_ricovero")
 ```
 
 ```{r, context = "server", eval=!params$export}
 originReport(
-  "m_motivo_ricovero",
+  "o_motivo_ricovero",
   data = data_ranged[["full_filtered"]],
   type = "centervar",
   what = "motivo_ricovero2"
@@ -231,12 +231,12 @@ originReportStatic(
 ```
 ### Trauma
 ```{r, eval=!params$export}
-originReportUI("m_trauma")
+originReportUI("o_trauma")
 ```
 
 ```{r, context = "server", eval=!params$export}
 originReport(
-  "m_trauma",
+  "o_trauma",
   data = data_ranged[["full_filtered"]],
   type = "checkbox",
   dict = trauma  # internal db in data-raw/internal-data.R
@@ -248,12 +248,12 @@ originReport(
 
 ### PICUs admission after injuries
 ```{r, eval=!params$export}
-originReportUI("m_motivo_ric_trauma")
+originReportUI("o_motivo_ric_trauma")
 ```
 
 ```{r, context = "server", eval=!params$export}
 originReport(
-  "m_motivo_ric_trauma",
+  "o_motivo_ric_trauma",
   data = data_ranged[["full_filtered"]],
   type = "centervar",
   what = "motivo_ric_trauma2"

@@ -33,18 +33,10 @@ losReportUI <- function(id) {
     ),
     fluidRow(plotlyOutput(ns("dist"), height = "800px")),
     fluidRow(
-      column(3, checkboxInput(ns("byAgeclass"),
-                              label   = "Età"
-      )),
-      column(3, checkboxInput(ns("byGender"),
-                              label   = "Genere"
-      )),
-      column(3, checkboxInput(ns("byYear"),
-                              label   = "Anno"
-      )),
-      column(3, checkboxInput(ns("byType"),
-                              label   = "Tipo ricovero"
-      )),
+      column(3, checkboxInput(ns("byAgeclass"), label = "Età")),
+      column(3, checkboxInput(ns("byGender"), label = "Genere")),
+      column(3, checkboxInput(ns("byYear"), label = "Anno")),
+      column(3, checkboxInput(ns("byType"), label = "Tipo ricovero")),
       title = "Stratificazione tabella per: "
     ),
     fluidRow(
