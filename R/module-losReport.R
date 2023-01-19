@@ -71,7 +71,7 @@ losReport <- function(id, data, what) {
     output$dist <- renderPlotly({
       data_to_use() |>
         los_Plot(what = what) |>
-        plotly::ggplotly() |>
+                plotly::ggplotly(dynamicTicks = TRUE) |>
         plotly::layout(boxmode = "group")
     })
 

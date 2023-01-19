@@ -66,7 +66,7 @@ originReport <- function(id, data, type, what = NULL, dict = NULL) {
         origin_Plot(
           type = type, what = what, dict = dict
           ) |>
-      plotly::ggplotly() |>
+              plotly::ggplotly(dynamicTicks = TRUE) |>
         plotly::layout(boxmode = "group")
     })
 

@@ -4,7 +4,8 @@
 
 
 
-## LOS {.tabset .tabset-dropdown}
+<!-- ## LOS {.tabset .tabset-dropdown} -->
+## LOS {-}
 ```{r, eval=!params$export}
 losReportUI("m_durata")
 ```
