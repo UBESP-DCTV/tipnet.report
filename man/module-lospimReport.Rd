@@ -4,23 +4,16 @@
 \alias{module-lospimReport}
 \alias{lospimReportUI}
 \alias{lospimReport}
-\alias{lospimReportStatic}
 \title{lospim module}
 \usage{
 lospimReportUI(id)
 
-lospimReport(id, data, what)
-
-lospimReportStatic(data, completed, what)
+lospimReport(id, data)
 }
 \arguments{
 \item{id}{name for the specific instance of the module.}
 
 \item{data}{database to use}
-
-\item{completed}{(chr) "Completed" or "Not-completed"}
-
-\item{type}{(chr) "Total" or "Proportion"}
 }
 \description{
 General description
@@ -30,7 +23,5 @@ General description
 \item \code{lospimReportUI()}: user interface
 
 \item \code{lospimReport()}: server function
-
-\item \code{lospimReportStatic()}: static report function
 
 }}

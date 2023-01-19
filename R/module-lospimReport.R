@@ -4,8 +4,6 @@
 #'
 #' @param id name for the specific instance of the module.
 #' @param data database to use
-#' @param completed (chr) "Completed" or "Not-completed"
-#' @param type (chr) "Total" or "Proportion"
 #'
 #' @importFrom shiny NS callModule reactive req
 #' @importFrom shiny fluidPage fluidRow selectInput textOutput plotOutput
@@ -23,18 +21,16 @@ NULL
 lospimReportUI <- function(id) {
   ns <- NS(id)
 
-  fluidPage(
-
-    fluidRow(plotlyOutput(ns("pimlos"), height = "800px")),
-
-    )
+  fluidPage(fluidRow(
+    plotlyOutput(ns("pimlos"), height = "800px")
+  ))
 
 }
 
 
 #' @describeIn module-lospimReport server function
 #' @export
-lospimReport <- function(id, data, what) {
+lospimReport <- function(id, data) {
 
   callModule(id = id, function(input, output, session) {
 
@@ -50,19 +46,8 @@ lospimReport <- function(id, data, what) {
     output$pimlos <- renderPlotly({
       data_to_use() |>
         pimlos_plot() |>
-        plotly::ggplotly()
+        plotly::ggplotly(dynamicTicks = TRUE)
     })
 
-
-
   })
-}
-
-
-#' @describeIn module-lospimReport static report function
-#' @export
-lospimReportStatic <- function(data, completed, what) {
-  data_to_use <- quality_dataToUse(data, completed)
-  lospim_Plot(data_to_use, what = what) +
-    labs(subtitle = glue::glue("Data used: {completed}."))
 }
