@@ -61,7 +61,7 @@ descriptivesReport <- function(id, data, what) {
 
     output$dist <- renderPlotly({
       descriptives_Plot(data_to_use(), what = what) |>
-                plotly::ggplotly(dynamicTicks = TRUE) |>
+               plotly::ggplotly() |>
         plotly::layout(boxmode = "group")
 
     })

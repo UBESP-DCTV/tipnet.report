@@ -63,7 +63,7 @@ admissionReport <- function(id, data, type, what = NULL, dict = NULL) {
     output$dist <- renderPlotly({
       data_to_use() |>
         admission_Plot(type = type, what = what, dict = dict) |>
-                plotly::ggplotly(dynamicTicks = TRUE) |>
+               plotly::ggplotly() |>
         plotly::layout(boxmode = "group")
     })
 
