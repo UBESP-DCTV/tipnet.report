@@ -3,14 +3,17 @@
 \name{funs-losReport}
 \alias{funs-losReport}
 \alias{los_Plot}
+\alias{pimlos_plot}
 \alias{los_dataToUse}
 \title{los module}
 \usage{
 los_Plot(
   .db,
   what = c("diagnosi", "diagnosi_2", "popc_dimissione", "esito_tip", "mod_decesso",
-    "deceduto", "prelievo_organi", "destinazione", "durata_degenza")
+    "deceduto", "prelievo_organi", "destinazione", "durata_degenza", "smr")
 )
+
+pimlos_plot(.db)
 
 los_dataToUse(.db, .which = c("Completed only", "Overall"))
 }
@@ -26,6 +29,8 @@ los module
 \section{Functions}{
 \itemize{
 \item \code{los_Plot()}: plot
+
+\item \code{pimlos_plot()}: plot
 
 \item \code{los_dataToUse()}: data
 

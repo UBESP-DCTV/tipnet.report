@@ -67,7 +67,7 @@ originReport <- function(id, data, type, what = NULL, dict = NULL) {
           type = type, what = what, dict = dict
           ) |>
       plotly::ggplotly() |>
-        layout(boxmode = "group")
+        plotly::layout(boxmode = "group")
     })
 
     output$tbl <- DT::renderDT(

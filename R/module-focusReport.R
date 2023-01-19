@@ -68,7 +68,7 @@ focusReport <- function(id, data, type, what = NULL, dict = NULL) {
 
         ) |>
         plotly::ggplotly() |>
-        layout(boxmode = "group")
+        plotly::layout(boxmode = "group")
     })
 
     output$tbl <- DT::renderDT(

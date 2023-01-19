@@ -43,13 +43,13 @@ admissionReport(
 ```
 
 
-## CCC {.tabset .tabset-dropdown}
+<!--## CCC {.tabset .tabset-dropdown}  -->
 
-### Rate by center
+<!--### Rate by center  -->
 
-### Type
+<!--### Type  -->
 
-### Age
+<!--### Age --> 
 
 ## POPC {.tabset .tabset-dropdown}
 ```{r, eval=!params$export}
@@ -115,8 +115,4 @@ admissionReport(
   what = "pim"
 )
 ```
-### Age
 
-### Year
-
-### Type

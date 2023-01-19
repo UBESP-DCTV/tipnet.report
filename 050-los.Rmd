@@ -17,15 +17,26 @@ losReport(
 )
 ```
 
-### Age
+```{r, eval=!params$export}
+lospimReportUI("m_durata")
+```
 
-### Year
+```{r, context = "server", eval=!params$export}
+lospimReport(
+  "m_durata",
+  data = data_ranged[["full_filtered"]],
+  what = "durata_degenza"
+)
+```
+<!--### Age-->
 
-### Center
+<!--### Year-->
 
-### Condition (CCC)
+<!--### Center-->
 
-### Rate of los
+<!--### Condition (CCC)-->
+
+<!--###### Rate of los-->
 
 
 ## Discharge {.tabset .tabset-dropdown}
@@ -210,15 +221,26 @@ The new score seems to perform better than the old one, with a more adequate est
 correct SMR.
 
 ### Units
+```{r, eval=!params$export}
+losReportUI("m_smr")
+```
+
+```{r, context = "server", eval=!params$export}
+losReport(
+  "m_smr",
+  data = data_ranged[["full_filtered"]],
+  what = "smr"
+)
+```
+
+<!--#### Units -->
+<!--### PIM2 and PIM3 -->
+
+<!--### Age-->
+
+<!--### Year-->
+
+<!--### Type-->
 
 
-### PIM2 and PIM3
-
-### Age
-
-### Year
-
-### Type
-
-
-## Predictive mortality models {.tabset .tabset-dropdown}
+<!--#### Predictive mortality models {.tabset .tabset-dropdown}-->

@@ -5,18 +5,242 @@
 
 
 ## LOS {.tabset .tabset-dropdown}
+```{r, eval=!params$export}
+losReportUI("m_durata")
+```
 
-### Age
+```{r, context = "server", eval=!params$export}
+losReport(
+  "m_durata",
+  data = data_ranged[["full_filtered"]],
+  what = "durata_degenza"
+)
+```
 
-### Year
+```{r, eval=!params$export}
+lospimReportUI("m_durata")
+```
 
-### Center
+```{r, context = "server", eval=!params$export}
+lospimReport(
+  "m_durata",
+  data = data_ranged[["full_filtered"]],
+  what = "durata_degenza"
+)
+```
+<!--### Age-->
 
-### Condition (CCC)
+<!--### Year-->
 
-### Rate of admission
+<!--### Center-->
 
+<!--### Condition (CCC)-->
 
+<!--###### Rate of los-->
 
 
 ## Discharge {.tabset .tabset-dropdown}
+
+### Diagnosi di dimissione principale
+```{r, eval=!params$export}
+losReportUI("m_diagnosi")
+```
+
+```{r, context = "server", eval=!params$export}
+losReport(
+  "m_diagnosi",
+  data = data_ranged[["full_filtered"]],
+  what = "diagnosi"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+losReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_diagnosi_completed"]],
+  what = "diagnosi"
+)
+```
+
+### Diagnosi di dimissione secondaria
+```{r, eval=!params$export}
+losReportUI("m_diagnosi_2")
+```
+
+```{r, context = "server", eval=!params$export}
+losReport(
+  "m_diagnosi_2",
+  data = data_ranged[["full_filtered"]],
+  what = "diagnosi_2"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+losReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_diagnosi_2_completed"]],
+  what = "diagnosi_2"
+)
+```
+
+## POPC  {.tabset .tabset-dropdown}
+```{r, eval=!params$export}
+losReportUI("m_popc_dimissione")
+```
+
+```{r, context = "server", eval=!params$export}
+losReport(
+  "m_popc_dimissione",
+  data = data_ranged[["full_filtered"]],
+  what = "popc_dimissione"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+losReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_popc_dimissione_completed"]],
+  what = "popc_dimissione"
+)
+```
+
+## Accertamento di morte e donazione {.tabset .tabset-dropdown}
+
+### Esito
+```{r, eval=!params$export}
+losReportUI("m_esito_tip")
+```
+
+```{r, context = "server", eval=!params$export}
+losReport(
+  "m_esito_tip",
+  data = data_ranged[["full_filtered"]],
+  what = "esito_tip"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+losReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_esito_tip_completed"]],
+  what = "esito_tip"
+)
+```
+
+### Decesso
+```{r, eval=!params$export}
+losReportUI("m_mod_decesso")
+```
+
+```{r, context = "server", eval=!params$export}
+losReport(
+  "m_mod_decesso",
+  data = data_ranged[["full_filtered"]],
+  what = "mod_decesso"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+losReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_mod_decesso_completed"]],
+  what = "mod_decesso"
+)
+```
+
+
+### Accertamento di morte
+```{r, eval=!params$export}
+losReportUI("m_deceduto")
+```
+
+```{r, context = "server", eval=!params$export}
+losReport(
+  "m_deceduto",
+  data = data_ranged[["full_filtered"]],
+  what = "deceduto"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+losReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_deceduto_completed"]],
+  what = "deceduto"
+)
+```
+
+### Prelievo di organi
+```{r, eval=!params$export}
+losReportUI("m_prelievo_organi")
+```
+
+```{r, context = "server", eval=!params$export}
+losReport(
+  "m_prelievo_organi",
+  data = data_ranged[["full_filtered"]],
+  what = "prelievo_organi"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+losReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_prelievo_organi_completed"]],
+  what = "prelievo_organi"
+)
+```
+
+### Destinazione
+```{r, eval=!params$export}
+losReportUI("m_destinazione")
+```
+
+```{r, context = "server", eval=!params$export}
+losReport(
+  "m_destinazione",
+  data = data_ranged[["full_filtered"]],
+  what = "destinazione"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+losReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_destinazione_completed"]],
+  what = "destinazione"
+)
+```
+
+## Standardized Mortality Ratio (SMR) {.tabset .tabset-dropdown}
+
+The Standardized Mortality Ratio (SMR) was estimated as the ratio between observed deaths/expected deaths.
+Expected deaths were derived as the sum of all the PIM scores for each category considered.
+
+The new score seems to perform better than the old one, with a more adequate estimation of deaths and a more
+correct SMR.
+
+### Units
+```{r, eval=!params$export}
+losReportUI("m_smr")
+```
+
+```{r, context = "server", eval=!params$export}
+losReport(
+  "m_smr",
+  data = data_ranged[["full_filtered"]],
+  what = "smr"
+)
+```
+
+<!--#### Units -->
+<!--### PIM2 and PIM3 -->
+
+<!--### Age-->
+
+<!--### Year-->
+
+<!--### Type-->
+
+
+<!--#### Predictive mortality models {.tabset .tabset-dropdown}-->
