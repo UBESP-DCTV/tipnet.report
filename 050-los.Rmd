@@ -4,7 +4,7 @@
 
 
 
-## LOS {.tabset .tabset-dropdown}
+## Durata della degenza {.tabset .tabset-dropdown}
 
 ### Durata
 ```{r, eval=!params$export}
