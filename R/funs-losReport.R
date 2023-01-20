@@ -43,7 +43,7 @@ los_Plot <- function(
 
 
 
-#' @describeIn funs-losReport plot
+#' @describeIn funs-lospimReport plot
 #' @export
 pimlos_plot <- function(.db) {
   .db |>

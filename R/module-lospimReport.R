@@ -21,8 +21,15 @@ NULL
 lospimReportUI <- function(id) {
   ns <- NS(id)
 
-  fluidPage(fluidRow(
-    column(12, plotlyOutput(ns("pimlos"), height = "800px"))
+  fluidPage(
+    fluidRow(
+      column(5, selectInput(ns("completed"),
+                            label   = "Records to use",
+                            choices = c("Completed only", "Overall"),
+                            selected = "Completed only"
+      ))
+    ),
+    fluidRow(column(12, plotlyOutput(ns("pimlos"), height = "800px"))
   ))
 
 }
