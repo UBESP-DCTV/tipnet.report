@@ -19,18 +19,18 @@ losReport(
 )
 ```
 
-### Durata Vs. PIM
+<!-- ### Durata Vs. PIM -->
 
-```{r, eval=!params$export}
-lospimReportUI("l_durata_pim")
-```
+<!-- ```{r, eval=!params$export} -->
+<!-- lospimReportUI("l_durata_pim") -->
+<!-- ``` -->
 
-```{r, context = "server", eval=!params$export}
-lospimReport(
-  "l_durata_pim",
-  data = data_ranged[["full_filtered"]]
-)
-```
+<!-- ```{r, context = "server", eval=!params$export} -->
+<!-- lospimReport( -->
+<!--   "l_durata_pim", -->
+<!--   data = data_ranged[["full_filtered"]] -->
+<!-- ) -->
+<!-- ``` -->
 
 
 ## Discharge {.tabset .tabset-dropdown}
