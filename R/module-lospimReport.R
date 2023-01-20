@@ -22,7 +22,7 @@ lospimReportUI <- function(id) {
   ns <- NS(id)
 
   fluidPage(fluidRow(
-    plotlyOutput(ns("pimlos"), height = "800px")
+    column(12, plotlyOutput(ns("pimlos"), height = "800px"))
   ))
 
 }

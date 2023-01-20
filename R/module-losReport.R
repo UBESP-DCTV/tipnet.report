@@ -31,7 +31,7 @@ losReportUI <- function(id) {
                             selected = "Completed only"
       ))
     ),
-    fluidRow(plotlyOutput(ns("dist"), height = "800px")),
+    fluidRow(column(12, plotlyOutput(ns("dist"), height = "800px"))),
     fluidRow(
       column(3, checkboxInput(ns("byAgeclass"), label = "Età")),
       column(3, checkboxInput(ns("byGender"), label = "Genere")),
