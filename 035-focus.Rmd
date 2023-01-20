@@ -4,7 +4,7 @@
 
 
 
-## Insorgenza di nuova diagnosi/commorbidità {.tabset .tabset-dropdown}
+## Insorgenza di nuova diagnosi/comorbidità {.tabset .tabset-dropdown}
 
 ### 	Insufficienza d'organo insorta durante il ricovero
 ```{r, eval=!params$export}
@@ -76,7 +76,7 @@ focusReportUI("f_procedure_ricovero_2")
 
 ```{r, context = "server", eval=!params$export}
 focusReport(
-  "m_procedure_ricovero_2",
+  "f_procedure_ricovero_2",
   data = data_ranged[["full_filtered"]],
   type = "checkbox",
   dict = procedure_ricovero  # internal db in data-raw/internal-data.R

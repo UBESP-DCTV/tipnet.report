@@ -38,7 +38,7 @@ origin_Plot <- function(
         "provenienza" = "Provenienza",
         "altro_osp" = "Altro ospedale",
         "tipologia2" = "tipo",
-        "tipo_chr" = "Tipo chirurgia",
+        "tipo_chir" = "Tipo chirurgia",
         "priorita" = "Priorità",
         "motivo_post_oper" = "post chirurgia",
         "motivo_ricovero2"  = "ric. medico",

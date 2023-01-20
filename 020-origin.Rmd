@@ -27,7 +27,7 @@ The system allow to distinguish the first from subsequent admissions in the same
 - other origin
 
 
-> number of admission for the same patient beside the first
+<!-- number of admission for the same patient beside the first --> 
 
 
 
