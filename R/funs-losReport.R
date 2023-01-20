@@ -115,7 +115,7 @@ los_dataTbl <- function(
 
   if (by_gender) {
     .db <- .db |>
-      group_by(.data[["gender"]])
+      group_by(.data[["gender"]], .add = TRUE)
   }
 
   if (by_ageclass) {

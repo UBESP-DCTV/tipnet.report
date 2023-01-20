@@ -93,8 +93,7 @@ centervar_tbl <- function(.db, what) {
       transform_centervar(what = what)
   #    dplyr::relocate(dplyr::all_of(c("center", "smr_type"))) |>
    #   dplyr::arrange(.data[["center"]], .data[["smr_type"]])
-  }
-  else {
+  } else {
     .db |>
       transform_centervar(what = what) |>
       dplyr::group_by(
@@ -149,9 +148,11 @@ transform_centervar_smr <- function(x, what) {
     dplyr::select(any_of(c(
       "center", "age_class", "gender", "tipologia", "ingresso_dt",
       "esito_tip","pim2", "pim3"
-    ))) |>  dplyr::mutate(
-      year = as.integer(lubridate::year(.data[["ingresso_dt"]]))) |>
-    group_by(.data$center)|>
+    ))) |>
+    # dplyr::mutate(
+    #   year = as.integer(lubridate::year(.data[["ingresso_dt"]]))
+    # ) |>
+    dplyr::group_by(.data$center, .add = TRUE) |>
     dplyr::summarise(
       smr_pim2 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
         (sum(.data$pim2, na.rm = TRUE)/100),
