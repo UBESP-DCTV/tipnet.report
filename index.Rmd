@@ -45,6 +45,9 @@ options(
   width = 144
 )
 
+httr::config(ssl_verifypeer = FALSE) |> 
+  httr::set_config(override = FALSE)
+
 knitr::opts_chunk$set(
   comment = "",
   cache = FALSE,
