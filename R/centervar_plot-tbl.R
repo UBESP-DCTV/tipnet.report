@@ -37,7 +37,7 @@ centervar_plot <- function(.db, what, reported_name) {
       p +
         geom_bar(
           aes(fill = .data[[what]]),
-          position = "dodge"
+          position =  position_dodge2(reverse=TRUE)
         )
     }
   }
