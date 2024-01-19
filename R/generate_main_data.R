@@ -103,6 +103,7 @@ join_all_sheets <- function(sheets) {
         . == "complete"
       }
     ) %>%
+    dplyr::filter(!is.na(center)) |>
     dplyr::mutate(
       codpat = as.factor(.data$codpat),
       eta = as.integer(.data[["eta"]]),
