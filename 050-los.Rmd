@@ -78,6 +78,9 @@ losReportStatic(
 ```
 
 ## POPC  {.tabset .tabset-dropdown}
+
+### POPC Dimissione
+
 ```{r, eval=!params$export}
 losReportUI("l_popc_dimissione")
 ```
@@ -95,6 +98,28 @@ losReportStatic(
   data = data_ranged[["full_filtered"]](),
   completed = params[["d_popc_dimissione_completed"]],
   what = "popc_dimissione"
+)
+```
+
+### Delta POPC Dimissione Ingresso
+
+```{r, eval=!params$export}
+losReportUI("l_popc_delta")
+```
+
+```{r, context = "server", eval=!params$export}
+losReport(
+  "l_popc_delta",
+  data = data_ranged[["full_filtered"]],
+  what = "popc_delta"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+losReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_popc_delta_completed"]],
+  what = "popc_delta"
 )
 ```
 

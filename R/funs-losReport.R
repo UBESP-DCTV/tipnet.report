@@ -18,7 +18,7 @@ NULL
 #' los_Plot(full_records, "etnia")
 los_Plot <- function(
     .db,
-    what = c("diagnosi","diagnosi_2","popc_dimissione","esito_tip","mod_decesso","deceduto",
+    what = c("diagnosi","diagnosi_2","popc_dimissione", "popc_delta","esito_tip","mod_decesso","deceduto",
              "prelievo_organi","destinazione","durata_degenza","smr")
 ) {
   what <- match.arg(what)
@@ -27,6 +27,7 @@ los_Plot <- function(
                           "diagnosi" = "Diagnosi princ.",
                           "diagnosi_2" = "Diagnosi 2",
                           "popc_dimissione" = "POPC",
+                          "popc_delta" = "Delta POPC",
                           "esito_tip" ="esito",
                           "mod_decesso" = "Decesso",
                           "deceduto" = "Acc. decesso",
@@ -103,7 +104,7 @@ los_dataToUse <- function(
 
 los_dataTbl <- function(
     .db,
-    what = c("diagnosi","diagnosi_2","popc_dimissione","esito_tip","mod_decesso","deceduto",
+    what = c("diagnosi","diagnosi_2","popc_dimissione","popc_delta","esito_tip","mod_decesso","deceduto",
              "prelievo_organi","destinazione","durata_degenza","smr"),
     by_gender = FALSE,
     by_ageclass = FALSE,

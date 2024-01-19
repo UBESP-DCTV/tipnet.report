@@ -113,10 +113,20 @@ join_all_sheets <- function(sheets) {
           .data[["tipologia"]]=="chirurgico"~ "Chirurgico",
           .data[["tipologia"]]=="trauma, ustione, intossicazione, annegamento, avvelenamento, folgorazione, inalazione di fumo, ipotermia, soffocamento"~ "Trauma",
           TRUE ~ "[missing tipologia]"
-
         )
       ),
-   motivo_ricovero2  =  forcats::fct_recode(motivo_ricovero,"alterato sensorio"="alterato sensorio / crisi convulsive","disordini metabolici"="disordini metabolici / disidratazione","insufficienza cardiocircolatoria" = "insufficienza cardiocircolatoria (no shock settico)",
+      delta_popc =as.numeric(.data[["popc_dimissione"]]) - as.numeric(.data[["popc"]]) ,
+      popc_delta=as.factor(
+        dplyr::case_when(
+          .data[["delta_popc"]]< 0~ "Peggioramento",
+          .data[["delta_popc"]]== 0 ~ "Stabile",
+          .data[["delta_popc"]]> 1~ "Miglioramento",
+          TRUE ~ "[missing delta_popc]"
+        )),
+      popc_delta=  forcats::fct_rev(popc_delta),
+      popc_dimissione = as.factor(.data$popc_dimissione),
+      popc = as.factor(.data$popc),
+      motivo_ricovero2  =  forcats::fct_recode(motivo_ricovero,"alterato sensorio"="alterato sensorio / crisi convulsive","disordini metabolici"="disordini metabolici / disidratazione","insufficienza cardiocircolatoria" = "insufficienza cardiocircolatoria (no shock settico)",
                  "diagnosi sepsi correlata" = "diagnosi sepsi correlata (di natura diversa da respiro cuore snc)","shock distributivo"="shock distributivo (settico)","arresto"="arresto cardiocircolatorio","programmato"="programmato per procedure invasive"),
    sede_inf2  =  forcats::fct_recode(sede_inf,"polmone"="polmone (infezione di comunità)","polmone - vap"="polmone - vap (inf. nosocomiale associata al ventilatore)","snc (ventr.)" = "snc (da derivazione ventricolare)",
                                             "snc (non ventr.)" = "snc (non da derivazione ventricolare)","vie aree inf."="vie aree inferiori (non polmonite)","vie aeree sup."="vie aeree superiori"),
