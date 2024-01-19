@@ -134,7 +134,7 @@ transform_centervar_pim <- function(x, what) {
       dplyr::matches("pim")
     ) |>
     pivot_longer(
-      dplyr::all_of(c("pim2", "pim3")),
+      dplyr::all_of(c("pim3")),
       names_to = "pim_type",
       values_to = "pim_val"
     ) |>
@@ -147,19 +147,19 @@ transform_centervar_smr <- function(x, what) {
   x |>
     dplyr::select(any_of(c(
       "center", "age_class", "gender", "tipologia", "ingresso_dt",
-      "esito_tip","pim2", "pim3"
+      "esito_tip", "pim3"
     ))) |>
     # dplyr::mutate(
     #   year = as.integer(lubridate::year(.data[["ingresso_dt"]]))
     # ) |>
     dplyr::group_by(.data$center, .add = TRUE) |>
     dplyr::summarise(
-      smr_pim2 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
-        (sum(.data$pim2, na.rm = TRUE)/100),
+      #smr_pim2 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
+       # (sum(.data$pim2, na.rm = TRUE)/100),
       smr_pim3 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
         (sum(.data$pim3, na.rm = TRUE)/100)) |>
     pivot_longer(
-      dplyr::all_of(c("smr_pim2", "smr_pim3")),
+      dplyr::all_of(c("smr_pim3")),
       names_to = "smr_type",
       values_to = "smr_val"
     )

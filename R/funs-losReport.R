@@ -50,7 +50,7 @@ pimlos_plot <- function(.db) {
   .db |>
     dplyr::select("center", "durata_degenza", dplyr::matches("pim")) |>
     tidyr::pivot_longer(
-      dplyr::all_of(c("pim2", "pim3")),
+      dplyr::all_of(c("pim3")),
       names_to = "pim_type",
       values_to = "pim_val"
     ) |>
