@@ -324,8 +324,8 @@ data_ranged <- yearRange("year_range")
 
 
 
+<!-- cat("# References {-}") -->
 
-# References {-}
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
