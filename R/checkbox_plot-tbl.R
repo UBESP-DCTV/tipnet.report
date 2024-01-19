@@ -7,11 +7,11 @@
 #' @export
 checkbox_plot <- function(.db, dict) {
   checkbox_db(.db, dict) |>
-    ggplot(aes(x = center, fill = name)) +
-    geom_bar(position = "fill") +
+    ggplot(aes(x =   forcats::fct_rev(center),  fill = name)) +
+    geom_bar(position =position_fill(reverse = TRUE)) +
     coord_flip() +
     labs(x = "Centro", y = "Prop", fill = "Categoria")
-}
+  }
 
 
 #' Checkbox table
