@@ -32,6 +32,19 @@ lospimReport(
 )
 ```
 
+### Durata Vs. SMR
+
+```{r, eval=!params$export}
+lossmrReportUI("l_durata_smr")
+```
+
+```{r, context = "server", eval=!params$export}
+lossmrReport(
+  "l_durata_smr",
+  data = data_ranged[["full_filtered"]]
+)
+```
+
 
 ## Discharge {.tabset .tabset-dropdown}
 

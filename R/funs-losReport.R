@@ -76,7 +76,34 @@ pimlos_plot <- function(.db) {
     )
 }
 
-
+#' @describeIn funs-lossmrReport plot
+#' @export
+smrlos_plot <- function(.db) {
+  .db |>
+    dplyr::select("center", "durata_degenza", "esito_tip","pim3") |>
+    dplyr::group_by(.data$center, .add = TRUE) |>
+    dplyr::summarise(
+      #smr_pim2 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
+      # (sum(.data$pim2, na.rm = TRUE)/100),
+      smr = sum(.data$esito_tip=="morto", na.rm = TRUE) /
+        (sum(.data$pim3, na.rm = TRUE)/100),
+      durata_media = mean(.data$durata_degenza))|>
+    ggplot2::remove_missing(
+      na.rm = TRUE,
+      vars = c("smr", "durata_media")
+    ) |>
+    dplyr::ungroup() |>
+    ggplot(
+      aes(.data$durata_media, .data$smr)
+    ) +
+    geom_text(aes(label = .data$center)) +
+    labs(
+      x = "Durata media",
+      y = "SMR (per centro)",
+      colour = "SMR",
+      label = "SMR"
+    )
+}
 
 
 
