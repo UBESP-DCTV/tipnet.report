@@ -121,7 +121,7 @@ join_all_sheets <- function(sheets) {
         dplyr::case_when(
           .data[["delta_popc"]]< 0~ "Peggioramento",
           .data[["delta_popc"]]== 0 ~ "Stabile",
-          .data[["delta_popc"]]> 1~ "Miglioramento",
+          .data[["delta_popc"]]>= 1~ "Miglioramento",
           TRUE ~ "[missing delta_popc]"
         )),
       niv1_gg = (niv1del_dt%--%niv1al_dt)/days(1),
