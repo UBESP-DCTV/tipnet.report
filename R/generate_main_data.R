@@ -144,7 +144,27 @@ join_all_sheets <- function(sheets) {
       niv_it_tot = ifelse(niv_it_tot<0,0,niv_it_tot),
       popc_delta=  forcats::fct_rev(popc_delta),
       popc_dimissione = as.factor(.data$popc_dimissione),
-      popc = as.factor(.data$popc),
+      popc = factor(
+        dplyr::case_when(
+          .data[["popc"]]== 1 ~ "Buona performance globale",
+          .data[["popc"]]== 2 ~ "Lieve disabilità globale",
+          .data[["popc"]] ==3 ~ "Moderata disabilità globale",
+          .data[["popc"]] ==4 ~ "Grave disabilità globale",
+          .data[["popc"]] ==5 ~ "Coma",
+          .data[["popc"]] ==6 ~ "Morte cerebrale",
+          TRUE ~ "[missing popc]")),
+     popc=  forcats::fct_rev(popc),
+     popc_dimissione = as.factor(
+       dplyr::case_when(
+         .data[["popc_dimissione"]]== 1 ~ "Buona performance globale",
+         .data[["popc_dimissione"]]== 2 ~ "Lieve disabilità globale",
+         .data[["popc_dimissione"]] ==3 ~ "Moderata disabilità globale",
+         .data[["popc_dimissione"]] ==4 ~ "Grave disabilità globale",
+         .data[["popc_dimissione"]] ==5 ~ "Coma",
+         .data[["popc_dimissione"]] ==6 ~ "Morte cerebrale",
+         TRUE ~ "[missing popc_dimissione]")),
+     popc_dimissione=  forcats::fct_rev(popc_dimissione),
+
       motivo_ricovero2  =  forcats::fct_recode(motivo_ricovero,"alterato sensorio"="alterato sensorio / crisi convulsive","disordini metabolici"="disordini metabolici / disidratazione","insufficienza cardiocircolatoria" = "insufficienza cardiocircolatoria (no shock settico)",
                  "diagnosi sepsi correlata" = "diagnosi sepsi correlata (di natura diversa da respiro cuore snc)","shock distributivo"="shock distributivo (settico)","arresto"="arresto cardiocircolatorio","programmato"="programmato per procedure invasive"),
    sede_inf2  =  forcats::fct_recode(sede_inf,"polmone"="polmone (infezione di comunità)","polmone - vap"="polmone - vap (inf. nosocomiale associata al ventilatore)","snc (ventr.)" = "snc (da derivazione ventricolare)",
@@ -152,6 +172,8 @@ join_all_sheets <- function(sheets) {
    vent_iniz2  =  forcats::fct_recode(vent_iniz,"prima dell'ingresso"="prima dell'ingresso in rianimazione","all'ingresso"="all'ingresso (entro la prima ora) in rianimazione","durante la degenza"="durante la degenza in rianimazione"),
 
    motivo_ric_trauma2  =  forcats::fct_recode(motivo_ric_trauma,"insufficienza cardiovascolare"="insufficienza cardiovascolare (shock emorragico)"),
+   diagnosi_inf  =  forcats::fct_recode(diagnosi_inf,"accertata"="accertata (check con esame colturale positivo e microrganismo compilato)"),
+
       age_class = age_to_class(.data[["eta"]], .data[["eta_giorni"]]),
       complete =
         .data[["complete.anagrafica"]] &

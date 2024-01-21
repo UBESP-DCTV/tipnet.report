@@ -23,9 +23,9 @@ descriptives_Plot <- function(
   what <- match.arg(what)
 
   reported_name <- switch(what,
-    "gender" = "gender",
-    "etnia" = "ethnicity",
-    "age_class" = "age class"
+    "gender" = "Genere",
+    "etnia" = "Etnia",
+    "age_class" = "Età in classi"
   )
 
   centervar_plot(.db, what, reported_name)

@@ -41,7 +41,7 @@ origin_Plot <- function(
         "tipo_chir" = "Tipo chirurgia",
         "priorita" = "Priorità",
         "motivo_post_oper" = "post chirurgia",
-        "motivo_ricovero2"  = "ric. medico",
+        "motivo_ricovero2"  = "Ricovero medico",
         "motivo_ric_trauma2" = "post-trauma"
 
       )
