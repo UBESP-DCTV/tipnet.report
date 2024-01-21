@@ -32,6 +32,15 @@ centervar_plot <- function(.db, what, reported_name) {
             position = "jitter"
           )
         }
+  } else if (any(what == c("tipo_chir", "altro_osp","motivo_post_oper",
+                           "motivo_ricovero2","motivo_ric_trauma2","vent_iniz2","niv_it"))){
+    function(p) {
+      p +
+        geom_bar(
+          aes(fill = .data[[what]]),
+          position =  position_dodge2(reverse=TRUE)
+        )
+    }
   }
   else {
     function(p) {
@@ -94,7 +103,17 @@ centervar_tbl <- function(.db, what) {
       transform_centervar(what = what)
     #    dplyr::relocate(dplyr::all_of(c("center", "smr_type"))) |>
     #   dplyr::arrange(.data[["center"]], .data[["smr_type"]])
-  } else {
+  } else if (any(what == c("tipo_chir", "altro_osp","motivo_post_oper",
+                           "motivo_ricovero2","motivo_ric_trauma2","vent_iniz2","niv_it"))) {
+    .db |>
+      transform_centervar(what = what) |>
+      dplyr::group_by(
+        across(c(.data$center, dplyr::all_of(what))),
+        .add = TRUE
+      ) |>
+      dplyr::summarise(Somma = dplyr::n())
+  }
+  else {
     .db |>
       transform_centervar(what = what) |>
       dplyr::group_by(
@@ -179,14 +198,66 @@ transform_centervar_durata_degenza <- function(x, what) {
 }
 
 transform_centervar_niv_it_tot <- function(x, what) {
+    checkmate::assert_string(what)
   checkmate::assert_string(what)
 
   dplyr::filter(x,!is.na(.data[["niv_it"]]))
 }
 
-transform_centervar_default <- function(x, what) {
+
+transform_centervar_tipo_chir <- function(x, what) {
+  checkmate::assert_string(what)
+  x |>
+    dplyr::mutate(
+      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+    ) |>
+  dplyr::filter(.data[["tipologia"]]== "chirurgico")
+
+}
+
+transform_centervar_altro_osp <- function(x, what) {
+  checkmate::assert_string(what)
+  x |>
+    dplyr::mutate(
+      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+    ) |>
+    dplyr::filter(.data[["provenienza"]]== "altro ospedale")
+}
+transform_centervar_motivo_ric_trauma2 <- function(x, what) {
+  checkmate::assert_string(what)
+  x |>
+    dplyr::mutate(
+      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+    ) |>
+  dplyr::filter(.data[["tipologia2"]]== "Trauma")
+
+}
+
+transform_centervar_motivo_ricovero2 <- function(x, what) {
+  checkmate::assert_string(what)
+  x |>
+    dplyr::mutate(
+      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+    ) |>
+    dplyr::filter(.data[["tipologia"]]== "medico")
+
+}
+transform_centervar_motivo_post_oper <- function(x, what) {
+  checkmate::assert_string(what)
+  x |>
+    dplyr::mutate(
+      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+    ) |>
+    dplyr::filter(.data[["tipologia"]]== "chirurgico")
+
+}
+
+transform_centervar_default <- function(x, what)
+  {
   x |>
     dplyr::mutate(
       dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
     )
 }
+
+
