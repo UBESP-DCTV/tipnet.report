@@ -1,6 +1,6 @@
-# Length of stay (LOS) and Pediatric Intensive Care Unit (PICU) discharge {#los .tabset .tabset-fade .tabset-pills}
+# Durata della degenza e dimissione dell'Unità di Terapia Intensiva Pediatrica {#los .tabset .tabset-fade .tabset-pills}
 
-## Overview {-}
+<!-- cat("## Overview {-}") -->
 
 
 
@@ -46,7 +46,7 @@ lossmrReport(
 ```
 
 
-## Discharge {.tabset .tabset-dropdown}
+## Dimissione {.tabset .tabset-dropdown}
 
 ### Diagnosi di dimissione principale
 ```{r, eval=!params$export}
@@ -114,7 +114,7 @@ losReportStatic(
 )
 ```
 
-### Delta POPC Dimissione Ingresso
+### Delta POPC Dimissione-Ingresso
 
 ```{r, eval=!params$export}
 losReportUI("l_popc_delta")
@@ -247,11 +247,8 @@ losReportStatic(
 <!-- ## Standardized Mortality Ratio (SMR) {.tabset .tabset-dropdown} -->
 ## Standardized Mortality Ratio (SMR)
 
-The Standardized Mortality Ratio (SMR) was estimated as the ratio between observed deaths/expected deaths.
-Expected deaths were derived as the sum of all the PIM scores for each category considered.
-
-The new score seems to perform better than the old one, with a more adequate estimation of deaths and a more
-correct SMR.
+Il rapporto standardizzato di mortalità (SMR) è stato stimato come rapporto tra decessi osservati e decessi attesi.
+I decessi attesi sono stati ricavati come somma di tutti i punteggi PIM per ogni categoria considerata.
 
 <!-- ### Units -->
 ```{r, eval=!params$export}

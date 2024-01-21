@@ -1,39 +1,39 @@
-# Type of Admission and Origin {#origin .tabset .tabset-fade .tabset-pills}
+# Tipologia di ricovero e provenienza {#origin .tabset .tabset-fade .tabset-pills}
 
-## Overview {-}
+## Panoramica {-}
 
-The system allow to distinguish the first from subsequent admissions in the same unit. Admission was coded as mode, type, origin, and reasons. All the metrics can be visualized stratified by gender and age class.
+Il sistema permette di distinguere i primi ricoveri da quelli successivi nella stessa unità. I ricoveri sono stati codificati come modalità, tipo, origine e motivi. Tutte le metriche possono essere visualizzate stratificate per sesso e classe di età.
 
-**Mode**:
+**Modalità**:
 
-- planned (defined as admission that might be postponed for 24 hours)
-- unplanned
-- re-admission
+- programmato (definito come ricovero che può essere posticipato di 24 ore)
+- non programmato
+- riammissione
 
 
-**Type**:
+**Tipo**:
 
-- medical
-- surgical
+- medico
+- chirurgico
 - trauma
 
-**Origin**:
+**Provenienza**:
 
-- ward
-- emergency room
-- operating room
-- other hospital
-- home
-- other origin
+- reparto
+- pronto soccorso
+- sala operatoria
+- altro ospedale
+- casa
+- altra origine
 
 
 <!-- number of admission for the same patient beside the first --> 
 
 
 
-## Mode  {.tabset .tabset-dropdown}
+## Modalità  {.tabset .tabset-dropdown}
 
-### Planned and Unplanned
+### Programmato o non programmato
 ```{r, eval=!params$export}
 originReportUI("o_planned")
 ```
@@ -55,7 +55,7 @@ originReportStatic(
 )
 ```
 
-### Re-admissions
+### Riammissioni
 
 ```{r, eval=!params$export}
 originReportUI("o_admission")
@@ -78,9 +78,9 @@ originReportStatic(
 )
 ```
 
-## Origin and type {.tabset .tabset-dropdown}
+## Provenienza e Tipologia {.tabset .tabset-dropdown}
 
-### Overview
+### Provenienza
 ```{r, eval=!params$export}
 originReportUI("o_provenienza")
 ```
@@ -101,7 +101,7 @@ originReportStatic(
   what = "provenienza"
 )
 ```
-### Other hospital
+### Altri ospedali
 ```{r, eval=!params$export}
 originReportUI("o_altro_osp")
 ```
@@ -122,7 +122,7 @@ originReportStatic(
   what = "altro_osp"
 )
 ```
-### Type
+### Tipologia
 ```{r, eval=!params$export}
 originReportUI("o_tipologia")
 ```
@@ -143,7 +143,7 @@ originReportStatic(
   what = "tipologia2"
 )
 ```
-### Type of surgery
+### Chirurgico
 ```{r, eval=!params$export}
 originReportUI("o_tipo_chir")
 ```
@@ -164,7 +164,7 @@ originReportStatic(
   what = "tipo_chir"
 )
 ```
-## Priority level of admission  {.tabset .tabset-dropdown}
+## Priorità {.tabset .tabset-dropdown}
 ```{r, eval=!params$export}
 originReportUI("o_priorita")
 ```
@@ -185,9 +185,9 @@ originReportStatic(
   what = "priorita"
 )
 ```
-## Reasons {.tabset .tabset-dropdown}
+## Motivazioni {.tabset .tabset-dropdown}
 
-### Post-operative PICUs admissions
+### Motivazione post ricovero chirurgico
 ```{r, eval=!params$export}
 originReportUI("o_motivo_post_oper")
 ```
@@ -208,7 +208,7 @@ originReportStatic(
   what = "motivo_post_oper"
 )
 ```
-### Medical PICUs admissions
+### Motivazione ricovero medico
 ```{r, eval=!params$export}
 originReportUI("o_motivo_ricovero")
 ```
@@ -246,7 +246,7 @@ originReport(
 
 
 
-### PICUs admission after injuries
+### Motivazione ricovero trauma
 ```{r, eval=!params$export}
 originReportUI("o_motivo_ric_trauma")
 ```

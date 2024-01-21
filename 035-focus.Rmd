@@ -1,6 +1,6 @@
 # Focus sul ricovero {#focus .tabset .tabset-fade .tabset-pills}
 
-## Overview {-}
+<!-- cat("## Overview {-}") -->
 
 
 
@@ -28,7 +28,7 @@ focusReportStatic(
 )
 ```
 
-### Macro-diagnosis
+### Macro-diagnosi
 ```{r, eval=!params$export}
 focusReportUI("f_insuff_organo_ricovero")
 ```
@@ -164,7 +164,7 @@ focusReportStatic(
 )
 ```
 
-### Durata  
+### Durata ventilazione
 
 ```{r, eval=!params$export}
 focusReportUI("f_niv_it_tot")

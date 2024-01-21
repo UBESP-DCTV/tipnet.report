@@ -1,24 +1,20 @@
-# Descriptive and Demographic {#descriptives .tabset .tabset-fade .tabset-pills}
+# Descrittive (genere, etnia, età){#descriptives .tabset .tabset-fade .tabset-pills}
 
-## Overview {-}
+## Panoramica {-}
 
-In Italy there are 23 medical surgical (M/S) Pediatric Intensive Care Units (PICUs):
+In Italia ci sono 23 Unità di Terapia Intensiva Pediatrica: 
 
-- 11 in the north
-- 8 in the center
-- 4 in the south
+- 11 al nord
+- 8 al centro
+- 4 al sud
 
-of the country.
+I dati qui riportati analizzano i pazienti ricoverati nelle PICU da
+da `r params$first_y` a `r params$last_y`.
 
-Data reported here analyze patients admitted in PICUs from
-`r params$first_y` to `r params$last_y`.
+Solo i bambini di età compresa tra 0 e 16 anni che hanno un punteggio di gravità all'ammissione che consentono di stimare un rapporto standardizzato di mortalità (SMR) sono stati presi in considerazione.
 
-Only children 0 -- 16 years old who have a severity score on admission
-which allow to estimate a Standardized Mortality Ratio (SMR) were
-considered.
+I criteri di esclusione sono stati "pretermine o > 16 anni", o che non hanno completato l'inserimento dei dati.
 
-Exclusion criteria were "preterm or > 16 years old", or not completed
-data entry
 
 ---
 
@@ -42,14 +38,14 @@ data entry
 
 
 
-## Demographics {.tabset .tabset-dropdown}
+## Descrittive {.tabset .tabset-dropdown}
 
 <!-- foo -->
 
 
 
 
-### Gender
+### Genere
 
 ```{r, eval=!params$export}
 descriptivesReportUI("d_gender", what = "gender")
@@ -77,7 +73,7 @@ descriptivesReportStatic(
 
 
 
-### Ethnicity
+### Etnia
 
 ```{r, eval=!params$export}
 descriptivesReportUI("d_ethnicity", what = "etnia")
@@ -104,7 +100,7 @@ descriptivesReportStatic(
 
 
 
-### Age
+### Età
 
 ```{r, eval=!params$export}
 descriptivesReportUI("d_ageclass", what = "age_class")
