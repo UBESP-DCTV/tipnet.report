@@ -4,7 +4,7 @@
 #' @export
 centervar_plot <- function(.db, what, reported_name) {
 
-  geom_centervar <- if (any(what == c("redcap_repeat_instance","durata_degenza"))) {
+  geom_centervar <- if (any(what == c("redcap_repeat_instance","durata_degenza","niv_it_tot"))) {
     function(p) {
       p +
       geom_boxplot(aes(y = .data[[what]]))
@@ -32,7 +32,8 @@ centervar_plot <- function(.db, what, reported_name) {
             position = "jitter"
           )
         }
-  } else {
+  }
+  else {
     function(p) {
       p +
         geom_bar(
@@ -66,7 +67,7 @@ centervar_plot <- function(.db, what, reported_name) {
 #' @export
 centervar_tbl <- function(.db, what) {
 
-  if (any(what == c( "redcap_repeat_instance","durata_degenza"))) {
+  if (any(what == c( "redcap_repeat_instance","durata_degenza","niv_it_tot"))) {
     checkmate::assert_string(what)
 
     .db |>
@@ -91,8 +92,8 @@ centervar_tbl <- function(.db, what) {
   } else if (any(what == "smr")) {
     .db |>
       transform_centervar(what = what)
-  #    dplyr::relocate(dplyr::all_of(c("center", "smr_type"))) |>
-   #   dplyr::arrange(.data[["center"]], .data[["smr_type"]])
+    #    dplyr::relocate(dplyr::all_of(c("center", "smr_type"))) |>
+    #   dplyr::arrange(.data[["center"]], .data[["smr_type"]])
   } else {
     .db |>
       transform_centervar(what = what) |>
@@ -155,7 +156,7 @@ transform_centervar_smr <- function(x, what) {
     dplyr::group_by(.data$center, .add = TRUE) |>
     dplyr::summarise(
       #smr_pim2 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
-       # (sum(.data$pim2, na.rm = TRUE)/100),
+      # (sum(.data$pim2, na.rm = TRUE)/100),
       smr_pim3 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
         (sum(.data$pim3, na.rm = TRUE)/100)) |>
     pivot_longer(
@@ -177,31 +178,15 @@ transform_centervar_durata_degenza <- function(x, what) {
   dplyr::filter(x, .data[[what]] != 1)
 }
 
+transform_centervar_niv_it_tot <- function(x, what) {
+  checkmate::assert_string(what)
+
+  dplyr::filter(x,!is.na(.data[["niv_it"]]))
+}
+
 transform_centervar_default <- function(x, what) {
   x |>
     dplyr::mutate(
       dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

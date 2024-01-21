@@ -115,6 +115,7 @@ join_all_sheets <- function(sheets) {
           TRUE ~ "[missing tipologia]"
         )
       ),
+      tipologia2=  forcats::fct_rev(tipologia2),
       delta_popc =as.numeric(.data[["popc_dimissione"]]) - as.numeric(.data[["popc"]]) ,
       popc_delta=as.factor(
         dplyr::case_when(
@@ -123,6 +124,24 @@ join_all_sheets <- function(sheets) {
           .data[["delta_popc"]]> 1~ "Miglioramento",
           TRUE ~ "[missing delta_popc]"
         )),
+      niv1_gg = (niv1del_dt%--%niv1al_dt)/days(1),
+      niv2_gg = (niv2del_dt%--%niv2al_dt)/days(1),
+      niv3_gg = (niv3del_dt%--%niv3al_dt)/days(1),
+      niv4_gg = (niv4del_dt%--%niv4al_dt)/days(1),
+      it1_gg = (it1del_dt%--%it1al_dt)/days(1),
+      it2_gg = (it2del_dt%--%it2al_dt)/days(1),
+      it3_gg = (it3del_dt%--%it3al_dt)/days(1),
+      niv1_gg= if_else(is.na(.data$niv1_gg), 0, .data$niv1_gg),
+      niv2_gg= if_else(is.na(.data$niv2_gg), 0, .data$niv2_gg),
+      niv3_gg= if_else(is.na(.data$niv3_gg), 0, .data$niv3_gg),
+      niv4_gg= if_else(is.na(.data$niv4_gg), 0, .data$niv4_gg),
+      it1_gg= if_else(is.na(.data$it1_gg), 0, .data$it1_gg),
+      it2_gg= if_else(is.na(.data$it2_gg), 0, .data$it2_gg),
+      it3_gg= if_else(is.na(.data$it3_gg), 0, .data$it3_gg),
+      niv_tot = niv1_gg +niv2_gg +niv3_gg+niv4_gg,
+      it_tot = it1_gg+it2_gg+it3_gg,
+      niv_it_tot = niv_tot+it_tot,
+      niv_it_tot = ifelse(niv_it_tot<0,0,niv_it_tot),
       popc_delta=  forcats::fct_rev(popc_delta),
       popc_dimissione = as.factor(.data$popc_dimissione),
       popc = as.factor(.data$popc),
@@ -140,6 +159,7 @@ join_all_sheets <- function(sheets) {
         .data[["complete.pim"]] &
         .data[["complete.dimissione"]]
     )
+
 
 
 }

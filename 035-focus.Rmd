@@ -163,7 +163,29 @@ focusReportStatic(
   what = "niv_it"
 )
 ```
-<!--### Durata  -->
+
+### Durata  
+
+```{r, eval=!params$export}
+focusReportUI("f_niv_it_tot")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "f_niv_it_tot",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "niv_it_tot"
+  )
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+focusReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_niv_it_tot_completed"]],
+  what = "niv_it_tot"
+)
+```
 
 ## Scheda infezioni {.tabset .tabset-dropdown}
 
