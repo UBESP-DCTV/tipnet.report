@@ -11,7 +11,7 @@ checkbox_plot <- function(.db, dict) {
     geom_bar(position =position_fill(reverse = TRUE)) +
     coord_flip() +
     labs(x = "Centro", y = "Prop", fill = "Categoria")
-  }
+}
 
 
 #' Checkbox table
@@ -46,3 +46,48 @@ checkbox_db <- function(.db, dict) {
       values_drop_na = TRUE
     )
 }
+
+
+reorder_name_level <- function(.db) {
+
+  if (!"names" %in% (.db)) {
+    return(.db)
+  }
+
+  .db[["names"]] |>
+    forcats::fct_relevel(
+      get_ordered_name(.db)
+    )
+
+}
+
+
+
+get_ordered_name <- function(.db) {
+  stopifnot("names" %in% (.db[["names"]]))
+  stopifnot(
+    `name must be a factor` = is.factor(
+      .db[["names"]]
+    )
+  )
+
+  if (all(
+    c('02-basso-flusso', '02-alto-flusso', 'ventilazione','broncoscopia', 'tracheotomia',
+      'accesso vascolare','PIC','drenaggio addominale','drenaggio toracico',
+      'drenaggio pericardico','cateterismo cardiaco', 'trattamento dialitico',
+      'PEG','intervento chirurgico', 'RCP', 'ECMO', 'VAD', 'Rashkind','altro') %in% .db[["names"]]
+  )) {
+    c('02-basso-flusso', '02-alto-flusso', 'ventilazione','broncoscopia', 'tracheotomia',
+      'accesso vascolare','PIC','drenaggio addominale','drenaggio toracico',
+      'drenaggio pericardico','cateterismo cardiaco', 'trattamento dialitico',
+      'PEG','intervento chirurgico', 'RCP', 'ECMO', 'VAD', 'Rashkind','altro')
+
+    stop("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
+
+  } else {
+    levels(.db[["names"]])
+  }
+}
+
+
