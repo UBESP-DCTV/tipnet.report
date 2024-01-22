@@ -1,4 +1,4 @@
-# Durata della degenza e dimissione dell'Unità di Terapia Intensiva Pediatrica {#los .tabset .tabset-fade .tabset-pills}
+# Durata della degenza e dimissione dall'Unità di Terapia Intensiva Pediatrica {#los .tabset .tabset-fade .tabset-pills}
 
 <!-- cat("## Overview {-}") -->
 

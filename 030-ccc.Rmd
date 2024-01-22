@@ -1,4 +1,4 @@
-# Ricoveri TIP {#ccc .tabset .tabset-fade .tabset-pills}
+# Caratteristiche all'ingresso  {#ccc .tabset .tabset-fade .tabset-pills}
 
 <!-- cat("## Overview {-}") -->
 
