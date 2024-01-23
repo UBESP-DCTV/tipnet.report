@@ -2,11 +2,11 @@
 
 ## Panoramica {-}
 
-In Italia ci sono 23 Unità di Terapia Intensiva Pediatrica: 
-
+<!-- #In Italia ci sono 23 Unità di Terapia Intensiva Pediatrica: 
+# TOGLI IL DETTAGLIO DI NORD CENTRO E SUD
 - 11 al nord
 - 8 al centro
-- 4 al sud
+- 4 al sud -->
 
 I dati qui riportati analizzano i pazienti ricoverati nelle PICU da
 da `r params$first_y` a `r params$last_y`.
