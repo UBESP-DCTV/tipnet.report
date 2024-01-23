@@ -7,7 +7,7 @@ centervar_plot <- function(.db, what, reported_name) {
   geom_centervar <- if (any(what == c("redcap_repeat_instance","durata_degenza","niv_it_tot"))) {
     function(p) {
       p +
-      geom_boxplot(aes(y = .data[[what]]))
+        geom_boxplot(aes(y = .data[[what]]))
     }
   } else if (any(what == "pim")) {
     function(p) {
@@ -21,27 +21,19 @@ centervar_plot <- function(.db, what, reported_name) {
         coord_flip()
     }
   } else if (any(what == "smr")) {
-      function(p) {
-        p +
-          geom_text(
-            aes(
-              x = .data[["smr_val"]],
-              y = .data[["smr_type"]],
-              label = .data$center,colour=.data[["smr_type"]]
-            ),
-            position = "jitter"
-          )
-        }
-  } else if (any(what == c("tipo_chir", "altro_osp","motivo_post_oper",
-                           "motivo_ricovero2","motivo_ric_trauma2","vent_iniz2","niv_it"))){
     function(p) {
       p +
-        geom_bar(
-          aes(fill = .data[[what]]),
-          position =  position_dodge2(reverse=TRUE)
+        geom_text(
+          aes(
+            x = .data[["smr_val"]],
+            y = .data[["smr_type"]],
+            label = .data$center,colour=.data[["smr_type"]]
+          ),
+          position = "jitter"
         )
     }
   }
+
   else {
     function(p) {
       p +
@@ -76,7 +68,11 @@ centervar_plot <- function(.db, what, reported_name) {
 #' @export
 centervar_tbl <- function(.db, what) {
 
-  if (any(what == c( "redcap_repeat_instance","durata_degenza","niv_it_tot"))) {
+  if (any(what == c(
+    "redcap_repeat_instance",
+    "durata_degenza",
+    "niv_it_tot"
+  ))) {
     checkmate::assert_string(what)
 
     .db |>
@@ -103,15 +99,6 @@ centervar_tbl <- function(.db, what) {
       transform_centervar(what = what)
     #    dplyr::relocate(dplyr::all_of(c("center", "smr_type"))) |>
     #   dplyr::arrange(.data[["center"]], .data[["smr_type"]])
-  } else if (any(what == c("tipo_chir", "altro_osp","motivo_post_oper",
-                           "motivo_ricovero2","motivo_ric_trauma2","vent_iniz2","niv_it"))) {
-    .db |>
-      transform_centervar(what = what) |>
-      dplyr::group_by(
-        across(c(.data$center, dplyr::all_of(what))),
-        .add = TRUE
-      ) |>
-      dplyr::summarise(Somma = dplyr::n())
   }
   else {
     .db |>
@@ -126,17 +113,47 @@ centervar_tbl <- function(.db, what) {
 }
 
 
+get_branch <- function(what, type = c("var", "val")) {
+  type <- match.arg(type)
 
+  switch(type,
+    "var" = get_branch_var(what),
+    "val" = get_branch_val(what),
+    stop("Strange error, this should never happend!!")
+  )
+}
 
+get_branch_var <- function(what) {
+  dplyr::case_when(
+    what == "tipo_chir" ~ "tipologia",
+    what == "altro_osp" ~ "provenienza",
+    what == "motivo_ricovero2" ~ "tipologia",
+    TRUE ~ "<null>"
+  )
+}
 
+get_branch_val <- function(what) {
+  dplyr::case_when(
+    what == "tipo_chir" ~ "chirurgico",
+    what == "altro_osp" ~ "altro ospedale",
+    what == "altro_osp" ~ "medico",
+    TRUE ~ "<null>"
+  )
+}
 transform_centervar <- function(x, what) {
 
   func_name <- glue::glue("transform_centervar_{what[[1]]}")
 
-  tryCatch(
-    do.call(func_name, list(x = x, what = what)),
-    error = function(e) transform_centervar_default(x, what)
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
   ) |>
+    # tryCatch(
+    #   do.call(func_name, list(x = x, what = what)),
+    #   error = function(e) transform_centervar_default(x, what)
+    # ) |>
     dplyr::mutate(
       center = forcats::fct_inseq(.data[["center"]]) |>
         forcats::fct_rev()
@@ -176,7 +193,7 @@ transform_centervar_smr <- function(x, what) {
     dplyr::summarise(
       #smr_pim2 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
       # (sum(.data$pim2, na.rm = TRUE)/100),
-      smr_pim3 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
+      smr_pim3 = sum(.data$esito_tip == "morto", na.rm = TRUE) /
         (sum(.data$pim3, na.rm = TRUE)/100)) |>
     pivot_longer(
       dplyr::all_of(c("smr_pim3")),
@@ -197,67 +214,79 @@ transform_centervar_durata_degenza <- function(x, what) {
   dplyr::filter(x, .data[[what]] != 1)
 }
 
-transform_centervar_niv_it_tot <- function(x, what) {
-    checkmate::assert_string(what)
-  checkmate::assert_string(what)
 
-  dplyr::filter(x,!is.na(.data[["niv_it"]]))
+
+
+
+transform_centervar_branched <- function(
+    x,
+    what ,
+    branchvar,
+    branchvalue
+)   {
+  checkmate::assert_string(what)
+  res <- x
+  #|>
+   # dplyr::mutate(
+    #  dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+   # )
+
+  if (sum(c(branchvar, branchvar) == "<null>") == 1) {
+    stop(stringr::str_c(
+      "Only one between branchval and branchvar is NULL.",
+      "Both or none of them must be NULL.",
+      sep = "\n"
+    ))
+  }
+
+  if (branchvar != "<null>") {
+    res <- res |>
+      dplyr::filter(.data[[branchvar]] == branchvalue)
+  }
+
+  res
 }
 
-
-transform_centervar_tipo_chir <- function(x, what) {
-  checkmate::assert_string(what)
-  x |>
-    dplyr::mutate(
-      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
-    ) |>
-  dplyr::filter(.data[["tipologia"]]== "chirurgico")
-
-}
-
-transform_centervar_altro_osp <- function(x, what) {
-  checkmate::assert_string(what)
-  x |>
-    dplyr::mutate(
-      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
-    ) |>
-    dplyr::filter(.data[["provenienza"]]== "altro ospedale")
-}
-transform_centervar_motivo_ric_trauma2 <- function(x, what) {
-  checkmate::assert_string(what)
-  x |>
-    dplyr::mutate(
-      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
-    ) |>
-  dplyr::filter(.data[["tipologia2"]]== "Trauma")
-
-}
-
-transform_centervar_motivo_ricovero2 <- function(x, what) {
-  checkmate::assert_string(what)
-  x |>
-    dplyr::mutate(
-      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
-    ) |>
-    dplyr::filter(.data[["tipologia"]]== "medico")
-
-}
-transform_centervar_motivo_post_oper <- function(x, what) {
-  checkmate::assert_string(what)
-  x |>
-    dplyr::mutate(
-      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
-    ) |>
-    dplyr::filter(.data[["tipologia"]]== "chirurgico")
-
-}
-
-transform_centervar_default <- function(x, what)
-  {
+transform_centervar_default <- function(x, what) {
   x |>
     dplyr::mutate(
       dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
     )
 }
 
+
+transform_centervar_niv_it_tot <- function(x, what) {
+  checkmate::assert_string(what)
+
+  dplyr::filter(x,!is.na(.data[["niv_it"]]))
+}
+
+
+
+#transform_centervar_motivo_ricovero2 <- function(x, what) {
+#  checkmate::assert_string(what)
+#  x |>
+#    dplyr::mutate(
+#      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+#    ) |>
+#    dplyr::filter(.data[["tipologia"]] == "medico")
+
+#}
+
+#transform_centervar_motivo_post_oper <- function(x, what) {
+#  checkmate::assert_string(what)
+#  x |>
+#    dplyr::mutate(
+#      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+#    ) |>
+#    dplyr::filter(.data[["tipologia"]] == "chirurgico")
+
+#}
+
+#transform_centervar_default <- function(x, what) {
+#  x |>
+#    dplyr::mutate(
+#      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+#    )
+#  }
 
