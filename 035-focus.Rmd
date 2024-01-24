@@ -277,23 +277,23 @@ focusReportStatic(
 ```
 ### Infezione evoluta in sepsi
 ```{r, eval=!params$export}
-focusReportUI("f_sepsi_2")
+focusReportUI("f_sepsi")
 ```
 
 ```{r, context = "server", eval=!params$export}
 focusReport(
-  "f_sepsi_2",
+  "f_sepsi",
   data = data_ranged[["full_filtered"]],
   type = "centervar",
-  what = "sepsi_2"
+  what = "sepsi"
   )
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
 focusReportStatic(
   data = data_ranged[["full_filtered"]](),
-  completed = params[["d_sepsi_2_completed"]],
-  what = "sepsi_2"
+  completed = params[["d_sepsi_completed"]],
+  what = "sepsi"
 )
 ```
 

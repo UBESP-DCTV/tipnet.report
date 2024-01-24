@@ -6,7 +6,7 @@
 
 ## Durata della degenza {.tabset .tabset-dropdown}
 
-### Durata
+### Durata media
 ```{r, eval=!params$export}
 losReportUI("l_durata")
 ```
@@ -19,7 +19,7 @@ losReport(
 )
 ```
 
-### Durata Vs. PIM
+### Durata media Vs. PIM
 
 ```{r, eval=!params$export}
 lospimReportUI("l_durata_pim")
@@ -32,7 +32,7 @@ lospimReport(
 )
 ```
 
-### Durata Vs. SMR
+### Durata media Vs. SMR
 
 ```{r, eval=!params$export}
 lossmrReportUI("l_durata_smr")
@@ -244,13 +244,13 @@ losReportStatic(
 )
 ```
 
-<!-- ## Standardized Mortality Ratio (SMR) {.tabset .tabset-dropdown} -->
-## Standardized Mortality Ratio (SMR)
+## Standardized Mortality Ratio (SMR) {.tabset .tabset-dropdown}
 
 Il rapporto standardizzato di mortalità (SMR) è stato stimato come rapporto tra decessi osservati e decessi attesi.
 I decessi attesi sono stati ricavati come somma di tutti i punteggi PIM per ogni categoria considerata.
 
-<!-- ### Units -->
+### SMR
+
 ```{r, eval=!params$export}
 losReportUI("l_smr")
 ```
@@ -263,6 +263,18 @@ losReport(
 )
 ```
 
+### SMR Vs. Volume ricoveri
+
+```{r, eval=!params$export}
+lossmrvolReportUI("l_smrlosvol")
+```
+
+```{r, context = "server", eval=!params$export}
+lossmrvolReport(
+  "l_smrlosvol",
+  data = data_ranged[["full_filtered"]]
+)
+```
 <!--#### Units -->
 <!--### PIM2 and PIM3 -->
 

@@ -15,9 +15,9 @@ params:
   d_gender_completed: "Completed only"
 
 title: "TIPNet inter-dynamical report"
-author: "The Italian Pediatric Intensive Care Units Network (**TIPNet**) is part of the Italian Society of Pediatric and Neonatal Anesthesia and Intensive Care (**SARNePI**).
+author: "La Rete Italiana delle Unità di Terapia Intensiva Pediatrica (**TIPNet**) fa parte della Società Italiana di Anestesia e Terapia Intensiva Pediatrica e Neonatale (**SARNePI**).
   </br>
-  \\ \\ \\ \\ This report has been developed in collaboration with the Unit of Biostatistics, Epidemiology and Public Health (**UBEP**) --- University of Padova."
+  \\ \\ \\ \\  Questo report è stato sviluppato in collaborazione con l'Unità di Biostatistica, Epidemiologia e Sanità Pubblica (**UBEP**) --- Università di Padova"
 
 biblio-style: apalike
 link-citations: yes

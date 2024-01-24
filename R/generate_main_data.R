@@ -159,12 +159,20 @@ join_all_sheets <- function(sheets) {
        dplyr::case_when(
          .data[["popc_dimissione"]]== 1 ~ "Buona performance globale",
          .data[["popc_dimissione"]]== 2 ~ "Lieve disabilità globale",
-         .data[["popc_dimissione"]] ==3 ~ "Moderata disabilità globale",
-         .data[["popc_dimissione"]] ==4 ~ "Grave disabilità globale",
-         .data[["popc_dimissione"]] ==5 ~ "Coma",
-         .data[["popc_dimissione"]] ==6 ~ "Morte cerebrale",
+         .data[["popc_dimissione"]] == 3 ~ "Moderata disabilità globale",
+         .data[["popc_dimissione"]] == 4 ~ "Grave disabilità globale",
+         .data[["popc_dimissione"]] == 5 ~ "Coma",
+         .data[["popc_dimissione"]] == 6 ~ "Morte cerebrale",
          TRUE ~ "[missing popc_dimissione]")),
-     popc_dimissione =  forcats::fct_rev(popc_dimissione),
+     mod_decesso = as.factor(
+       dplyr::case_when(
+         .data[["mod_decesso"]]== "morte nonostante rianimazione cardiopolmonare" ~ "morte nonostante RCP",
+         .data[["mod_decesso"]]== "sospensione dei trattamenti di supporto vitale" ~ "sospensione dei TSV",
+         .data[["mod_decesso"]] == "astensione dall'iniziare trattamenti di supporto vitale" ~ "astensione dall'iniziare TSV",
+         .data[["mod_decesso"]] == "decisione di non rianimare" ~ "decisione di non rianimare",
+         .data[["mod_decesso"]] == "morte cerebrale" ~ "morte cerebrale",
+         TRUE ~ "[missing mod_decesso]")),
+     mod_decesso =  forcats::fct_rev(mod_decesso),
 
       motivo_ricovero2  =  forcats::fct_recode(motivo_ricovero,"alterato sensorio" = "alterato sensorio / crisi convulsive","disordini metabolici" = "disordini metabolici / disidratazione","insufficienza cardiocircolatoria" = "insufficienza cardiocircolatoria (no shock settico)",
                  "diagnosi sepsi correlata" = "diagnosi sepsi correlata (di natura diversa da respiro cuore snc)","shock distributivo" = "shock distributivo (settico)","arresto" = "arresto cardiocircolatorio","programmato" = "programmato per procedure invasive"),
@@ -174,6 +182,45 @@ join_all_sheets <- function(sheets) {
 
    motivo_ric_trauma2  =  forcats::fct_recode(motivo_ric_trauma,"insufficienza cardiovascolare" = "insufficienza cardiovascolare (shock emorragico)"),
    diagnosi_inf  =  forcats::fct_recode(diagnosi_inf,"accertata" = "accertata (check con esame colturale positivo e microrganismo compilato)"),
+   tipo_inf  =  forcats::fct_recode(tipo_inf,"nosocomiale" = "nosocomiale (dopo 48h da inizio ospedalizzazione)"),
+   criteri_generali = factor(
+     if_else(is_prematuro %in% "si" & sett_gest < 36, 0,
+             if_else(is_prematuro %in% "si" & sett_gest >= 36, 1,
+                     if_else(is_prematuro %in% "no" & eta > 16, 0, 1)
+             )
+     )),numeratore_pim3 = exp(
+       (pas*pas/1000*0.1716) - (pas*0.0431) +
+         if_else(r_pupillare %in% "midriasi fissa > 3 mm", 3.8233, 0) +
+         if_else(vam %in% "si", 0.9763, 0) +
+         if_else(!is.na(fio2_dec) & !is.na(pao2), (fio2_dec/pao2)*0.4214*100, 0.23*0.4214) +
+         abs(be*0.0671) +
+         if_else(uti %in% "si", -0.5378, 0) +
+         if_else(ch %in% "sì, dopo intervento cardioch con bypass", -1.2246,
+                 if_else(ch %in% "sì, dopo intervento cardioch senza bypass", -0.8762,
+                         if_else(ch %in% "sì, dopo intervento non cardioch", -1.5164, 0))) +
+         if_else(diag_h_ar %in% "nessuna/dubbia" | is.na(diag_h_ar), 0, 1.6225) +
+         if_else(diag_ar %in% c("nessuna / dubbia", "infezione hiv") | is.na(diag_ar), 0, 1.0725) +
+         if_else(diag_br %in% "nessuna / dubbia" | is.na(diag_br), 0, -2.1766) - 1.7928
+     )
+   ,
+   denominatore_pim3 = 1 + exp(
+     (pas*pas/1000*0.1716) - (pas*0.0431) +
+       if_else(r_pupillare %in% "midriasi fissa > 3 mm", 3.8233, 0) +
+       if_else(vam %in% "si", 0.9763, 0) +
+       if_else(!is.na(fio2_dec) & !is.na(pao2), (fio2_dec/pao2)*0.4214*100, 0.23*0.4214) +
+       abs(be*0.0671) +
+       if_else(uti %in% "si", -0.5378, 0) +
+       if_else(ch %in% "s?, dopo intervento cardioch con bypass", -1.2246,
+               if_else(ch %in% "sì, dopo intervento cardioch senza bypass", -0.8762,
+                       if_else(ch %in% "sì, dopo intervento non cardioch", -1.5164, 0))) +
+       if_else(diag_h_ar %in% "nessuna/dubbia" | is.na(diag_h_ar), 0, 1.6225) +
+       if_else(diag_ar %in% c("nessuna / dubbia", "infezione hiv") | is.na(diag_ar), 0, 1.0725) +
+       if_else(diag_br %in% "nessuna / dubbia" | is.na(diag_br), 0, -2.1766) - 1.7928
+   )
+   ,
+
+   pim3_new = round((numeratore_pim3/denominatore_pim3)*100, 2),
+   pim3_new =ifelse(criteri_generali == 1,pim3_new,NA),
 
       age_class = age_to_class(.data[["eta"]], .data[["eta_giorni"]]),
       complete =
