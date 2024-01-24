@@ -105,6 +105,32 @@ smrlos_plot <- function(.db) {
     )
 }
 
+#' @describeIn funs-lossmrvolReport plot
+#' @export
+smrlosvol_plot <- function(.db) {
+  .db |>
+    dplyr::select("center", "esito_tip","pim3") |>
+    dplyr::group_by(.data$center, .add = TRUE) |>
+    dplyr::summarise(
+      smr = sum(.data$esito_tip=="morto", na.rm = TRUE) /
+        (sum(.data$pim3, na.rm = TRUE)/100),
+      volume = n())|>
+    ggplot2::remove_missing(
+      na.rm = TRUE,
+      vars = c("smr", "volume")
+    ) |>
+    dplyr::ungroup() |>
+    ggplot(
+      aes(.data$volume, .data$smr)
+    ) +
+    geom_text(aes(label = .data$center)) +
+    labs(
+      x = "Volume ricoveri",
+      y = "SMR (per centro)",
+      colour = "SMR",
+      label = "SMR"
+    )
+}
 
 
 #' @describeIn funs-losReport data
