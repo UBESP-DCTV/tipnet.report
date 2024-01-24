@@ -19,8 +19,8 @@ NULL
 focus_Plot <- function(
     .db,
     type = c("centervar", "checkbox"),
-    what = c("insufficienza","procedure_rico","vent_iniz2","niv_it","inf_ingresso_tip",
-             "sede_inf2","diagnosi_inf","tipo_inf","sepsi_2"),
+    what = c("insufficienza","procedure_rico","vent_iniz2","niv_it","niv_it_tot","inf_ingresso_tip",
+             "sede_inf2","diagnosi_inf","tipo_inf","sepsi"),
     dict = NULL
 ) {
   type <- match.arg(type)
@@ -33,11 +33,12 @@ focus_Plot <- function(
                           "procedure_rico" = "Procedura ricovero",
                           "vent_iniz2" = "Inizio ventilazione",
                           "niv_it" ="Tecnica utilizzata",
+                          "niv_it_tot" = "Durata Ventilazione",
                           "inf_ingresso_tip" = "infezione ingresso",
                           "sede_inf2" = "Sede infenzione",
                           "diagnosi_inf" = "Diagnosi infezione",
                           "tipo_inf" = "Tipo infezione",
-                          "sepsi_2" = "Infezione evoluta in sepsi"
+                          "sepsi" = "Infezione evoluta in sepsi"
 
   )
 
@@ -74,8 +75,8 @@ focus_dataToUse <- function(
 focus_dataTbl <- function(
     .db,
     type = c("centervar", "checkbox"),
-    what = c("insufficienza","procedure_rico","vent_iniz2","niv_it","inf_ingresso_tip",
-             "sede_inf2","diagnosi_inf","tipo_inf","sepsi_2"),
+    what = c("insufficienza","procedure_rico","vent_iniz2","niv_it","niv_it_tot","inf_ingresso_tip",
+             "sede_inf2","diagnosi_inf","tipo_inf","sepsi"),
     dict = NULL,
     by_gender = FALSE,
     by_ageclass = FALSE

@@ -103,6 +103,7 @@ join_all_sheets <- function(sheets) {
         . == "complete"
       }
     ) %>%
+    dplyr::filter(!is.na(center)) |>
     dplyr::mutate(
       codpat = as.factor(.data$codpat),
       eta = as.integer(.data[["eta"]]),
@@ -112,16 +113,115 @@ join_all_sheets <- function(sheets) {
           .data[["tipologia"]]=="chirurgico"~ "Chirurgico",
           .data[["tipologia"]]=="trauma, ustione, intossicazione, annegamento, avvelenamento, folgorazione, inalazione di fumo, ipotermia, soffocamento"~ "Trauma",
           TRUE ~ "[missing tipologia]"
-
         )
       ),
-   motivo_ricovero2  =  forcats::fct_recode(motivo_ricovero,"alterato sensorio"="alterato sensorio / crisi convulsive","disordini metabolici"="disordini metabolici / disidratazione","insufficienza cardiocircolatoria" = "insufficienza cardiocircolatoria (no shock settico)",
-                 "diagnosi sepsi correlata" = "diagnosi sepsi correlata (di natura diversa da respiro cuore snc)","shock distributivo"="shock distributivo (settico)","arresto"="arresto cardiocircolatorio","programmato"="programmato per procedure invasive"),
-   sede_inf2  =  forcats::fct_recode(sede_inf,"polmone"="polmone (infezione di comunità)","polmone - vap"="polmone - vap (inf. nosocomiale associata al ventilatore)","snc (ventr.)" = "snc (da derivazione ventricolare)",
-                                            "snc (non ventr.)" = "snc (non da derivazione ventricolare)","vie aree inf."="vie aree inferiori (non polmonite)","vie aeree sup."="vie aeree superiori"),
-   vent_iniz2  =  forcats::fct_recode(vent_iniz,"prima dell'ingresso"="prima dell'ingresso in rianimazione","all'ingresso"="all'ingresso (entro la prima ora) in rianimazione","durante la degenza"="durante la degenza in rianimazione"),
+      tipologia2 =  forcats::fct_rev(tipologia2),
+      delta_popc = as.numeric(.data[["popc_dimissione"]]) - as.numeric(.data[["popc"]]) ,
+      popc_delta = as.factor(
+        dplyr::case_when(
+          .data[["delta_popc"]] < 0~ "Peggioramento",
+          .data[["delta_popc"]] == 0 ~ "Stabile",
+          .data[["delta_popc"]] > 0~ "Miglioramento",
+          TRUE ~ "[missing delta_popc]"
+        )),
+          niv1_gg = (niv1del_dt %--% niv1al_dt)/days(1),
+          niv2_gg = (niv2del_dt %--% niv2al_dt)/days(1),
+          niv3_gg = (niv3del_dt %--% niv3al_dt)/days(1),
+          niv4_gg = (niv4del_dt %--% niv4al_dt)/days(1),
+          it1_gg = (it1del_dt %--% it1al_dt)/days(1),
+          it2_gg = (it2del_dt %--% it2al_dt)/days(1),
+          it3_gg = (it3del_dt %--% it3al_dt)/days(1),
+          niv1_gg = if_else(is.na(.data$niv1_gg), 0, .data$niv1_gg),
+          niv2_gg = if_else(is.na(.data$niv2_gg), 0, .data$niv2_gg),
+          niv3_gg = if_else(is.na(.data$niv3_gg), 0, .data$niv3_gg),
+          niv4_gg = if_else(is.na(.data$niv4_gg), 0, .data$niv4_gg),
+          it1_gg = if_else(is.na(.data$it1_gg), 0, .data$it1_gg),
+          it2_gg = if_else(is.na(.data$it2_gg), 0, .data$it2_gg),
+          it3_gg = if_else(is.na(.data$it3_gg), 0, .data$it3_gg),
+          niv_tot = niv1_gg + niv2_gg + niv3_gg + niv4_gg,
+          it_tot = it1_gg + it2_gg + it3_gg,
+         niv_it_tot = niv_tot + it_tot,
+          niv_it_tot = ifelse(niv_it_tot < 0,0,niv_it_tot),
+         niv_it_tot = ifelse(niv_it_tot >=500,0,niv_it_tot),
+          popc_delta =  forcats::fct_rev(popc_delta),
+          popc_dimissione = as.factor(.data$popc_dimissione),
+          popc = factor(
+        dplyr::case_when(
+          .data[["popc"]]== 1 ~ "Buona performance globale",
+          .data[["popc"]]== 2 ~ "Lieve disabilità globale",
+          .data[["popc"]] ==3 ~ "Moderata disabilità globale",
+          .data[["popc"]] ==4 ~ "Grave disabilità globale",
+          .data[["popc"]] ==5 ~ "Coma",
+          .data[["popc"]] ==6 ~ "Morte cerebrale",
+          TRUE ~ "[missing popc]")),
+     popc =  forcats::fct_rev(popc),
+     popc_dimissione = as.factor(
+       dplyr::case_when(
+         .data[["popc_dimissione"]]== 1 ~ "Buona performance globale",
+         .data[["popc_dimissione"]]== 2 ~ "Lieve disabilità globale",
+         .data[["popc_dimissione"]] == 3 ~ "Moderata disabilità globale",
+         .data[["popc_dimissione"]] == 4 ~ "Grave disabilità globale",
+         .data[["popc_dimissione"]] == 5 ~ "Coma",
+         .data[["popc_dimissione"]] == 6 ~ "Morte cerebrale",
+         TRUE ~ "[missing popc_dimissione]")),
+     mod_decesso = as.factor(
+       dplyr::case_when(
+         .data[["mod_decesso"]]== "morte nonostante rianimazione cardiopolmonare" ~ "morte nonostante RCP",
+         .data[["mod_decesso"]]== "sospensione dei trattamenti di supporto vitale" ~ "sospensione dei TSV",
+         .data[["mod_decesso"]] == "astensione dall'iniziare trattamenti di supporto vitale" ~ "astensione dall'iniziare TSV",
+         .data[["mod_decesso"]] == "decisione di non rianimare" ~ "decisione di non rianimare",
+         .data[["mod_decesso"]] == "morte cerebrale" ~ "morte cerebrale",
+         TRUE ~ "[missing mod_decesso]")),
+     mod_decesso =  forcats::fct_rev(mod_decesso),
 
-   motivo_ric_trauma2  =  forcats::fct_recode(motivo_ric_trauma,"insufficienza cardiovascolare"="insufficienza cardiovascolare (shock emorragico)"),
+      motivo_ricovero2  =  forcats::fct_recode(motivo_ricovero,"alterato sensorio" = "alterato sensorio / crisi convulsive","disordini metabolici" = "disordini metabolici / disidratazione","insufficienza cardiocircolatoria" = "insufficienza cardiocircolatoria (no shock settico)",
+                 "diagnosi sepsi correlata" = "diagnosi sepsi correlata (di natura diversa da respiro cuore snc)","shock distributivo" = "shock distributivo (settico)","arresto" = "arresto cardiocircolatorio","programmato" = "programmato per procedure invasive"),
+   sede_inf2  =  forcats::fct_recode(sede_inf,"polmone" = "polmone (infezione di comunità)","polmone - vap" = "polmone - vap (inf. nosocomiale associata al ventilatore)","snc (ventr.)" = "snc (da derivazione ventricolare)",
+                                            "snc (non ventr.)" = "snc (non da derivazione ventricolare)","vie aree inf." = "vie aree inferiori (non polmonite)","vie aeree sup." = "vie aeree superiori"),
+   vent_iniz2  =  forcats::fct_recode(vent_iniz,"prima dell'ingresso" = "prima dell'ingresso in rianimazione","all'ingresso" = "all'ingresso (entro la prima ora) in rianimazione","durante la degenza" = "durante la degenza in rianimazione"),
+
+   motivo_ric_trauma2  =  forcats::fct_recode(motivo_ric_trauma,"insufficienza cardiovascolare" = "insufficienza cardiovascolare (shock emorragico)"),
+   diagnosi_inf  =  forcats::fct_recode(diagnosi_inf,"accertata" = "accertata (check con esame colturale positivo e microrganismo compilato)"),
+   tipo_inf  =  forcats::fct_recode(tipo_inf,"nosocomiale" = "nosocomiale (dopo 48h da inizio ospedalizzazione)"),
+   criteri_generali = factor(
+     if_else(is_prematuro %in% "si" & sett_gest < 36, 0,
+             if_else(is_prematuro %in% "si" & sett_gest >= 36, 1,
+                     if_else(is_prematuro %in% "no" & eta > 16, 0, 1)
+             )
+     )),numeratore_pim3 = exp(
+       (pas*pas/1000*0.1716) - (pas*0.0431) +
+         if_else(r_pupillare %in% "midriasi fissa > 3 mm", 3.8233, 0) +
+         if_else(vam %in% "si", 0.9763, 0) +
+         if_else(!is.na(fio2_dec) & !is.na(pao2), (fio2_dec/pao2)*0.4214*100, 0.23*0.4214) +
+         abs(be*0.0671) +
+         if_else(uti %in% "si", -0.5378, 0) +
+         if_else(ch %in% "sì, dopo intervento cardioch con bypass", -1.2246,
+                 if_else(ch %in% "sì, dopo intervento cardioch senza bypass", -0.8762,
+                         if_else(ch %in% "sì, dopo intervento non cardioch", -1.5164, 0))) +
+         if_else(diag_h_ar %in% "nessuna/dubbia" | is.na(diag_h_ar), 0, 1.6225) +
+         if_else(diag_ar %in% c("nessuna / dubbia", "infezione hiv") | is.na(diag_ar), 0, 1.0725) +
+         if_else(diag_br %in% "nessuna / dubbia" | is.na(diag_br), 0, -2.1766) - 1.7928
+     )
+   ,
+   denominatore_pim3 = 1 + exp(
+     (pas*pas/1000*0.1716) - (pas*0.0431) +
+       if_else(r_pupillare %in% "midriasi fissa > 3 mm", 3.8233, 0) +
+       if_else(vam %in% "si", 0.9763, 0) +
+       if_else(!is.na(fio2_dec) & !is.na(pao2), (fio2_dec/pao2)*0.4214*100, 0.23*0.4214) +
+       abs(be*0.0671) +
+       if_else(uti %in% "si", -0.5378, 0) +
+       if_else(ch %in% "s?, dopo intervento cardioch con bypass", -1.2246,
+               if_else(ch %in% "sì, dopo intervento cardioch senza bypass", -0.8762,
+                       if_else(ch %in% "sì, dopo intervento non cardioch", -1.5164, 0))) +
+       if_else(diag_h_ar %in% "nessuna/dubbia" | is.na(diag_h_ar), 0, 1.6225) +
+       if_else(diag_ar %in% c("nessuna / dubbia", "infezione hiv") | is.na(diag_ar), 0, 1.0725) +
+       if_else(diag_br %in% "nessuna / dubbia" | is.na(diag_br), 0, -2.1766) - 1.7928
+   )
+   ,
+
+   pim3_new = round((numeratore_pim3/denominatore_pim3)*100, 2),
+   pim3_new =ifelse(criteri_generali == 1,pim3_new,NA),
+
       age_class = age_to_class(.data[["eta"]], .data[["eta_giorni"]]),
       complete =
         .data[["complete.anagrafica"]] &
@@ -129,6 +229,7 @@ join_all_sheets <- function(sheets) {
         .data[["complete.pim"]] &
         .data[["complete.dimissione"]]
     )
+
 
 
 }

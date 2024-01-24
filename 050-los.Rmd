@@ -1,12 +1,12 @@
-# Length of stay (LOS) and Pediatric Intensive Care Unit (PICU) discharge {#los .tabset .tabset-fade .tabset-pills}
+# Durata della degenza e dimissione dall'Unità di Terapia Intensiva Pediatrica {#los .tabset .tabset-fade .tabset-pills}
 
-## Overview {-}
+<!-- cat("## Overview {-}") -->
 
 
 
 ## Durata della degenza {.tabset .tabset-dropdown}
 
-### Durata
+### Durata media
 ```{r, eval=!params$export}
 losReportUI("l_durata")
 ```
@@ -19,7 +19,7 @@ losReport(
 )
 ```
 
-### Durata Vs. PIM
+### Durata media Vs. PIM
 
 ```{r, eval=!params$export}
 lospimReportUI("l_durata_pim")
@@ -32,8 +32,21 @@ lospimReport(
 )
 ```
 
+### Durata media Vs. SMR
 
-## Discharge {.tabset .tabset-dropdown}
+```{r, eval=!params$export}
+lossmrReportUI("l_durata_smr")
+```
+
+```{r, context = "server", eval=!params$export}
+lossmrReport(
+  "l_durata_smr",
+  data = data_ranged[["full_filtered"]]
+)
+```
+
+
+## Dimissione {.tabset .tabset-dropdown}
 
 ### Diagnosi di dimissione principale
 ```{r, eval=!params$export}
@@ -78,6 +91,9 @@ losReportStatic(
 ```
 
 ## POPC  {.tabset .tabset-dropdown}
+
+### POPC Dimissione
+
 ```{r, eval=!params$export}
 losReportUI("l_popc_dimissione")
 ```
@@ -95,6 +111,28 @@ losReportStatic(
   data = data_ranged[["full_filtered"]](),
   completed = params[["d_popc_dimissione_completed"]],
   what = "popc_dimissione"
+)
+```
+
+### Delta POPC Dimissione-Ingresso
+
+```{r, eval=!params$export}
+losReportUI("l_popc_delta")
+```
+
+```{r, context = "server", eval=!params$export}
+losReport(
+  "l_popc_delta",
+  data = data_ranged[["full_filtered"]],
+  what = "popc_delta"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+losReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_popc_delta_completed"]],
+  what = "popc_delta"
 )
 ```
 
@@ -206,16 +244,13 @@ losReportStatic(
 )
 ```
 
-<!-- ## Standardized Mortality Ratio (SMR) {.tabset .tabset-dropdown} -->
-## Standardized Mortality Ratio (SMR)
+## Standardized Mortality Ratio (SMR) {.tabset .tabset-dropdown}
 
-The Standardized Mortality Ratio (SMR) was estimated as the ratio between observed deaths/expected deaths.
-Expected deaths were derived as the sum of all the PIM scores for each category considered.
+Il rapporto standardizzato di mortalità (SMR) è stato stimato come rapporto tra decessi osservati e decessi attesi.
+I decessi attesi sono stati ricavati come somma di tutti i punteggi PIM per ogni categoria considerata.
 
-The new score seems to perform better than the old one, with a more adequate estimation of deaths and a more
-correct SMR.
+### SMR
 
-<!-- ### Units -->
 ```{r, eval=!params$export}
 losReportUI("l_smr")
 ```
@@ -228,6 +263,18 @@ losReport(
 )
 ```
 
+### SMR Vs. Volume ricoveri
+
+```{r, eval=!params$export}
+lossmrvolReportUI("l_smrlosvol")
+```
+
+```{r, context = "server", eval=!params$export}
+lossmrvolReport(
+  "l_smrlosvol",
+  data = data_ranged[["full_filtered"]]
+)
+```
 <!--#### Units -->
 <!--### PIM2 and PIM3 -->
 

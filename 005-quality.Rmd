@@ -1,13 +1,13 @@
-# Quality {#quality .tabset .tabset-fade .tabset-pills}
+# Qualità Dati {#quality .tabset .tabset-fade .tabset-pills}
 
 ## Overview {-}
 
-A record is considered _completed_ when it has at least the sheets 
-**anagrafica**, **accettazione**, **pim**, **dimissione** marked as completed.
+Un record si considera _completato_ quando ha almeno le schede 
+**anagrafica**, **accettazione**, **pim**, **dimissione** contrassegnati come completati.
 
 ---
 
-## Complete records {.tabset .tabset-dropdown}
+## Record completi {.tabset .tabset-dropdown}
 
 ```{r, eval=!params$export}
 qualityReportUI("q_overall")
@@ -26,18 +26,16 @@ qualityReportStatic(data_ranged[["full_filtered"]](),
 
 
 
-## Data errors {.tabset .tabset-dropdown}
+## Missing & Outlier {.tabset .tabset-dropdown}
 
-Two types of errors are considered at the moment:
+Al momento si considerano due tipi di errori:
 
-1. Missing data.
+1. Dati mancanti.
 
-2. Outlier values out of reasonable range, i.e., which have a distance
-   from the median that is farther than 1.5 times the inter quartile
-   range.
+2. Valori anomali al di fuori di un intervallo ragionevole, cioè con una distanza dalla mediana superiore a 1,5 volte l'inter quartile.
 
 
-### Missing values
+### Dati mancanti
 
 
 
@@ -58,11 +56,8 @@ missReportStatic(data = data_ranged[["full_filtered"]](),
 
 
 
-### Possible errors into the data
+### Outlier
 
-
-For numerical variables, outliers are considered possible errors, i.e.
-values farther than 1.5 times the inter quartile range from the median.
 
 ```{r, eval=!params$export}
 outlierReportUI("q_err", data = full_records)

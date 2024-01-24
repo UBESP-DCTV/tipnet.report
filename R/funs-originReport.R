@@ -37,11 +37,11 @@ origin_Plot <- function(
         "redcap_repeat_instance" = "Riammissione",
         "provenienza" = "Provenienza",
         "altro_osp" = "Altro ospedale",
-        "tipologia2" = "tipo",
-        "tipo_chir" = "Tipo chirurgia",
+        "tipologia2" = "Tipo di ricovero",
+        "tipo_chir" = "Tipo di chirurgia",
         "priorita" = "Priorità",
-        "motivo_post_oper" = "post chirurgia",
-        "motivo_ricovero2"  = "ric. medico",
+        "motivo_post_oper" = "Ricovero post chirurgia",
+        "motivo_ricovero2"  = "Ricovero medico",
         "motivo_ric_trauma2" = "post-trauma"
 
       )

@@ -18,7 +18,7 @@ NULL
 #' los_Plot(full_records, "etnia")
 los_Plot <- function(
     .db,
-    what = c("diagnosi","diagnosi_2","popc_dimissione","esito_tip","mod_decesso","deceduto",
+    what = c("diagnosi","diagnosi_2","popc_dimissione", "popc_delta","esito_tip","mod_decesso","deceduto",
              "prelievo_organi","destinazione","durata_degenza","smr")
 ) {
   what <- match.arg(what)
@@ -27,6 +27,7 @@ los_Plot <- function(
                           "diagnosi" = "Diagnosi princ.",
                           "diagnosi_2" = "Diagnosi 2",
                           "popc_dimissione" = "POPC",
+                          "popc_delta" = "Delta POPC",
                           "esito_tip" ="esito",
                           "mod_decesso" = "Decesso",
                           "deceduto" = "Acc. decesso",
@@ -49,7 +50,7 @@ pimlos_plot <- function(.db) {
   .db |>
     dplyr::select("center", "durata_degenza", dplyr::matches("pim")) |>
     tidyr::pivot_longer(
-      dplyr::all_of(c("pim2", "pim3")),
+      dplyr::all_of(c("pim3_new")),
       names_to = "pim_type",
       values_to = "pim_val"
     ) |>
@@ -75,8 +76,61 @@ pimlos_plot <- function(.db) {
     )
 }
 
+#' @describeIn funs-lossmrReport plot
+#' @export
+smrlos_plot <- function(.db) {
+  .db |>
+    dplyr::select("center", "durata_degenza", "esito_tip","pim3_new") |>
+    dplyr::group_by(.data$center, .add = TRUE) |>
+    dplyr::summarise(
+      #smr_pim2 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
+      # (sum(.data$pim2, na.rm = TRUE)/100),
+      smr = sum(.data$esito_tip=="morto", na.rm = TRUE) /
+        (sum(.data$pim3_new, na.rm = TRUE)/100),
+      durata_media = mean(.data$durata_degenza))|>
+    ggplot2::remove_missing(
+      na.rm = TRUE,
+      vars = c("smr", "durata_media")
+    ) |>
+    dplyr::ungroup() |>
+    ggplot(
+      aes(.data$durata_media, .data$smr)
+    ) +
+    geom_text(aes(label = .data$center)) +
+    labs(
+      x = "Durata media",
+      y = "SMR (per centro)",
+      colour = "SMR",
+      label = "SMR"
+    )
+}
 
-
+#' @describeIn funs-lossmrvolReport plot
+#' @export
+smrlosvol_plot <- function(.db) {
+  .db |>
+    dplyr::select("center", "esito_tip","pim3") |>
+    dplyr::group_by(.data$center, .add = TRUE) |>
+    dplyr::summarise(
+      smr = sum(.data$esito_tip=="morto", na.rm = TRUE) /
+        (sum(.data$pim3, na.rm = TRUE)/100),
+      volume = n())|>
+    ggplot2::remove_missing(
+      na.rm = TRUE,
+      vars = c("smr", "volume")
+    ) |>
+    dplyr::ungroup() |>
+    ggplot(
+      aes(.data$volume, .data$smr)
+    ) +
+    geom_text(aes(label = .data$center)) +
+    labs(
+      x = "Volume ricoveri",
+      y = "SMR (per centro)",
+      colour = "SMR",
+      label = "SMR"
+    )
+}
 
 
 #' @describeIn funs-losReport data
@@ -103,7 +157,7 @@ los_dataToUse <- function(
 
 los_dataTbl <- function(
     .db,
-    what = c("diagnosi","diagnosi_2","popc_dimissione","esito_tip","mod_decesso","deceduto",
+    what = c("diagnosi","diagnosi_2","popc_dimissione","popc_delta","esito_tip","mod_decesso","deceduto",
              "prelievo_organi","destinazione","durata_degenza","smr"),
     by_gender = FALSE,
     by_ageclass = FALSE,

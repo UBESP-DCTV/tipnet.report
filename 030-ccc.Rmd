@@ -1,6 +1,6 @@
-# PICU Admissions {#ccc .tabset .tabset-fade .tabset-pills}
+# Caratteristiche all'ingresso  {#ccc .tabset .tabset-fade .tabset-pills}
 
-## Overview {-}
+<!-- cat("## Overview {-}") -->
 
 <!--Chronic complex condition definition was taken by the paper of Feudtner C et al: “Pediatric Deaths Attributable to
 Complex Chronic Conditions: A Population-Based Study of Washington State, 1980-1997” published in Pediatrics in
@@ -12,9 +12,9 @@ Moreover, the system allows to record the specific chronic disease -->
 
 
 
-## Comorbidity on admission {.tabset .tabset-dropdown}
+## Comorbidità {.tabset .tabset-dropdown}
 
-### Comorbidity on admission Yes/No
+### Comorbidità 
 ```{r, eval=!params$export}
 admissionReportUI("m_mal_cronica")
 ```
@@ -28,7 +28,7 @@ admissionReport(
 )
 ```
 
-### Macro-diagnosis
+### Macro-diagnosi
 ```{r, eval=!params$export}
 admissionReportUI("m_macro")
 ```
@@ -66,7 +66,7 @@ admissionReport(
 ```
 ## Insufficienze d'organo  {.tabset .tabset-dropdown}
 
-### Insufficienze d'organo Yes/No
+### Insufficienze d'organo 
 ```{r, eval=!params$export}
 admissionReportUI("m_insuff_organo7")
 ```
@@ -96,13 +96,10 @@ admissionReport(
 
 
 
-## PIM2 and PIM3 {.tabset .tabset-dropdown}
-
-The registry adopted, since the beginning, the Pediatric Index of Mortality (PIM) score. The PIM2 variables are
-recorded and the risk of death is automatically calculated by the system. In 2013, after a revision of the coefficient of the variables, the new PIM3 score was published. We updated the PIM page with the new formula and since 2014 we calculate both the 2 and 3 version. Moreover, retrospectically, we collected all the new variables and through the new coefficients we derived the PIM3 score for all the patient in the registry.
+## PIM3 {.tabset .tabset-dropdown}
 
 
-### Severity
+### PIM3
 ```{r, eval=!params$export}
 admissionReportUI("adm_pim")
 ```
