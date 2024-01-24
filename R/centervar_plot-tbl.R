@@ -116,11 +116,10 @@ transform_centervar <- function(x, what) {
 
   func_name <- glue::glue("transform_centervar_{what[[1]]}")
 
-
+  message(func_name)
   tryCatch(
     do.call(func_name, list(x = x, what = what)),
     error = function(e) {
-      stop(e, call. = FALSE)
       transform_centervar_default(x, what)
     }
   ) |>
@@ -138,7 +137,51 @@ transform_centervar_default <- function(x, what) {
 }
 
 
-trasform_centervar_tipo_chir  <- function(x, what) {
+transform_centervar_tipo_chir  <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+}
+
+transform_centervar_motivo_post_oper <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+}
+
+transform_centervar_motivo_ric_trauma2 <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+}
+
+transform_centervar_mod_decesso <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+}
+
+transform_centervar_deceduto <- function(x, what) {
   checkmate::assert_string(what)
 
   transform_centervar_branched(
@@ -150,7 +193,62 @@ trasform_centervar_tipo_chir  <- function(x, what) {
 }
 
 
-trasform_centervar_altro_osp  <- function(x, what) {
+transform_centervar_prelievo_organi <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+}
+
+transform_centervar_sede_inf2 <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+}
+
+transform_centervar_diagnosi_inf <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+}
+
+transform_centervar_tipo_inf <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+}
+
+transform_centervar_sepsi <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+}
+
+transform_centervar_altro_osp  <- function(x, what) {
   checkmate::assert_string(what)
 
   transform_centervar_branched(
@@ -162,6 +260,65 @@ trasform_centervar_altro_osp  <- function(x, what) {
 
 }
 
+transform_centervar_motivo_ricovero2  <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+
+}
+
+transform_centervar_sede_inf2  <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+
+}
+
+transform_centervar_diagnosi_inf  <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+
+}
+
+transform_centervar_tipo_inf  <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+
+}
+
+transform_centervar_sepsi <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+
+}
 transform_centervar_branched <- function(
     x,
     what ,
@@ -207,6 +364,15 @@ get_branch_var <- function(what) {
     what == "tipo_chir" ~ "tipologia",
     what == "altro_osp" ~ "provenienza",
     what == "motivo_ricovero2" ~ "tipologia",
+    what == "motivo_post_oper" ~ "tipologia",
+    what == "motivo_ric_trauma2" ~ "tipologia2",
+    what == "mod_decesso" ~ "esito_tip",
+    what == "deceduto" ~ "esito_tip",
+    what == "prelievo_organi" ~ "esito_tip",
+    what == "sede_inf2" ~ "inf_ingresso_tip",
+    what == "diagnosi_inf" ~ "inf_ingresso_tip",
+    what == "tipo_inf" ~ "inf_ingresso_tip",
+    what == "sepsi" ~ "inf_ingresso_tip",
     TRUE ~ "<null>"
   )
 }
@@ -216,6 +382,15 @@ get_branch_val <- function(what) {
     what == "tipo_chir" ~ "chirurgico",
     what == "altro_osp" ~ "altro ospedale",
     what == "motivo_ricovero2" ~ "medico",
+    what == "motivo_post_oper" ~ "chirurgico",
+    what == "motivo_ric_trauma2" ~ "Trauma",
+    what == "mod_decesso" ~ "morto",
+    what == "deceduto" ~ "morto",
+    what == "prelievo_organi" ~ "morto",
+    what == "sede_inf2" ~ "si",
+    what == "diagnosi_inf" ~ "si",
+    what == "tipo_inf" ~ "si",
+    what == "sepsi" ~ "si",
     TRUE ~ "<null>"
   )
 }
@@ -262,25 +437,52 @@ transform_centervar_smr <- function(x, what) {
     )
 }
 
-transform_centervar_redcap_repeat_instance <- function(x, what) {
+transform_centervar_what_not_one <- function(x, what) {
   checkmate::assert_string(what)
 
   dplyr::filter(x, .data[[what]] != 1)
+
+}
+
+transform_centervar_redcap_repeat_instance <- function(x, what) {
+  transform_centervar_what_not_one(x,what)
+
 }
 
 transform_centervar_durata_degenza <- function(x, what) {
+  transform_centervar_what_not_one(x,what)
+}
+
+transform_centervar_nonmissing_var <- function(x, what,var) {
   checkmate::assert_string(what)
 
-  dplyr::filter(x, .data[[what]] != 1)
+  dplyr::filter(x,!is.na(.data[[var]]))
 }
+
 
 
 transform_centervar_niv_it_tot <- function(x, what) {
-  checkmate::assert_string(what)
+  transform_centervar_nonmissing_var(x,what,"niv_it")
 
-  dplyr::filter(x,!is.na(.data[["niv_it"]]))
 }
 
+transform_centervar_niv_it<- function(x, what) {
+  transform_centervar_nonmissing_var_niv(x,what,"niv_it")
+
+}
+
+transform_centervar_vent_iniz2<- function(x, what) {
+  transform_centervar_nonmissing_var_niv(x,what,"niv_it")
+
+}
+
+transform_centervar_nonmissing_var_niv <- function(x, what,var) {
+  checkmate::assert_string(what)
+  x |> dplyr::filter(!is.na(.data[[var]])) |>
+    dplyr::mutate(
+      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na))
+
+}
 
 
 #transform_centervar_motivo_ricovero2 <- function(x, what) {
@@ -293,15 +495,7 @@ transform_centervar_niv_it_tot <- function(x, what) {
 
 #}
 
-#transform_centervar_motivo_post_oper <- function(x, what) {
-#  checkmate::assert_string(what)
-#  x |>
-#    dplyr::mutate(
-#      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
-#    ) |>
-#    dplyr::filter(.data[["tipologia"]] == "chirurgico")
 
-#}
 
 #transform_centervar_default <- function(x, what) {
 #  x |>

@@ -159,12 +159,20 @@ join_all_sheets <- function(sheets) {
        dplyr::case_when(
          .data[["popc_dimissione"]]== 1 ~ "Buona performance globale",
          .data[["popc_dimissione"]]== 2 ~ "Lieve disabilità globale",
-         .data[["popc_dimissione"]] ==3 ~ "Moderata disabilità globale",
-         .data[["popc_dimissione"]] ==4 ~ "Grave disabilità globale",
-         .data[["popc_dimissione"]] ==5 ~ "Coma",
-         .data[["popc_dimissione"]] ==6 ~ "Morte cerebrale",
+         .data[["popc_dimissione"]] == 3 ~ "Moderata disabilità globale",
+         .data[["popc_dimissione"]] == 4 ~ "Grave disabilità globale",
+         .data[["popc_dimissione"]] == 5 ~ "Coma",
+         .data[["popc_dimissione"]] == 6 ~ "Morte cerebrale",
          TRUE ~ "[missing popc_dimissione]")),
-     popc_dimissione =  forcats::fct_rev(popc_dimissione),
+     mod_decesso = as.factor(
+       dplyr::case_when(
+         .data[["mod_decesso"]]== "morte nonostante rianimazione cardiopolmonare" ~ "morte nonostante RCP",
+         .data[["mod_decesso"]]== "sospensione dei trattamenti di supporto vitale" ~ "sospensione dei TSV",
+         .data[["mod_decesso"]] == "astensione dall'iniziare trattamenti di supporto vitale" ~ "astensione dall'iniziare TSV",
+         .data[["mod_decesso"]] == "decisione di non rianimare" ~ "decisione di non rianimare",
+         .data[["mod_decesso"]] == "morte cerebrale" ~ "morte cerebrale",
+         TRUE ~ "[missing mod_decesso]")),
+     mod_decesso =  forcats::fct_rev(mod_decesso),
 
       motivo_ricovero2  =  forcats::fct_recode(motivo_ricovero,"alterato sensorio" = "alterato sensorio / crisi convulsive","disordini metabolici" = "disordini metabolici / disidratazione","insufficienza cardiocircolatoria" = "insufficienza cardiocircolatoria (no shock settico)",
                  "diagnosi sepsi correlata" = "diagnosi sepsi correlata (di natura diversa da respiro cuore snc)","shock distributivo" = "shock distributivo (settico)","arresto" = "arresto cardiocircolatorio","programmato" = "programmato per procedure invasive"),
@@ -174,6 +182,7 @@ join_all_sheets <- function(sheets) {
 
    motivo_ric_trauma2  =  forcats::fct_recode(motivo_ric_trauma,"insufficienza cardiovascolare" = "insufficienza cardiovascolare (shock emorragico)"),
    diagnosi_inf  =  forcats::fct_recode(diagnosi_inf,"accertata" = "accertata (check con esame colturale positivo e microrganismo compilato)"),
+   tipo_inf  =  forcats::fct_recode(tipo_inf,"nosocomiale" = "nosocomiale (dopo 48h da inizio ospedalizzazione)"),
 
       age_class = age_to_class(.data[["eta"]], .data[["eta_giorni"]]),
       complete =
