@@ -136,7 +136,7 @@ get_branch_val <- function(what) {
   dplyr::case_when(
     what == "tipo_chir" ~ "chirurgico",
     what == "altro_osp" ~ "altro ospedale",
-    what == "altro_osp" ~ "medico",
+    what == "motivo_ricovero2" ~ "medico",
     TRUE ~ "<null>"
   )
 }
@@ -144,24 +144,40 @@ transform_centervar <- function(x, what) {
 
   func_name <- glue::glue("transform_centervar_{what[[1]]}")
 
-  transform_centervar_branched(
-    x,
-    what,
-    get_branch(what, "var"),
-    get_branch(what, "val")
-  ) |>
-    # tryCatch(
-    #   do.call(func_name, list(x = x, what = what)),
-    #   error = function(e) transform_centervar_default(x, what)
-    # ) |>
+
+    tryCatch(
+       do.call(func_name, list(x = x, what = what)),
+       error = function(e) transform_centervar_default(x, what)
+     ) |>
     dplyr::mutate(
       center = forcats::fct_inseq(.data[["center"]]) |>
         forcats::fct_rev()
     )
 }
 
+trasform_centervar_tipo_chir  <- function(x, what) {
+  checkmate::assert_string(what)
+
+transform_centervar_branched(
+  x,
+  what,
+  get_branch(what, "var"),
+  get_branch(what, "val")
+)
+}
 
 
+trasform_centervar_altro_osp  <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+
+}
 transform_centervar_pim <- function(x, what) {
   checkmate::assert_string(what)
 
@@ -225,11 +241,10 @@ transform_centervar_branched <- function(
     branchvalue
 )   {
   checkmate::assert_string(what)
-  res <- x
-  #|>
-   # dplyr::mutate(
-    #  dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
-   # )
+  res <- x |>
+    dplyr::mutate(
+      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+    )
 
   if (sum(c(branchvar, branchvar) == "<null>") == 1) {
     stop(stringr::str_c(
