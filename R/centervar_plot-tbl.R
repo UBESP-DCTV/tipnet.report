@@ -112,6 +112,85 @@ centervar_tbl <- function(.db, what) {
 
 }
 
+transform_centervar <- function(x, what) {
+
+  func_name <- glue::glue("transform_centervar_{what[[1]]}")
+
+
+  tryCatch(
+    do.call(func_name, list(x = x, what = what)),
+    error = function(e) {
+      stop(e, call. = FALSE)
+      transform_centervar_default(x, what)
+    }
+  ) |>
+    dplyr::mutate(
+      center = forcats::fct_inseq(.data[["center"]]) |>
+        forcats::fct_rev()
+    )
+}
+
+transform_centervar_default <- function(x, what) {
+  x |>
+    dplyr::mutate(
+      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+    )
+}
+
+
+trasform_centervar_tipo_chir  <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+}
+
+
+trasform_centervar_altro_osp  <- function(x, what) {
+  checkmate::assert_string(what)
+
+  transform_centervar_branched(
+    x,
+    what,
+    get_branch(what, "var"),
+    get_branch(what, "val")
+  )
+
+}
+
+transform_centervar_branched <- function(
+    x,
+    what ,
+    branchvar,
+    branchvalue
+)   {
+  checkmate::assert_string(what)
+
+  res <- x |>
+    dplyr::mutate(
+      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+    )
+
+  if (sum(c(branchvar, branchvar) == "<null>") == 1) {
+    stop(stringr::str_c(
+      "Only one between branchval and branchvar is NULL.",
+      "Both or none of them must be NULL.",
+      sep = "\n"
+    ))
+  }
+
+  if (branchvar != "<null>") {
+    res <- res |>
+      dplyr::filter(.data[[branchvar]] == branchvalue)
+  }
+
+  res
+}
+
 
 get_branch <- function(what, type = c("var", "val")) {
   type <- match.arg(type)
@@ -140,44 +219,9 @@ get_branch_val <- function(what) {
     TRUE ~ "<null>"
   )
 }
-transform_centervar <- function(x, what) {
-
-  func_name <- glue::glue("transform_centervar_{what[[1]]}")
 
 
-    tryCatch(
-       do.call(func_name, list(x = x, what = what)),
-       error = function(e) transform_centervar_default(x, what)
-     ) |>
-    dplyr::mutate(
-      center = forcats::fct_inseq(.data[["center"]]) |>
-        forcats::fct_rev()
-    )
-}
 
-trasform_centervar_tipo_chir  <- function(x, what) {
-  checkmate::assert_string(what)
-
-transform_centervar_branched(
-  x,
-  what,
-  get_branch(what, "var"),
-  get_branch(what, "val")
-)
-}
-
-
-trasform_centervar_altro_osp  <- function(x, what) {
-  checkmate::assert_string(what)
-
-  transform_centervar_branched(
-    x,
-    what,
-    get_branch(what, "var"),
-    get_branch(what, "val")
-  )
-
-}
 transform_centervar_pim <- function(x, what) {
   checkmate::assert_string(what)
 
@@ -228,45 +272,6 @@ transform_centervar_durata_degenza <- function(x, what) {
   checkmate::assert_string(what)
 
   dplyr::filter(x, .data[[what]] != 1)
-}
-
-
-
-
-
-transform_centervar_branched <- function(
-    x,
-    what ,
-    branchvar,
-    branchvalue
-)   {
-  checkmate::assert_string(what)
-  res <- x |>
-    dplyr::mutate(
-      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
-    )
-
-  if (sum(c(branchvar, branchvar) == "<null>") == 1) {
-    stop(stringr::str_c(
-      "Only one between branchval and branchvar is NULL.",
-      "Both or none of them must be NULL.",
-      sep = "\n"
-    ))
-  }
-
-  if (branchvar != "<null>") {
-    res <- res |>
-      dplyr::filter(.data[[branchvar]] == branchvalue)
-  }
-
-  res
-}
-
-transform_centervar_default <- function(x, what) {
-  x |>
-    dplyr::mutate(
-      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
-    )
 }
 
 
