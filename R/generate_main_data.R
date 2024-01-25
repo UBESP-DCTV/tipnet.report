@@ -147,23 +147,24 @@ join_all_sheets <- function(sheets) {
           popc_dimissione = as.factor(.data$popc_dimissione),
           popc = factor(
         dplyr::case_when(
-          .data[["popc"]]== 1 ~ "Buona performance globale",
-          .data[["popc"]]== 2 ~ "Lieve disabilità globale",
-          .data[["popc"]] ==3 ~ "Moderata disabilità globale",
-          .data[["popc"]] ==4 ~ "Grave disabilità globale",
-          .data[["popc"]] ==5 ~ "Coma",
-          .data[["popc"]] ==6 ~ "Morte cerebrale",
-          TRUE ~ "[missing popc]")),
-     popc =  forcats::fct_rev(popc),
+          .data[["popc"]] == 1 ~ "1 - Buona performance globale",
+          .data[["popc"]] == 2 ~ "2 - Lieve disabilità globale",
+          .data[["popc"]] == 3 ~ "3 - Moderata disabilità globale",
+          .data[["popc"]] == 4 ~ "4 - Grave disabilità globale",
+          .data[["popc"]] == 5 ~ "5 - Coma",
+          .data[["popc"]] == 6 ~ "6 - Morte cerebrale",
+           TRUE ~ "[missing popc]")),
+     popc =  forcats::fct_relevel(popc, "[missing popc]", after = 6),
      popc_dimissione = as.factor(
        dplyr::case_when(
-         .data[["popc_dimissione"]]== 1 ~ "Buona performance globale",
-         .data[["popc_dimissione"]]== 2 ~ "Lieve disabilità globale",
-         .data[["popc_dimissione"]] == 3 ~ "Moderata disabilità globale",
-         .data[["popc_dimissione"]] == 4 ~ "Grave disabilità globale",
-         .data[["popc_dimissione"]] == 5 ~ "Coma",
-         .data[["popc_dimissione"]] == 6 ~ "Morte cerebrale",
-         TRUE ~ "[missing popc_dimissione]")),
+         .data[["popc_dimissione"]]== 1 ~ "1 - Buona performance globale",
+         .data[["popc_dimissione"]] == 2 ~ "2 - Lieve disabilità globale",
+         .data[["popc_dimissione"]] == 3 ~ "3 - Moderata disabilità globale",
+         .data[["popc_dimissione"]] == 4 ~ "4 - Grave disabilità globale",
+         .data[["popc_dimissione"]] == 5 ~ "5 - Coma",
+         .data[["popc_dimissione"]] == 6 ~ "6 - Morte cerebrale",
+         TRUE ~ "[missing popc dimissione]")),
+     popc_dimissione =  forcats::fct_relevel(popc, "[missing popc]", after = 6),
      mod_decesso = as.factor(
        dplyr::case_when(
          .data[["mod_decesso"]]== "morte nonostante rianimazione cardiopolmonare" ~ "morte nonostante RCP",
@@ -210,7 +211,7 @@ join_all_sheets <- function(sheets) {
        if_else(!is.na(fio2_dec) & !is.na(pao2), (fio2_dec/pao2)*0.4214*100, 0.23*0.4214) +
        abs(be*0.0671) +
        if_else(uti %in% "si", -0.5378, 0) +
-       if_else(ch %in% "s?, dopo intervento cardioch con bypass", -1.2246,
+       if_else(ch %in% "sì, dopo intervento cardioch con bypass", -1.2246,
                if_else(ch %in% "sì, dopo intervento cardioch senza bypass", -0.8762,
                        if_else(ch %in% "sì, dopo intervento non cardioch", -1.5164, 0))) +
        if_else(diag_h_ar %in% "nessuna/dubbia" | is.na(diag_h_ar), 0, 1.6225) +
