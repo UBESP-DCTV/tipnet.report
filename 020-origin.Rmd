@@ -78,6 +78,28 @@ originReportStatic(
 )
 ```
 
+## Priorità {.tabset .tabset-dropdown}
+```{r, eval=!params$export}
+originReportUI("o_priorita")
+```
+
+```{r, context = "server", eval=!params$export}
+originReport(
+  "o_priorita",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "priorita"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+originReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_gender_completed"]],
+  what = "priorita"
+)
+```
+
 ## Provenienza e Tipologia {.tabset .tabset-dropdown}
 
 ### Provenienza
@@ -164,27 +186,7 @@ originReportStatic(
   what = "tipo_chir"
 )
 ```
-## Priorità {.tabset .tabset-dropdown}
-```{r, eval=!params$export}
-originReportUI("o_priorita")
-```
 
-```{r, context = "server", eval=!params$export}
-originReport(
-  "o_priorita",
-  data = data_ranged[["full_filtered"]],
-  type = "centervar",
-  what = "priorita"
-)
-```
-
-```{r, context = "server", eval=params$export, fig.height=11}
-originReportStatic(
-  data = data_ranged[["full_filtered"]](),
-  completed = params[["d_gender_completed"]],
-  what = "priorita"
-)
-```
 ## Motivazioni {.tabset .tabset-dropdown}
 
 ### Motivazione post ricovero chirurgico
