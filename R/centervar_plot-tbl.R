@@ -7,7 +7,14 @@ centervar_plot <- function(.db, what, reported_name) {
   geom_centervar <- if (any(what == c("redcap_repeat_instance","durata_degenza","niv_it_tot"))) {
     function(p) {
       p +
-        geom_boxplot(aes(y = .data[[what]]))
+        geom_boxplot(aes(y = .data[[what]]))+
+
+        labs(
+          x = "Center",
+          y = " ",
+          fill = stringr::str_to_sentence(reported_name),
+          colour = stringr::str_to_sentence(reported_name)
+        )
     }
   } else if (any(what == "pim")) {
     function(p) {
@@ -17,7 +24,12 @@ centervar_plot <- function(.db, what, reported_name) {
             y = .data[["pim_val"]],
             colour = .data[["pim_type"]]
           )
-        ) +
+        ) + labs(
+          x = "Center",
+          y = " ",
+          fill = stringr::str_to_sentence(reported_name),
+          colour = stringr::str_to_sentence(reported_name)
+        )+
         coord_flip()
     }
   } else if (any(what == "smr")) {
@@ -30,6 +42,12 @@ centervar_plot <- function(.db, what, reported_name) {
             label = .data$center,colour=.data[["smr_type"]]
           ),
           position = "jitter"
+        )+
+        labs(
+          x = "SMR",
+          y = " ",
+          fill = stringr::str_to_sentence(reported_name),
+          colour = stringr::str_to_sentence(reported_name)
         )
     }
   }
@@ -40,6 +58,13 @@ centervar_plot <- function(.db, what, reported_name) {
         geom_bar(
           aes(fill = .data[[what]]),
           position =  position_dodge2(reverse=TRUE)
+        )+
+
+        labs(
+          x = "Center",
+          y = "Counts",
+          fill = stringr::str_to_sentence(reported_name),
+          colour = stringr::str_to_sentence(reported_name)
         )
     }
   }
@@ -49,12 +74,6 @@ centervar_plot <- function(.db, what, reported_name) {
     ggplot(aes(x = .data$center)) |>
     geom_centervar() +
     coord_flip() +
-    labs(
-      x = "Center",
-      y = "Counts",
-      fill = stringr::str_to_sentence(reported_name),
-      colour = stringr::str_to_sentence(reported_name)
-    ) +
     theme(legend.position = "top")
 }
 
@@ -406,7 +425,7 @@ transform_centervar_pim <- function(x, what) {
       dplyr::matches("pim")
     ) |>
     pivot_longer(
-      dplyr::all_of(c("pim3_new")),
+      dplyr::all_of(c("pim3")),
       names_to = "pim_type",
       values_to = "pim_val"
     ) |>
@@ -419,7 +438,7 @@ transform_centervar_smr <- function(x, what) {
   x |>
     dplyr::select(any_of(c(
       "center", "age_class", "gender", "tipologia", "ingresso_dt",
-      "esito_tip", "pim3_new"
+      "esito_tip", "pim3"
     ))) |>
     # dplyr::mutate(
     #   year = as.integer(lubridate::year(.data[["ingresso_dt"]]))
@@ -429,7 +448,7 @@ transform_centervar_smr <- function(x, what) {
       #smr_pim2 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
       # (sum(.data$pim2, na.rm = TRUE)/100),
       smr_pim3 = sum(.data$esito_tip == "morto", na.rm = TRUE) /
-        (sum(.data$pim3_new, na.rm = TRUE)/100)) |>
+        (sum(.data$pim3, na.rm = TRUE)/100)) |>
     pivot_longer(
       dplyr::all_of(c("smr_pim3")),
       names_to = "smr_type",
