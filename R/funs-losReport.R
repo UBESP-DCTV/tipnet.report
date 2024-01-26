@@ -50,7 +50,7 @@ pimlos_plot <- function(.db) {
   .db |>
     dplyr::select("center", "durata_degenza", dplyr::matches("pim")) |>
     tidyr::pivot_longer(
-      dplyr::all_of(c("pim3_new")),
+      dplyr::all_of(c("pim3")),
       names_to = "pim_type",
       values_to = "pim_val"
     ) |>
@@ -80,13 +80,13 @@ pimlos_plot <- function(.db) {
 #' @export
 smrlos_plot <- function(.db) {
   .db |>
-    dplyr::select("center", "durata_degenza", "esito_tip","pim3_new") |>
+    dplyr::select("center", "durata_degenza", "esito_tip","pim3") |>
     dplyr::group_by(.data$center, .add = TRUE) |>
     dplyr::summarise(
       #smr_pim2 = sum(.data$esito_tip=="morto", na.rm = TRUE) /
       # (sum(.data$pim2, na.rm = TRUE)/100),
       smr = sum(.data$esito_tip=="morto", na.rm = TRUE) /
-        (sum(.data$pim3_new, na.rm = TRUE)/100),
+        (sum(.data$pim3, na.rm = TRUE)/100),
       durata_media = mean(.data$durata_degenza))|>
     ggplot2::remove_missing(
       na.rm = TRUE,
