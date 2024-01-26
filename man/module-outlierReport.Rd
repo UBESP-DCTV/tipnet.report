@@ -25,10 +25,10 @@ General description
 }
 \section{Functions}{
 \itemize{
-\item \code{outlierReportUI}: user interface
+\item \code{outlierReportUI()}: user interface
 
-\item \code{outlierReport}: server function
+\item \code{outlierReport()}: server function
 
-\item \code{outlierReportStatic}: static report function
+\item \code{outlierReportStatic()}: static report function
+
 }}
-

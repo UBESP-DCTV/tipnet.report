@@ -21,10 +21,12 @@ skip_if_no_auth <- function() {
 #' @export
 data_path <- function(path = here::here()) {
   current_folder <- basename(normalizePath(path))
-  path_to_data <- switch(current_folder,
+  path_to_data <- switch(
+    current_folder,
     "TIPNet_test"   = fs::path(path, "..", "..", "tipnet-data"),
+    "tipnet-report" = fs::path(path, "..", "..", "tipnet-data"),
     "TIPNet"        = fs::path(path, "..", "..", "tipnet-data"),
-    "tipnet.report"  = fs::path(path, "..", "tipnet-data"),
+    "tipnet.report" = fs::path(path, "..", "tipnet-data"),
     "tipnet.report" = fs::path(path, "..", "tipnet-data"),
     "report"        = data_path(fs::path(path, "..", "..", "tipnet-data")),
     "static"        = data_path(fs::path(path, "..", "..", "tipnet-data")),
@@ -35,3 +37,51 @@ data_path <- function(path = here::here()) {
 
   fs::dir_create(path_to_data)
 }
+
+
+
+age_to_class <- function(ages, days) {
+  ordered(
+    dplyr::case_when(
+      ages >   18 ~ "adulto",
+      ages >   12 ~ "adolescente",
+      ages >    6 ~ "eta scolare",
+      ages >    0 ~ "eta prescolare",
+      days >= 366 ~ "[wrong/missing age]",
+      days >   30 ~ "lattante",
+      days >    0 ~ "neonato",
+      TRUE ~ "[wrong/missing age]"
+    ),
+    levels = c(
+      "neonato", "lattante", "eta prescolare", "eta scolare",
+      "adolescente", "adulto", "[wrong/missing age]"
+    )
+  )
+}
+
+
+
+
+
+factorize_centers <- function(x, use_city = TRUE) {
+
+  city_labels <- as.character(centers_table[["center"]])
+
+  if (use_city) {
+    city_labels <- stringr::str_c(
+      city_labels,
+       as.character(centers_table[["center_city"]])
+    ) |>
+      stringr::str_trim()
+  }
+
+  x |>
+    factor(
+      levels = centers_table[["id"]],
+      labels = city_labels
+    )
+}
+
+
+
+

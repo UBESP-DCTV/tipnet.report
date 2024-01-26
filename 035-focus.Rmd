@@ -1,0 +1,299 @@
+# Focus sul ricovero {#focus .tabset .tabset-fade .tabset-pills}
+
+<!-- cat("## Overview {-}") -->
+
+
+
+## Insorgenza di nuova diagnosi/comorbidità {.tabset .tabset-dropdown}
+
+### 	Insufficienza d'organo insorta durante il ricovero
+```{r, eval=!params$export}
+focusReportUI("f_insufficienza")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "f_insufficienza",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "insufficienza"
+)
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+focusReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_insufficienza_completed"]],
+  what = "insufficienza"
+)
+```
+
+### Macro-diagnosi
+```{r, eval=!params$export}
+focusReportUI("f_insuff_organo_ricovero")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "f_insuff_organo_ricovero",
+  data = data_ranged[["full_filtered"]],
+  type = "checkbox",
+  dict = insuff_organo_ricovero  # internal db in data-raw/internal-data.R
+)
+```
+
+
+
+## Procedure durante il ricovero {.tabset .tabset-dropdown}
+
+### Procedure ricovero
+```{r, eval=!params$export}
+focusReportUI("f_procedure_rico")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "f_procedure_rico",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "procedure_rico"
+  )
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+focusReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_procedure_rico_completed"]],
+  what = "procedure_rico"
+)
+```
+
+### Quali procedure
+
+```{r, eval=!params$export}
+focusReportUI("f_procedure_ricovero_2")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "f_procedure_ricovero_2",
+  data = data_ranged[["full_filtered"]],
+  type = "checkbox",
+  dict = procedure_ricovero  # internal db in data-raw/internal-data.R
+)
+```
+
+
+
+## Nutrizione {.tabset .tabset-dropdown}
+```{r, eval=!params$export}
+focusReportUI("f_nutrizione")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "f_nutrizione",
+  data = data_ranged[["full_filtered"]],
+  type = "checkbox",
+  dict = nutrizione # internal db in data-raw/internal-data.R
+  )
+```
+
+
+
+## Procedure ventilazione {.tabset .tabset-dropdown}
+
+
+
+### Motivo vam
+```{r, eval=!params$export}
+focusReportUI("f_ventilazione")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "f_ventilazione",
+  data = data_ranged[["full_filtered"]],
+  type = "checkbox",
+  dict = ventilazione  # internal db in data-raw/internal-data.R
+  )
+```
+
+
+### Quando è iniziata la ventilazione in degenza?
+```{r, eval=!params$export}
+focusReportUI("f_vent_iniz")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "f_vent_iniz",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "vent_iniz2"
+ )
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+focusReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_vent_iniz_completed"]],
+  what = "vent_iniz2"
+)
+```
+
+### Tecnica utilizzata
+```{r, eval=!params$export}
+focusReportUI("f_niv_it")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "f_niv_it",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "niv_it"
+  )
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+focusReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_niv_it_completed"]],
+  what = "niv_it"
+)
+```
+
+### Durata ventilazione
+
+```{r, eval=!params$export}
+focusReportUI("f_niv_it_tot")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "f_niv_it_tot",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "niv_it_tot"
+  )
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+focusReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_niv_it_tot_completed"]],
+  what = "niv_it_tot"
+)
+```
+
+## Scheda infezioni {.tabset .tabset-dropdown}
+
+### Infezione all'ingresso
+```{r, eval=!params$export}
+focusReportUI("f_inf_ingresso_tip")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "f_inf_ingresso_tip",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "inf_ingresso_tip"
+  )
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+focusReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_inf_ingresso_tip_completed"]],
+  what = "inf_ingresso_tip"
+)
+```
+### Sede infezione
+```{r, eval=!params$export}
+focusReportUI("f_sede_inf")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "f_sede_inf",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "sede_inf2"
+  )
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+focusReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_sede_inf_completed"]],
+  what = "sede_inf2"
+)
+```
+
+### Diagnosi infezione
+```{r, eval=!params$export}
+focusReportUI("f_diagnosi_inf")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "f_diagnosi_inf",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "diagnosi_inf"
+  )
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+focusReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_diagnosi_inf_completed"]],
+  what = "diagnosi_inf"
+)
+```
+
+### Tipologia infezione
+```{r, eval=!params$export}
+focusReportUI("f_tipo_inf")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "f_tipo_inf",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "tipo_inf"
+  )
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+focusReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_tipo_inf_completed"]],
+  what = "tipo_inf"
+)
+```
+### Infezione evoluta in sepsi
+```{r, eval=!params$export}
+focusReportUI("f_sepsi")
+```
+
+```{r, context = "server", eval=!params$export}
+focusReport(
+  "f_sepsi",
+  data = data_ranged[["full_filtered"]],
+  type = "centervar",
+  what = "sepsi"
+  )
+```
+
+```{r, context = "server", eval=params$export, fig.height=11}
+focusReportStatic(
+  data = data_ranged[["full_filtered"]](),
+  completed = params[["d_sepsi_completed"]],
+  what = "sepsi"
+)
+```
+

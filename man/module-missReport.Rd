@@ -25,10 +25,10 @@ General description
 }
 \section{Functions}{
 \itemize{
-\item \code{missReportUI}: user interface
+\item \code{missReportUI()}: user interface
 
-\item \code{missReport}: server function
+\item \code{missReport()}: server function
 
-\item \code{missReportStatic}: static report function
+\item \code{missReportStatic()}: static report function
+
 }}
-

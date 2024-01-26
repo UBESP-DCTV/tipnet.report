@@ -10,6 +10,7 @@ source("renv/activate.R")
 # }
 #
 #
-# options(
-#   tipnet.dev = TRUE
-# )
+if (interactive()) {
+  options(tipnet.dev = TRUE)
+  httr::set_config(httr::config(ssl_verifypeer = FALSE))
+}

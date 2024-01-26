@@ -23,9 +23,28 @@ NULL
 missReportUI <- function(id, data) {
   ns <- NS(id)
 
+  all_sheets <- c(
+    "anagrafica", "accettazione", "degenza", "dimissione",
+    "infezione", "ingresso", "punteggio_di_aristotle",
+    "pelod_scheda_facoltativa", "pim", "procedure_di_ventilazione"
+  ) %>%
+    purrr::set_names(str_to_sentence(str_replace_all(., "_", " ")))
+
   fluidPage(
     fluidRow(
-      column(12, plotOutput(ns("out_plot")))
+      column(12, textOutput(ns("txt")))
+    ),
+    fluidRow(
+      column(12, checkboxGroupInput(
+        ns("active_sheets"),
+        label = "Select REDCap sheets to consider",
+        choices = all_sheets,
+        selected = all_sheets,
+        inline = TRUE
+      ))
+    ),
+    fluidRow(
+      column(12, plotOutput(ns("miss_plot")))
     ),
     fluidRow(
       column(12, selectInput(ns("center"),
@@ -35,7 +54,7 @@ missReportUI <- function(id, data) {
       ))
     ),
     fluidRow(
-      column(12, DT::DTOutput(ns("out_table")))
+      column(12, DT::DTOutput(ns("miss_table")))
     )
   )
 }
@@ -46,11 +65,18 @@ missReportUI <- function(id, data) {
 missReport <- function(id, data) {
   callModule(id = id, function(input, output, session) {
 
-    data_to_use <- reactive({
-      miss_dataToUse(data)
+    n_missing <- reactive({
+      map_int(data(), ~sum(is.na(.)))
+    })
+    are_w_missing <- reactive({
+      n_missing() > 0
     })
 
-    output$out_plot <- renderPlot(
+    data_to_use <- reactive({
+      miss_dataToUse(data(), input$active_sheets)
+    })
+
+    output$miss_plot <- renderPlot(
       miss_dataPlot(data_to_use())
     )
 
@@ -58,10 +84,15 @@ missReport <- function(id, data) {
       req(input$center)
     })
 
-    output$out_table <- DT::renderDT(
+    output$miss_table <- DT::renderDT(
       miss_dataTbl(data_to_use(), center()),
-      filter = list(position = "top", clear = TRUE)
+      filter = list(position = "top", clear = TRUE),
+      server=FALSE
     )
+
+    output$txt <- renderText(glue::glue(
+        "Overall, there are {sum(are_w_missing())} variables with some missing data (out of {length(data())}) for a total number of {sum(n_missing())} missing entries in the whole dataset ({round(100 * mean(is.na(data())), 2)}% of missingness)."
+    ))
   })
 }
 
@@ -69,7 +100,13 @@ missReport <- function(id, data) {
 #' @describeIn module-missReport static report function
 #' @export
 missReportStatic <- function(data, center) {
+  n_missing <- map_int(data, ~sum(is.na(.)))
+  are_w_missing <- n_missing > 0
   data_to_use <- miss_dataToUse(data)
+
+  glue::glue(
+    "Overall, there are {sum(are_w_missing)} variables with some missing data (out of {length(data)}) for a total number of {sum(n_missing)} missing entries in the whole dataset ({round(100 * mean(is.na(data)), 2)}% of missingness)."
+  )
 
   print(miss_dataPlot(data_to_use))
 

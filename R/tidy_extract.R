@@ -20,7 +20,11 @@
 #'   tidy_extract(tipnet_raw, "meta")
 #' }
 #'
-tidy_extract <- function(data, type = c("data", "meta")) {
+tidy_extract <- function(
+    data,
+    type = c("data", "meta"),
+    use_city = TRUE
+) {
   type <- match.arg(type)
 
   if (type == "meta") {
@@ -41,7 +45,11 @@ tidy_extract <- function(data, type = c("data", "meta")) {
         center = .data$redcap_data_access_group,
         fields = .data$redcap_event_name
       ) %>%
-      dplyr::mutate(center = factorize_centers(.data$center))
+      dplyr::mutate(
+        center = factorize_centers(.data$center, use_city = use_city)
+      ) %>%
+      # dplyr::filter(center %in% c("<MISSING>", "", "Prova")) %>%
+      dplyr::mutate(center = forcats::fct_drop(.data$center))
   }
 
   if (type == "meta_data") {

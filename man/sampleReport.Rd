@@ -17,12 +17,12 @@ General description
 }
 \section{Functions}{
 \itemize{
-\item \code{sampleReportUI}: user interface
+\item \code{sampleReportUI()}: user interface
 
 User Interface description
 
-\item \code{sampleReport}: server function
+\item \code{sampleReport()}: server function
 
 Server description
-}}
 
+}}

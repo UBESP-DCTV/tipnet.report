@@ -1,6 +1,6 @@
 Package: tipnet.report
 Title: TIPNet reports
-Version: 0.0.1
+Version: 0.0.1.9002
 Authors@R: 
     person("Corrado", "Lanera", , "corrado.lanera@gmail.com", role = c("aut", "cre", "cph"))
 Description: The goal of tipnet.report is to implement and collect all the
@@ -45,4 +45,4 @@ Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3

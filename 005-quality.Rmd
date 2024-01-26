@@ -1,24 +1,24 @@
-# Quality {#quality .tabset .tabset-fade .tabset-pills}
+# Qualità Dati {#quality .tabset .tabset-fade .tabset-pills}
 
 ## Overview {-}
 
-A record is considered _completed_ when it has at least the sheets 
-**anagrafica**, **accettazione**, **pim**, **dimissione** marked as completed.
+Un record si considera _completato_ quando ha almeno le schede 
+**anagrafica**, **accettazione**, **pim**, **dimissione** contrassegnati come completati.
 
 ---
 
-## Complete records {.tabset .tabset-dropdown}
+## Record completi {.tabset .tabset-dropdown}
 
 ```{r, eval=!params$export}
 qualityReportUI("q_overall")
 ```
 
 ```{r, context = "server", eval=!params$export}
-qualityReport("q_overall", data = full_records)
+qualityReport("q_overall", data = data_ranged[["full_filtered"]])
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
-qualityReportStatic(full_records,
+qualityReportStatic(data_ranged[["full_filtered"]](),
   params$q_overall_completed,
   params$q_overall_type
 )
@@ -26,97 +26,49 @@ qualityReportStatic(full_records,
 
 
 
+## Missing & Outlier {.tabset .tabset-dropdown}
+
+Al momento si considerano due tipi di errori:
+
+1. Dati mancanti.
+
+2. Valori anomali al di fuori di un intervallo ragionevole, cioè con una distanza dalla mediana superiore a 1,5 volte l'inter quartile.
+
+
+### Dati mancanti
 
 
 
-
-
-## Hospitalized {.tabset .tabset-dropdown}
-
-```{r, context = "server"}
-data_hosp <- dplyr::filter(full_records, !is.na(reparto))
-```
-
-Records are considered related to an "hospitalized" patient if the field 
-**reparto** is not missing in the sheet **dimissione**.
-
-```{r, eval=!params$export}
-qualityReportUI("q_hosp")
-```
-
-```{r, context = "server", eval=!params$export}
-qualityReport("q_hosp", data = data_hosp)
-```
-
-```{r, context = "server", eval=params$export, fig.height=11}
-qualityReportStatic(data_hosp,
-  params$q_hosp_completed,
-  params$q_hosp_type
-)
-```
-
-
-
-
-
-
-
-
-## Data errors {.tabset .tabset-dropdown}
-
-Two types of errors are considered at the moment:
-
-1. Missing data.
-
-2. Outlier values out of reasonable range, i.e., which have a distance
-   from the median that is farther than 1.5 times the inter quartile
-   range.
-
-
-### Missing values
-
-
-```{r}
-n_missing <- map_int(full_records, ~sum(is.na(.)))
-are_w_missing <- n_missing > 0
-```
-
-Overall, there are `r sum(are_w_missing)` variables with some missing
-data (out of `r length(full_records)`) for a total number of
-`r sum(n_missing)` missing entries in the whole dataset
-(`r round(100 * mean(is.na(full_records)), 2)`% of missingness).
 
 ```{r, eval=!params$export}
 missReportUI("q_miss", data = full_records)
 ```
 
 ```{r, context = "server", eval=!params$export}
-missReport("q_miss", data = full_records)
+missReport("q_miss", data = data_ranged[["full_filtered"]])
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
-missReportStatic(data = full_records, center = params$q_miss_center)
+missReportStatic(data = data_ranged[["full_filtered"]](),
+                 center = params$q_miss_center)
 ```
 
 
 
 
-### Possible errors into the data
+### Outlier
 
-
-For numerical variables, outliers are considered possible errors, i.e.
-values farther than 1.5 times the inter quartile range from the median.
 
 ```{r, eval=!params$export}
-outlierReportUI("q_err", data = outliers)
+outlierReportUI("q_err", data = full_records)
 ```
 
 ```{r, context = "server", eval=!params$export}
-outlierReport("q_err", data = outliers)
+outlierReport("q_err", data = data_ranged[["outliers_filtered"]])
 ```
 
 ```{r, context = "server", eval=params$export, fig.height=11}
-outlierReportStatic(data = outliers, center = params$q_err_center)
+outlierReportStatic(data = data_ranged[["outliers_filtered"]](), center = params$q_err_center)
 ```
 
 

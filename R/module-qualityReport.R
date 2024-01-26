@@ -49,12 +49,15 @@ qualityReportUI <- function(id) {
 #' @export
 qualityReport <- function(id, data) {
 
-  are_out_age <- quality_areOutAge(data)
 
   callModule(id = id, function(input, output, session) {
 
+    are_out_age <- reactive({
+      quality_areOutAge(data())
+    })
+
     data_to_use <- reactive({
-      quality_dataToUse(data, completed())
+      quality_dataToUse(data(), completed())
     })
 
     fun_y <- reactive({
@@ -70,7 +73,7 @@ qualityReport <- function(id, data) {
     output$stat_global <- renderText(
       quality_statGlobal(data_to_use(), completed())
     )
-    output$out_of_age <- renderText(quality_outOfAge(are_out_age))
+    output$out_of_age <- renderText(quality_outOfAge(are_out_age()))
 
     output$plot_global <- renderPlot({
       quality_completeDataPlot(data_to_use(), fun_y(), completed())
