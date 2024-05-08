@@ -70,7 +70,7 @@ factorize_centers <- function(x, use_city = TRUE) {
   if (use_city) {
     city_labels <- stringr::str_c(
       city_labels,
-       as.character(centers_table[["center_city"]])
+       " (", as.character(centers_table[["center_city"]]), ")"
     ) |>
       stringr::str_trim()
   }

@@ -1,5 +1,4 @@
 ## code to prepare `tipnet_db` dataset goes here
-library(assertive) # it should precede tidyverse
 library(tidyverse)
 library(lubridate)
 library(janitor)
