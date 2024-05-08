@@ -50,9 +50,7 @@ centervar_plot <- function(.db, what, reported_name) {
           colour = stringr::str_to_sentence(reported_name)
         )
     }
-  }
-
-  else {
+  } else {
     function(p) {
       p +
         geom_bar(
@@ -143,7 +141,7 @@ transform_centervar <- function(x, what) {
     }
   ) |>
     dplyr::mutate(
-      center = forcats::fct_inseq(.data[["center"]]) |>
+      center = forcats::fct_infreq(.data[["center"]]) |>
         forcats::fct_rev()
     )
 }
@@ -151,7 +149,10 @@ transform_centervar <- function(x, what) {
 transform_centervar_default <- function(x, what) {
   x |>
     dplyr::mutate(
-      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+      dplyr::across(
+        dplyr::all_of(what),
+        \(x) forcats::fct_na_value_to_level(x, "(Missing)")
+      )
     )
 }
 
@@ -348,7 +349,10 @@ transform_centervar_branched <- function(
 
   res <- x |>
     dplyr::mutate(
-      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+      dplyr::across(
+        dplyr::all_of(what),
+        \(x) forcats::fct_na_value_to_level(x, "(Missing)")
+      )
     )
 
   if (sum(c(branchvar, branchvar) == "<null>") == 1) {
@@ -499,7 +503,11 @@ transform_centervar_nonmissing_var_niv <- function(x, what,var) {
   checkmate::assert_string(what)
   x |> dplyr::filter(!is.na(.data[[var]])) |>
     dplyr::mutate(
-      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na))
+      dplyr::across(
+        dplyr::all_of(what),
+        \(x) forcats::fct_na_value_to_level(x, "(Missing)")
+      )
+    )
 
 }
 
@@ -508,7 +516,10 @@ transform_centervar_nonmissing_var_niv <- function(x, what,var) {
 #  checkmate::assert_string(what)
 #  x |>
 #    dplyr::mutate(
-#      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+#      dplyr::across(
+#        dplyr::all_of(what),
+#          \(x) forcats::fct_na_value_to_level(x, "(Missing)")
+#      )
 #    ) |>
 #    dplyr::filter(.data[["tipologia"]] == "medico")
 
@@ -519,7 +530,10 @@ transform_centervar_nonmissing_var_niv <- function(x, what,var) {
 #transform_centervar_default <- function(x, what) {
 #  x |>
 #    dplyr::mutate(
-#      dplyr::across(dplyr::all_of(what), forcats::fct_explicit_na)
+#      dplyr::across(
+#        dplyr::all_of(what),
+#          \(x) forcats::fct_na_value_to_level(x, "(Missing)")
+#      )
 #    )
 #  }
 
