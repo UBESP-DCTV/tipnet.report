@@ -51,8 +51,8 @@ htmltools::img(
 if (interactive()) {
   params <- list(
     year = 2024,
-    first_month = 1,
-    last_month = 6
+    first_month = 7,
+    last_month = 12
   )
 }
 
@@ -315,26 +315,27 @@ eval_summaries <- function(tip_data, current_center = NULL) {
     return(NULL)
   }
 
-  tip_data <- select(tip_data, -center)
+  tip_data <- dplyr::select(tip_data, -center)
 
   Accettazione <- anagrafica %>%
-    inner_join(tip_data) %>%
-    select(gender, etnia)
+    dplyr::inner_join(tip_data) %>%
+    dplyr::select(gender, etnia)
 
   names(Accettazione) <- label(Accettazione)
   label(Accettazione, self = FALSE) <- c("", "")
 
-  desc_base <- describe(Accettazione)
+  desc_base <- Hmisc::describe(Accettazione)
 
   desc_tip <- summary(
     formula = gender ~ .,
-    data = select(tip_data, -codpat, -redcap_repeat_instance) %>%
-      remove_empty(),
+    data = tip_data |>
+      dplyr::select(-codpat, -redcap_repeat_instance) %>%
+      remove_empty(which = c("rows", "cols")),
     method = "reverse",
     overall = TRUE,
     continue = 3
   ) %>%
-    tidy_summary(digits = 3, exclude1 = FALSE, long = TRUE, prmsd = TRUE)
+    depigner::tidy_summary(digits = 3, exclude1 = FALSE, long = TRUE, prmsd = TRUE)
 
 
   smr <- tip_data %>%
@@ -348,7 +349,7 @@ eval_summaries <- function(tip_data, current_center = NULL) {
   list(desc_base = desc_base, desc_tip = desc_tip, smr = smr)
 }
 
-safe_eval <- safely(eval_summaries)
+safe_eval <- purrr::safely(eval_summaries)
 
 overall <- safe_eval(data_to_describe)
 
@@ -382,6 +383,9 @@ centers <- levels(data_to_describe$center) %>%
   ))
 
 center_summaries <- centers %>%
+  purrr::set_names(
+    glue::glue("DAG encoded: {stringr::str_remove(., ' \\\\(\\\\)')}")
+  ) %>%
   purrr::map(safe_eval, tip_data = data_to_describe)
 
 

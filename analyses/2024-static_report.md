@@ -185,10 +185,10 @@ iVBORw0KGgoAAAANSUhEUgAAABkAAAANCAMAAABrcDXcAAAACVBMVEUAAADMzMz////1iUV5AAAAIklE
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                               N           maschio  (N=810)               femmina  (N=626)                ambiguo  (N=1)                Combined  (N=1437)      
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------ ------------------------------ ------------------------------ ------------------------------- ------------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   1437    156.000/1169.500/3524.500      231.000/1134.500/3592.250        60.000/ 60.000/ 60.000        182.000/1150.000/3549.000   
+Eta&nbsp;(giorni)                                                                                                                                                                                   1437    156.000/1169.500/3524.500      231.000/1134.500/3592.250        60.000/ 60.000/ 60.000        182.000/1150.000/3549.000   
                                                                                                                                                                                                                2010.047+/-2181.150            2027.128+/-2180.962                  60.000+/-                 2016.131+/-2180.177      
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             1437                                                                                                                              
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             1437                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                     11% ( 87)                      10% ( 61)                        0% ( 0)                       10% (148)           
 
@@ -206,7 +206,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                         0% ( 0)                        0% ( 0)                         0% ( 0)                        0% ( 0)            
 
-Priorità                                                                                                                                                                                            1430                                                                                                                              
+Priorita                                                                                                                                                                                            1430                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                           54% (433)                      52% (325)                       100% ( 1)                      53% (759)           
 
@@ -262,79 +262,79 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                              2% ( 7)                        2% ( 7)                         0% ( 0)                        2% ( 14)           
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   1430                                                                                                                              
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   1430                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                          59% (476)                      57% (355)                       100% ( 1)                      58% (832)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                          41% (331)                      43% (267)                        0% ( 0)                       42% (598)           
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      1437                                                                                                                              
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      1437                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       88% ( 714)                     87% ( 544)                      100% ( 1)                      88% (1259)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        12% ( 96)                      13% ( 82)                        0% ( 0)                       12% ( 178)          
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        1437                                                                                                                              
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        1437                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       97% ( 788)                     97% ( 606)                      100% ( 1)                      97% (1395)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                         3% ( 22)                       3% ( 20)                        0% ( 0)                        3% ( 42)           
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       1437                                                                                                                              
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       1437                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       82% ( 668)                     84% ( 526)                      100% ( 1)                      83% (1195)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        18% ( 142)                     16% ( 100)                       0% ( 0)                       17% ( 242)          
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    1437                                                                                                                              
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    1437                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       95% ( 768)                     96% ( 598)                      100% ( 1)                      95% (1367)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                         5% ( 42)                       4% ( 28)                        0% ( 0)                        5% ( 70)           
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  1437                                                                                                                              
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  1437                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       93% ( 754)                     94% ( 590)                      100% ( 1)                      94% (1345)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                         7% ( 56)                       6% ( 36)                        0% ( 0)                        6% ( 92)           
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            1437                                                                                                                              
+Comorbidita:&nbsp;renale                                                                                                                                                                            1437                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       97% ( 783)                     96% ( 601)                       0% ( 0)                       96% (1384)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                         3% ( 27)                       4% ( 25)                       100% ( 1)                       4% ( 53)           
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      1437                                                                                                                              
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      1437                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       91% ( 738)                     91% ( 572)                      100% ( 1)                      91% (1311)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                         9% ( 72)                       9% ( 54)                        0% ( 0)                       9% ( 126)           
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        1437                                                                                                                              
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        1437                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       90% ( 733)                     87% ( 543)                      100% ( 1)                      89% (1277)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        10% ( 77)                      13% ( 83)                        0% ( 0)                       11% ( 160)          
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       1437                                                                                                                              
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       1437                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       90% ( 733)                     91% ( 571)                      100% ( 1)                      91% (1305)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        10% ( 77)                       9% ( 55)                        0% ( 0)                       9% ( 132)           
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      1437                                                                                                                              
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      1437                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       94% ( 765)                     96% ( 599)                      100% ( 1)                      95% (1365)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                         6% ( 45)                       4% ( 27)                        0% ( 0)                        5% ( 72)           
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             1437                                                                                                                              
+Comorbidita:&nbsp;altro                                                                                                                                                                             1437                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       97% ( 787)                     97% ( 609)                      100% ( 1)                      97% (1397)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                         3% ( 23)                       3% ( 17)                        0% ( 0)                        3% ( 40)           
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     1437                                                                                                                              
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     1437                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                           43% (351)                      46% (285)                        0% ( 0)                       44% (636)           
 
@@ -348,11 +348,11 @@ Numero&nbsp;di&nbsp;comorbidità                                                
 
 &nbsp;&nbsp;&nbsp;&nbsp;5                                                                                                                                                                                            0% ( 3)                        1% ( 4)                         0% ( 0)                        0% ( 7)            
 
-Comorbidità:&nbsp;gastroenterologica                                                                                                                                                                105                                                                                                                               
+Comorbidita:&nbsp;gastroenterologica                                                                                                                                                                105                                                                                                                               
 
 &nbsp;&nbsp;&nbsp;&nbsp;gastroenterologica                                                                                                                                                                          100% ( 53)                     100% ( 52)                                                     100% (105)          
 
-Comorbidità:&nbsp;trapiantologica                                                                                                                                                                    5                                                                                                                                
+Comorbidita:&nbsp;trapiantologica                                                                                                                                                                    5                                                                                                                                
 
 &nbsp;&nbsp;&nbsp;&nbsp;trapiantologica                                                                                                                                                                             100% ( 1)                      100% ( 4)                                                      100% ( 5)           
 
@@ -440,7 +440,7 @@ SMR PIM3 (overall):  0.65
 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 1  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -559,10 +559,10 @@ iVBORw0KGgoAAAANSUhEUgAAABkAAAANCAMAAABrcDXcAAAACVBMVEUAAADMzMz////1iUV5AAAAIklE
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                               N          maschio  (N=145)               femmina  (N=114)              Combined  (N=259)       
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----- ------------------------------ ------------------------------ ------------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   259     95.000/1356.000/3619.000      197.000/ 769.000/4015.000      139.500/1241.000/3868.000   
+Eta&nbsp;(giorni)                                                                                                                                                                                   259     95.000/1356.000/3619.000      197.000/ 769.000/4015.000      139.500/1241.000/3868.000   
                                                                                                                                                                                                               2239.517+/-2693.179            2218.833+/-2590.520            2230.413+/-2643.414      
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             259                                                                                              
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             259                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                     16% (23)                       12% (14)                       14% (37)           
 
@@ -580,7 +580,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                        0% ( 0)                        0% ( 0)                        0% ( 0)            
 
-Priorità                                                                                                                                                                                            256                                                                                              
+Priorita                                                                                                                                                                                            256                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                          25% ( 36)                      29% ( 33)                      27% ( 69)           
 
@@ -636,79 +636,79 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                             0% ( 0)                        5% ( 2)                        2% ( 2)            
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   256                                                                                              
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   256                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                         69% ( 99)                      75% ( 84)                      71% (183)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                         31% ( 45)                      25% ( 28)                      29% ( 73)           
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      259                                                                                              
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      259                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      72% (104)                      68% ( 78)                      70% (182)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       28% ( 41)                      32% ( 36)                      30% ( 77)           
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        259                                                                                              
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        259                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      97% (141)                      95% (108)                      96% (249)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        3% ( 4)                        5% ( 6)                        4% ( 10)           
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       259                                                                                              
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       259                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      77% (112)                      79% ( 90)                      78% (202)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       23% ( 33)                      21% ( 24)                      22% ( 57)           
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    259                                                                                              
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    259                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      97% (141)                      99% (113)                      98% (254)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        3% ( 4)                        1% ( 1)                        2% ( 5)            
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  259                                                                                              
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  259                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      99% (143)                      96% (110)                      98% (253)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        1% ( 2)                        4% ( 4)                        2% ( 6)            
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            259                                                                                              
+Comorbidita:&nbsp;renale                                                                                                                                                                            259                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      97% (140)                      96% (109)                      96% (249)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        3% ( 5)                        4% ( 5)                        4% ( 10)           
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      259                                                                                              
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      259                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      95% (138)                      90% (103)                      93% (241)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        5% ( 7)                       10% ( 11)                       7% ( 18)           
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        259                                                                                              
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        259                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      93% (135)                      80% ( 91)                      87% (226)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        7% ( 10)                      20% ( 23)                      13% ( 33)           
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       259                                                                                              
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       259                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      96% (139)                      91% (104)                      94% (243)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        4% ( 6)                        9% ( 10)                       6% ( 16)           
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      259                                                                                              
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      259                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      99% (144)                      98% (112)                      99% (256)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        1% ( 1)                        2% ( 2)                        1% ( 3)            
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             259                                                                                              
+Comorbidita:&nbsp;altro                                                                                                                                                                             259                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      95% (138)                      95% (108)                      95% (246)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        5% ( 7)                        5% ( 6)                        5% ( 13)           
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     259                                                                                              
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     259                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                          33% ( 48)                      28% ( 32)                      31% ( 80)           
 
@@ -720,7 +720,7 @@ Numero&nbsp;di&nbsp;comorbidità                                                
 
 &nbsp;&nbsp;&nbsp;&nbsp;4                                                                                                                                                                                           0% ( 0)                        4% ( 5)                        2% ( 5)            
 
-Comorbidità:&nbsp;gastroenterologica                                                                                                                                                                15                                                                                               
+Comorbidita:&nbsp;gastroenterologica                                                                                                                                                                15                                                                                               
 
 &nbsp;&nbsp;&nbsp;&nbsp;gastroenterologica                                                                                                                                                                         100% ( 8)                      100% ( 7)                      100% (15)           
 
@@ -804,7 +804,7 @@ SMR PIM2:  0.62
 SMR PIM3:  0.97 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 2  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -907,10 +907,10 @@ iVBORw0KGgoAAAANSUhEUgAAAAoAAAANCAMAAACn6Q83AAAACVBMVEUAAADMzMz////1iUV5AAAAIElE
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                              N           maschio  (N=10)                 femmina  (N=10)                Combined  (N=20)        
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---- ------------------------------- ------------------------------- -------------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   20    1585.250/4138.500/5696.000       510.750/1400.000/3853.250       948.000/2147.000/4467.750   
+Eta&nbsp;(giorni)                                                                                                                                                                                   20    1585.250/4138.500/5696.000       510.750/1400.000/3853.250       948.000/2147.000/4467.750   
                                                                                                                                                                                                               3602.900+/-2369.564             2067.300+/-1885.575             2835.100+/-2228.079      
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             20                                                                                                 
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             20                                                                                                 
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                     0% (0)                          10% (1)                         5% (1)             
 
@@ -928,7 +928,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                        0% (0)                          0% (0)                          0% (0)             
 
-Priorità                                                                                                                                                                                            20                                                                                                 
+Priorita                                                                                                                                                                                            20                                                                                                 
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                          20% ( 2)                        20% ( 2)                        20% ( 4)            
 
@@ -984,71 +984,71 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                             0% (0)                          0% (0)                          0% (0)             
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   20                                                                                                 
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   20                                                                                                 
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                         60% ( 6)                        50% ( 5)                        55% (11)            
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                         40% ( 4)                        50% ( 5)                        45% ( 9)            
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      20                                                                                                 
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      20                                                                                                 
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      100% (10)                       100% (10)                       100% (20)           
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        20                                                                                                 
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        20                                                                                                 
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      100% (10)                       100% (10)                       100% (20)           
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       20                                                                                                 
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       20                                                                                                 
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      100% (10)                       90% ( 9)                        95% (19)            
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        0% ( 0)                        10% ( 1)                         5% ( 1)            
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    20                                                                                                 
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    20                                                                                                 
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      100% (10)                       90% ( 9)                        95% (19)            
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        0% ( 0)                        10% ( 1)                         5% ( 1)            
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  20                                                                                                 
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  20                                                                                                 
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      90% ( 9)                        100% (10)                       95% (19)            
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       10% ( 1)                         0% ( 0)                         5% ( 1)            
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            20                                                                                                 
+Comorbidita:&nbsp;renale                                                                                                                                                                            20                                                                                                 
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      90% ( 9)                        100% (10)                       95% (19)            
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       10% ( 1)                         0% ( 0)                         5% ( 1)            
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      20                                                                                                 
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      20                                                                                                 
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      100% (10)                       100% (10)                       100% (20)           
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        20                                                                                                 
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        20                                                                                                 
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      80% ( 8)                        70% ( 7)                        75% (15)            
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       20% ( 2)                        30% ( 3)                        25% ( 5)            
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       20                                                                                                 
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       20                                                                                                 
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      100% (10)                       90% ( 9)                        95% (19)            
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        0% ( 0)                        10% ( 1)                         5% ( 1)            
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      20                                                                                                 
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      20                                                                                                 
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      90% ( 9)                        100% (10)                       95% (19)            
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       10% ( 1)                         0% ( 0)                         5% ( 1)            
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             20                                                                                                 
+Comorbidita:&nbsp;altro                                                                                                                                                                             20                                                                                                 
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      100% (10)                       100% (10)                       100% (20)           
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     20                                                                                                 
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     20                                                                                                 
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                          50% ( 5)                        50% ( 5)                        50% (10)            
 
@@ -1056,7 +1056,7 @@ Numero&nbsp;di&nbsp;comorbidità                                                
 
 &nbsp;&nbsp;&nbsp;&nbsp;2                                                                                                                                                                                           0% ( 0)                        10% ( 1)                         5% ( 1)            
 
-Comorbidità:&nbsp;gastroenterologica                                                                                                                                                                1                                                                                                  
+Comorbidita:&nbsp;gastroenterologica                                                                                                                                                                1                                                                                                  
 
 &nbsp;&nbsp;&nbsp;&nbsp;gastroenterologica                                                                                                                                                                         100% ( 1)                                                       100% ( 1)           
 
@@ -1151,7 +1151,7 @@ SMR PIM2:  4.73
 SMR PIM3:  5 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 3  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -1254,10 +1254,10 @@ iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAMAAACXZR4WAAAACVBMVEUAAADMzMz////1iUV5AAAAGklE
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                               N          maschio  (N=80)                femmina  (N=54)               Combined  (N=134)       
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----- ------------------------------ ------------------------------ ------------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   134     82.750/ 732.500/4687.250      124.250/1577.500/3982.250       99.000/1145.500/4248.750   
+Eta&nbsp;(giorni)                                                                                                                                                                                   134     82.750/ 732.500/4687.250      124.250/1577.500/3982.250       99.000/1145.500/4248.750   
                                                                                                                                                                                                               2268.988+/-2413.164            2066.796+/-2013.427            2187.507+/-2254.852      
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             134                                                                                              
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             134                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                     14% (11)                       11% ( 6)                       13% (17)           
 
@@ -1275,7 +1275,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                        0% ( 0)                        0% ( 0)                        0% ( 0)            
 
-Priorità                                                                                                                                                                                            133                                                                                              
+Priorita                                                                                                                                                                                            133                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                          98% ( 78)                      89% ( 47)                      94% (125)           
 
@@ -1331,79 +1331,79 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                             0% ( 0)                        7% ( 1)                        3% ( 1)            
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   133                                                                                              
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   133                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                          69% (55)                       47% (25)                       60% (80)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                          31% (25)                       53% (28)                       40% (53)           
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      134                                                                                              
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      134                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      98% ( 78)                      98% ( 53)                      98% (131)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        2% ( 2)                        2% ( 1)                        2% ( 3)            
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        134                                                                                              
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        134                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      91% ( 73)                      98% ( 53)                      94% (126)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        9% ( 7)                        2% ( 1)                        6% ( 8)            
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       134                                                                                              
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       134                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      80% ( 64)                      83% ( 45)                      81% (109)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       20% ( 16)                       17% ( 9)                      19% ( 25)           
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    134                                                                                              
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    134                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      98% ( 78)                      98% ( 53)                      98% (131)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        2% ( 2)                        2% ( 1)                        2% ( 3)            
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  134                                                                                              
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  134                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      92% ( 74)                      93% ( 50)                      93% (124)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        8% ( 6)                        7% ( 4)                        7% ( 10)           
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            134                                                                                              
+Comorbidita:&nbsp;renale                                                                                                                                                                            134                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      98% ( 78)                      100% ( 54)                     99% (132)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        2% ( 2)                        0% ( 0)                        1% ( 2)            
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      134                                                                                              
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      134                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      95% ( 76)                      93% ( 50)                      94% (126)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        5% ( 4)                        7% ( 4)                        6% ( 8)            
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        134                                                                                              
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        134                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      94% ( 75)                      94% ( 51)                      94% (126)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        6% ( 5)                        6% ( 3)                        6% ( 8)            
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       134                                                                                              
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       134                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      85% ( 68)                      87% ( 47)                      86% (115)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       15% ( 12)                       13% ( 7)                      14% ( 19)           
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      134                                                                                              
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      134                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      91% ( 73)                      94% ( 51)                      93% (124)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        9% ( 7)                        6% ( 3)                        7% ( 10)           
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             134                                                                                              
+Comorbidita:&nbsp;altro                                                                                                                                                                             134                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      99% ( 79)                      98% ( 53)                      99% (132)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        1% ( 1)                        2% ( 1)                        1% ( 2)            
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     134                                                                                              
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     134                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                           35% (28)                       57% (31)                       44% (59)           
 
@@ -1415,7 +1415,7 @@ Numero&nbsp;di&nbsp;comorbidità                                                
 
 &nbsp;&nbsp;&nbsp;&nbsp;4                                                                                                                                                                                           0% ( 0)                        2% ( 1)                        1% ( 1)            
 
-Comorbidità:&nbsp;gastroenterologica                                                                                                                                                                13                                                                                               
+Comorbidita:&nbsp;gastroenterologica                                                                                                                                                                13                                                                                               
 
 &nbsp;&nbsp;&nbsp;&nbsp;gastroenterologica                                                                                                                                                                         100% (10)                      100% ( 3)                      100% (13)           
 
@@ -1499,7 +1499,7 @@ SMR PIM2:  0.76
 SMR PIM3:  0.91 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 4  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -1601,10 +1601,10 @@ bottom: -1ex;
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                              N         maschio  (N=5)              femmina  (N=6)             Combined  (N=11)      
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---- --------------------------- --------------------------- ---------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   11   881.000/1360.000/3004.000   223.500/ 279.000/2289.000   225.000/ 881.000/2973.000 
+Eta&nbsp;(giorni)                                                                                                                                                                                   11   881.000/1360.000/3004.000   223.500/ 279.000/2289.000   225.000/ 881.000/2973.000 
                                                                                                                                                                                                             2160.000+/-2186.567         1313.500+/-1773.592         1698.273+/-1918.507    
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             11                                                                                     
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             11                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                   20% (1)                     17% (1)                     18% (2)          
 
@@ -1622,7 +1622,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                      0% (0)                      0% (0)                      0% (0)           
 
-Priorità                                                                                                                                                                                            11                                                                                     
+Priorita                                                                                                                                                                                            11                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                         0% (0)                      17% (1)                     9% (1)           
 
@@ -1678,65 +1678,65 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                           0% (0)                      0% (0)                      0% (0)           
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   11                                                                                     
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   11                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                        20% (1)                     17% (1)                     18% (2)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                        80% (4)                     83% (5)                     82% (9)          
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      11                                                                                     
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      11                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% ( 5)                   100% ( 6)                   100% (11)         
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        11                                                                                     
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        11                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% ( 5)                   100% ( 6)                   100% (11)         
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       11                                                                                     
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       11                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% ( 5)                   100% ( 6)                   100% (11)         
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    11                                                                                     
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    11                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% ( 5)                   100% ( 6)                   100% (11)         
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  11                                                                                     
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  11                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% ( 5)                   100% ( 6)                   100% (11)         
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            11                                                                                     
+Comorbidita:&nbsp;renale                                                                                                                                                                            11                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% ( 5)                   100% ( 6)                   100% (11)         
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      11                                                                                     
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      11                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% ( 5)                   100% ( 6)                   100% (11)         
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        11                                                                                     
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        11                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    80% ( 4)                    100% ( 6)                   91% (10)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                     20% ( 1)                     0% ( 0)                     9% ( 1)          
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       11                                                                                     
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       11                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% ( 5)                   100% ( 6)                   100% (11)         
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      11                                                                                     
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      11                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% ( 5)                   100% ( 6)                   100% (11)         
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             11                                                                                     
+Comorbidita:&nbsp;altro                                                                                                                                                                             11                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% ( 5)                   100% ( 6)                   100% (11)         
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     11                                                                                     
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     11                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                        80% ( 4)                    100% ( 6)                   91% (10)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                        20% ( 1)                     0% ( 0)                     9% ( 1)          
 
-Comorbidità:&nbsp;gastroenterologica                                                                                                                                                                1                                                                                      
+Comorbidita:&nbsp;gastroenterologica                                                                                                                                                                1                                                                                      
 
 &nbsp;&nbsp;&nbsp;&nbsp;gastroenterologica                                                                                                                                                                                                   100% ( 1)                   100% ( 1)         
 
@@ -1847,7 +1847,7 @@ SMR PIM2:  0
 SMR PIM3:  0 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 5  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -1948,10 +1948,10 @@ caucasica (127, 0.730), ispanica (9, 0.052), asiatica (7, 0.040), africana (6, 0
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                               N          maschio  (N=95)                femmina  (N=79)               Combined  (N=174)       
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----- ------------------------------ ------------------------------ ------------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   174    386.000/1567.000/3666.000      992.000/2916.000/4437.000      549.500/2046.500/4232.750   
+Eta&nbsp;(giorni)                                                                                                                                                                                   174    386.000/1567.000/3666.000      992.000/2916.000/4437.000      549.500/2046.500/4232.750   
                                                                                                                                                                                                               2081.126+/-1851.478            2887.962+/-2207.623            2447.448+/-2054.810      
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             174                                                                                              
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             174                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                     2% ( 2)                        1% ( 1)                        2% ( 3)            
 
@@ -1969,7 +1969,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                        0% ( 0)                        0% ( 0)                        0% ( 0)            
 
-Priorità                                                                                                                                                                                            172                                                                                              
+Priorita                                                                                                                                                                                            172                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                           43% (40)                       42% (33)                       42% (73)           
 
@@ -2025,77 +2025,77 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                             3% ( 2)                        0% ( 0)                        2% ( 2)            
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   172                                                                                              
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   172                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                         62% ( 58)                      56% ( 44)                      59% (102)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                         38% ( 36)                      44% ( 34)                      41% ( 70)           
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      174                                                                                              
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      174                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      97% ( 92)                      92% ( 73)                      95% (165)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        3% ( 3)                        8% ( 6)                        5% ( 9)            
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        174                                                                                              
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        174                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      99% ( 94)                      95% ( 75)                      97% (169)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        1% ( 1)                        5% ( 4)                        3% ( 5)            
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       174                                                                                              
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       174                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      74% ( 70)                      87% ( 69)                      80% (139)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       26% ( 25)                      13% ( 10)                      20% ( 35)           
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    174                                                                                              
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    174                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      77% ( 73)                      84% ( 66)                      80% (139)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       23% ( 22)                      16% ( 13)                      20% ( 35)           
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  174                                                                                              
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  174                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      98% ( 93)                      99% ( 78)                      98% (171)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        2% ( 2)                        1% ( 1)                        2% ( 3)            
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            174                                                                                              
+Comorbidita:&nbsp;renale                                                                                                                                                                            174                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      100% ( 95)                     100% ( 79)                     100% (174)          
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      174                                                                                              
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      174                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      68% ( 65)                      81% ( 64)                      74% (129)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       32% ( 30)                      19% ( 15)                      26% ( 45)           
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        174                                                                                              
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        174                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      86% ( 82)                      87% ( 69)                      87% (151)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       14% ( 13)                      13% ( 10)                      13% ( 23)           
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       174                                                                                              
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       174                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      92% ( 87)                      95% ( 75)                      93% (162)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        8% ( 8)                        5% ( 4)                        7% ( 12)           
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      174                                                                                              
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      174                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      93% ( 88)                      99% ( 78)                      95% (166)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        7% ( 7)                        1% ( 1)                        5% ( 8)            
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             174                                                                                              
+Comorbidita:&nbsp;altro                                                                                                                                                                             174                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      97% ( 92)                      94% ( 74)                      95% (166)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        3% ( 3)                        6% ( 5)                        5% ( 8)            
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     174                                                                                              
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     174                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                           39% (37)                       48% (38)                       43% (75)           
 
@@ -2107,7 +2107,7 @@ Numero&nbsp;di&nbsp;comorbidità                                                
 
 &nbsp;&nbsp;&nbsp;&nbsp;4                                                                                                                                                                                           2% ( 2)                        4% ( 3)                        3% ( 5)            
 
-Comorbidità:&nbsp;gastroenterologica                                                                                                                                                                18                                                                                               
+Comorbidita:&nbsp;gastroenterologica                                                                                                                                                                18                                                                                               
 
 &nbsp;&nbsp;&nbsp;&nbsp;gastroenterologica                                                                                                                                                                         100% (10)                      100% ( 8)                      100% (18)           
 
@@ -2191,7 +2191,7 @@ SMR PIM2:  0.66
 SMR PIM3:  0.79 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 6  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -2299,10 +2299,10 @@ iVBORw0KGgoAAAANSUhEUgAAABYAAAANCAMAAACae25RAAAACVBMVEUAAADMzMz////1iUV5AAAAJklE
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                              N          maschio  (N=52)                femmina  (N=45)                 ambiguo  (N=1)                 Combined  (N=98)       
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---- ------------------------------ ------------------------------ ------------------------------- ------------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   98    259.500/ 926.500/2469.250      244.000/ 517.000/1271.000        60.000/ 60.000/ 60.000        243.250/ 738.000/1945.000   
+Eta&nbsp;(giorni)                                                                                                                                                                                   98    259.500/ 926.500/2469.250      244.000/ 517.000/1271.000        60.000/ 60.000/ 60.000        243.250/ 738.000/1945.000   
                                                                                                                                                                                                              1530.096+/-1675.730            1068.711+/-1163.689                  60.000+/-                 1303.235+/-1469.596      
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             98                                                                                                                              
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             98                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                    2% ( 1)                        0% ( 0)                         0% ( 0)                        1% ( 1)            
 
@@ -2320,7 +2320,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                       0% ( 0)                        0% ( 0)                         0% ( 0)                        0% ( 0)            
 
-Priorità                                                                                                                                                                                            98                                                                                                                              
+Priorita                                                                                                                                                                                            98                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                          69% (36)                       71% (32)                       100% ( 1)                       70% (69)           
 
@@ -2376,77 +2376,77 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                            0% ( 0)                        4% ( 1)                         0% ( 0)                        2% ( 1)            
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   98                                                                                                                              
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   98                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                         48% (25)                       60% (27)                       100% ( 1)                       54% (53)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                         52% (27)                       40% (18)                        0% ( 0)                        46% (45)           
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      98                                                                                                                              
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      98                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      94% (49)                       96% (43)                       100% ( 1)                       95% (93)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       6% ( 3)                        4% ( 2)                         0% ( 0)                        5% ( 5)            
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        98                                                                                                                              
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        98                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% (52)                       96% (43)                       100% ( 1)                       98% (96)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       0% ( 0)                        4% ( 2)                         0% ( 0)                        2% ( 2)            
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       98                                                                                                                              
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       98                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      87% (45)                       98% (44)                       100% ( 1)                       92% (90)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       13% ( 7)                       2% ( 1)                         0% ( 0)                        8% ( 8)            
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    98                                                                                                                              
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    98                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% (52)                      100% (45)                       100% ( 1)                      100% (98)           
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  98                                                                                                                              
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  98                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      98% (51)                       93% (42)                       100% ( 1)                       96% (94)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       2% ( 1)                        7% ( 3)                         0% ( 0)                        4% ( 4)            
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            98                                                                                                                              
+Comorbidita:&nbsp;renale                                                                                                                                                                            98                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      94% (49)                       80% (36)                        0% ( 0)                        87% (85)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       6% ( 3)                        20% ( 9)                       100% ( 1)                       13% (13)           
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      98                                                                                                                              
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      98                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      77% (40)                       78% (35)                       100% ( 1)                       78% (76)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       23% (12)                       22% (10)                        0% ( 0)                        22% (22)           
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        98                                                                                                                              
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        98                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      88% (46)                       76% (34)                       100% ( 1)                       83% (81)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       12% ( 6)                       24% (11)                        0% ( 0)                        17% (17)           
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       98                                                                                                                              
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       98                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      90% (47)                       98% (44)                       100% ( 1)                       94% (92)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       10% ( 5)                       2% ( 1)                         0% ( 0)                        6% ( 6)            
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      98                                                                                                                              
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      98                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      90% (47)                       96% (43)                       100% ( 1)                       93% (91)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       10% ( 5)                       4% ( 2)                         0% ( 0)                        7% ( 7)            
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             98                                                                                                                              
+Comorbidita:&nbsp;altro                                                                                                                                                                             98                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      96% (50)                      100% (45)                       100% ( 1)                       98% (96)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       4% ( 2)                        0% ( 0)                         0% ( 0)                        2% ( 2)            
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     98                                                                                                                              
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     98                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                          56% (29)                       42% (19)                        0% ( 0)                        49% (48)           
 
@@ -2460,7 +2460,7 @@ Numero&nbsp;di&nbsp;comorbidità                                                
 
 &nbsp;&nbsp;&nbsp;&nbsp;5                                                                                                                                                                                          2% ( 1)                        0% ( 0)                         0% ( 0)                        1% ( 1)            
 
-Comorbidità:&nbsp;gastroenterologica                                                                                                                                                                8                                                                                                                               
+Comorbidita:&nbsp;gastroenterologica                                                                                                                                                                8                                                                                                                               
 
 &nbsp;&nbsp;&nbsp;&nbsp;gastroenterologica                                                                                                                                                                        100% ( 4)                      100% ( 4)                                                      100% ( 8)           
 
@@ -2544,7 +2544,7 @@ SMR PIM2:  0.54
 SMR PIM3:  0.84 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 7  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -2663,10 +2663,10 @@ iVBORw0KGgoAAAANSUhEUgAAABkAAAANCAMAAABrcDXcAAAACVBMVEUAAADMzMz////1iUV5AAAAKElE
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                               N          maschio  (N=86)                femmina  (N=64)               Combined  (N=150)       
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----- ------------------------------ ------------------------------ ------------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   150    2.5000/ 360.5000/1204.7500     3.7500/ 125.0000/ 900.2500     3.2500/ 243.0000/1093.5000  
+Eta&nbsp;(giorni)                                                                                                                                                                                   150    2.5000/ 360.5000/1204.7500     3.7500/ 125.0000/ 900.2500     3.2500/ 243.0000/1093.5000  
                                                                                                                                                                                                              1054.6977+/-1505.3165           661.6094+/-1104.4388           886.9800+/-1358.8496     
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             150                                                                                              
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             150                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                     29% (25)                       34% (22)                       31% (47)           
 
@@ -2684,7 +2684,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                        0% ( 0)                        0% ( 0)                        0% ( 0)            
 
-Priorità                                                                                                                                                                                            150                                                                                              
+Priorita                                                                                                                                                                                            150                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                           66% (57)                       56% (36)                       62% (93)           
 
@@ -2740,77 +2740,77 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                             4% ( 2)                        0% ( 0)                        2% ( 2)            
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   150                                                                                              
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   150                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                          48% (41)                       47% (30)                       47% (71)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                          52% (45)                       53% (34)                       53% (79)           
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      150                                                                                              
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      150                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      84% ( 72)                      83% ( 53)                      83% (125)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       16% ( 14)                      17% ( 11)                      17% ( 25)           
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        150                                                                                              
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        150                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      99% ( 85)                      100% ( 64)                     99% (149)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        1% ( 1)                        0% ( 0)                        1% ( 1)            
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       150                                                                                              
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       150                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      91% ( 78)                      86% ( 55)                      89% (133)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        9% ( 8)                        14% ( 9)                      11% ( 17)           
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    150                                                                                              
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    150                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      98% ( 84)                      98% ( 63)                      98% (147)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        2% ( 2)                        2% ( 1)                        2% ( 3)            
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  150                                                                                              
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  150                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      93% ( 80)                      97% ( 62)                      95% (142)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        7% ( 6)                        3% ( 2)                        5% ( 8)            
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            150                                                                                              
+Comorbidita:&nbsp;renale                                                                                                                                                                            150                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      100% ( 86)                     97% ( 62)                      99% (148)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        0% ( 0)                        3% ( 2)                        1% ( 2)            
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      150                                                                                              
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      150                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      98% ( 84)                      97% ( 62)                      97% (146)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        2% ( 2)                        3% ( 2)                        3% ( 4)            
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        150                                                                                              
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        150                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      88% ( 76)                      91% ( 58)                      89% (134)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       12% ( 10)                       9% ( 6)                       11% ( 16)           
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       150                                                                                              
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       150                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      91% ( 78)                      98% ( 63)                      94% (141)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        9% ( 8)                        2% ( 1)                        6% ( 9)            
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      150                                                                                              
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      150                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      94% ( 81)                      92% ( 59)                      93% (140)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        6% ( 5)                        8% ( 5)                        7% ( 10)           
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             150                                                                                              
+Comorbidita:&nbsp;altro                                                                                                                                                                             150                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      100% ( 86)                     100% ( 64)                     100% (150)          
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     150                                                                                              
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     150                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                           55% (47)                       53% (34)                       54% (81)           
 
@@ -2824,7 +2824,7 @@ Numero&nbsp;di&nbsp;comorbidità                                                
 
 &nbsp;&nbsp;&nbsp;&nbsp;5                                                                                                                                                                                           0% ( 0)                        2% ( 1)                        1% ( 1)            
 
-Comorbidità:&nbsp;gastroenterologica                                                                                                                                                                 7                                                                                               
+Comorbidita:&nbsp;gastroenterologica                                                                                                                                                                 7                                                                                               
 
 &nbsp;&nbsp;&nbsp;&nbsp;gastroenterologica                                                                                                                                                                          100% (5)                       100% (2)                       100% (7)           
 
@@ -2896,7 +2896,7 @@ SMR PIM2:  0
 SMR PIM3:  0 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 8  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -2999,10 +2999,10 @@ iVBORw0KGgoAAAANSUhEUgAAABMAAAANCAMAAAB8UqUVAAAACVBMVEUAAADMzMz////1iUV5AAAAIElE
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                               N          maschio  (N=98)                femmina  (N=75)               Combined  (N=173)       
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----- ------------------------------ ------------------------------ ------------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   173     89.000/1061.500/3158.500       94.000/ 553.000/2022.000       89.000/ 846.000/2400.000   
+Eta&nbsp;(giorni)                                                                                                                                                                                   173     89.000/1061.500/3158.500       94.000/ 553.000/2022.000       89.000/ 846.000/2400.000   
                                                                                                                                                                                                               1874.837+/-2114.165            1598.693+/-2272.057            1755.121+/-2181.857      
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             173                                                                                              
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             173                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                     14% (14)                       12% ( 9)                       13% (23)           
 
@@ -3020,7 +3020,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                        0% ( 0)                        0% ( 0)                        0% ( 0)            
 
-Priorità                                                                                                                                                                                            173                                                                                              
+Priorita                                                                                                                                                                                            173                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                          73% ( 72)                      69% ( 52)                      72% (124)           
 
@@ -3076,79 +3076,79 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                             2% ( 1)                        0% ( 0)                        1% ( 1)            
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   173                                                                                              
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   173                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                          61% (60)                       52% (39)                       57% (99)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                          39% (38)                       48% (36)                       43% (74)           
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      173                                                                                              
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      173                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      84% ( 82)                      77% ( 58)                      81% (140)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       16% ( 16)                      23% ( 17)                      19% ( 33)           
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        173                                                                                              
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        173                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      98% ( 96)                      99% ( 74)                      98% (170)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        2% ( 2)                        1% ( 1)                        2% ( 3)            
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       173                                                                                              
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       173                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      89% ( 87)                      87% ( 65)                      88% (152)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       11% ( 11)                      13% ( 10)                      12% ( 21)           
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    173                                                                                              
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    173                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      97% ( 95)                      100% ( 75)                     98% (170)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        3% ( 3)                        0% ( 0)                        2% ( 3)            
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  173                                                                                              
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  173                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      83% ( 81)                      92% ( 69)                      87% (150)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       17% ( 17)                       8% ( 6)                       13% ( 23)           
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            173                                                                                              
+Comorbidita:&nbsp;renale                                                                                                                                                                            173                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      91% ( 89)                      95% ( 71)                      92% (160)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        9% ( 9)                        5% ( 4)                        8% ( 13)           
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      173                                                                                              
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      173                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      97% ( 95)                      95% ( 71)                      96% (166)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        3% ( 3)                        5% ( 4)                        4% ( 7)            
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        173                                                                                              
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        173                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      94% ( 92)                      92% ( 69)                      93% (161)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        6% ( 6)                        8% ( 6)                        7% ( 12)           
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       173                                                                                              
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       173                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      93% ( 91)                      92% ( 69)                      92% (160)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        7% ( 7)                        8% ( 6)                        8% ( 13)           
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      173                                                                                              
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      173                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      94% ( 92)                      95% ( 71)                      94% (163)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        6% ( 6)                        5% ( 4)                        6% ( 10)           
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             173                                                                                              
+Comorbidita:&nbsp;altro                                                                                                                                                                             173                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      99% ( 97)                      100% ( 75)                     99% (172)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        1% ( 1)                        0% ( 0)                        1% ( 1)            
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     173                                                                                              
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     173                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                           40% (39)                       48% (36)                       43% (75)           
 
@@ -3160,11 +3160,11 @@ Numero&nbsp;di&nbsp;comorbidità                                                
 
 &nbsp;&nbsp;&nbsp;&nbsp;4                                                                                                                                                                                           0% ( 0)                        3% ( 2)                        1% ( 2)            
 
-Comorbidità:&nbsp;gastroenterologica                                                                                                                                                                 7                                                                                               
+Comorbidita:&nbsp;gastroenterologica                                                                                                                                                                 7                                                                                               
 
 &nbsp;&nbsp;&nbsp;&nbsp;gastroenterologica                                                                                                                                                                          100% (2)                       100% (5)                       100% (7)           
 
-Comorbidità:&nbsp;trapiantologica                                                                                                                                                                    3                                                                                               
+Comorbidita:&nbsp;trapiantologica                                                                                                                                                                    3                                                                                               
 
 &nbsp;&nbsp;&nbsp;&nbsp;trapiantologica                                                                                                                                                                                                           100% ( 3)                      100% ( 3)           
 
@@ -3248,7 +3248,7 @@ SMR PIM2:  0.48
 SMR PIM3:  0.69 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 9  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -3351,10 +3351,10 @@ iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAMAAACXZR4WAAAACVBMVEUAAADMzMz////1iUV5AAAAGklE
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                              N         maschio  (N=31)              femmina  (N=34)              Combined  (N=65)      
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---- ---------------------------- ---------------------------- ----------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   65   1060.000/3155.000/5108.500   1423.750/4339.000/5356.250   1313.000/3663.000/5139.000 
+Eta&nbsp;(giorni)                                                                                                                                                                                   65   1060.000/3155.000/5108.500   1423.750/4339.000/5356.250   1313.000/3663.000/5139.000 
                                                                                                                                                                                                             2900.387+/-2199.365          3580.000+/-2146.579          3255.877+/-2181.825     
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             65                                                                                        
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             65                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                   3% ( 1)                      0% ( 0)                      2% ( 1)           
 
@@ -3372,7 +3372,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                      0% ( 0)                      0% ( 0)                      0% ( 0)           
 
-Priorità                                                                                                                                                                                            65                                                                                        
+Priorita                                                                                                                                                                                            65                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                         48% (15)                     35% (12)                     42% (27)          
 
@@ -3428,73 +3428,73 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                           0% ( 0)                      0% ( 0)                      0% ( 0)           
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   65                                                                                        
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   65                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                        35% (11)                     59% (20)                     48% (31)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                        65% (20)                     41% (14)                     52% (34)          
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      65                                                                                        
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      65                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% (31)                     97% (33)                     98% (64)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      0% ( 0)                      3% ( 1)                      2% ( 1)           
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        65                                                                                        
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        65                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% (31)                    100% (34)                    100% (65)          
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       65                                                                                        
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       65                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     90% (28)                     76% (26)                     83% (54)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      10% ( 3)                     24% ( 8)                     17% (11)          
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    65                                                                                        
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    65                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     87% (27)                     88% (30)                     88% (57)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      13% ( 4)                     12% ( 4)                     12% ( 8)          
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  65                                                                                        
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  65                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     90% (28)                     91% (31)                     91% (59)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      10% ( 3)                     9% ( 3)                      9% ( 6)           
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            65                                                                                        
+Comorbidita:&nbsp;renale                                                                                                                                                                            65                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% (31)                    100% (34)                    100% (65)          
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      65                                                                                        
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      65                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     90% (28)                     91% (31)                     91% (59)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      10% ( 3)                     9% ( 3)                      9% ( 6)           
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        65                                                                                        
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        65                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     94% (29)                     85% (29)                     89% (58)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      6% ( 2)                      15% ( 5)                     11% ( 7)          
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       65                                                                                        
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       65                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% (31)                     88% (30)                     94% (61)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      0% ( 0)                      12% ( 4)                     6% ( 4)           
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      65                                                                                        
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      65                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% (31)                     91% (31)                     95% (62)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      0% ( 0)                      9% ( 3)                      5% ( 3)           
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             65                                                                                        
+Comorbidita:&nbsp;altro                                                                                                                                                                             65                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% (31)                    100% (34)                    100% (65)          
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     65                                                                                        
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     65                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                         65% (20)                     47% (16)                     55% (36)          
 
@@ -3506,7 +3506,7 @@ Numero&nbsp;di&nbsp;comorbidità                                                
 
 &nbsp;&nbsp;&nbsp;&nbsp;5                                                                                                                                                                                         0% ( 0)                      3% ( 1)                      2% ( 1)           
 
-Comorbidità:&nbsp;gastroenterologica                                                                                                                                                                4                                                                                         
+Comorbidita:&nbsp;gastroenterologica                                                                                                                                                                4                                                                                         
 
 &nbsp;&nbsp;&nbsp;&nbsp;gastroenterologica                                                                                                                                                                                                    100% ( 4)                    100% ( 4)          
 
@@ -3605,7 +3605,7 @@ SMR PIM2:  0.94
 SMR PIM3:  1.46 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 10  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -3708,10 +3708,10 @@ iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAMAAACXZR4WAAAACVBMVEUAAADMzMz////1iUV5AAAAIUlE
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                               N          maschio  (N=59)                femmina  (N=43)               Combined  (N=102)       
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----- ------------------------------ ------------------------------ ------------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   102    143.500/1011.000/1852.000      120.500/1140.000/2767.500      134.750/1027.000/2426.500   
+Eta&nbsp;(giorni)                                                                                                                                                                                   102    143.500/1011.000/1852.000      120.500/1140.000/2767.500      134.750/1027.000/2426.500   
                                                                                                                                                                                                               1478.881+/-2120.106            1801.860+/-2047.237            1615.039+/-2085.607      
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             102                                                                                              
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             102                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                     7% ( 4)                        16% ( 7)                       11% (11)           
 
@@ -3729,7 +3729,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                        0% ( 0)                        0% ( 0)                        0% ( 0)            
 
-Priorità                                                                                                                                                                                            102                                                                                              
+Priorita                                                                                                                                                                                            102                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                           19% (11)                       33% (14)                       25% (25)           
 
@@ -3785,79 +3785,79 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                             0% ( 0)                        0% ( 0)                        0% ( 0)            
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   102                                                                                              
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   102                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                          88% (52)                       74% (32)                       82% (84)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                          12% ( 7)                       26% (11)                       18% (18)           
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      102                                                                                              
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      102                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       83% (49)                       91% (39)                       86% (88)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        17% (10)                       9% ( 4)                        14% (14)           
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        102                                                                                              
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        102                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      100% ( 59)                     98% ( 42)                      99% (101)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        0% ( 0)                        2% ( 1)                        1% ( 1)            
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       102                                                                                              
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       102                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       75% (44)                       72% (31)                       74% (75)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        25% (15)                       28% (12)                       26% (27)           
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    102                                                                                              
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    102                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       97% (57)                       91% (39)                       94% (96)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        3% ( 2)                        9% ( 4)                        6% ( 6)            
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  102                                                                                              
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  102                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       78% (46)                       93% (40)                       84% (86)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        22% (13)                       7% ( 3)                        16% (16)           
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            102                                                                                              
+Comorbidita:&nbsp;renale                                                                                                                                                                            102                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       95% (56)                       95% (41)                       95% (97)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        5% ( 3)                        5% ( 2)                        5% ( 5)            
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      102                                                                                              
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      102                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       93% (55)                       98% (42)                       95% (97)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        7% ( 4)                        2% ( 1)                        5% ( 5)            
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        102                                                                                              
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        102                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       92% (54)                       88% (38)                       90% (92)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        8% ( 5)                        12% ( 5)                       10% (10)           
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       102                                                                                              
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       102                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       76% (45)                       67% (29)                       73% (74)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        24% (14)                       33% (14)                       27% (28)           
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      102                                                                                              
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      102                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      98% ( 58)                      100% ( 43)                     99% (101)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        2% ( 1)                        0% ( 0)                        1% ( 1)            
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             102                                                                                              
+Comorbidita:&nbsp;altro                                                                                                                                                                             102                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                       88% (52)                       95% (41)                       91% (93)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                        12% ( 7)                       5% ( 2)                        9% ( 9)            
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     102                                                                                              
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     102                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                           20% (12)                       30% (13)                       25% (25)           
 
@@ -3871,7 +3871,7 @@ Numero&nbsp;di&nbsp;comorbidità                                                
 
 &nbsp;&nbsp;&nbsp;&nbsp;5                                                                                                                                                                                           2% ( 1)                        5% ( 2)                        3% ( 3)            
 
-Comorbidità:&nbsp;gastroenterologica                                                                                                                                                                17                                                                                               
+Comorbidita:&nbsp;gastroenterologica                                                                                                                                                                17                                                                                               
 
 &nbsp;&nbsp;&nbsp;&nbsp;gastroenterologica                                                                                                                                                                         100% ( 8)                      100% ( 9)                      100% (17)           
 
@@ -3943,7 +3943,7 @@ SMR PIM2:  0
 SMR PIM3:  0 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 11  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -4045,10 +4045,10 @@ bottom: -1ex;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                              N          maschio  (N=6)               femmina  (N=8)              Combined  (N=14)      
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---- ---------------------------- ---------------------------- ----------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   14   414.500/1565.000/2720.000    959.500/1698.500/3197.250    636.500/1565.000/3007.000  
+Eta&nbsp;(giorni)                                                                                                                                                                                   14   414.500/1565.000/2720.000    959.500/1698.500/3197.250    636.500/1565.000/3007.000  
                                                                                                                                                                                                             1733.000+/-1619.847          2140.375+/-1636.566          1965.786+/-1579.604     
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             14                                                                                        
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             14                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                   17% (1)                       0% (0)                       7% (1)           
 
@@ -4066,7 +4066,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                       0% (0)                       0% (0)                       0% (0)           
 
-Priorità                                                                                                                                                                                            14                                                                                        
+Priorita                                                                                                                                                                                            14                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                         17% (1)                      25% (2)                      21% (3)           
 
@@ -4122,73 +4122,73 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                            0% (0)                      17% (1)                       8% (1)           
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   14                                                                                        
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   14                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                        50% ( 3)                     88% ( 7)                     71% (10)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                        50% ( 3)                     12% ( 1)                     29% ( 4)          
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      14                                                                                        
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      14                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     83% ( 5)                     88% ( 7)                     86% (12)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      17% ( 1)                     12% ( 1)                     14% ( 2)          
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        14                                                                                        
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        14                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% ( 6)                     88% ( 7)                     93% (13)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      0% ( 0)                      12% ( 1)                     7% ( 1)           
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       14                                                                                        
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       14                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     83% ( 5)                     75% ( 6)                     79% (11)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      17% ( 1)                     25% ( 2)                     21% ( 3)          
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    14                                                                                        
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    14                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% ( 6)                    100% ( 8)                    100% (14)          
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  14                                                                                        
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  14                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% ( 6)                     75% ( 6)                     86% (12)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      0% ( 0)                      25% ( 2)                     14% ( 2)          
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            14                                                                                        
+Comorbidita:&nbsp;renale                                                                                                                                                                            14                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     83% ( 5)                     88% ( 7)                     86% (12)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      17% ( 1)                     12% ( 1)                     14% ( 2)          
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      14                                                                                        
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      14                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     83% ( 5)                     75% ( 6)                     79% (11)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      17% ( 1)                     25% ( 2)                     21% ( 3)          
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        14                                                                                        
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        14                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     83% ( 5)                    100% ( 8)                     93% (13)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      17% ( 1)                     0% ( 0)                      7% ( 1)           
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       14                                                                                        
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       14                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     83% ( 5)                     88% ( 7)                     86% (12)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      17% ( 1)                     12% ( 1)                     14% ( 2)          
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      14                                                                                        
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      14                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% ( 6)                    100% ( 8)                    100% (14)          
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             14                                                                                        
+Comorbidita:&nbsp;altro                                                                                                                                                                             14                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% ( 6)                    100% ( 8)                    100% (14)          
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     14                                                                                        
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     14                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                         50% (3)                      12% (1)                      29% (4)           
 
@@ -4198,11 +4198,11 @@ Numero&nbsp;di&nbsp;comorbidità                                                
 
 &nbsp;&nbsp;&nbsp;&nbsp;3                                                                                                                                                                                         17% (1)                       0% (0)                       7% (1)           
 
-Comorbidità:&nbsp;gastroenterologica                                                                                                                                                                3                                                                                         
+Comorbidita:&nbsp;gastroenterologica                                                                                                                                                                3                                                                                         
 
 &nbsp;&nbsp;&nbsp;&nbsp;gastroenterologica                                                                                                                                                                                                    100% ( 3)                    100% ( 3)          
 
-Comorbidità:&nbsp;trapiantologica                                                                                                                                                                   1                                                                                         
+Comorbidita:&nbsp;trapiantologica                                                                                                                                                                   1                                                                                         
 
 &nbsp;&nbsp;&nbsp;&nbsp;trapiantologica                                                                                                                                                                          100% ( 1)                                                 100% ( 1)          
 
@@ -4303,12 +4303,12 @@ SMR PIM2:  1.84
 SMR PIM3:  2.49 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 12  {.tabset .tabset-fade .tabset-pills} 
  
  > no data for this center 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 13  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -4411,10 +4411,10 @@ iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAMAAACXZR4WAAAACVBMVEUAAADMzMz////1iUV5AAAAJklE
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                               N         maschio  (N=88)              femmina  (N=39)             Combined  (N=127)      
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----- ---------------------------- ---------------------------- ----------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   127   459.000/2728.500/4134.750    481.000/1905.000/3534.500    469.000/1992.000/3999.000  
+Eta&nbsp;(giorni)                                                                                                                                                                                   127   459.000/2728.500/4134.750    481.000/1905.000/3534.500    469.000/1992.000/3999.000  
                                                                                                                                                                                                              2551.898+/-2113.172          2168.872+/-1939.020          2434.276+/-2061.235     
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             127                                                                                        
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             127                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                    5% ( 4)                      0% ( 0)                      3% ( 4)           
 
@@ -4432,7 +4432,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                       0% ( 0)                      0% ( 0)                      0% ( 0)           
 
-Priorità                                                                                                                                                                                            126                                                                                        
+Priorita                                                                                                                                                                                            126                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                          64% (56)                     69% (27)                     66% (83)          
 
@@ -4488,79 +4488,79 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                            0% ( 0)                      0% ( 0)                      0% ( 0)           
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   126                                                                                        
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   126                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                         48% (42)                     36% (14)                     44% (56)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                         52% (45)                     64% (25)                     56% (70)          
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      127                                                                                        
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      127                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     95% ( 84)                    97% ( 38)                    96% (122)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       5% ( 4)                      3% ( 1)                      4% ( 5)           
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        127                                                                                        
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        127                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     98% ( 86)                    95% ( 37)                    97% (123)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       2% ( 2)                      5% ( 2)                      3% ( 4)           
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       127                                                                                        
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       127                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     82% ( 72)                    82% ( 32)                    82% (104)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      18% ( 16)                     18% ( 7)                    18% ( 23)          
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    127                                                                                        
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    127                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     98% ( 86)                    97% ( 38)                    98% (124)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       2% ( 2)                      3% ( 1)                      2% ( 3)           
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  127                                                                                        
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  127                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     95% ( 84)                    100% ( 39)                   97% (123)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       5% ( 4)                      0% ( 0)                      3% ( 4)           
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            127                                                                                        
+Comorbidita:&nbsp;renale                                                                                                                                                                            127                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     98% ( 86)                    95% ( 37)                    97% (123)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       2% ( 2)                      5% ( 2)                      3% ( 4)           
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      127                                                                                        
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      127                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     94% ( 83)                    97% ( 38)                    95% (121)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       6% ( 5)                      3% ( 1)                      5% ( 6)           
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        127                                                                                        
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        127                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     90% ( 79)                    95% ( 37)                    91% (116)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       10% ( 9)                     5% ( 2)                      9% ( 11)          
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       127                                                                                        
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       127                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     88% ( 77)                    87% ( 34)                    87% (111)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      12% ( 11)                     13% ( 5)                    13% ( 16)          
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      127                                                                                        
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      127                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     89% ( 78)                    90% ( 35)                    89% (113)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      11% ( 10)                     10% ( 4)                    11% ( 14)          
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             127                                                                                        
+Comorbidita:&nbsp;altro                                                                                                                                                                             127                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     99% ( 87)                    95% ( 37)                    98% (124)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       1% ( 1)                      5% ( 2)                      2% ( 3)           
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     127                                                                                        
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     127                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                          53% (47)                     67% (26)                     57% (73)          
 
@@ -4572,7 +4572,7 @@ Numero&nbsp;di&nbsp;comorbidità                                                
 
 &nbsp;&nbsp;&nbsp;&nbsp;4                                                                                                                                                                                          3% ( 3)                      8% ( 3)                      5% ( 6)           
 
-Comorbidità:&nbsp;gastroenterologica                                                                                                                                                                 8                                                                                         
+Comorbidita:&nbsp;gastroenterologica                                                                                                                                                                 8                                                                                         
 
 &nbsp;&nbsp;&nbsp;&nbsp;gastroenterologica                                                                                                                                                                         100% (4)                     100% (4)                     100% (8)          
 
@@ -4656,7 +4656,7 @@ SMR PIM2:  0.3
 SMR PIM3:  0.4 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 14  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -4759,10 +4759,10 @@ iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAACVBMVEUAAADMzMz////1iUV5AAAAF0lE
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                              N          maschio  (N=26)                femmina  (N=38)                Combined  (N=64)       
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---- ------------------------------ ------------------------------ ------------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   64    357.500/1505.500/3960.750      504.000/2471.000/4162.000      403.250/2323.000/4124.000   
+Eta&nbsp;(giorni)                                                                                                                                                                                   64    357.500/1505.500/3960.750      504.000/2471.000/4162.000      403.250/2323.000/4124.000   
                                                                                                                                                                                                              2199.423+/-2013.569            2606.579+/-2034.259            2441.172+/-2019.879      
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             64                                                                                              
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             64                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                    0% ( 0)                        0% ( 0)                        0% ( 0)            
 
@@ -4780,7 +4780,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                       0% ( 0)                        0% ( 0)                        0% ( 0)            
 
-Priorità                                                                                                                                                                                            64                                                                                              
+Priorita                                                                                                                                                                                            64                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                          62% (16)                       79% (30)                       72% (46)           
 
@@ -4836,77 +4836,77 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                            5% ( 1)                        0% ( 0)                        2% ( 1)            
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   64                                                                                              
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   64                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                         54% (14)                       50% (19)                       52% (33)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                         46% (12)                       50% (19)                       48% (31)           
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      64                                                                                              
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      64                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      96% (25)                       97% (37)                       97% (62)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       4% ( 1)                        3% ( 1)                        3% ( 2)            
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        64                                                                                              
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        64                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      88% (23)                       97% (37)                       94% (60)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       12% ( 3)                       3% ( 1)                        6% ( 4)            
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       64                                                                                              
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       64                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      88% (23)                       95% (36)                       92% (59)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       12% ( 3)                       5% ( 2)                        8% ( 5)            
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    64                                                                                              
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    64                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% (26)                       97% (37)                       98% (63)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       0% ( 0)                        3% ( 1)                        2% ( 1)            
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  64                                                                                              
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  64                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      96% (25)                       79% (30)                       86% (55)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       4% ( 1)                        21% ( 8)                       14% ( 9)           
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            64                                                                                              
+Comorbidita:&nbsp;renale                                                                                                                                                                            64                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% (26)                      100% (38)                      100% (64)           
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      64                                                                                              
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      64                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% (26)                       97% (37)                       98% (63)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       0% ( 0)                        3% ( 1)                        2% ( 1)            
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        64                                                                                              
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        64                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      88% (23)                       76% (29)                       81% (52)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       12% ( 3)                       24% ( 9)                       19% (12)           
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       64                                                                                              
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       64                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      88% (23)                       97% (37)                       94% (60)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       12% ( 3)                       3% ( 1)                        6% ( 4)            
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      64                                                                                              
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      64                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      92% (24)                      100% (38)                       97% (62)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       8% ( 2)                        0% ( 0)                        3% ( 2)            
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             64                                                                                              
+Comorbidita:&nbsp;altro                                                                                                                                                                             64                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      96% (25)                       97% (37)                       97% (62)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       4% ( 1)                        3% ( 1)                        3% ( 2)            
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     64                                                                                              
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     64                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                          46% (12)                       50% (19)                       48% (31)           
 
@@ -4916,11 +4916,11 @@ Numero&nbsp;di&nbsp;comorbidità                                                
 
 &nbsp;&nbsp;&nbsp;&nbsp;4                                                                                                                                                                                          0% ( 0)                        3% ( 1)                        2% ( 1)            
 
-Comorbidità:&nbsp;gastroenterologica                                                                                                                                                                1                                                                                               
+Comorbidita:&nbsp;gastroenterologica                                                                                                                                                                1                                                                                               
 
 &nbsp;&nbsp;&nbsp;&nbsp;gastroenterologica                                                                                                                                                                                                       100% ( 1)                      100% ( 1)           
 
-Comorbidità:&nbsp;trapiantologica                                                                                                                                                                   1                                                                                               
+Comorbidita:&nbsp;trapiantologica                                                                                                                                                                   1                                                                                               
 
 &nbsp;&nbsp;&nbsp;&nbsp;trapiantologica                                                                                                                                                                                                          100% ( 1)                      100% ( 1)           
 
@@ -5004,37 +5004,37 @@ SMR PIM2:  0.65
 SMR PIM3:  0.72 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 15  {.tabset .tabset-fade .tabset-pills} 
  
  > no data for this center 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 20  {.tabset .tabset-fade .tabset-pills} 
  
  > no data for this center 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 21  {.tabset .tabset-fade .tabset-pills} 
  
  > no data for this center 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 22  {.tabset .tabset-fade .tabset-pills} 
  
  > no data for this center 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 24  {.tabset .tabset-fade .tabset-pills} 
  
  > no data for this center 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 25  {.tabset .tabset-fade .tabset-pills} 
  
  > no data for this center 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 28  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -5136,11 +5136,11 @@ bottom: -1ex;
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                              femmina  (N=1)   Combined  (N=1) 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------- -----------------
-Età&nbsp;(giorni)                                                                                                                                                                                                                    
+Eta&nbsp;(giorni)                                                                                                                                                                                                                    
 
 &nbsp;&nbsp;&nbsp;&nbsp;1150                                                                                                                                                                           100% (1)         100% (1)     
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                                                              
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                         0% (0)           0% (0)      
 
@@ -5158,7 +5158,7 @@ Classe&nbsp;di&nbsp;età
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                            0% (0)           0% (0)      
 
-Priorità                                                                                                                                                                                                                             
+Priorita                                                                                                                                                                                                                             
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                               0% (0)           0% (0)      
 
@@ -5214,57 +5214,57 @@ Motivo&nbsp;del&nbsp;ricovero
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                 0% (0)           0% (0)      
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                                                    
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                                                    
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                             100% (1)         100% (1)     
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                              0% (0)           0% (0)      
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                                                       
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                                                       
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                          100% (1)         100% (1)     
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                                                         
+Comorbidita:&nbsp;metabolica                                                                                                                                                                                                         
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                          100% (1)         100% (1)     
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                                                        
+Comorbidita:&nbsp;neurologica                                                                                                                                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                           100% (1)         100% (1)     
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                                                     
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                                                     
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                          100% (1)         100% (1)     
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                                                   
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                          100% (1)         100% (1)     
 
-Comorbidità:&nbsp;renale                                                                                                                                                                                                             
+Comorbidita:&nbsp;renale                                                                                                                                                                                                             
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                          100% (1)         100% (1)     
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                                                       
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                                                       
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                          100% (1)         100% (1)     
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                                                         
+Comorbidita:&nbsp;sindromica                                                                                                                                                                                                         
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                          100% (1)         100% (1)     
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                                                        
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                          100% (1)         100% (1)     
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                                                       
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                                                       
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                           100% (1)         100% (1)     
 
-Comorbidità:&nbsp;altro                                                                                                                                                                                                              
+Comorbidita:&nbsp;altro                                                                                                                                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                          100% (1)         100% (1)     
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                                                      
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                                                      
 
 &nbsp;&nbsp;&nbsp;&nbsp;2                                                                                                                                                                              100% (1)         100% (1)     
 
@@ -5331,7 +5331,7 @@ SMR PIM2:  0
 SMR PIM3:  0 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 29  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -5434,10 +5434,10 @@ iVBORw0KGgoAAAANSUhEUgAAAAoAAAANCAMAAACn6Q83AAAACVBMVEUAAADMzMz////1iUV5AAAAHElE
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                              N          maschio  (N=11)                femmina  (N=10)                Combined  (N=21)       
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---- ------------------------------ ------------------------------ ------------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   21    298.500/ 964.000/1636.000      1018.250/2573.500/3351.500     801.000/1178.000/2785.000   
+Eta&nbsp;(giorni)                                                                                                                                                                                   21    298.500/ 964.000/1636.000      1018.250/2573.500/3351.500     801.000/1178.000/2785.000   
                                                                                                                                                                                                              1195.273+/-1097.432            2664.900+/-2124.456            1895.095+/-1788.528      
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             21                                                                                              
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             21                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                     0% (0)                         0% (0)                         0% (0)            
 
@@ -5455,7 +5455,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                        0% (0)                         0% (0)                         0% (0)            
 
-Priorità                                                                                                                                                                                            21                                                                                              
+Priorita                                                                                                                                                                                            21                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                          36% ( 4)                       30% ( 3)                       33% ( 7)           
 
@@ -5511,63 +5511,63 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                             0% (0)                        11% (1)                         5% (1)            
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   21                                                                                              
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   21                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                         27% ( 3)                       40% ( 4)                       33% ( 7)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                         73% ( 8)                       60% ( 6)                       67% (14)           
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      21                                                                                              
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      21                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% (11)                      100% (10)                      100% (21)           
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        21                                                                                              
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        21                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      91% (10)                      100% (10)                       95% (20)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       9% ( 1)                        0% ( 0)                        5% ( 1)            
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       21                                                                                              
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       21                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      82% ( 9)                       60% ( 6)                       71% (15)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       18% ( 2)                       40% ( 4)                       29% ( 6)           
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    21                                                                                              
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    21                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      91% (10)                       90% ( 9)                       90% (19)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       9% ( 1)                        10% ( 1)                       10% ( 2)           
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  21                                                                                              
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  21                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% (11)                      100% (10)                      100% (21)           
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            21                                                                                              
+Comorbidita:&nbsp;renale                                                                                                                                                                            21                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% (11)                      100% (10)                      100% (21)           
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      21                                                                                              
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      21                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% (11)                      100% (10)                      100% (21)           
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        21                                                                                              
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        21                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% (11)                      100% (10)                      100% (21)           
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       21                                                                                              
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       21                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% (11)                      100% (10)                      100% (21)           
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      21                                                                                              
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      21                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% (11)                      100% (10)                      100% (21)           
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             21                                                                                              
+Comorbidita:&nbsp;altro                                                                                                                                                                             21                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% (11)                      100% (10)                      100% (21)           
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     21                                                                                              
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     21                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                          73% ( 8)                       60% ( 6)                       67% (14)           
 
@@ -5655,17 +5655,17 @@ SMR PIM2:  0.77
 SMR PIM3:  0.81 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 30  {.tabset .tabset-fade .tabset-pills} 
  
  > no data for this center 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 32  {.tabset .tabset-fade .tabset-pills} 
  
  > no data for this center 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 33  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -5767,10 +5767,10 @@ bottom: -1ex;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                              N         maschio  (N=11)               femmina  (N=1)              Combined  (N=12)      
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---- ---------------------------- ---------------------------- ----------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   12   735.500/2573.000/4215.500    3305.000/3305.000/3305.000   864.250/2939.000/4155.750  
+Eta&nbsp;(giorni)                                                                                                                                                                                   12   735.500/2573.000/4215.500    3305.000/3305.000/3305.000   864.250/2939.000/4155.750  
                                                                                                                                                                                                             2579.545+/-2005.524              3305.000+/-              2640.000+/-1923.626     
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             12                                                                                        
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             12                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                    0% (0)                       0% (0)                       0% (0)           
 
@@ -5788,7 +5788,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                       0% (0)                       0% (0)                       0% (0)           
 
-Priorità                                                                                                                                                                                            12                                                                                        
+Priorita                                                                                                                                                                                            12                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                         45% (5)                       0% (0)                      42% (5)           
 
@@ -5844,67 +5844,67 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                            0% (0)                       0% (0)                       0% (0)           
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   12                                                                                        
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   12                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                        36% (4)                      100% (1)                     42% (5)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                        64% (7)                       0% (0)                      58% (7)           
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      12                                                                                        
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      12                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% (11)                    100% ( 1)                    100% (12)          
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        12                                                                                        
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        12                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     91% (10)                     0% ( 0)                      83% (10)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      9% ( 1)                     100% ( 1)                     17% ( 2)          
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       12                                                                                        
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       12                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     82% ( 9)                    100% ( 1)                     83% (10)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      18% ( 2)                     0% ( 0)                      17% ( 2)          
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    12                                                                                        
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    12                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% (11)                    100% ( 1)                    100% (12)          
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  12                                                                                        
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  12                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% (11)                    100% ( 1)                    100% (12)          
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            12                                                                                        
+Comorbidita:&nbsp;renale                                                                                                                                                                            12                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% (11)                    100% ( 1)                    100% (12)          
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      12                                                                                        
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      12                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     91% (10)                    100% ( 1)                     92% (11)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      9% ( 1)                      0% ( 0)                      8% ( 1)           
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        12                                                                                        
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        12                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     64% (7)                      100% (1)                     67% (8)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      36% (4)                       0% (0)                      33% (4)           
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       12                                                                                        
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       12                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     82% ( 9)                    100% ( 1)                     83% (10)          
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                      18% ( 2)                     0% ( 0)                      17% ( 2)          
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      12                                                                                        
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      12                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% (11)                    100% ( 1)                    100% (12)          
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             12                                                                                        
+Comorbidita:&nbsp;altro                                                                                                                                                                             12                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                    100% (11)                    100% ( 1)                    100% (12)          
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     12                                                                                        
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     12                                                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                         64% (7)                       0% (0)                      58% (7)           
 
@@ -5993,7 +5993,7 @@ SMR PIM2:  0
 SMR PIM3:  0 
 
  
-##  DAG: NA  {.tabset .tabset-fade .tabset-pills} 
+##  DAG encoded: 35  {.tabset .tabset-fade .tabset-pills} 
  
 ### Accettazione 
  
@@ -6096,10 +6096,10 @@ iVBORw0KGgoAAAANSUhEUgAAAAoAAAANCAMAAACn6Q83AAAACVBMVEUAAADMzMz////1iUV5AAAAH0lE
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 &nbsp;                                                                                                                                                                                              N           maschio  (N=7)                 femmina  (N=5)                Combined  (N=12)       
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---- ------------------------------ ------------------------------ ------------------------------
-Età&nbsp;(giorni)                                                                                                                                                                                   12    662.500/1636.000/2802.000      175.000/ 208.000/ 270.000      223.000/ 662.500/2684.500   
+Eta&nbsp;(giorni)                                                                                                                                                                                   12    662.500/1636.000/2802.000      175.000/ 208.000/ 270.000      223.000/ 662.500/2684.500   
                                                                                                                                                                                                              1787.286+/-1355.222            1265.000+/-2368.328            1569.667+/-1764.583      
 
-Classe&nbsp;di&nbsp;età                                                                                                                                                                             12                                                                                              
+Classe&nbsp;di&nbsp;eta                                                                                                                                                                             12                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;neonati                                                                                                                                                                                     0% (0)                         0% (0)                         0% (0)            
 
@@ -6117,7 +6117,7 @@ Classe&nbsp;di&nbsp;età                                                        
 
 &nbsp;&nbsp;&nbsp;&nbsp;[dato&nbsp;mancante]                                                                                                                                                                        0% (0)                         0% (0)                         0% (0)            
 
-Priorità                                                                                                                                                                                            12                                                                                              
+Priorita                                                                                                                                                                                            12                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;1                                                                                                                                                                                          57% (4)                        20% (1)                        42% (5)            
 
@@ -6173,63 +6173,63 @@ Motivo&nbsp;del&nbsp;ricovero                                                   
 
 &nbsp;&nbsp;&nbsp;&nbsp;arresto&nbsp;cardiocircolatorio                                                                                                                                                            20% (1)                        50% (1)                        29% (2)            
 
-Presenza&nbsp;di&nbsp;comorbidità                                                                                                                                                                   12                                                                                              
+Presenza&nbsp;di&nbsp;comorbidita                                                                                                                                                                   12                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;si                                                                                                                                                                                         29% (2)                        40% (2)                        33% (4)            
 
 &nbsp;&nbsp;&nbsp;&nbsp;no                                                                                                                                                                                         71% (5)                        60% (3)                        67% (8)            
 
-Comorbidità:&nbsp;cardiologica                                                                                                                                                                      12                                                                                              
+Comorbidita:&nbsp;cardiologica                                                                                                                                                                      12                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      86% ( 6)                       80% ( 4)                       83% (10)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       14% ( 1)                       20% ( 1)                       17% ( 2)           
 
-Comorbidità:&nbsp;metabolica                                                                                                                                                                        12                                                                                              
+Comorbidita:&nbsp;metabolica                                                                                                                                                                        12                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% ( 7)                      100% ( 5)                      100% (12)           
 
-Comorbidità:&nbsp;neurologica                                                                                                                                                                       12                                                                                              
+Comorbidita:&nbsp;neurologica                                                                                                                                                                       12                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% ( 7)                      100% ( 5)                      100% (12)           
 
-Comorbidità:&nbsp;neuromuscolare                                                                                                                                                                    12                                                                                              
+Comorbidita:&nbsp;neuromuscolare                                                                                                                                                                    12                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% ( 7)                      100% ( 5)                      100% (12)           
 
-Comorbidità:&nbsp;onco-ematologica                                                                                                                                                                  12                                                                                              
+Comorbidita:&nbsp;onco-ematologica                                                                                                                                                                  12                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% ( 7)                      100% ( 5)                      100% (12)           
 
-Comorbidità:&nbsp;renale                                                                                                                                                                            12                                                                                              
+Comorbidita:&nbsp;renale                                                                                                                                                                            12                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                      86% ( 6)                      100% ( 5)                       92% (11)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       14% ( 1)                       0% ( 0)                        8% ( 1)            
 
-Comorbidità:&nbsp;respiratoria                                                                                                                                                                      12                                                                                              
+Comorbidita:&nbsp;respiratoria                                                                                                                                                                      12                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% ( 7)                      100% ( 5)                      100% (12)           
 
-Comorbidità:&nbsp;sindromica                                                                                                                                                                        12                                                                                              
+Comorbidita:&nbsp;sindromica                                                                                                                                                                        12                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% ( 7)                      100% ( 5)                      100% (12)           
 
-Comorbidità:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       12                                                                                              
+Comorbidita:&nbsp;malformato/esiti&nbsp;di&nbsp;malformazione                                                                                                                                       12                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% ( 7)                      100% ( 5)                      100% (12)           
 
-Comorbidità:&nbsp;ex-prematuro                                                                                                                                                                      12                                                                                              
+Comorbidita:&nbsp;ex-prematuro                                                                                                                                                                      12                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% ( 7)                       60% ( 3)                       83% (10)           
 
 &nbsp;&nbsp;&nbsp;&nbsp;TRUE                                                                                                                                                                                       0% ( 0)                        40% ( 2)                       17% ( 2)           
 
-Comorbidità:&nbsp;altro                                                                                                                                                                             12                                                                                              
+Comorbidita:&nbsp;altro                                                                                                                                                                             12                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;FALSE                                                                                                                                                                                     100% ( 7)                      100% ( 5)                      100% (12)           
 
-Numero&nbsp;di&nbsp;comorbidità                                                                                                                                                                     12                                                                                              
+Numero&nbsp;di&nbsp;comorbidita                                                                                                                                                                     12                                                                                              
 
 &nbsp;&nbsp;&nbsp;&nbsp;0                                                                                                                                                                                          71% (5)                        60% (3)                        67% (8)            
 
@@ -6237,7 +6237,7 @@ Numero&nbsp;di&nbsp;comorbidità                                                
 
 &nbsp;&nbsp;&nbsp;&nbsp;2                                                                                                                                                                                           0% (0)                        20% (1)                         8% (1)            
 
-Comorbidità:&nbsp;gastroenterologica                                                                                                                                                                2                                                                                               
+Comorbidita:&nbsp;gastroenterologica                                                                                                                                                                2                                                                                               
 
 &nbsp;&nbsp;&nbsp;&nbsp;gastroenterologica                                                                                                                                                                         100% (1)                       100% (1)                       100% (2)           
 
