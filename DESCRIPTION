@@ -40,6 +40,7 @@ Suggests:
     devtools,
     roxygen2 (>= 6.1.1),
     spelling (>= 2.1),
+    styler,
     testthat (>= 2.1.1),
     withr
 Encoding: UTF-8
