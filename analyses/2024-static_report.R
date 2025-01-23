@@ -14,8 +14,8 @@
 #'
 #' params:
 #'   year: 2024
-#'   first_month: 7
-#'   last_month: 12
+#'   first_month: 1
+#'   last_month: 6
 #' ---
 #'
 #'
@@ -51,8 +51,8 @@ htmltools::img(
 if (interactive()) {
   params <- list(
     year = 2024,
-    first_month = 7,
-    last_month = 12
+    first_month = 1,
+    last_month = 6
   )
 }
 
