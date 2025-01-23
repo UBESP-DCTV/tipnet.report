@@ -30,8 +30,6 @@
 #' List here all the command executed during development of the package
 #'
 
-# renv::install("CorradoLanera/autotestthat")
-autotestthat::auto_test_package_job() # before every start!
 
 
 # usethis::use_test("<function_name>")
@@ -69,7 +67,6 @@ spelling::update_wordlist()
 #' --------------------------------------------------------------------
 #'
 lintr::lint_package()
-goodpractice::gp()
 
 # The following calls run into your (interactive) session
 # Use the corresponding RStudio button under the "Build"

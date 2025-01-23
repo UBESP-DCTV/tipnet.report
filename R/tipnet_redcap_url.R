@@ -6,5 +6,5 @@
 #' @examples
 #' tipnet_redcap_url()
 tipnet_redcap_url <- function() {
-  "https://redcap.dctv.unipd.it/api/"
+  "https://edc01.unipd-ubep.it/redcap/api/"
 }

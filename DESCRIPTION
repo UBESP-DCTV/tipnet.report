@@ -11,7 +11,7 @@ BugReports: https://github.com/UBESP-DCTV/tipnet.report/issues
 Depends: 
     R (>= 3.5.0)
 Imports: 
-    assertive (>= 0.3-5),
+    checkmate,
     dplyr (>= 0.8.3),
     DT,
     forcats,
@@ -37,12 +37,14 @@ Imports:
 Suggests: 
     attempt,
     covr (>= 3.2.1),
+    devtools,
     roxygen2 (>= 6.1.1),
     spelling (>= 2.1),
+    styler,
     testthat (>= 2.1.1),
     withr
 Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2

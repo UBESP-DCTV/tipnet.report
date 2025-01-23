@@ -9,8 +9,8 @@
 focus_Plot(
   .db,
   type = c("centervar", "checkbox"),
-  what = c("insufficienza", "procedure_rico", "vent_iniz2", "niv_it", "inf_ingresso_tip",
-    "sede_inf2", "diagnosi_inf", "tipo_inf", "sepsi_2"),
+  what = c("insufficienza", "procedure_rico", "vent_iniz2", "niv_it", "niv_it_tot",
+    "inf_ingresso_tip", "sede_inf2", "diagnosi_inf", "tipo_inf", "sepsi"),
   dict = NULL
 )
 

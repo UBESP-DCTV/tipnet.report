@@ -47,7 +47,7 @@ add_sheets_prefix <- function(data, exept = NULL) {
     stringr::str_remove("_complete$|_da_compilare.*$")
 
   if (!is.null(exept)) {
-    assertive::assert_is_subset(exept, data_names)
+    checkmate::assert_subset(exept, data_names)
   } else {
     exept <- character()
   }

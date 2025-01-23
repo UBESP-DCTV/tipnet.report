@@ -136,7 +136,7 @@ losReportStatic(
 )
 ```
 
-## Accertamento di morte e donazione {.tabset .tabset-dropdown}
+## Esito {.tabset .tabset-dropdown}
 
 ### Esito
 ```{r, eval=!params$export}
