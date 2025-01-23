@@ -1,5 +1,5 @@
 # Makefile
-APP_NAME ?= TIPNet_test
+APP_NAME ?= TIPNet
 APP_DIR ?= /srv/shiny-server/$(APP_NAME)
 DATA_DIR ?= /srv/tipnet-data
 RESTART_FILE = $(APP_DIR)/restart.txt
