@@ -13,9 +13,11 @@ NULL
 #' @export
 #' @examples
 #'
-#' focus_Plot(full_records) # default what = "mal_cronica"
-#' focus_Plot(full_records, "mal_cronica") # same as before
-#' focus_Plot(full_records, "etnia")
+#' \dontrun{
+#'   focus_Plot(full_records) # default what = "mal_cronica"
+#'   focus_Plot(full_records, "mal_cronica") # same as before
+#'   focus_Plot(full_records, "etnia")
+#' }
 focus_Plot <- function(
     .db,
     type = c("centervar", "checkbox"),
@@ -54,8 +56,10 @@ focus_Plot <- function(
 #' @export
 #' @examples
 #'
-#' focus_dataToUse(full_records, "Completed only")
-#' focus_dataToUse(full_records, "overall")
+#' \dontrun{
+#'   focus_dataToUse(full_records, "Completed only")
+#'   focus_dataToUse(full_records, "overall")
+#' }
 focus_dataToUse <- function(
     .db,
     .which = c("Completed only", "Overall")

@@ -3,6 +3,9 @@
 \name{funs-losReport}
 \alias{funs-losReport}
 \alias{los_Plot}
+\alias{pimlos_plot}
+\alias{smrlos_plot}
+\alias{smrlosvol_plot}
 \alias{los_dataToUse}
 \title{los module}
 \usage{
@@ -12,6 +15,12 @@ los_Plot(
     "mod_decesso", "deceduto", "prelievo_organi", "destinazione", "durata_degenza",
     "smr")
 )
+
+pimlos_plot(.db)
+
+smrlos_plot(.db)
+
+smrlosvol_plot(.db)
 
 los_dataToUse(.db, .which = c("Completed only", "Overall"))
 }
@@ -28,15 +37,25 @@ los module
 \itemize{
 \item \code{los_Plot()}: plot
 
+\item \code{pimlos_plot()}: pim-time plot
+
+\item \code{smrlos_plot()}: smr-time plot
+
+\item \code{smrlosvol_plot()}: smr-vol plot
+
 \item \code{los_dataToUse()}: data
 
 }}
 \examples{
 
-los_Plot(full_records) # default what = "mal_cronica"
-los_Plot(full_records, "mal_cronica") # same as before
-los_Plot(full_records, "etnia")
+\dontrun{
+  los_Plot(full_records) # default what = "mal_cronica"
+  los_Plot(full_records, "mal_cronica") # same as before
+  los_Plot(full_records, "etnia")
+}
 
-los_dataToUse(full_records, "Completed only")
-los_dataToUse(full_records, "overall")
+\dontrun{
+  los_dataToUse(full_records, "Completed only")
+  los_dataToUse(full_records, "overall")
+}
 }

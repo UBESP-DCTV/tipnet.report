@@ -29,6 +29,5 @@ Get a sheet table
   tipnet \%>\% get_sheet("anagrafica")
   tipnet \%>\% get_sheet("anagrafica", field = "anagrafica")
   tipnet \%>\% get_sheet("degenza")
-
 }
 }

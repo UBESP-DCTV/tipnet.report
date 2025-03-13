@@ -34,10 +34,14 @@ picu focus module
 }}
 \examples{
 
-focus_Plot(full_records) # default what = "mal_cronica"
-focus_Plot(full_records, "mal_cronica") # same as before
-focus_Plot(full_records, "etnia")
+\dontrun{
+  focus_Plot(full_records) # default what = "mal_cronica"
+  focus_Plot(full_records, "mal_cronica") # same as before
+  focus_Plot(full_records, "etnia")
+}
 
-focus_dataToUse(full_records, "Completed only")
-focus_dataToUse(full_records, "overall")
+\dontrun{
+  focus_dataToUse(full_records, "Completed only")
+  focus_dataToUse(full_records, "overall")
+}
 }

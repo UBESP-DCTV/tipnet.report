@@ -13,9 +13,11 @@ NULL
 #' @export
 #' @examples
 #'
-#' admission_Plot(full_records) # default what = "mal_cronica"
-#' admission_Plot(full_records, "mal_cronica") # same as before
-#' admission_Plot(full_records, "etnia")
+#' \dontrun{
+#'   admission_Plot(full_records) # default what = "mal_cronica"
+#'   admission_Plot(full_records, "mal_cronica") # same as before
+#'   admission_Plot(full_records, "etnia")
+#'  }
 admission_Plot <- function(
     .db,
     type = c("centervar", "checkbox"),
@@ -47,8 +49,10 @@ admission_Plot <- function(
 #' @export
 #' @examples
 #'
-#' admission_dataToUse(full_records, "Completed only")
-#' admission_dataToUse(full_records, "overall")
+#' \dontrun{
+#'   admission_dataToUse(full_records, "Completed only")
+#'   admission_dataToUse(full_records, "overall")
+#'  }
 admission_dataToUse <- function(
     .db,
     .which = c("Completed only", "Overall")
@@ -58,7 +62,7 @@ admission_dataToUse <- function(
 
   if (.which == "Completed only") {
     return(
-      filter(.db, .data$complete)
+      dplyr::filter(.db, .data$complete)
     )
   }
   .db
@@ -80,17 +84,17 @@ admission_dataTbl <- function(
 
   if (by_gender) {
     .db <- .db |>
-      group_by(.data[["gender"]])
+      dplyr::group_by(.data[["gender"]])
   }
 
   if (by_ageclass) {
     .db <- .db |>
-      group_by(.data[["age_class"]], .add = TRUE)
+      dplyr::group_by(.data[["age_class"]], .add = TRUE)
   }
 
   if (by_type) {
     .db <- .db |>
-      group_by(.data[["tipologia"]], .add = TRUE)
+      dplyr::group_by(.data[["tipologia"]], .add = TRUE)
   }
 
   if (by_year) {
@@ -98,7 +102,7 @@ admission_dataTbl <- function(
       dplyr::mutate(
         year = as.integer(lubridate::year(.data[["ingresso_dt"]]))
       ) |>
-      group_by(.data[["year"]], .add = TRUE)
+      dplyr::group_by(.data[["year"]], .add = TRUE)
   }
 
 

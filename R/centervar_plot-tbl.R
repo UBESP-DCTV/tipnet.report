@@ -1,5 +1,9 @@
 #' Barplot stratified by center
 #'
+#' @importFrom ggplot2 geom_text geom_bar
+#' @importFrom ggplot2 position_dodge2 position_fill
+#' @importFrom ggplot2 coord_flip labs aes ggplot theme
+#'
 #' @return a ggplot
 #' @export
 centervar_plot <- function(.db, what, reported_name) {

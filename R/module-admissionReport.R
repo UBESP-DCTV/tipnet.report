@@ -7,7 +7,7 @@
 #' @param completed (chr) "Completed" or "Not-completed"
 #' @param type (chr) "Total" or "Proportion"
 #'
-#' @importFrom shiny NS callModule reactive req
+#' @importFrom shiny NS callModule reactive req checkboxInput
 #' @importFrom shiny fluidPage fluidRow selectInput textOutput plotOutput
 #' @importFrom shiny renderText renderPlot column
 #' @importFrom plotly renderPlotly plotlyOutput ggplotly

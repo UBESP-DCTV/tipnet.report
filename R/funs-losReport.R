@@ -8,14 +8,15 @@
 NULL
 
 
-#'
 #' @describeIn funs-losReport plot
 #' @export
 #' @examples
 #'
-#' los_Plot(full_records) # default what = "mal_cronica"
-#' los_Plot(full_records, "mal_cronica") # same as before
-#' los_Plot(full_records, "etnia")
+#' \dontrun{
+#'   los_Plot(full_records) # default what = "mal_cronica"
+#'   los_Plot(full_records, "mal_cronica") # same as before
+#'   los_Plot(full_records, "etnia")
+#' }
 los_Plot <- function(
     .db,
     what = c("diagnosi","diagnosi_2","popc_dimissione", "popc_delta","esito_tip","mod_decesso","deceduto",
@@ -44,7 +45,7 @@ los_Plot <- function(
 
 
 
-#' @describeIn funs-lospimReport plot
+#' @describeIn funs-losReport pim-time plot
 #' @export
 pimlos_plot <- function(.db) {
   .db |>
@@ -76,7 +77,7 @@ pimlos_plot <- function(.db) {
     )
 }
 
-#' @describeIn funs-lossmrReport plot
+#' @describeIn funs-losReport smr-time plot
 #' @export
 smrlos_plot <- function(.db) {
   .db |>
@@ -105,7 +106,7 @@ smrlos_plot <- function(.db) {
     )
 }
 
-#' @describeIn funs-lossmrvolReport plot
+#' @describeIn funs-losReport smr-vol plot
 #' @export
 smrlosvol_plot <- function(.db) {
   .db |>
@@ -137,8 +138,10 @@ smrlosvol_plot <- function(.db) {
 #' @export
 #' @examples
 #'
-#' los_dataToUse(full_records, "Completed only")
-#' los_dataToUse(full_records, "overall")
+#' \dontrun{
+#'   los_dataToUse(full_records, "Completed only")
+#'   los_dataToUse(full_records, "overall")
+#' }
 los_dataToUse <- function(
     .db,
     .which = c("Completed only", "Overall")

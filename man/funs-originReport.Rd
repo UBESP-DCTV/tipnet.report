@@ -35,10 +35,14 @@ Origin module
 }}
 \examples{
 
-origin_Plot(full_records) # default what = "gender"
-origin_Plot(full_records, "gender") # same as before
-origin_Plot(full_records, "etnia")
+\dontrun{
+  origin_Plot(full_records) # default what = "gender"
+  origin_Plot(full_records, "gender") # same as before
+  origin_Plot(full_records, "etnia")
+}
 
-origin_dataToUse(full_records, "Completed only")
-origin_dataToUse(full_records, "overall")
+\dontrun{
+  origin_dataToUse(full_records, "Completed only")
+  origin_dataToUse(full_records, "overall")
+}
 }

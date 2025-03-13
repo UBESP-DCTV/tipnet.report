@@ -33,10 +33,14 @@ picu admissions module
 }}
 \examples{
 
-admission_Plot(full_records) # default what = "mal_cronica"
-admission_Plot(full_records, "mal_cronica") # same as before
-admission_Plot(full_records, "etnia")
+\dontrun{
+  admission_Plot(full_records) # default what = "mal_cronica"
+  admission_Plot(full_records, "mal_cronica") # same as before
+  admission_Plot(full_records, "etnia")
+ }
 
-admission_dataToUse(full_records, "Completed only")
-admission_dataToUse(full_records, "overall")
+\dontrun{
+  admission_dataToUse(full_records, "Completed only")
+  admission_dataToUse(full_records, "overall")
+ }
 }

@@ -28,10 +28,14 @@ Descriptives module
 }}
 \examples{
 
-descriptives_Plot(full_records) # default what = "gender"
-descriptives_Plot(full_records, "gender") # same as before
-descriptives_Plot(full_records, "etnia")
+\dontrun{
+  descriptives_Plot(full_records) # default what = "gender"
+  descriptives_Plot(full_records, "gender") # same as before
+  descriptives_Plot(full_records, "etnia")
+ }
 
-descriptives_dataToUse(full_records, "Completed only")
-descriptives_dataToUse(full_records, "overall")
+\dontrun{
+  descriptives_dataToUse(full_records, "Completed only")
+  descriptives_dataToUse(full_records, "overall")
+}
 }

@@ -19,3 +19,15 @@
 ^analyses$
 ^old$
 ^\.git$
+^005-quality.Rmd$
+^010-descriptives.Rmd$
+^020-origin.Rmd$
+^030-ccc.Rmd$
+^035-focus.Rmd$
+^050-los.Rmd$
+^Makefile$
+^index.Rmd$
+^modules-tests$
+^restart.txt$
+^tipnet.report.Rproj$
+^update-TIPNet.sh$
