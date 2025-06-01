@@ -2,7 +2,7 @@
 #' title: "TIP-Net"
 #' subtitle: "Report dati `r params$year` (mesi: `r params$first_month` - `r params$last_month`)"
 #' author: "Unità di Biostatistica, Epidemiologia, e Sanità Pubblica<br>Dipartimento di Scienze Cardio-Toraco-Vascolari e Sanità Pubblica<br>University of Padova"
-#' date: "Data di creazione del report: `r Sys.Date()` (ver. 1.0.0)"
+#' date: "Data di creazione del report: `r Sys.Date()` (ver. 4.1.1)"
 #' output:
 #'   bookdown::html_document2:
 #'     toc: true
@@ -14,8 +14,8 @@
 #'
 #' params:
 #'   year: 2024
-#'   first_month: 1
-#'   last_month: 6
+#'   first_month: 7
+#'   last_month: 12
 #' ---
 #'
 #'
@@ -51,8 +51,8 @@ htmltools::img(
 if (interactive()) {
   params <- list(
     year = 2024,
-    first_month = 1,
-    last_month = 6
+    first_month = 7,
+    last_month = 12
   )
 }
 
